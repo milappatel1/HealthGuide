@@ -498,55 +498,6 @@ export const bodySystems: BodySystem[] = [
     icon: 'Brain',
     diseases: ['alzheimers-disease', 'migraine', 'depression-major', 'anxiety-generalized']
   },
-    {
-    id: 'dermatological',
-    name: 'Skin & Hair',
-    description: 'Your skin, hair, and nails that protect your body from the environment.',
-    icon: 'Skin',
-    diseases: ['eczema', 'psoriasis', 'acne']
-  },
-  {
-    id: 'immune',
-    name: 'Immune System',
-    description: 'Your body\'s defense system that fights infections and diseases.',
-    icon: 'Shield',
-    diseases: ['lupus', 'hiv-aids', 'rheumatoid-arthritis']
-  },
-  {
-    id: 'reproductive',
-    name: 'Reproductive System',
-    description: 'Organs involved in reproduction and sexual health.',
-    icon: 'Reproduction',
-    diseases: ['endometriosis', 'polycystic-ovary', 'prostatitis']
-  },
-  {
-    id: 'urinary',
-    name: 'Urinary System',
-    description: 'Kidneys, bladder, and related organs that filter waste from your blood.',
-    icon: 'Droplet',
-    diseases: ['kidney-stones', 'urinary-tract-infection', 'chronic-kidney-disease']
-  },
-  {
-    id: 'sensory',
-    name: 'Sensory Organs',
-    description: 'Eyes, ears, and other organs that help you perceive the world.',
-    icon: 'Eye',
-    diseases: ['glaucoma', 'cataracts', 'tinnitus']
-  },
-  {
-    id: 'hematological',
-    name: 'Blood System',
-    description: 'Blood cells, plasma, and components that transport oxygen and nutrients.',
-    icon: 'Activity',
-    diseases: ['anemia', 'hemophilia', 'leukemia']
-  },
-  {
-    id: 'lymphatic',
-    name: 'Lymphatic System',
-    description: 'Network of tissues and organs that help rid the body of toxins.',
-    icon: 'Network',
-    diseases: ['lymphedema', 'hodgkins-lymphoma', 'mononucleosis']
-  }
   {
     id: 'musculoskeletal',
     name: 'Bones & Muscles',
