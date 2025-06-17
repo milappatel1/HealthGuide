@@ -73,65 +73,6 @@ export const diseases: Disease[] = [
     severity: 'moderate',
     commonness: 'common'
   },
-
-  {
-    id: 'atrial-fibrillation',
-    name: 'Atrial Fibrillation',
-    category: 'Cardiovascular',
-    bodySystem: 'cardiovascular',
-    summary: 'An irregular and often rapid heart rhythm that can lead to blood clots, stroke, and other complications.',
-    symptoms: [
-      'Irregular heartbeat or palpitations',
-      'Rapid heartbeat',
-      'Chest pain or discomfort',
-      'Shortness of breath',
-      'Fatigue and weakness',
-      'Dizziness or lightheadedness',
-      'Reduced exercise tolerance'
-    ],
-    causes: [
-      'High blood pressure',
-      'Heart disease or heart defects',
-      'Overactive thyroid',
-      'Sleep apnea',
-      'Excessive alcohol consumption',
-      'Age (more common after 60)',
-      'Family history of atrial fibrillation'
-    ],
-    diagnosis: [
-      'Electrocardiogram (ECG)',
-      'Holter monitor (24-hour ECG)',
-      'Event monitor',
-      'Echocardiogram',
-      'Blood tests (thyroid function)',
-      'Chest X-ray'
-    ],
-    treatment: [
-      'Blood thinners (anticoagulants)',
-      'Heart rate control medications',
-      'Heart rhythm control medications',
-      'Cardioversion (electrical shock therapy)',
-      'Catheter ablation',
-      'Lifestyle modifications'
-    ],
-    prevention: [
-      'Maintain healthy blood pressure',
-      'Exercise regularly',
-      'Eat a heart-healthy diet',
-      'Maintain healthy weight',
-      'Limit alcohol consumption',
-      'Don\'t smoke',
-      'Manage stress'
-    ],
-    simpleExplanation: {
-      whatIs: 'Your heart has four rooms, and the top two rooms (atria) are supposed to beat in a steady rhythm. In atrial fibrillation, these rooms beat very fast and irregularly, like a drum that\'s out of rhythm.',
-      howYouGet: 'It can happen when your heart gets damaged from high blood pressure, heart disease, or other conditions. Sometimes it runs in families, and it becomes more common as people get older.',
-      howToFeel: 'You might feel like your heart is racing, fluttering, or skipping beats. You could feel tired, dizzy, or have trouble breathing, especially when you\'re active.',
-      howToGetBetter: 'Doctors can give you medicines to help control your heart rhythm and prevent blood clots. Sometimes they use special procedures to help your heart beat normally again.'
-    },
-    severity: 'moderate',
-    commonness: 'common'
-  },
   
   {
     id: 'coronary-artery-disease',
