@@ -67,9 +67,6 @@ const BodySystems: React.FC = () => {
               {/* Associated Diseases */}
               {systemDiseases.length > 0 ? (
                 <div className="space-y-3">
-                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase tracking-wide">
-                    Related Conditions
-                  </h3>
                   <div className="space-y-2">
                     {systemDiseases.slice(0, 3).map((disease) => (
                       <Link
