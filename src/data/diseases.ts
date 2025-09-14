@@ -73,7 +73,65 @@ export const diseases: Disease[] = [
     severity: 'moderate',
     commonness: 'common'
   },
-  
+
+  {
+  id: 'coronary-artery-disease',
+  name: 'Coronary Artery Disease (CAD)',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A condition where the coronary arteries become narrowed or blocked due to plaque buildup, reducing blood flow to the heart.',
+  symptoms: [
+    'Chest pain or pressure (angina)',
+    'Shortness of breath',
+    'Fatigue with exertion',
+    'Heart palpitations',
+    'Nausea or sweating during chest discomfort',
+    'Dizziness or fainting',
+    'Silent heart attacks (sometimes no symptoms)'
+  ],
+  causes: [
+    'Atherosclerosis (plaque buildup in arteries)',
+    'High blood pressure',
+    'High cholesterol',
+    'Smoking',
+    'Diabetes',
+    'Obesity',
+    'Sedentary lifestyle',
+    'Family history of heart disease'
+  ],
+  diagnosis: [
+    'Electrocardiogram (ECG)',
+    'Exercise stress test',
+    'Echocardiogram',
+    'Cardiac catheterization and angiogram',
+    'CT coronary angiography',
+    'Blood tests (cholesterol, triglycerides)'
+  ],
+  treatment: [
+    'Lifestyle modifications (diet, exercise, stop smoking)',
+    'Medications (statins, beta-blockers, aspirin, nitrates)',
+    'Angioplasty and stent placement',
+    'Coronary artery bypass surgery (CABG)',
+    'Cardiac rehabilitation programs'
+  ],
+  prevention: [
+    'Maintain healthy blood pressure and cholesterol',
+    'Exercise regularly',
+    'Eat a heart-healthy diet',
+    'Avoid smoking',
+    'Maintain healthy weight',
+    'Manage stress',
+    'Control diabetes if present'
+  ],
+  simpleExplanation: {
+    whatIs: 'Your heart needs blood through special tubes called arteries. In CAD, those tubes get clogged with fatty “gunk” called plaque, so less blood gets to the heart.',
+    howYouGet: 'It builds up over time if you eat unhealthy foods, smoke, or have high blood pressure or cholesterol. Family history can also make it more likely.',
+    howToFeel: 'You may feel chest pain, like someone is squeezing your chest, or get tired easily. Sometimes there are no symptoms until a heart attack happens.',
+    howToGetBetter: 'Doctors give medicine to lower cholesterol and blood pressure, and sometimes do procedures to open or bypass the clogged arteries.'
+  },
+  severity: 'severe',
+  commonness: 'very-common'
+},
 
   // =============================================================================
   // RESPIRATORY DISEASES
@@ -136,6 +194,61 @@ export const diseases: Disease[] = [
     commonness: 'common'
   },
 
+  {
+  id: 'copd',
+  name: 'Chronic Obstructive Pulmonary Disease (COPD)',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A group of progressive lung diseases, including emphysema and chronic bronchitis, that make it hard to breathe.',
+  symptoms: [
+    'Chronic cough with mucus',
+    'Shortness of breath (especially during activity)',
+    'Wheezing',
+    'Chest tightness',
+    'Frequent respiratory infections',
+    'Fatigue',
+    'Blue lips or fingernails in severe cases'
+  ],
+  causes: [
+    'Long-term smoking',
+    'Exposure to air pollutants',
+    'Chronic exposure to dust or chemicals',
+    'Genetic factors (alpha-1 antitrypsin deficiency)',
+    'History of frequent lung infections'
+  ],
+  diagnosis: [
+    'Medical history and physical exam',
+    'Spirometry (lung function test)',
+    'Chest X-ray',
+    'CT scan',
+    'Arterial blood gas test',
+    'Pulse oximetry'
+  ],
+  treatment: [
+    'Quitting smoking (most important step)',
+    'Bronchodilator inhalers',
+    'Steroid inhalers',
+    'Pulmonary rehabilitation',
+    'Oxygen therapy',
+    'Surgery in severe cases (lung volume reduction, transplant)'
+  ],
+  prevention: [
+    'Don’t smoke or quit if you do',
+    'Avoid secondhand smoke',
+    'Limit exposure to lung irritants',
+    'Get flu and pneumonia vaccines',
+    'Exercise regularly to strengthen lungs'
+  ],
+  simpleExplanation: {
+    whatIs: 'COPD makes your airways and lungs damaged, like old, stiff balloons that can’t fill and empty properly.',
+    howYouGet: 'It usually happens after years of smoking, breathing dirty air, or being exposed to harmful chemicals.',
+    howToFeel: 'You’ll have trouble catching your breath, cough a lot with mucus, and feel tired even after small activities.',
+    howToGetBetter: 'There’s no cure, but medicines, oxygen, and quitting smoking can help you breathe easier and live longer.'
+  },
+  severity: 'severe',
+  commonness: 'common'
+},
+
 
   // =============================================================================
   // ENDOCRINE/METABOLIC DISEASES
@@ -194,6 +307,60 @@ export const diseases: Disease[] = [
     severity: 'severe',
     commonness: 'uncommon'
   },
+
+  {
+  id: 'diabetes-type-2',
+  name: 'Type 2 Diabetes',
+  category: 'Metabolic Disorders',
+  bodySystem: 'endocrine',
+  summary: 'A chronic condition where the body becomes resistant to insulin or doesn’t make enough, leading to high blood sugar levels.',
+  symptoms: [
+    'Increased thirst and urination',
+    'Fatigue',
+    'Blurred vision',
+    'Slow-healing sores',
+    'Frequent infections',
+    'Numbness or tingling in hands/feet',
+    'Unintended weight loss (less common)'
+  ],
+  causes: [
+    'Insulin resistance',
+    'Obesity',
+    'Sedentary lifestyle',
+    'Unhealthy diet',
+    'Genetics and family history',
+    'Older age',
+    'History of gestational diabetes'
+  ],
+  diagnosis: [
+    'Fasting blood glucose test',
+    'A1C test',
+    'Oral glucose tolerance test',
+    'Random plasma glucose test'
+  ],
+  treatment: [
+    'Lifestyle modifications (diet, exercise)',
+    'Oral medications (metformin, sulfonylureas)',
+    'Injectable medications (GLP-1 agonists, insulin if needed)',
+    'Weight management',
+    'Regular blood sugar monitoring'
+  ],
+  prevention: [
+    'Maintain healthy weight',
+    'Exercise regularly',
+    'Eat a balanced, low-sugar diet',
+    'Avoid smoking and excessive alcohol',
+    'Regular blood sugar checks if at risk'
+  ],
+  simpleExplanation: {
+    whatIs: 'In type 2 diabetes, your body doesn’t use insulin properly. Insulin is the “key” that lets sugar from food into your cells. Without it working well, sugar builds up in your blood.',
+    howYouGet: 'It usually happens slowly from being overweight, not active enough, or having a family history of diabetes.',
+    howToFeel: 'You may feel thirsty all the time, pee a lot, feel tired, and get sick more often. Cuts may take longer to heal.',
+    howToGetBetter: 'Doctors help with healthy eating, exercise, and medicines to lower blood sugar. Sometimes insulin is needed if pills don’t work well enough.'
+  },
+  severity: 'moderate',
+  commonness: 'very-common'
+},
 
   // =============================================================================
   // GASTROINTESTINAL DISEASES
@@ -261,6 +428,60 @@ export const diseases: Disease[] = [
     commonness: 'common'
   },
 
+  {
+  id: 'irritable-bowel-syndrome',
+  name: 'Irritable Bowel Syndrome (IBS)',
+  category: 'Gastrointestinal',
+  bodySystem: 'digestive',
+  summary: 'A common disorder affecting the large intestine, causing abdominal pain, cramping, bloating, and changes in bowel habits.',
+  symptoms: [
+    'Abdominal pain or cramping',
+    'Bloating and gas',
+    'Diarrhea, constipation, or both',
+    'Mucus in stool',
+    'Changes in bowel movement frequency',
+    'Relief of pain after a bowel movement'
+  ],
+  causes: [
+    'Exact cause unknown',
+    'Abnormal gut muscle contractions',
+    'Increased sensitivity in intestines',
+    'Gut-brain interaction problems',
+    'Stress or anxiety',
+    'Certain foods (dairy, caffeine, fatty foods)',
+    'Hormonal changes (worse during menstruation)'
+  ],
+  diagnosis: [
+    'Medical history and symptom review',
+    'Physical exam',
+    'Blood tests (to rule out other conditions)',
+    'Stool tests',
+    'Colonoscopy (if needed)'
+  ],
+  treatment: [
+    'Dietary changes (low FODMAP diet)',
+    'Fiber supplements',
+    'Antidiarrheal medications',
+    'Laxatives for constipation',
+    'Antispasmodic medications',
+    'Stress management and therapy'
+  ],
+  prevention: [
+    'Identify and avoid trigger foods',
+    'Eat smaller, regular meals',
+    'Manage stress',
+    'Stay physically active',
+    'Get adequate sleep'
+  ],
+  simpleExplanation: {
+    whatIs: 'IBS is when your stomach and intestines get “out of sync,” causing tummy pain, gas, and changes in bathroom habits.',
+    howYouGet: 'Doctors aren’t sure exactly, but it’s linked to stress, sensitive guts, and certain foods. It’s not caused by infection or cancer.',
+    howToFeel: 'You may have stomach aches, diarrhea, constipation, or feel bloated like a balloon.',
+    howToGetBetter: 'Doctors suggest diet changes, stress control, and sometimes medicine to calm your intestines so they behave better.'
+  },
+  severity: 'mild',
+  commonness: 'very-common'
+},
 
   // =============================================================================
   // NEUROLOGICAL DISEASES
@@ -329,6 +550,60 @@ export const diseases: Disease[] = [
     commonness: 'common'
   },
 
+  {
+  id: 'migraine',
+  name: 'Migraine',
+  category: 'Neurological',
+  bodySystem: 'nervous',
+  summary: 'A neurological disorder characterized by recurrent headaches that are moderate to severe, often with nausea and sensitivity to light or sound.',
+  symptoms: [
+    'Intense, throbbing headache (often one side of head)',
+    'Nausea and vomiting',
+    'Sensitivity to light, sound, or smells',
+    'Visual disturbances (aura)',
+    'Tingling in arms or face',
+    'Difficulty speaking',
+    'Fatigue after headache'
+  ],
+  causes: [
+    'Genetics and family history',
+    'Abnormal brain activity affecting nerve signals',
+    'Hormonal changes',
+    'Stress',
+    'Certain foods (chocolate, cheese, caffeine)',
+    'Sleep disturbances',
+    'Environmental triggers (bright lights, strong smells)'
+  ],
+  diagnosis: [
+    'Medical history and symptom review',
+    'Neurological exam',
+    'MRI or CT scan (to rule out other causes)',
+    'Headache diary tracking triggers and frequency'
+  ],
+  treatment: [
+    'Pain relievers (NSAIDs, triptans)',
+    'Anti-nausea medications',
+    'Preventive medications (beta-blockers, anticonvulsants)',
+    'Lifestyle changes (stress management, sleep hygiene)',
+    'Avoiding known triggers'
+  ],
+  prevention: [
+    'Identify and avoid triggers',
+    'Maintain regular sleep schedule',
+    'Eat regular, balanced meals',
+    'Stay hydrated',
+    'Exercise regularly',
+    'Stress reduction techniques'
+  ],
+  simpleExplanation: {
+    whatIs: 'Migraines are super strong headaches that feel like pounding or throbbing, often making you sick and sensitive to light and sound.',
+    howYouGet: 'They run in families and can be triggered by stress, certain foods, or changes in hormones or sleep.',
+    howToFeel: 'Your head will hurt a lot, sometimes only on one side, and you may feel nauseous or see flashing lights.',
+    howToGetBetter: 'Doctors give medicine to stop the pain and sometimes medicine to prevent future attacks. Avoiding triggers also helps.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
 
   // =============================================================================
   // MUSCULOSKELETAL DISEASES
@@ -392,11 +667,117 @@ export const diseases: Disease[] = [
     commonness: 'common'
   },
 
+  {
+  id: 'arthritis-rheumatoid',
+  name: 'Rheumatoid Arthritis (RA)',
+  category: 'Musculoskeletal',
+  bodySystem: 'musculoskeletal',
+  summary: 'An autoimmune disorder where the immune system attacks the joints, causing inflammation, pain, and eventual joint damage.',
+  symptoms: [
+    'Tender, warm, swollen joints',
+    'Joint stiffness (worse in morning)',
+    'Fatigue',
+    'Fever',
+    'Loss of appetite',
+    'Joint deformities in advanced stages'
+  ],
+  causes: [
+    'Autoimmune reaction',
+    'Genetic predisposition',
+    'Hormonal factors',
+    'Smoking (risk factor)',
+    'Environmental triggers (infections)'
+  ],
+  diagnosis: [
+    'Physical exam of joints',
+    'Blood tests (rheumatoid factor, anti-CCP antibodies)',
+    'Erythrocyte sedimentation rate (ESR)',
+    'C-reactive protein (CRP)',
+    'X-rays or MRI of joints'
+  ],
+  treatment: [
+    'Disease-modifying antirheumatic drugs (DMARDs)',
+    'Biologic agents',
+    'NSAIDs for pain',
+    'Steroids',
+    'Physical therapy',
+    'Surgery for severe joint damage'
+  ],
+  prevention: [
+    'No known prevention (autoimmune)',
+    'Stop smoking',
+    'Maintain healthy weight',
+    'Early diagnosis and treatment to prevent damage'
+  ],
+  simpleExplanation: {
+    whatIs: 'RA is when your body’s defense system attacks your joints by mistake, making them swollen, stiff, and painful.',
+    howYouGet: 'Doctors don’t know exactly why, but it’s linked to genetics, smoking, and immune system problems.',
+    howToFeel: 'Your joints will ache, feel stiff, and swell, especially in the morning. Over time, they may even change shape.',
+    howToGetBetter: 'Doctors use strong medicines to calm your immune system, reduce swelling, and protect your joints.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
 
   // =============================================================================
   // MENTAL HEALTH CONDITIONS
   // =============================================================================
+{
+  id: 'depression-major',
+  name: 'Major Depressive Disorder (Depression)',
+  category: 'Mental Health',
+  bodySystem: 'nervous',
+  summary: 'A serious mood disorder that causes persistent feelings of sadness, loss of interest, and difficulty with daily functioning.',
+  symptoms: [
+    'Persistent sadness or low mood',
+    'Loss of interest in hobbies or activities',
+    'Changes in appetite and weight',
+    'Sleep problems (insomnia or oversleeping)',
+    'Fatigue and low energy',
+    'Feelings of worthlessness or guilt',
+    'Difficulty concentrating',
+    'Thoughts of death or suicide'
+  ],
+  causes: [
+    'Imbalance of brain chemicals',
+    'Genetics and family history',
+    'Trauma or stressful life events',
+    'Chronic illness or pain',
+    'Substance abuse',
+    'Hormonal changes'
+  ],
+  diagnosis: [
+    'Psychiatric evaluation',
+    'Patient interview and history',
+    'Standardized depression screening tools (PHQ-9)',
+    'Rule out medical causes with blood tests',
+    'Symptom duration (2+ weeks)'
+  ],
+  treatment: [
+    'Antidepressant medications (SSRIs, SNRIs, etc.)',
+    'Psychotherapy (CBT, interpersonal therapy)',
+    'Lifestyle changes (exercise, sleep, nutrition)',
+    'Support groups',
+    'Severe cases: hospitalization or ECT'
+  ],
+  prevention: [
+    'Manage stress effectively',
+    'Stay physically active',
+    'Maintain strong social connections',
+    'Seek help early when symptoms start',
+    'Avoid alcohol and drugs'
+  ],
+  simpleExplanation: {
+    whatIs: 'Depression is when your brain’s “happiness switch” doesn’t work properly, leaving you stuck in sadness and low energy.',
+    howYouGet: 'It can come from brain chemistry, tough life events, or sometimes run in families. Anyone can get it.',
+    howToFeel: 'You’ll feel sad most of the time, lose interest in things you once enjoyed, and may struggle to eat, sleep, or focus.',
+    howToGetBetter: 'Doctors help with medicines and therapy to lift your mood. Talking to loved ones, exercising, and staying connected can also make a big difference.'
+  },
+  severity: 'severe',
+  commonness: 'common'
+},
 
+  
   {
     id: 'anxiety-generalized',
     name: 'Generalized Anxiety Disorder',
