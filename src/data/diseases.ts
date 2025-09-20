@@ -1698,6 +1698,157 @@ export const diseases: Disease[] = [
   },
 
   {
+  id: 'crohns-disease',
+  name: 'Crohn’s Disease',
+  category: 'Gastrointestinal',
+  bodySystem: 'gastrointestinal',
+  summary: 'A chronic inflammatory bowel disease that can affect any part of the gastrointestinal tract, causing abdominal pain, diarrhea, and weight loss.',
+  symptoms: [
+    'Abdominal pain and cramping',
+    'Chronic diarrhea',
+    'Blood in stool',
+    'Weight loss',
+    'Fatigue',
+    'Fever',
+    'Mouth ulcers'
+  ],
+  causes: [
+    'Autoimmune reaction',
+    'Genetic predisposition',
+    'Environmental factors (diet, smoking)',
+    'Abnormal gut bacteria response'
+  ],
+  diagnosis: [
+    'Colonoscopy with biopsy',
+    'Endoscopy',
+    'CT or MRI enterography',
+    'Blood tests (anemia, inflammation markers)',
+    'Stool studies'
+  ],
+  treatment: [
+    'Anti-inflammatory medications (corticosteroids)',
+    'Immunosuppressants (azathioprine, methotrexate)',
+    'Biologics (infliximab, adalimumab)',
+    'Surgery to remove diseased sections of bowel',
+    'Dietary modifications'
+  ],
+  prevention: [
+    'Avoid smoking',
+    'Regular monitoring with GI specialist',
+    'Healthy diet and stress management'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when your immune system attacks your gut, causing swelling and sores anywhere along your digestive system.',
+    howYouGet: 'Doctors don’t know for sure, but it’s linked to genes, environment, and immune problems.',
+    howToFeel: 'You may have stomach pain, diarrhea, weight loss, and sometimes blood in your stool.',
+    howToGetBetter: 'Medicines calm your immune system, and sometimes surgery helps if parts of your gut are badly damaged.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
+{
+  id: 'ulcerative-colitis',
+  name: 'Ulcerative Colitis',
+  category: 'Gastrointestinal',
+  bodySystem: 'gastrointestinal',
+  summary: 'A chronic inflammatory bowel disease that causes long-lasting inflammation and ulcers in the lining of the large intestine and rectum.',
+  symptoms: [
+    'Bloody diarrhea',
+    'Abdominal cramping',
+    'Urgent need to defecate',
+    'Weight loss',
+    'Fatigue',
+    'Fever',
+    'Joint pain'
+  ],
+  causes: [
+    'Autoimmune reaction',
+    'Genetic predisposition',
+    'Environmental triggers',
+    'Immune system imbalance'
+  ],
+  diagnosis: [
+    'Colonoscopy with biopsy',
+    'Flexible sigmoidoscopy',
+    'Stool sample tests',
+    'Blood tests (anemia, inflammation)',
+    'Imaging (CT/MRI)'
+  ],
+  treatment: [
+    'Anti-inflammatory drugs (mesalamine, steroids)',
+    'Immunosuppressants',
+    'Biologics (adalimumab, infliximab)',
+    'Surgery to remove colon in severe cases',
+    'Nutritional support'
+  ],
+  prevention: [
+    'Healthy diet and stress control',
+    'Avoid smoking',
+    'Regular GI monitoring'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when your colon gets swollen and develops open sores inside.',
+    howYouGet: 'Your immune system misfires and keeps attacking your colon lining.',
+    howToFeel: 'You’ll have bloody diarrhea, stomach cramps, and feel tired and weak.',
+    howToGetBetter: 'Medicines calm your immune system, but some people may need surgery if medicines don’t work.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
+{
+  id: 'intestinal-ischemia',
+  name: 'Intestinal Ischemia',
+  category: 'Gastrointestinal',
+  bodySystem: 'gastrointestinal',
+  summary: 'A condition where blood flow to the intestines is reduced or blocked, leading to tissue injury or death.',
+  symptoms: [
+    'Sudden severe abdominal pain',
+    'Nausea and vomiting',
+    'Blood in stool',
+    'Diarrhea',
+    'Abdominal tenderness',
+    'Bloating',
+    'Fever (if advanced)'
+  ],
+  causes: [
+    'Blood clot in mesenteric arteries',
+    'Atherosclerosis',
+    'Low blood pressure or shock',
+    'Heart failure',
+    'Arrhythmias (atrial fibrillation)',
+    'Vasculitis'
+  ],
+  diagnosis: [
+    'CT angiography (to check blood flow)',
+    'Doppler ultrasound',
+    'Blood tests (lactate, white blood cells)',
+    'Colonoscopy (sometimes)',
+    'Exploratory surgery in severe cases'
+  ],
+  treatment: [
+    'Blood thinners (anticoagulants)',
+    'Thrombolytics (clot-dissolving drugs)',
+    'Surgery to remove clots or damaged bowel',
+    'Stent placement in arteries',
+    'Supportive care (IV fluids, antibiotics)'
+  ],
+  prevention: [
+    'Manage heart disease and blood pressure',
+    'Quit smoking',
+    'Use anticoagulants if prone to clots',
+    'Healthy diet and exercise'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when blood can’t get to part of your intestines, and they start to get damaged.',
+    howYouGet: 'Usually from a blood clot or blocked arteries, often in people with heart or blood vessel problems.',
+    howToFeel: 'Sudden sharp belly pain, vomiting, and sometimes blood in your poop.',
+    howToGetBetter: 'Doctors use blood thinners, clot-busting drugs, or surgery to restore blood flow.'
+  },
+  severity: 'severe',
+  commonness: 'rare'
+},
+  
+  {
   id: 'irritable-bowel-syndrome',
   name: 'Irritable Bowel Syndrome (IBS)',
   category: 'Gastrointestinal',
