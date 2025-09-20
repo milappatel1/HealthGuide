@@ -75,6 +75,161 @@ export const diseases: Disease[] = [
   },
 
   {
+  id: 'cardiac-tamponade',
+  name: 'Cardiac Tamponade',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A life-threatening condition where fluid builds up in the sac around the heart, compressing it and impairing its ability to pump blood.',
+  symptoms: [
+    'Severe shortness of breath',
+    'Low blood pressure',
+    'Rapid heartbeat',
+    'Fainting or near fainting',
+    'Chest pain or pressure',
+    'Distended neck veins',
+    'Weak pulses'
+  ],
+  causes: [
+    'Chest trauma',
+    'Heart surgery complications',
+    'Cancer spreading to the heart',
+    'Pericarditis',
+    'Kidney failure (uremia)',
+    'Aortic rupture',
+    'Tuberculosis (rare in developed countries)'
+  ],
+  diagnosis: [
+    'Echocardiogram (ultrasound of the heart)',
+    'Chest X-ray',
+    'Electrocardiogram (ECG)',
+    'CT scan or MRI',
+    'Physical exam (Beck’s triad: low BP, muffled heart sounds, jugular vein distension)'
+  ],
+  treatment: [
+    'Emergency pericardiocentesis (needle drainage)',
+    'Surgical pericardial window',
+    'IV fluids to stabilize blood pressure',
+    'Treating underlying cause (cancer, infection, trauma)'
+  ],
+  prevention: [
+    'Monitor and treat pericarditis early',
+    'Regular follow-up after heart surgery',
+    'Manage cancer promptly',
+    'Avoid untreated severe infections'
+  ],
+  simpleExplanation: {
+    whatIs: 'Your heart sits in a sac, and when fluid fills that sac, it squeezes the heart so it can’t pump properly.',
+    howYouGet: 'It can happen after an injury, infection, surgery, or cancer spreading to the heart area.',
+    howToFeel: 'You feel like you can’t breathe, may feel dizzy, weak, and your blood pressure can drop dangerously low.',
+    howToGetBetter: 'Doctors quickly drain the fluid around your heart so it can beat normally again, then treat the cause.'
+  },
+  severity: 'severe',
+  commonness: 'rare'
+},
+{
+  id: 'endocarditis',
+  name: 'Endocarditis',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'An infection of the inner lining of the heart chambers and valves, often caused by bacteria entering the bloodstream.',
+  symptoms: [
+    'Fever and chills',
+    'Heart murmur',
+    'Fatigue',
+    'Night sweats',
+    'Shortness of breath',
+    'Swelling in feet, legs, or abdomen',
+    'Skin changes (tiny red or purple spots, splinter hemorrhages)'
+  ],
+  causes: [
+    'Bacteria entering bloodstream during dental procedures',
+    'IV drug use',
+    'Artificial heart valves',
+    'Congenital heart defects',
+    'Prolonged catheter use',
+    'Weakened immune system'
+  ],
+  diagnosis: [
+    'Blood cultures',
+    'Echocardiogram (to see valve infection)',
+    'Electrocardiogram (ECG)',
+    'Chest X-ray',
+    'CT scan',
+    'Lab tests (inflammatory markers)'
+  ],
+  treatment: [
+    'IV antibiotics (long course, weeks)',
+    'Surgical removal or repair of infected valves',
+    'Treating source of infection'
+  ],
+  prevention: [
+    'Good dental hygiene',
+    'Antibiotics before dental/surgical procedures (for high-risk patients)',
+    'Avoid IV drug use',
+    'Sterile catheter care'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s a dangerous infection inside your heart, usually on the valves.',
+    howYouGet: 'Bacteria sneak into your bloodstream from things like dental work or IV drug use, then stick to your heart.',
+    howToFeel: 'You may feel feverish, tired, sweaty, and develop heart problems.',
+    howToGetBetter: 'Doctors give long-term antibiotics, and sometimes surgery to fix or replace the heart valve.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+{
+  id: 'aortic-dissection',
+  name: 'Aortic Dissection',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A tear in the inner layer of the aorta’s wall that allows blood to flow between layers, creating a false channel and risking rupture.',
+  symptoms: [
+    'Sudden, severe chest or upper back pain (tearing or ripping sensation)',
+    'Shortness of breath',
+    'Loss of consciousness',
+    'Weak pulse in one arm compared to the other',
+    'Stroke-like symptoms',
+    'Low blood pressure'
+  ],
+  causes: [
+    'High blood pressure (hypertension)',
+    'Connective tissue disorders (Marfan syndrome, Ehlers-Danlos)',
+    'Trauma (car accident, fall)',
+    'Atherosclerosis',
+    'Heart surgery complications',
+    'Aortic aneurysm'
+  ],
+  diagnosis: [
+    'CT angiography (gold standard)',
+    'Transesophageal echocardiogram',
+    'MRI angiography',
+    'Chest X-ray (widened mediastinum)',
+    'Physical exam (blood pressure difference between arms)'
+  ],
+  treatment: [
+    'Emergency surgery (for ascending aorta)',
+    'Blood pressure control with IV medications',
+    'Stent placement (endovascular repair)',
+    'Long-term blood pressure management'
+  ],
+  prevention: [
+    'Control blood pressure',
+    'Regular screening if at risk (family history, genetic conditions)',
+    'Avoid stimulant drugs (like cocaine)',
+    'Treat aneurysms before rupture'
+  ],
+  simpleExplanation: {
+    whatIs: 'The main blood pipe from your heart tears open inside its wall, making blood go the wrong way.',
+    howYouGet: 'High blood pressure or weak tissue in the aorta can cause it to split apart.',
+    howToFeel: 'It feels like the worst, sharpest chest or back pain you can imagine, and it comes suddenly.',
+    howToGetBetter: 'Doctors rush to control your blood pressure and often do emergency surgery to repair the aorta.'
+  },
+  severity: 'severe',
+  commonness: 'rare'
+}
+
+
+  {
   id: 'coronary-artery-disease',
   name: 'Coronary Artery Disease (CAD)',
   category: 'Cardiovascular',
