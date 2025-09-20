@@ -2356,7 +2356,7 @@ export const diseases: Disease[] = [
     howToFeel: 'You get sharp bone pain, fever, swelling, and sometimes pus leaking out.',
     howToGetBetter: 'Doctors give you strong antibiotics and sometimes do surgery to clean the infection out of your bone.'
   },
-  severity: 'moderate',
+  severity: 'severe',
   commonness: 'rare'
 },
 
@@ -2409,7 +2409,7 @@ export const diseases: Disease[] = [
     howToFeel: 'Your joints will ache, feel stiff, and swell, especially in the morning. Over time, they may even change shape.',
     howToGetBetter: 'Doctors use strong medicines to calm your immune system, reduce swelling, and protect your joints.'
   },
-  severity: 'severe',
+  severity: 'moderate',
   commonness: 'uncommon'
 },
 
