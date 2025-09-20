@@ -12,19 +12,19 @@ const faqs: FAQ[] = [
   {
     id: 'what-is-healthexplain',
     question: 'What is HealthExplain and who is it for?',
-    answer: 'HealthExplain is a free educational website that explains medical conditions in simple, easy-to-understand language. It\'s designed for patients, families, caregivers, students, and anyone who wants to learn about health conditions without getting overwhelmed by medical jargon. We include special "Simple Explanation" sections that are perfect for children or anyone who prefers straightforward explanations.',
+    answer: 'HealthExplain is a free educational website that explains medical conditions in simple, easy-to-understand language. It\'s designed for patients, families, caregivers, students, and anyone who wants to learn about health conditions without getting overwhelmed by medical jargon. I include special "Simple Explanation" sections that are perfect for children or anyone who prefers straightforward explanations.',
     category: 'About'
   },
   {
     id: 'medical-accuracy',
     question: 'How do I know the medical information is accurate?',
-    answer: 'All our content is carefully researched using reputable medical sources and presented in an educational format. However, this information is for educational purposes only and should never replace professional medical advice. Always consult with a healthcare provider for proper diagnosis, treatment, and medical decisions. We regularly review and update our content to ensure it remains current and accurate.',
+    answer: 'All of my content is carefully researched using reputable medical sources and presented in an educational format. However, this information is for educational purposes only and should never replace professional medical advice. Always consult with a healthcare provider for proper diagnosis, treatment, and medical decisions. I regularly review and update our content to ensure it remains current and accurate.',
     category: 'Medical'
   },
   {
     id: 'simple-explanations',
     question: 'What are the "Simple Explanations" sections?',
-    answer: 'Our Simple Explanations are specially written sections that break down complex medical information into easy-to-understand language, often using analogies and everyday comparisons. These sections answer four key questions: What is it? How do you get it? How will you feel? How to get better? They\'re perfect for children, family members, or anyone who wants a clear, straightforward understanding of a condition.',
+    answer: 'My Simple Explanations are specially written sections that break down complex medical information into easy-to-understand language, often using analogies and everyday comparisons. These sections answer four key questions: What is it? How do you get it? How will you feel? How to get better? They\'re perfect for children, family members, or anyone who wants a clear, straightforward understanding of a condition.',
     category: 'Features'
   },
   {
@@ -36,7 +36,7 @@ const faqs: FAQ[] = [
   {
     id: 'accessibility-features',
     question: 'What accessibility features does HealthExplain offer?',
-    answer: 'We\'ve designed HealthExplain to be accessible to everyone. Our features include adjustable font sizes (small, medium, large), dark mode for comfortable reading in low light, high contrast colors for readability, mobile-responsive design that works on all devices, and clear, simple language throughout. You can find the accessibility controls in the top navigation bar.',
+    answer: 'I\'ve designed HealthExplain to be accessible to everyone. My features include adjustable font sizes (small, medium, large), dark mode for comfortable reading in low light, high contrast colors for readability, mobile-responsive design that works on all devices, and clear, simple language throughout. You can find the accessibility controls in the top navigation bar.',
     category: 'Features'
   },
   {
@@ -48,25 +48,25 @@ const faqs: FAQ[] = [
   {
     id: 'find-information',
     question: 'How do I find information about a specific condition?',
-    answer: 'You can find information in several ways: use our search bar on the homepage or any page to search for diseases, symptoms, or body systems; browse "All Diseases" to see our complete list; explore "Body Systems" to find conditions organized by which part of the body they affect; or check the categories and tags on each disease page to find related conditions.',
+    answer: 'You can find information in several ways: use my search bar on the homepage or any page to search for diseases, symptoms, or body systems; browse "All Diseases" to see my complete list; explore "Body Systems" to find conditions organized by which part of the body they affect; or check the categories and tags on each disease page to find related conditions.',
     category: 'Navigation'
   },
   {
     id: 'medication-information',
     question: 'Does HealthExplain provide medication information?',
-    answer: 'While we mention general types of treatments and medications in our disease pages, we don\'t provide detailed medication information, dosages, or drug interactions. For specific medication questions, always consult with a pharmacist, doctor, or other healthcare professional. They can provide personalized advice based on your specific situation and medical history.',
+    answer: 'While I mention general types of treatments and medications in our disease pages, I don\'t provide detailed medication information, dosages, or drug interactions. For specific medication questions, always consult with a pharmacist, doctor, or other healthcare professional. They can provide personalized advice based on your specific situation and medical history.',
     category: 'Medical'
   },
   {
     id: 'kids-content',
     question: 'Is this website appropriate for children?',
-    answer: 'Yes! We\'ve designed HealthExplain to be family-friendly and appropriate for all ages. Our "Simple Explanation" sections are specifically written to help children understand health conditions in a non-scary, age-appropriate way. However, we recommend that adults review the content first and be available to answer any questions children might have while reading.',
+    answer: 'Yes! I\'ve designed HealthExplain to be family-friendly and appropriate for all ages. My "Simple Explanation" sections are specifically written to help children understand health conditions in a non-scary, age-appropriate way. However, I recommend that adults review the content first and be available to answer any questions children might have while reading.',
     category: 'Family'
   },
   {
     id: 'update-frequency',
     question: 'How often is the information updated?',
-    answer: 'We regularly review and update our content to ensure it remains current and accurate. Medical knowledge is constantly evolving, and we strive to reflect the most current understanding of health conditions. If you notice any information that seems outdated or incorrect, please let us know so we can investigate and make necessary updates.',
+    answer: 'I regularly review and update the content to ensure it remains current and accurate. Medical knowledge is constantly evolving, and I strive to reflect the most current understanding of health conditions. If you notice any information that seems outdated or incorrect, please let us know so we can investigate and make necessary updates.',
     category: 'About'
   }
 ];
