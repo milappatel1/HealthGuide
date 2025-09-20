@@ -459,7 +459,7 @@ export const diseases: Disease[] = [
   },
   severity: 'mild',
   commonness: 'common'
-}
+},
 
   // =============================================================================
   // RESPIRATORY DISEASES
