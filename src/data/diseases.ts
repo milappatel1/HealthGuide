@@ -338,7 +338,7 @@ export const diseases: Disease[] = [
     'Wound care for ulcers'
   ],
   prevention: [
-    'Don't smoke',
+    'Do not smoke',
     'Exercise regularly',
     'Eat heart-healthy diet',
     'Control diabetes and blood pressure',
