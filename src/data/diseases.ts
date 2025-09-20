@@ -133,6 +133,113 @@ export const diseases: Disease[] = [
   commonness: 'very-common'
 },
 
+  {
+  id: 'heart-failure',
+  name: 'Heart Failure',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A chronic condition where the heart cannot pump blood effectively enough to meet the body’s needs.',
+  symptoms: [
+    'Shortness of breath (especially lying down)',
+    'Swelling in legs, ankles, or abdomen',
+    'Fatigue and weakness',
+    'Rapid or irregular heartbeat',
+    'Persistent cough or wheezing',
+    'Sudden weight gain from fluid buildup'
+  ],
+  causes: [
+    'Coronary artery disease',
+    'High blood pressure',
+    'Heart attack damage',
+    'Valve disease',
+    'Cardiomyopathy',
+    'Diabetes',
+    'Obesity'
+  ],
+  diagnosis: [
+    'Physical exam and history',
+    'Echocardiogram',
+    'Electrocardiogram (ECG)',
+    'Chest X-ray',
+    'Blood tests (BNP/NT-proBNP)',
+    'Cardiac MRI or CT'
+  ],
+  treatment: [
+    'Medications (ACE inhibitors, beta-blockers, diuretics)',
+    'Lifestyle modifications',
+    'Implantable devices (pacemaker, defibrillator)',
+    'Surgery (valve repair, bypass)',
+    'Heart transplant (severe cases)'
+  ],
+  prevention: [
+    'Manage blood pressure and cholesterol',
+    'Exercise regularly',
+    'Eat a heart-healthy diet',
+    'Quit smoking',
+    'Control diabetes',
+    'Limit alcohol'
+  ],
+  simpleExplanation: {
+    whatIs: 'Heart failure means the heart is weak and can’t pump blood well enough, like a pump that’s losing power.',
+    howYouGet: 'It usually happens after years of heart damage from things like high blood pressure, heart attacks, or clogged arteries.',
+    howToFeel: 'You may feel short of breath, swollen in your legs, and tired all the time.',
+    howToGetBetter: 'Medicines, lifestyle changes, and sometimes devices or surgery can help your heart work better.'
+  },
+  severity: 'severe',
+  commonness: 'common'
+},
+
+{
+  id: 'hypertension',
+  name: 'Hypertension (High Blood Pressure)',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A chronic condition where the force of the blood against artery walls is consistently too high, increasing the risk of heart disease and stroke.',
+  symptoms: [
+    'Often none (silent condition)',
+    'Headaches (sometimes)',
+    'Dizziness',
+    'Blurred vision',
+    'Nosebleeds (rare, in severe cases)'
+  ],
+  causes: [
+    'Genetics and family history',
+    'Obesity',
+    'High salt diet',
+    'Lack of physical activity',
+    'Stress',
+    'Excessive alcohol use',
+    'Chronic kidney disease'
+  ],
+  diagnosis: [
+    'Blood pressure measurement',
+    'Ambulatory blood pressure monitoring',
+    'Blood and urine tests',
+    'Electrocardiogram (ECG)',
+    'Echocardiogram (if complications suspected)'
+  ],
+  treatment: [
+    'Lifestyle changes (diet, exercise, stress management)',
+    'Medications (diuretics, ACE inhibitors, beta-blockers, calcium channel blockers)',
+    'Regular monitoring'
+  ],
+  prevention: [
+    'Maintain healthy weight',
+    'Eat low-salt, balanced diet',
+    'Exercise regularly',
+    'Limit alcohol and avoid smoking',
+    'Manage stress'
+  ],
+  simpleExplanation: {
+    whatIs: 'High blood pressure means your blood pushes too hard on your blood vessels, like too much water pressure in a hose.',
+    howYouGet: 'It comes from eating too much salt, being overweight, stress, or family history. It often sneaks up without symptoms.',
+    howToFeel: 'Usually you won’t feel it, but sometimes you may get headaches or dizziness.',
+    howToGetBetter: 'Healthy lifestyle and medicines help keep blood pressure normal and protect your heart, kidneys, and brain.'
+  },
+  severity: 'moderate',
+  commonness: 'very-common'
+},
+
   // =============================================================================
   // RESPIRATORY DISEASES
   // =============================================================================
@@ -247,6 +354,102 @@ export const diseases: Disease[] = [
   },
   severity: 'severe',
   commonness: 'common'
+},
+
+  {
+  id: 'pneumonia',
+  name: 'Pneumonia',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'An infection that inflames the air sacs in one or both lungs, which may fill with fluid or pus.',
+  symptoms: [
+    'Cough with phlegm or pus',
+    'Fever and chills',
+    'Shortness of breath',
+    'Chest pain when breathing or coughing',
+    'Fatigue',
+    'Nausea, vomiting, or diarrhea'
+  ],
+  causes: [
+    'Bacterial infection (Streptococcus pneumoniae most common)',
+    'Viral infections (influenza, RSV, COVID-19)',
+    'Fungal infections (rare, in immunocompromised)',
+    'Aspiration of food or liquids'
+  ],
+  diagnosis: [
+    'Medical history and physical exam',
+    'Chest X-ray',
+    'Blood tests',
+    'Sputum culture',
+    'Pulse oximetry',
+    'CT scan (if needed)'
+  ],
+  treatment: [
+    'Antibiotics (for bacterial)',
+    'Antiviral or antifungal drugs (if indicated)',
+    'Fever reducers and pain relievers',
+    'Rest and fluids',
+    'Hospitalization with oxygen (severe cases)'
+  ],
+  prevention: [
+    'Vaccination (pneumococcal, flu, COVID-19)',
+    'Good hygiene',
+    'Avoid smoking',
+    'Strengthen immune system with healthy lifestyle'
+  ],
+  simpleExplanation: {
+    whatIs: 'Pneumonia is a lung infection that fills your air sacs with fluid, making it hard to breathe.',
+    howYouGet: 'It comes from bacteria, viruses, or fungi getting into your lungs, especially if your immune system is weak.',
+    howToFeel: 'You’ll cough, have fever, chest pain, and feel very tired. Breathing will be harder.',
+    howToGetBetter: 'Doctors use antibiotics or other medicines, plus rest and fluids. Sometimes you need hospital care with oxygen.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
+
+{
+  id: 'tuberculosis',
+  name: 'Tuberculosis (TB)',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A serious infectious disease caused by Mycobacterium tuberculosis bacteria, primarily affecting the lungs but can spread to other organs.',
+  symptoms: [
+    'Persistent cough (3+ weeks)',
+    'Coughing up blood or sputum',
+    'Chest pain',
+    'Unintentional weight loss',
+    'Night sweats',
+    'Fever and chills',
+    'Fatigue'
+  ],
+  causes: [
+    'Infection with Mycobacterium tuberculosis',
+    'Spread through airborne droplets when an infected person coughs or sneezes'
+  ],
+  diagnosis: [
+    'Tuberculin skin test (Mantoux test)',
+    'Blood tests (IGRA)',
+    'Chest X-ray',
+    'Sputum smear and culture'
+  ],
+  treatment: [
+    'Combination antibiotic therapy (isoniazid, rifampin, ethambutol, pyrazinamide)',
+    '6–9 months treatment duration',
+    'Directly observed therapy (DOT) for adherence'
+  ],
+  prevention: [
+    'BCG vaccination (in high-risk areas)',
+    'Good ventilation in crowded spaces',
+    'Early detection and treatment of active cases'
+  ],
+  simpleExplanation: {
+    whatIs: 'TB is a lung infection that spreads through the air when someone sick coughs or sneezes.',
+    howYouGet: 'You can catch it if you spend time with someone who has active TB and you breathe in the bacteria.',
+    howToFeel: 'You’ll cough a lot, maybe cough up blood, lose weight, sweat at night, and feel weak.',
+    howToGetBetter: 'Doctors use a mix of antibiotics for many months to kill the bacteria and stop it from spreading.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
 },
 
 
