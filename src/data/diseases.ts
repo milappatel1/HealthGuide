@@ -180,7 +180,7 @@ export const diseases: Disease[] = [
     'Limit alcohol'
   ],
   simpleExplanation: {
-    whatIs: 'Heart failure means the heart is weak and can not pump blood well enough, like a pump that’s losing power.',
+    whatIs: 'Heart failure means the heart is weak and can not pump blood well enough, like a pump that is losing power.',
     howYouGet: 'It usually happens after years of heart damage from things like high blood pressure, heart attacks, or clogged arteries.',
     howToFeel: 'You may feel short of breath, swollen in your legs, and tired all the time.',
     howToGetBetter: 'Medicines, lifestyle changes, and sometimes devices or surgery can help your heart work better.'
