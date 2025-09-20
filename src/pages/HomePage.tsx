@@ -110,7 +110,7 @@ const HomePage: React.FC = () => {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-              Common Conditions
+              Commonly Visited Conditions
             </h2>
             <p className="text-gray-600 dark:text-gray-400">
               Learn about the most frequently asked about health conditions
