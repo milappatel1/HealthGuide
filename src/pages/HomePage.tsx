@@ -11,45 +11,45 @@ const HomePage: React.FC = () => {
   return (
     <div className="space-y-12 sm:space-y-16">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
-          <div className="text-center space-y-6 sm:space-y-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-              Understanding Health
-              <span className="block bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-                Made Simple
-              </span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Learn about medical conditions, symptoms, and treatments in clear, 
-              easy-to-understand language. Perfect for patients, families, and anyone 
-              curious about health.
-            </p>
+     <section className="relative overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+    <div className="text-center space-y-6 sm:space-y-8">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-snug sm:leading-tight break-words">
+        Understanding Health
+        <span className="block bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          Made Simple
+        </span>
+      </h1>
+      <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-full sm:max-w-3xl mx-auto leading-relaxed break-words">
+        Learn about medical conditions, symptoms, and treatments in clear, 
+        easy-to-understand language. Perfect for patients, families, and anyone 
+        curious about health.
+      </p>
 
-            {/* Search Bar */}
-            <div className="max-w-md sm:max-w-lg mx-auto mt-4">
-              <SearchBar />
-            </div>
+      {/* Search Bar */}
+      <div className="max-w-md sm:max-w-lg mx-auto mt-4">
+        <SearchBar />
+      </div>
 
-            {/* Quick Stats */}
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8 sm:mt-12">
-              {[
-                { value: `${diseases.length}+`, label: 'Conditions Explained', color: 'text-blue-600 dark:text-blue-400' },
-                { value: bodySystems.length, label: 'Body Systems', color: 'text-green-600 dark:text-green-400' },
-                { value: '100%', label: 'Free Access', color: 'text-purple-600 dark:text-purple-400' },
-              ].map((stat, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl px-6 py-4 border border-gray-200 dark:border-gray-700 w-36 text-center"
-                >
-                  <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+      {/* Quick Stats */}
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8 sm:mt-12">
+        {[
+          { value: `${diseases.length}+`, label: 'Conditions Explained', color: 'text-blue-600 dark:text-blue-400' },
+          { value: bodySystems.length, label: 'Body Systems', color: 'text-green-600 dark:text-green-400' },
+          { value: '100%', label: 'Free Access', color: 'text-purple-600 dark:text-purple-400' },
+        ].map((stat, idx) => (
+          <div
+            key={idx}
+            className="bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl px-4 sm:px-6 py-3 sm:py-4 border border-gray-200 dark:border-gray-700 w-32 sm:w-36 text-center"
+          >
+            <div className={`text-xl sm:text-2xl font-bold ${stat.color}`}>{stat.value}</div>
+            <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Features Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
