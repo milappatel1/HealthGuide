@@ -893,7 +893,7 @@ export const diseases: Disease[] = [
   },
   severity: 'severe',
   commonness: 'common'
-}
+},
 
 
   // =============================================================================
