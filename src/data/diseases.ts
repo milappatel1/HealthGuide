@@ -774,62 +774,6 @@ export const diseases: Disease[] = [
   severity: 'severe',
   commonness: 'rare'
 },
-  
-{
-  id: 'pulmonary-embolism',
-  name: 'Pulmonary Embolism',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A blockage in one of the pulmonary arteries in the lungs, usually caused by blood clots that travel from the legs or other parts of the body.',
-  symptoms: [
-    'Sudden shortness of breath',
-    'Sharp chest pain that worsens with deep breathing',
-    'Coughing up blood',
-    'Rapid heartbeat',
-    'Dizziness or fainting',
-    'Swelling in one leg (from DVT)',
-    'Anxiety or feeling of doom'
-  ],
-  causes: [
-    'Deep vein thrombosis (DVT)',
-    'Prolonged immobility (flights, bed rest)',
-    'Recent surgery',
-    'Cancer',
-    'Smoking',
-    'Hormonal therapy or birth control pills',
-    'Genetic clotting disorders'
-  ],
-  diagnosis: [
-    'CT pulmonary angiography',
-    'Ventilation-perfusion (V/Q) scan',
-    'D-dimer blood test',
-    'Doppler ultrasound of legs',
-    'Chest X-ray',
-    'Electrocardiogram (to rule out heart cause)'
-  ],
-  treatment: [
-    'Anticoagulants (blood thinners)',
-    'Thrombolytics (clot-busting drugs)',
-    'Surgical clot removal (embolectomy)',
-    'Inferior vena cava (IVC) filter placement',
-    'Oxygen therapy'
-  ],
-  prevention: [
-    'Move regularly during long travel or bed rest',
-    'Wear compression stockings',
-    'Stay hydrated',
-    'Take prescribed blood thinners after surgery',
-    'Quit smoking'
-  ],
-  simpleExplanation: {
-    whatIs: 'A blood clot travels to your lungs and blocks blood flow.',
-    howYouGet: 'Usually it starts as a clot in your leg that breaks off and gets stuck in your lung arteries.',
-    howToFeel: 'Sudden chest pain, trouble breathing, and sometimes coughing blood.',
-    howToGetBetter: 'Doctors give blood thinners or special drugs to break up the clot, and sometimes surgery if it’s very big.'
-  },
-  severity: 'severe',
-  commonness: 'common'
-},
 
   {
   id: 'copd',
