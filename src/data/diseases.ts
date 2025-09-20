@@ -240,6 +240,227 @@ export const diseases: Disease[] = [
   commonness: 'very-common'
 },
 
+  {
+  id: 'stroke',
+  name: 'Stroke',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A medical emergency that occurs when blood flow to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients.',
+  symptoms: [
+    'Sudden numbness or weakness in face, arm, or leg',
+    'Sudden confusion or trouble speaking',
+    'Sudden trouble seeing in one or both eyes',
+    'Sudden trouble walking or loss of balance',
+    'Sudden severe headache',
+    'Drooping face on one side',
+    'Difficulty understanding speech'
+  ],
+  causes: [
+    'Blood clot blocking brain artery (ischemic stroke)',
+    'Bleeding in the brain (hemorrhagic stroke)',
+    'High blood pressure',
+    'Atrial fibrillation',
+    'Diabetes',
+    'High cholesterol',
+    'Smoking'
+  ],
+  diagnosis: [
+    'CT scan or MRI of brain',
+    'Blood tests',
+    'Electrocardiogram (ECG)',
+    'Carotid ultrasound',
+    'Echocardiogram',
+    'Neurological examination'
+  ],
+  treatment: [
+    'Clot-busting medications (if ischemic)',
+    'Emergency surgery (if hemorrhagic)',
+    'Blood pressure management',
+    'Physical and speech therapy',
+    'Occupational therapy',
+    'Long-term rehabilitation'
+  ],
+  prevention: [
+    'Control blood pressure and cholesterol',
+    'Don't smoke',
+    'Limit alcohol',
+    'Exercise regularly',
+    'Eat healthy diet',
+    'Manage diabetes',
+    'Treat atrial fibrillation'
+  ],
+  simpleExplanation: {
+    whatIs: 'A stroke happens when blood can't get to part of your brain, either because a blood vessel gets blocked or bursts. Without blood, brain cells start to die.',
+    howYouGet: 'It usually happens when you have high blood pressure, irregular heartbeat, or clogged arteries for a long time.',
+    howToFeel: 'You might suddenly feel weak on one side, have trouble speaking, or feel confused. Your face might droop on one side.',
+    howToGetBetter: 'Getting to the hospital fast is crucial. Doctors can use medicines or surgery to restore blood flow and prevent more damage.'
+  },
+  severity: 'severe',
+  commonness: 'common'
+},
+
+{
+  id: 'peripheral-artery-disease',
+  name: 'Peripheral Artery Disease (PAD)',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A condition where narrowed arteries reduce blood flow to the limbs, usually the legs, causing pain and increasing risk of infection.',
+  symptoms: [
+    'Leg pain when walking (claudication)',
+    'Coldness in lower leg or foot',
+    'Numbness or weakness in legs',
+    'Slow-healing sores on legs or feet',
+    'Shiny skin on legs',
+    'Hair loss on legs',
+    'Weak pulse in legs or feet'
+  ],
+  causes: [
+    'Atherosclerosis (plaque buildup in arteries)',
+    'Smoking',
+    'Diabetes',
+    'High blood pressure',
+    'High cholesterol',
+    'Age over 65',
+    'Family history'
+  ],
+  diagnosis: [
+    'Ankle-brachial index (ABI) test',
+    'Ultrasound',
+    'Angiography',
+    'Blood tests',
+    'Physical examination'
+  ],
+  treatment: [
+    'Lifestyle changes (exercise, quit smoking)',
+    'Medications (blood thinners, cholesterol drugs)',
+    'Angioplasty and stenting',
+    'Bypass surgery',
+    'Wound care for ulcers'
+  ],
+  prevention: [
+    'Don't smoke',
+    'Exercise regularly',
+    'Eat heart-healthy diet',
+    'Control diabetes and blood pressure',
+    'Manage cholesterol'
+  ],
+  simpleExplanation: {
+    whatIs: 'PAD is when the blood vessels in your legs get clogged, so less blood flows to your leg muscles and feet.',
+    howYouGet: 'It happens the same way heart disease does - from smoking, diabetes, high blood pressure, or high cholesterol over time.',
+    howToFeel: 'Your legs will hurt when you walk, and they might feel cold or numb. Cuts on your legs may heal slowly.',
+    howToGetBetter: 'Doctors help open the blocked arteries and give medicines to improve blood flow. Exercise and quitting smoking are very important.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
+
+{
+  id: 'deep-vein-thrombosis',
+  name: 'Deep Vein Thrombosis (DVT)',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A blood clot that forms in a deep vein, usually in the legs, which can be life-threatening if it travels to the lungs.',
+  symptoms: [
+    'Swelling in affected leg',
+    'Pain or tenderness in leg',
+    'Red or discolored skin',
+    'Warm feeling in affected area',
+    'Enlarged veins',
+    'Sometimes no symptoms'
+  ],
+  causes: [
+    'Prolonged sitting or bed rest',
+    'Surgery or injury',
+    'Pregnancy',
+    'Birth control pills or hormone therapy',
+    'Cancer',
+    'Inherited blood clotting disorders',
+    'Obesity'
+  ],
+  diagnosis: [
+    'Ultrasound of veins',
+    'D-dimer blood test',
+    'CT or MRI scan',
+    'Venography (contrast dye X-ray)'
+  ],
+  treatment: [
+    'Blood thinners (anticoagulants)',
+    'Clot-busting drugs (severe cases)',
+    'Compression stockings',
+    'Vena cava filter (if can't take blood thinners)',
+    'Thrombectomy (surgical clot removal)'
+  ],
+  prevention: [
+    'Move regularly during long trips',
+    'Exercise regularly',
+    'Maintain healthy weight',
+    'Wear compression stockings if at risk',
+    'Stay hydrated'
+  ],
+  simpleExplanation: {
+    whatIs: 'DVT is when your blood forms a clot in a deep vein, usually in your leg, like thick jelly blocking a straw.',
+    howYouGet: 'It happens when blood moves too slowly, often from sitting too long, after surgery, or from certain medications.',
+    howToFeel: 'Your leg might swell up, hurt, and feel warm. The dangerous part is if the clot breaks off and goes to your lungs.',
+    howToGetBetter: 'Doctors give blood-thinning medicines to dissolve the clot and prevent new ones. Moving around helps prevent it.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'varicose-veins',
+  name: 'Varicose Veins',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'Enlarged, twisted veins that are visible under the skin, most commonly in the legs, caused by weakened vein walls and valves.',
+  symptoms: [
+    'Bulging, twisted veins visible under skin',
+    'Aching or heavy feeling in legs',
+    'Burning or throbbing in legs',
+    'Muscle cramping and swelling',
+    'Worsened pain after sitting or standing',
+    'Itching around veins',
+    'Skin discoloration around veins'
+  ],
+  causes: [
+    'Weakened vein valves',
+    'Age (weakened vein walls)',
+    'Pregnancy (increased blood volume)',
+    'Family history',
+    'Prolonged standing',
+    'Obesity',
+    'Female hormones'
+  ],
+  diagnosis: [
+    'Physical examination',
+    'Ultrasound to check blood flow',
+    'Medical history review'
+  ],
+  treatment: [
+    'Compression stockings',
+    'Exercise and leg elevation',
+    'Sclerotherapy (injection treatment)',
+    'Laser treatment',
+    'Radiofrequency treatment',
+    'Surgery (vein stripping, phlebectomy)'
+  ],
+  prevention: [
+    'Exercise regularly',
+    'Maintain healthy weight',
+    'Avoid prolonged standing or sitting',
+    'Elevate legs when resting',
+    'Wear compression stockings'
+  ],
+  simpleExplanation: {
+    whatIs: 'Varicose veins are when the veins in your legs get stretched out and twisted because the little doors (valves) inside them don't close properly.',
+    howYouGet: 'It happens when you stand a lot, are pregnant, or have family members with the same problem. Age makes vein walls weaker.',
+    howToFeel: 'Your legs might ache, feel heavy, or cramp. You can see the twisted, bulging veins under your skin.',
+    howToGetBetter: 'Doctors can close off the bad veins with injections, lasers, or surgery. Wearing special stockings and elevating your legs helps too.'
+  },
+  severity: 'mild',
+  commonness: 'common'
+}
+
   // =============================================================================
   // RESPIRATORY DISEASES
   // =============================================================================
