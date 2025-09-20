@@ -673,6 +673,228 @@ export const diseases: Disease[] = [
   commonness: 'uncommon'
 },
 
+{
+  id: 'bronchitis-acute',
+  name: 'Acute Bronchitis',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A temporary inflammation of the lining of bronchial tubes that carry air to the lungs, usually caused by viral infections.',
+  symptoms: [
+    'Cough (may produce mucus)',
+    'Fatigue',
+    'Shortness of breath',
+    'Slight fever and chills',
+    'Chest discomfort',
+    'Sore throat',
+    'Body aches'
+  ],
+  causes: [
+    'Viral infections (cold or flu viruses)',
+    'Bacterial infections (less common)',
+    'Exposure to irritants (smoke, dust, fumes)',
+    'Air pollution'
+  ],
+  diagnosis: [
+    'Physical examination',
+    'Medical history',
+    'Chest X-ray (to rule out pneumonia)',
+    'Sputum test (if bacterial suspected)'
+  ],
+  treatment: [
+    'Rest and fluids',
+    'Cough suppressants',
+    'Pain relievers',
+    'Humidifier use',
+    'Antibiotics (only if bacterial)',
+    'Bronchodilators (if wheezing present)'
+  ],
+  prevention: [
+    'Wash hands frequently',
+    'Avoid smoking and secondhand smoke',
+    'Get flu vaccination',
+    'Wear mask around sick people',
+    'Avoid air pollutants'
+  ],
+  simpleExplanation: {
+    whatIs: 'Acute bronchitis is when the tubes that carry air to your lungs get irritated and swollen, usually from a cold or flu.',
+    howYouGet: 'Most of the time it comes from the same viruses that cause colds, or from breathing in irritating things like smoke.',
+    howToFeel: 'You'll have a nagging cough that may bring up mucus, feel tired, and have some chest discomfort.',
+    howToGetBetter: 'It usually goes away on its own with rest, fluids, and time. Cough medicine can help you feel more comfortable.'
+  },
+  severity: 'mild',
+  commonness: 'very-common'
+},
+
+{
+  id: 'sleep-apnea',
+  name: 'Sleep Apnea',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A serious sleep disorder where breathing repeatedly stops and starts during sleep, disrupting rest and oxygen levels.',
+  symptoms: [
+    'Loud snoring',
+    'Gasping for air during sleep',
+    'Morning headaches',
+    'Excessive daytime sleepiness',
+    'Difficulty concentrating',
+    'Irritability',
+    'High blood pressure'
+  ],
+  causes: [
+    'Throat muscles relaxing too much',
+    'Obesity (extra tissue blocking airways)',
+    'Large neck circumference',
+    'Narrowed airways',
+    'Family history',
+    'Age (more common in older adults)',
+    'Male gender'
+  ],
+  diagnosis: [
+    'Sleep study (polysomnography)',
+    'Home sleep test',
+    'Medical history and physical exam',
+    'Assessment of daytime sleepiness'
+  ],
+  treatment: [
+    'CPAP (continuous positive airway pressure) machine',
+    'Weight loss',
+    'Oral appliances',
+    'Positional therapy',
+    'Surgery (severe cases)',
+    'Lifestyle changes'
+  ],
+  prevention: [
+    'Maintain healthy weight',
+    'Exercise regularly',
+    'Avoid alcohol and sedatives',
+    'Sleep on your side',
+    'Quit smoking'
+  ],
+  simpleExplanation: {
+    whatIs: 'Sleep apnea is when you stop breathing many times during sleep because your throat closes up, then you wake up gasping for air.',
+    howYouGet: 'It usually happens when you're overweight, have a thick neck, or your throat muscles are too relaxed during sleep.',
+    howToFeel: 'You'll snore loudly, feel very tired during the day even after sleeping, and may wake up with headaches.',
+    howToGetBetter: 'Doctors often prescribe a CPAP machine that keeps your airways open while you sleep. Losing weight also helps a lot.'
+  },
+  severity: 'severe',
+  commonness: 'common'
+},
+
+{
+  id: 'pulmonary-embolism',
+  name: 'Pulmonary Embolism (PE)',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A life-threatening condition where a blood clot blocks an artery in the lungs, preventing blood flow and oxygen exchange.',
+  symptoms: [
+    'Sudden shortness of breath',
+    'Sharp chest pain (worse with breathing)',
+    'Coughing up blood',
+    'Rapid heart rate',
+    'Dizziness or fainting',
+    'Leg pain or swelling',
+    'Excessive sweating'
+  ],
+  causes: [
+    'Blood clot from deep vein thrombosis (DVT)',
+    'Prolonged immobility',
+    'Surgery or trauma',
+    'Cancer',
+    'Pregnancy',
+    'Birth control pills',
+    'Inherited clotting disorders'
+  ],
+  diagnosis: [
+    'CT pulmonary angiogram (CTPA)',
+    'D-dimer blood test',
+    'Chest X-ray',
+    'Echocardiogram',
+    'Arterial blood gas test',
+    'Ultrasound of legs'
+  ],
+  treatment: [
+    'Anticoagulant medications (blood thinners)',
+    'Thrombolytic therapy (clot-busting drugs)',
+    'Embolectomy (surgical clot removal)',
+    'Vena cava filter',
+    'Oxygen therapy',
+    'Hospitalization for monitoring'
+  ],
+  prevention: [
+    'Move regularly during long trips',
+    'Exercise regularly',
+    'Wear compression stockings',
+    'Stay hydrated',
+    'Take prescribed blood thinners if at risk'
+  ],
+  simpleExplanation: {
+    whatIs: 'A pulmonary embolism is when a blood clot travels to your lungs and blocks blood flow, like a cork stuck in a bottle.',
+    howYouGet: 'It usually starts as a clot in your leg that breaks off and travels through your blood to your lungs.',
+    howToFeel: 'You'll suddenly have trouble breathing, sharp chest pain, and may cough up blood. It can be life-threatening.',
+    howToGetBetter: 'This is a medical emergency requiring immediate hospital treatment with blood-thinning medicines or procedures to remove the clot.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'lung-cancer',
+  name: 'Lung Cancer',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A type of cancer that begins in the lungs, most commonly caused by smoking, and can spread to other parts of the body.',
+  symptoms: [
+    'Persistent cough that worsens',
+    'Coughing up blood',
+    'Chest pain',
+    'Shortness of breath',
+    'Hoarseness',
+    'Unexplained weight loss',
+    'Bone pain',
+    'Fatigue'
+  ],
+  causes: [
+    'Smoking (leading cause)',
+    'Secondhand smoke exposure',
+    'Radon gas exposure',
+    'Asbestos exposure',
+    'Air pollution',
+    'Family history',
+    'Previous radiation therapy'
+  ],
+  diagnosis: [
+    'Chest X-ray',
+    'CT scan of chest',
+    'Sputum cytology',
+    'Tissue biopsy',
+    'PET scan',
+    'Molecular testing of tumor'
+  ],
+  treatment: [
+    'Surgery (if early stage)',
+    'Chemotherapy',
+    'Radiation therapy',
+    'Targeted therapy',
+    'Immunotherapy',
+    'Palliative care'
+  ],
+  prevention: [
+    'Don't smoke or quit if you smoke',
+    'Avoid secondhand smoke',
+    'Test home for radon',
+    'Avoid carcinogens at work',
+    'Eat healthy diet with fruits and vegetables'
+  ],
+  simpleExplanation: {
+    whatIs: 'Lung cancer is when cells in your lungs grow out of control and form tumors that can spread to other parts of your body.',
+    howYouGet: 'Smoking is the main cause, but you can also get it from breathing in other harmful things like radon gas or asbestos.',
+    howToFeel: 'You may have a cough that won't go away, cough up blood, lose weight without trying, and feel very tired.',
+    howToGetBetter: 'Treatment depends on the type and stage, and may include surgery, chemotherapy, or radiation. Quitting smoking improves outcomes.'
+  },
+  severity: 'severe',
+  commonness: 'common'
+}
+
 
   // =============================================================================
   // ENDOCRINE/METABOLIC DISEASES
