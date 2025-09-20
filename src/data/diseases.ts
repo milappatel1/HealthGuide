@@ -180,7 +180,7 @@ export const diseases: Disease[] = [
     'Limit alcohol'
   ],
   simpleExplanation: {
-    whatIs: 'Heart failure means the heart is weak and can’t pump blood well enough, like a pump that’s losing power.',
+    whatIs: 'Heart failure means the heart is weak and can not pump blood well enough, like a pump that’s losing power.',
     howYouGet: 'It usually happens after years of heart damage from things like high blood pressure, heart attacks, or clogged arteries.',
     howToFeel: 'You may feel short of breath, swollen in your legs, and tired all the time.',
     howToGetBetter: 'Medicines, lifestyle changes, and sometimes devices or surgery can help your heart work better.'
@@ -290,7 +290,7 @@ export const diseases: Disease[] = [
     'Treat atrial fibrillation'
   ],
   simpleExplanation: {
-    whatIs: 'A stroke happens when blood can't get to part of your brain, either because a blood vessel gets blocked or bursts. Without blood, brain cells start to die.',
+    whatIs: 'A stroke happens when blood can not get to part of your brain, either because a blood vessel gets blocked or bursts. Without blood, brain cells start to die.',
     howYouGet: 'It usually happens when you have high blood pressure, irregular heartbeat, or clogged arteries for a long time.',
     howToFeel: 'You might suddenly feel weak on one side, have trouble speaking, or feel confused. Your face might droop on one side.',
     howToGetBetter: 'Getting to the hospital fast is crucial. Doctors can use medicines or surgery to restore blood flow and prevent more damage.'
@@ -452,7 +452,7 @@ export const diseases: Disease[] = [
     'Wear compression stockings'
   ],
   simpleExplanation: {
-    whatIs: 'Varicose veins are when the veins in your legs get stretched out and twisted because the little doors (valves) inside them don't close properly.',
+    whatIs: 'Varicose veins are when the veins in your legs get stretched out and twisted because the little doors (valves) inside them do not close properly.',
     howYouGet: 'It happens when you stand a lot, are pregnant, or have family members with the same problem. Age makes vein walls weaker.',
     howToFeel: 'Your legs might ache, feel heavy, or cramp. You can see the twisted, bulging veins under your skin.',
     howToGetBetter: 'Doctors can close off the bad veins with injections, lasers, or surgery. Wearing special stockings and elevating your legs helps too.'
