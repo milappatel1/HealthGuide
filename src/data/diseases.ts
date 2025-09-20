@@ -282,7 +282,7 @@ export const diseases: Disease[] = [
   ],
   prevention: [
     'Control blood pressure and cholesterol',
-    'Don't smoke',
+    'Do not smoke',
     'Limit alcohol',
     'Exercise regularly',
     'Eat healthy diet',
