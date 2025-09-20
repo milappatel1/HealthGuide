@@ -1704,6 +1704,180 @@ export const diseases: Disease[] = [
   commonness: 'uncommon'
 },
 
+  {
+  id: 'fibromyalgia',
+  name: 'Fibromyalgia',
+  category: 'Musculoskeletal',
+  bodySystem: 'musculoskeletal',
+  summary: 'A disorder characterized by widespread musculoskeletal pain, accompanied by fatigue, sleep, memory, and mood issues.',
+  symptoms: [
+    'Widespread muscle pain and tenderness',
+    'Chronic fatigue',
+    'Sleep disturbances',
+    'Morning stiffness',
+    'Headaches',
+    'Difficulty concentrating ("fibro fog")',
+    'Depression and anxiety',
+    'Irritable bowel syndrome',
+    'Sensitivity to temperature, light, and sound'
+  ],
+  causes: [
+    'Abnormal pain processing in the brain',
+    'Genetics and family history',
+    'Physical or emotional trauma',
+    'Infections',
+    'Sleep disorders',
+    'Stress',
+    'Other rheumatic conditions'
+  ],
+  diagnosis: [
+    'Clinical examination (tender point test)',
+    'Medical history and symptom assessment',
+    'Blood tests (to rule out other conditions)',
+    'No specific lab test for fibromyalgia',
+    'American College of Rheumatology criteria'
+  ],
+  treatment: [
+    'Pain medications (gabapentin, pregabalin)',
+    'Antidepressants (duloxetine, milnacipran)',
+    'Physical therapy',
+    'Regular exercise (low-impact)',
+    'Stress management',
+    'Cognitive behavioral therapy',
+    'Sleep improvement strategies'
+  ],
+  prevention: [
+    'No known prevention',
+    'Manage stress effectively',
+    'Get regular exercise',
+    'Maintain good sleep hygiene',
+    'Early treatment of symptoms'
+  ],
+  simpleExplanation: {
+    whatIs: 'Fibromyalgia is when your nervous system becomes overly sensitive to pain signals, making your muscles and joints hurt even when there\'s no injury.',
+    howYouGet: 'It may be triggered by stress, trauma, infections, or genetics, but doctors don\'t know exactly what causes the pain processing to go wrong.',
+    howToFeel: 'You\'ll have widespread muscle pain, feel exhausted, have trouble sleeping, and may feel mentally foggy or forgetful.',
+    howToGetBetter: 'There\'s no cure, but medicines, gentle exercise, stress management, and good sleep habits can help reduce pain and improve quality of life.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
+
+{
+  id: 'osteoporosis',
+  name: 'Osteoporosis',
+  category: 'Musculoskeletal',
+  bodySystem: 'musculoskeletal',
+  summary: 'A bone disease that occurs when the body loses too much bone, makes too little bone, or both, leading to weak and brittle bones.',
+  symptoms: [
+    'Often no symptoms until fracture occurs',
+    'Back pain (from vertebral fractures)',
+    'Loss of height over time',
+    'Stooped posture',
+    'Bone fractures from minor falls',
+    'Easily broken wrist, hip, or spine'
+  ],
+  causes: [
+    'Hormonal changes (especially menopause)',
+    'Age-related bone loss',
+    'Calcium and vitamin D deficiency',
+    'Lack of physical activity',
+    'Smoking and excessive alcohol',
+    'Certain medications (steroids)',
+    'Family history',
+    'Small body frame'
+  ],
+  diagnosis: [
+    'Bone density scan (DEXA scan)',
+    'Medical history and physical exam',
+    'Blood tests (calcium, vitamin D)',
+    'X-rays (may show fractures)',
+    'Risk assessment tools'
+  ],
+  treatment: [
+    'Bisphosphonate medications',
+    'Hormone therapy (in some cases)',
+    'Calcium and vitamin D supplements',
+    'Weight-bearing exercises',
+    'Fall prevention strategies',
+    'Lifestyle modifications'
+  ],
+  prevention: [
+    'Get adequate calcium and vitamin D',
+    'Exercise regularly (weight-bearing and strength)',
+    'Don\'t smoke',
+    'Limit alcohol consumption',
+    'Prevent falls at home',
+    'Bone density screening'
+  ],
+  simpleExplanation: {
+    whatIs: 'Osteoporosis is when your bones become weak and brittle, like old wood that breaks easily, because your body isn\'t making enough new bone.',
+    howYouGet: 'It happens when you age, especially after menopause in women, or from not getting enough calcium, vitamin D, or exercise over time.',
+    howToFeel: 'You usually won\'t feel anything until you break a bone easily from a minor fall or bump. You might notice getting shorter or developing a hunched back.',
+    howToGetBetter: 'Doctors give medicines to strengthen bones, plus calcium and vitamin D supplements. Weight-bearing exercise helps build stronger bones.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
+
+{
+  id: 'gout',
+  name: 'Gout',
+  category: 'Musculoskeletal',
+  bodySystem: 'musculoskeletal',
+  summary: 'A form of inflammatory arthritis caused by too much uric acid in the blood, leading to painful crystal deposits in joints.',
+  symptoms: [
+    'Intense joint pain (often big toe)',
+    'Sudden onset of pain (often at night)',
+    'Swelling and redness in affected joint',
+    'Warmth in the joint',
+    'Limited range of motion',
+    'Tophi (hard lumps under skin)',
+    'Kidney stones (in some cases)'
+  ],
+  causes: [
+    'High levels of uric acid in blood',
+    'Diet high in purines (red meat, seafood, alcohol)',
+    'Obesity',
+    'Genetics and family history',
+    'Kidney disease',
+    'Certain medications (diuretics)',
+    'Medical conditions (hypertension, diabetes)'
+  ],
+  diagnosis: [
+    'Joint fluid analysis (uric acid crystals)',
+    'Blood test for uric acid levels',
+    'X-rays of affected joints',
+    'Ultrasound of joints',
+    'Dual-energy CT scan'
+  ],
+  treatment: [
+    'NSAIDs for acute attacks',
+    'Colchicine',
+    'Corticosteroids',
+    'Uric acid-lowering medications (allopurinol)',
+    'Dietary changes',
+    'Weight management',
+    'Increased fluid intake'
+  ],
+  prevention: [
+    'Limit high-purine foods',
+    'Reduce alcohol consumption',
+    'Maintain healthy weight',
+    'Stay well hydrated',
+    'Limit sugary drinks',
+    'Exercise regularly'
+  ],
+  simpleExplanation: {
+    whatIs: 'Gout is when too much uric acid in your blood forms sharp crystals in your joints, causing sudden, severe pain like glass shards in your joint.',
+    howYouGet: 'It happens when you eat too many foods high in purines (like red meat and beer), are overweight, or have kidney problems that can\'t clear uric acid well.',
+    howToFeel: 'You\'ll have sudden, intense pain in a joint (often your big toe) that comes on quickly, usually at night, with swelling and redness.',
+    howToGetBetter: 'Doctors give medicine for the pain during attacks and other medicines to keep uric acid levels low. Changing your diet helps prevent future attacks.'
+  },
+  severity: 'moderate',
+  commonness: 'uncommon'
+},
+
   // =============================================================================
   // MENTAL HEALTH CONDITIONS
   // =============================================================================
