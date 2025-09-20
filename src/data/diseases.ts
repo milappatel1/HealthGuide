@@ -1588,7 +1588,7 @@ export const diseases: Disease[] = [
   },
   severity: 'severe',
   commonness: 'uncommon'
-}
+},
 
   // =============================================================================
   // MUSCULOSKELETAL DISEASES
