@@ -2754,57 +2754,7 @@ export const diseases: Disease[] = [
   severity: 'serious',
   commonness: 'common'
 },
-{
-  id: 'bipolar-disorder',
-  name: 'Bipolar Disorder',
-  category: 'Mental Health',
-  bodySystem: 'mental',
-  summary: 'A mental health condition characterized by extreme mood swings, including emotional highs (mania or hypomania) and lows (depression).',
-  symptoms: [
-    'Episodes of elevated mood or irritability (mania)',
-    'High energy, reduced need for sleep',
-    'Impulsive or risky behaviors',
-    'Depressive episodes (sadness, fatigue)',
-    'Difficulty concentrating',
-    'Mood swings affecting relationships',
-    'Thoughts of self-harm during depressive phases'
-  ],
-  causes: [
-    'Genetic predisposition',
-    'Neurochemical imbalances',
-    'Stressful life events',
-    'Hormonal changes',
-    'Environmental factors'
-  ],
-  diagnosis: [
-    'Psychiatric evaluation',
-    'Patient history and symptom tracking',
-    'Mood charts or diaries',
-    'Rule out medical or substance-related causes'
-  ],
-  treatment: [
-    'Mood stabilizers (lithium, valproate)',
-    'Antipsychotic medications',
-    'Psychotherapy (CBT, family therapy)',
-    'Lifestyle management (sleep, routine, stress)',
-    'Hospitalization during severe episodes'
-  ],
-  prevention: [
-    'Early recognition of mood swings',
-    'Adherence to medication',
-    'Regular sleep and activity schedules',
-    'Avoid alcohol and recreational drugs',
-    'Strong support system'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when your mood swings between very high energy and deep depression.',
-    howYouGet: 'Mostly genes and brain chemistry, sometimes triggered by stress or life events.',
-    howToFeel: 'You can feel unstoppable and energetic, then suddenly very sad and hopeless.',
-    howToGetBetter: 'Medication, therapy, and routine help keep your mood stable and reduce risky behaviors.'
-  },
-  severity: 'serious',
-  commonness: 'common'
-},
+
 {
   id: 'schizophrenia',
   name: 'Schizophrenia',
