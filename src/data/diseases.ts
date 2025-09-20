@@ -387,7 +387,7 @@ export const diseases: Disease[] = [
     'Blood thinners (anticoagulants)',
     'Clot-busting drugs (severe cases)',
     'Compression stockings',
-    'Vena cava filter (if can't take blood thinners)',
+    'Vena cava filter (if you can not take blood thinners)',
     'Thrombectomy (surgical clot removal)'
   ],
   prevention: [
