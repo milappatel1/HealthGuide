@@ -1317,6 +1317,152 @@ export const diseases: Disease[] = [
   commonness: 'very-common'
 },
 
+  {
+  id: 'cushings-syndrome',
+  name: 'Cushing’s Syndrome',
+  category: 'Endocrine/Metabolic',
+  bodySystem: 'endocrine',
+  summary: 'A hormonal disorder caused by prolonged exposure to high levels of cortisol, either from medications or from the body producing too much.',
+  symptoms: [
+    'Weight gain (especially in face, upper back, and abdomen)',
+    'Round, puffy face (“moon face”)',
+    'Purple stretch marks on skin',
+    'Thin arms and legs with weak muscles',
+    'Easy bruising',
+    'High blood pressure',
+    'Mood changes (depression, anxiety, irritability)'
+  ],
+  causes: [
+    'Prolonged use of corticosteroid medications',
+    'Pituitary adenoma (Cushing’s disease)',
+    'Adrenal gland tumors',
+    'Ectopic ACTH-producing tumors (e.g., lung cancer)'
+  ],
+  diagnosis: [
+    '24-hour urinary free cortisol test',
+    'Late-night salivary cortisol test',
+    'Dexamethasone suppression test',
+    'MRI or CT of pituitary/adrenal glands'
+  ],
+  treatment: [
+    'Surgical removal of tumor (pituitary or adrenal)',
+    'Radiation therapy (if surgery not possible)',
+    'Medications to control cortisol (ketoconazole, metyrapone)',
+    'Gradual reduction of corticosteroid medications (if drug-induced)'
+  ],
+  prevention: [
+    'Avoid unnecessary long-term corticosteroid use',
+    'Monitor hormone levels with regular checkups if at risk'
+  ],
+  simpleExplanation: {
+    whatIs: 'Your body has too much of the stress hormone cortisol for too long.',
+    howYouGet: 'It can happen from taking steroid medicines, or if your body makes too much cortisol because of a tumor.',
+    howToFeel: 'You gain weight in odd places, bruise easily, and may feel tired, moody, or weak.',
+    howToGetBetter: 'Doctors treat the cause—like removing a tumor—or adjust medicines to lower your cortisol levels.'
+  },
+  severity: 'moderate',
+  commonness: 'uncommon'
+},
+{
+  id: 'addisons-disease',
+  name: 'Addison’s Disease',
+  category: 'Endocrine/Metabolic',
+  bodySystem: 'endocrine',
+  summary: 'A rare disorder in which the adrenal glands don’t produce enough cortisol and sometimes aldosterone, leading to fatigue, low blood pressure, and electrolyte imbalances.',
+  symptoms: [
+    'Chronic fatigue',
+    'Weight loss and decreased appetite',
+    'Low blood pressure (especially when standing)',
+    'Darkening of skin (hyperpigmentation)',
+    'Salt cravings',
+    'Nausea, vomiting, diarrhea',
+    'Mood changes and irritability'
+  ],
+  causes: [
+    'Autoimmune destruction of adrenal glands',
+    'Tuberculosis',
+    'Adrenal tumors or infections',
+    'Genetic disorders affecting adrenal development',
+    'Sudden withdrawal from long-term steroid therapy'
+  ],
+  diagnosis: [
+    'ACTH stimulation test',
+    'Blood tests (cortisol, ACTH, sodium, potassium)',
+    'CT or MRI of adrenal glands',
+    'Autoantibody testing'
+  ],
+  treatment: [
+    'Hormone replacement therapy (hydrocortisone, fludrocortisone)',
+    'Increased salt intake',
+    'Emergency injections of corticosteroids during crises',
+    'Lifelong monitoring and dose adjustments'
+  ],
+  prevention: [
+    'No known prevention (if autoimmune)',
+    'Monitor and manage infections that affect adrenal glands',
+    'Avoid sudden stopping of long-term steroids'
+  ],
+  simpleExplanation: {
+    whatIs: 'Your adrenal glands aren’t making enough hormones your body needs.',
+    howYouGet: 'Most often from your immune system attacking your adrenal glands, but sometimes from infections or tumors.',
+    howToFeel: 'You may feel weak, dizzy when standing, crave salt, and your skin may get darker.',
+    howToGetBetter: 'Doctors give you replacement hormones to take for life, and you need extra medicine when you’re sick or stressed.'
+  },
+  severity: 'moderate',
+  commonness: 'rare'
+},
+{
+  id: 'thyroid-storm',
+  name: 'Thyroid Storm',
+  category: 'Endocrine/Metabolic',
+  bodySystem: 'endocrine',
+  summary: 'A life-threatening complication of hyperthyroidism in which excessive thyroid hormones cause extreme overactivation of body systems.',
+  symptoms: [
+    'Very high fever',
+    'Rapid or irregular heartbeat',
+    'Severe sweating',
+    'Agitation, anxiety, or confusion',
+    'Tremors',
+    'Diarrhea and vomiting',
+    'Low blood pressure and shock (late stage)'
+  ],
+  causes: [
+    'Untreated or poorly managed hyperthyroidism',
+    'Infection',
+    'Surgery or trauma',
+    'Stopping thyroid medication suddenly',
+    'Radioactive iodine treatment'
+  ],
+  diagnosis: [
+    'Clinical diagnosis based on symptoms (medical emergency)',
+    'Blood tests (extremely elevated T3, T4, suppressed TSH)',
+    'Electrocardiogram (to assess heart rhythm)',
+    'Chest X-ray (rule out infection)'
+  ],
+  treatment: [
+    'Hospitalization and ICU monitoring',
+    'Beta blockers (to control heart rate)',
+    'Antithyroid drugs (propylthiouracil, methimazole)',
+    'Iodine solution (to block hormone release)',
+    'Corticosteroids',
+    'IV fluids and cooling measures'
+  ],
+  prevention: [
+    'Proper treatment and monitoring of hyperthyroidism',
+    'Take thyroid medications as prescribed',
+    'Treat infections quickly',
+    'Avoid sudden discontinuation of therapy'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when your thyroid goes into overdrive and floods your body with way too much hormone.',
+    howYouGet: 'Usually when someone with untreated thyroid disease gets very sick or stops their medicines suddenly.',
+    howToFeel: 'You get a super high fever, pounding heartbeat, sweating, shaking, and feel very anxious or confused.',
+    howToGetBetter: 'Doctors treat you in the hospital with medicines to slow your thyroid and protect your heart.'
+  },
+  severity: 'severe',
+  commonness: 'rare'
+},
+
 {
   id: 'hypothyroidism',
   name: 'Hypothyroidism',
