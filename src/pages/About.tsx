@@ -13,7 +13,7 @@ const About: React.FC = () => {
           About HealthExplain
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-          We believe that everyone deserves to understand their health. 
+          Hey everyone, my name is Milap Patel, and I believe that everyone deserves to understand their health. 
           HealthExplain makes complex medical information accessible, 
           clear, and easy to understand for people of all ages and backgrounds.
         </p>
@@ -31,7 +31,7 @@ const About: React.FC = () => {
         </div>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
           To bridge the gap between complex medical terminology and everyday understanding. 
-          We transform complicated health information into clear, simple explanations that 
+          I transformed complicated health information into clear, simple explanations that 
           empower people to better understand their health conditions, make informed decisions, 
           and communicate more effectively with their healthcare providers.
         </p>
@@ -47,7 +47,7 @@ const About: React.FC = () => {
             Family-Centered
           </h3>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            We design our content for entire families, with special sections that help 
+            I designed my content for entire families, with special sections that help 
             children understand health conditions in age-appropriate, non-frightening ways.
           </p>
         </div>
@@ -60,7 +60,7 @@ const About: React.FC = () => {
             Medically Accurate
           </h3>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            All our content is carefully researched and based on reliable medical sources, 
+            All of my content is carefully researched and based on reliable medical sources, 
             ensuring you receive accurate, trustworthy health information.
           </p>
         </div>
@@ -73,7 +73,7 @@ const About: React.FC = () => {
             Educational Focus
           </h3>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            We're committed to education, not medical advice. Our goal is to help you 
+            I'am committed to education, not medical advice. Our goal is to help you 
             understand health conditions so you can have better conversations with your healthcare team.
           </p>
         </div>
@@ -86,7 +86,7 @@ const About: React.FC = () => {
             Accessibility First
           </h3>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            We believe health information should be accessible to everyone, regardless of 
+            I believe health information should be accessible to everyone, regardless of 
             reading level, age, or technical ability. That's why we offer multiple accessibility features.
           </p>
         </div>
@@ -123,7 +123,7 @@ const About: React.FC = () => {
                 Organized by Body Systems
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                We organize health conditions by the body systems they affect, helping you understand 
+                I organized health conditions by the body systems they affect, helping you understand 
                 how different parts of your body work together and what can go wrong.
               </p>
             </div>
@@ -138,7 +138,7 @@ const About: React.FC = () => {
                 Comprehensive Coverage
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                From symptoms and causes to diagnosis, treatment, and prevention, we cover all aspects 
+                From symptoms and causes to diagnosis, treatment, and prevention, I cover all aspects 
                 of each condition in a structured, easy-to-follow format.
               </p>
             </div>
@@ -174,8 +174,8 @@ const About: React.FC = () => {
           Thank You for Visiting HealthExplain
         </h2>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-          We're committed to making health information accessible and understandable for everyone. 
-          We hope our resources help you better understand health conditions and feel more confident 
+          I am committed to making health information accessible and understandable for everyone. 
+          I hope my resources help you better understand health conditions and feel more confident 
           in your healthcare journey.
         </p>
       </div>
