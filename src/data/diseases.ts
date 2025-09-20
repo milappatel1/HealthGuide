@@ -1174,7 +1174,7 @@ export const diseases: Disease[] = [
   },
   severity: 'moderate',
   commonness: 'very-common'
-}
+},
 
   // =============================================================================
   // GASTROINTESTINAL DISEASES
