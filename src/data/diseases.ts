@@ -226,7 +226,7 @@ export const diseases: Disease[] = [
   },
   severity: 'severe',
   commonness: 'rare'
-}
+},
 
 
   {
