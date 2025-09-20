@@ -678,6 +678,160 @@ export const diseases: Disease[] = [
   },
 
   {
+  id: 'sarcoidosis',
+  name: 'Sarcoidosis',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'An inflammatory disease where clusters of immune cells (granulomas) form in the lungs and other organs, interfering with normal function.',
+  symptoms: [
+    'Persistent dry cough',
+    'Shortness of breath',
+    'Chest pain',
+    'Fatigue',
+    'Fever',
+    'Swollen lymph nodes',
+    'Skin rashes or nodules'
+  ],
+  causes: [
+    'Exact cause unknown',
+    'Overactive immune response to unknown trigger',
+    'Possible genetic predisposition',
+    'Environmental exposures (dust, mold, chemicals)'
+  ],
+  diagnosis: [
+    'Chest X-ray (bilateral hilar lymphadenopathy)',
+    'CT scan of chest',
+    'Pulmonary function tests',
+    'Biopsy of lung tissue or lymph nodes',
+    'Blood tests (ACE levels, calcium)'
+  ],
+  treatment: [
+    'Corticosteroids (prednisone)',
+    'Immunosuppressive drugs (methotrexate, azathioprine)',
+    'Anti-TNF therapy in severe cases',
+    'Oxygen therapy (if advanced lung disease)'
+  ],
+  prevention: [
+    'No guaranteed prevention',
+    'Avoid exposure to lung irritants',
+    'Regular monitoring if family history exists'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when little clumps of immune cells grow inside your lungs and sometimes other organs, making them not work right.',
+    howYouGet: 'Doctors don’t know exactly why, but your immune system goes into overdrive after something like dust, chemicals, or maybe genes.',
+    howToFeel: 'You might feel very tired, cough a lot, and have trouble breathing.',
+    howToGetBetter: 'Steroids and medicines can calm your immune system so the clumps shrink and your lungs work better.'
+  },
+  severity: 'moderate',
+  commonness: 'uncommon'
+},
+  
+{
+  id: 'goodpasture-syndrome',
+  name: 'Goodpasture Syndrome',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A rare autoimmune disorder where antibodies attack the lungs and kidneys, leading to bleeding in the lungs and kidney failure.',
+  symptoms: [
+    'Coughing up blood (hemoptysis)',
+    'Shortness of breath',
+    'Fatigue',
+    'Chest pain',
+    'Bloody urine',
+    'Swelling in legs or ankles',
+    'Pale skin'
+  ],
+  causes: [
+    'Autoimmune reaction to basement membrane proteins',
+    'Genetic predisposition',
+    'Exposure to hydrocarbons, tobacco smoke, or viruses'
+  ],
+  diagnosis: [
+    'Chest X-ray or CT scan (lung bleeding)',
+    'Kidney function tests (BUN, creatinine)',
+    'Urinalysis (blood and protein in urine)',
+    'Blood tests (anti-GBM antibodies)',
+    'Lung or kidney biopsy'
+  ],
+  treatment: [
+    'Plasmapheresis (to remove antibodies)',
+    'Corticosteroids',
+    'Immunosuppressants (cyclophosphamide)',
+    'Dialysis (if kidney failure occurs)',
+    'Lung transplant in severe cases'
+  ],
+  prevention: [
+    'Avoid smoking',
+    'Limit exposure to hydrocarbons and toxins',
+    'Early treatment when symptoms first appear'
+  ],
+  simpleExplanation: {
+    whatIs: 'Your immune system makes a mistake and attacks your lungs and kidneys at the same time.',
+    howYouGet: 'It can happen if your genes and environment make your immune system misfire after smoke, infections, or chemical exposures.',
+    howToFeel: 'You cough up blood, feel short of breath, and your pee might turn dark or bloody.',
+    howToGetBetter: 'Doctors filter your blood to remove the bad antibodies and give you strong medicines to calm your immune system.'
+  },
+  severity: 'severe',
+  commonness: 'rare'
+},
+  
+{
+  id: 'pulmonary-embolism',
+  name: 'Pulmonary Embolism',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A blockage in one of the pulmonary arteries in the lungs, usually caused by blood clots that travel from the legs or other parts of the body.',
+  symptoms: [
+    'Sudden shortness of breath',
+    'Sharp chest pain that worsens with deep breathing',
+    'Coughing up blood',
+    'Rapid heartbeat',
+    'Dizziness or fainting',
+    'Swelling in one leg (from DVT)',
+    'Anxiety or feeling of doom'
+  ],
+  causes: [
+    'Deep vein thrombosis (DVT)',
+    'Prolonged immobility (flights, bed rest)',
+    'Recent surgery',
+    'Cancer',
+    'Smoking',
+    'Hormonal therapy or birth control pills',
+    'Genetic clotting disorders'
+  ],
+  diagnosis: [
+    'CT pulmonary angiography',
+    'Ventilation-perfusion (V/Q) scan',
+    'D-dimer blood test',
+    'Doppler ultrasound of legs',
+    'Chest X-ray',
+    'Electrocardiogram (to rule out heart cause)'
+  ],
+  treatment: [
+    'Anticoagulants (blood thinners)',
+    'Thrombolytics (clot-busting drugs)',
+    'Surgical clot removal (embolectomy)',
+    'Inferior vena cava (IVC) filter placement',
+    'Oxygen therapy'
+  ],
+  prevention: [
+    'Move regularly during long travel or bed rest',
+    'Wear compression stockings',
+    'Stay hydrated',
+    'Take prescribed blood thinners after surgery',
+    'Quit smoking'
+  ],
+  simpleExplanation: {
+    whatIs: 'A blood clot travels to your lungs and blocks blood flow.',
+    howYouGet: 'Usually it starts as a clot in your leg that breaks off and gets stuck in your lung arteries.',
+    howToFeel: 'Sudden chest pain, trouble breathing, and sometimes coughing blood.',
+    howToGetBetter: 'Doctors give blood thinners or special drugs to break up the clot, and sometimes surgery if it’s very big.'
+  },
+  severity: 'severe',
+  commonness: 'common'
+},
+
+  {
   id: 'copd',
   name: 'Chronic Obstructive Pulmonary Disease (COPD)',
   category: 'Respiratory',
