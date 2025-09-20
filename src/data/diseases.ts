@@ -74,6 +74,27 @@ export const diseases: Disease[] = [
     commonness: 'common'
   },
 
+  
+{
+  id: 'takotsubo-cardiomyopathy',
+  name: 'Takotsubo Cardiomyopathy (Broken Heart Syndrome)',
+  category: 'Cardiovascular',
+  bodySystem: 'cardiovascular',
+  summary: 'A sudden weakening of the heart muscle, often triggered by severe emotional or physical stress.',
+  symptoms: [
+    'Chest pain',
+    'Shortness of breath',
+    'Irregular heartbeat',
+    'Fainting',
+    'Signs similar to a heart attack'
+  ],
+  causes: [
+    'Intense emotional or physical stress',
+    'Excessive release of stress hormones (catecholamines)',
+    'More common in postmenopausal women'
+  ]
+},
+  
   {
   id: 'coronary-artery-disease',
   name: 'Coronary Artery Disease (CAD)',
