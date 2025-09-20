@@ -1008,6 +1008,174 @@ export const diseases: Disease[] = [
   commonness: 'very-common'
 },
 
+{
+  id: 'hypothyroidism',
+  name: 'Hypothyroidism',
+  category: 'Metabolic Disorders',
+  bodySystem: 'endocrine',
+  summary: 'A condition where the thyroid gland doesn\'t produce enough thyroid hormones, slowing down the body\'s metabolism.',
+  symptoms: [
+    'Fatigue and weakness',
+    'Weight gain',
+    'Cold intolerance',
+    'Dry skin and hair',
+    'Hair loss',
+    'Constipation',
+    'Depression or mood changes',
+    'Memory problems',
+    'Slow heart rate'
+  ],
+  causes: [
+    'Hashimoto\'s disease (autoimmune)',
+    'Thyroid surgery',
+    'Radiation treatment',
+    'Medications',
+    'Iodine deficiency',
+    'Congenital thyroid problems',
+    'Pituitary disorders'
+  ],
+  diagnosis: [
+    'TSH (thyroid-stimulating hormone) blood test',
+    'Free T4 blood test',
+    'Thyroid antibody tests',
+    'Physical examination',
+    'Medical history review'
+  ],
+  treatment: [
+    'Thyroid hormone replacement therapy (levothyroxine)',
+    'Regular monitoring and dose adjustment',
+    'Lifelong medication in most cases'
+  ],
+  prevention: [
+    'Ensure adequate iodine intake',
+    'Regular thyroid screening if at risk',
+    'No specific prevention for autoimmune causes'
+  ],
+  simpleExplanation: {
+    whatIs: 'Your thyroid is like your body\'s gas pedal - it controls how fast your body works. In hypothyroidism, it doesn\'t make enough hormone, so everything slows down.',
+    howYouGet: 'Sometimes your immune system attacks your thyroid by mistake, or it gets damaged by surgery or radiation. Some people are born with thyroid problems.',
+    howToFeel: 'You\'ll feel very tired, gain weight easily, feel cold all the time, and everything seems to move slower - even your thinking.',
+    howToGetBetter: 'Doctors give you thyroid hormone pills to replace what your thyroid can\'t make. You\'ll probably need to take them for life, but they work very well.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
+
+{
+  id: 'hyperthyroidism',
+  name: 'Hyperthyroidism',
+  category: 'Metabolic Disorders',
+  bodySystem: 'endocrine',
+  summary: 'A condition where the thyroid gland produces too much thyroid hormone, speeding up the body\'s metabolism.',
+  symptoms: [
+    'Rapid heartbeat',
+    'Unintentional weight loss',
+    'Increased appetite',
+    'Nervousness and anxiety',
+    'Trembling hands',
+    'Heat intolerance and sweating',
+    'Changes in bowel patterns',
+    'Fatigue',
+    'Difficulty sleeping',
+    'Bulging eyes (in Graves\' disease)'
+  ],
+  causes: [
+    'Graves\' disease (autoimmune)',
+    'Toxic multinodular goiter',
+    'Toxic adenoma',
+    'Thyroiditis (inflammation)',
+    'Too much iodine',
+    'Too much thyroid medication'
+  ],
+  diagnosis: [
+    'TSH blood test (will be low)',
+    'Free T3 and T4 blood tests',
+    'Thyroid antibody tests',
+    'Radioactive iodine uptake test',
+    'Thyroid ultrasound'
+  ],
+  treatment: [
+    'Anti-thyroid medications',
+    'Radioactive iodine therapy',
+    'Thyroid surgery',
+    'Beta-blockers for symptoms',
+    'Eye treatment (for Graves\' disease)'
+  ],
+  prevention: [
+    'No specific prevention',
+    'Avoid excessive iodine intake',
+    'Manage stress',
+    'Don\'t smoke (worsens eye problems)'
+  ],
+  simpleExplanation: {
+    whatIs: 'Hyperthyroidism is when your thyroid gland is like a car with the gas pedal stuck down - it makes too much hormone and speeds everything up.',
+    howYouGet: 'Usually your immune system makes your thyroid work too hard, or you have lumps in your thyroid that produce extra hormone.',
+    howToFeel: 'Your heart races, you lose weight even though you eat more, feel hot and sweaty, anxious, and your hands might shake.',
+    howToGetBetter: 'Doctors can give medicine to slow down your thyroid, use radioactive treatment to shrink it, or sometimes remove part of it with surgery.'
+  },
+  severity: 'moderate',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'obesity',
+  name: 'Obesity',
+  category: 'Metabolic Disorders',
+  bodySystem: 'endocrine',
+  summary: 'A complex disorder involving excessive body fat that increases the risk of health problems like heart disease, diabetes, and high blood pressure.',
+  symptoms: [
+    'Excess body weight',
+    'Difficulty with physical activity',
+    'Shortness of breath',
+    'Increased sweating',
+    'Snoring or sleep apnea',
+    'Joint and back pain',
+    'Feeling tired easily',
+    'Depression or low self-esteem'
+  ],
+  causes: [
+    'Consuming more calories than burned',
+    'Genetics and family history',
+    'Sedentary lifestyle',
+    'Poor diet (high-calorie, processed foods)',
+    'Medical conditions (hypothyroidism, PCOS)',
+    'Medications (antidepressants, steroids)',
+    'Psychological factors',
+    'Socioeconomic factors'
+  ],
+  diagnosis: [
+    'Body Mass Index (BMI) calculation',
+    'Waist circumference measurement',
+    'Medical history and physical exam',
+    'Blood tests (diabetes, cholesterol, thyroid)',
+    'Assessment of related health conditions'
+  ],
+  treatment: [
+    'Dietary changes and calorie reduction',
+    'Increased physical activity',
+    'Behavioral therapy and counseling',
+    'Weight-loss medications (if appropriate)',
+    'Bariatric surgery (severe cases)',
+    'Long-term lifestyle modification'
+  ],
+  prevention: [
+    'Eat a balanced, portion-controlled diet',
+    'Exercise regularly',
+    'Limit processed and high-calorie foods',
+    'Monitor weight regularly',
+    'Get adequate sleep',
+    'Manage stress'
+  ],
+  simpleExplanation: {
+    whatIs: 'Obesity is when your body stores too much fat, which can make it harder for your body to work properly and stay healthy.',
+    howYouGet: 'It happens when you eat more calories than your body burns over a long time. Your genes, lifestyle, and environment all play a role.',
+    howToFeel: 'You might feel tired easily, have trouble moving around, and be at higher risk for other health problems like diabetes or heart disease.',
+    howToGetBetter: 'The key is eating healthier foods in smaller portions and being more active. Sometimes doctors can help with medicines or surgery for severe cases.'
+  },
+  severity: 'moderate',
+  commonness: 'very-common'
+}
+
   // =============================================================================
   // GASTROINTESTINAL DISEASES
   // =============================================================================
