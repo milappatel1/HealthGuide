@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
             Why Choose HealthExplain?
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            We make complex medical information accessible to everyone, from curious kids to concerned adults.
+            I make complex medical information accessible to everyone, from curious kids to concerned adults.
           </p>
         </div>
 
