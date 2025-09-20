@@ -2259,6 +2259,109 @@ export const diseases: Disease[] = [
   },
 
   {
+  id: 'lupus',
+  name: 'Systemic Lupus Erythematosus (SLE)',
+  category: 'Musculoskeletal',
+  bodySystem: 'musculoskeletal',
+  summary: 'A chronic autoimmune disease where the immune system attacks multiple organs and tissues, including joints, skin, kidneys, and the nervous system.',
+  symptoms: [
+    'Joint pain and swelling',
+    'Butterfly-shaped rash on the face',
+    'Fatigue',
+    'Fever',
+    'Muscle pain',
+    'Photosensitivity (sensitivity to sunlight)',
+    'Mouth ulcers'
+  ],
+  causes: [
+    'Autoimmune attack on body tissues',
+    'Genetic predisposition',
+    'Hormonal factors (more common in women)',
+    'Environmental triggers (UV light, infections, medications)'
+  ],
+  diagnosis: [
+    'Blood tests (ANA, anti-dsDNA, anti-Smith antibodies)',
+    'Urine tests (for kidney involvement)',
+    'Chest X-ray (lung involvement)',
+    'Echocardiogram (heart involvement)',
+    'Physical exam (skin and joint findings)'
+  ],
+  treatment: [
+    'Anti-inflammatory drugs (NSAIDs)',
+    'Corticosteroids',
+    'Immunosuppressants (methotrexate, azathioprine)',
+    'Biologics (belimumab)',
+    'Lifestyle modifications (sun protection, stress reduction)'
+  ],
+  prevention: [
+    'Avoid excessive sun exposure',
+    'Quit smoking',
+    'Regular follow-ups with rheumatologist',
+    'Early treatment of infections'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when your immune system attacks your own joints, skin, and sometimes your organs.',
+    howYouGet: 'Doctors don’t know exactly, but it’s linked to genes, hormones, and triggers like sunlight or infections.',
+    howToFeel: 'You get achy, swollen joints, rashes, and may feel very tired or feverish.',
+    howToGetBetter: 'Medicines calm your immune system, and avoiding triggers like sunlight helps.'
+  },
+  severity: 'moderate',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'osteomyelitis',
+  name: 'Osteomyelitis',
+  category: 'Musculoskeletal',
+  bodySystem: 'musculoskeletal',
+  summary: 'A severe infection of the bone caused by bacteria or fungi, which can lead to bone destruction and sepsis if untreated.',
+  symptoms: [
+    'Severe localized bone pain',
+    'Fever and chills',
+    'Swelling, warmth, and redness over affected area',
+    'Fatigue',
+    'Limited movement of nearby joints',
+    'Drainage of pus (in chronic cases)'
+  ],
+  causes: [
+    'Bacterial infection (often Staphylococcus aureus)',
+    'Open fractures',
+    'Recent bone surgery or implants',
+    'Spread from nearby infection',
+    'Weakened immune system (diabetes, HIV)'
+  ],
+  diagnosis: [
+    'Blood cultures',
+    'Bone biopsy',
+    'X-rays (bone damage)',
+    'MRI or CT scan',
+    'Blood tests (elevated white blood cells, ESR, CRP)'
+  ],
+  treatment: [
+    'IV antibiotics (long course)',
+    'Surgical drainage of abscess',
+    'Removal of infected bone tissue',
+    'Hyperbaric oxygen therapy (sometimes)',
+    'Pain management'
+  ],
+  prevention: [
+    'Proper care of wounds and fractures',
+    'Sterile surgical techniques',
+    'Treat infections early',
+    'Good diabetes control'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s a serious infection inside your bone.',
+    howYouGet: 'Usually from bacteria entering through a wound, surgery, or spreading from another infection.',
+    howToFeel: 'You get sharp bone pain, fever, swelling, and sometimes pus leaking out.',
+    howToGetBetter: 'Doctors give you strong antibiotics and sometimes do surgery to clean the infection out of your bone.'
+  },
+  severity: 'moderate',
+  commonness: 'rare'
+},
+
+
+  {
   id: 'arthritis-rheumatoid',
   name: 'Rheumatoid Arthritis (RA)',
   category: 'Musculoskeletal',
