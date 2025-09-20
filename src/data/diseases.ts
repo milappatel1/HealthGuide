@@ -1936,6 +1936,178 @@ export const diseases: Disease[] = [
   commonness: 'common'
 },
 
+{
+  id: 'bipolar-disorder',
+  name: 'Bipolar Disorder',
+  category: 'Mental Health',
+  bodySystem: 'nervous',
+  summary: 'A mental health condition causing extreme mood swings that include emotional highs (mania or hypomania) and lows (depression).',
+  symptoms: [
+    'Manic episodes: elevated mood, increased energy, decreased need for sleep',
+    'Depressive episodes: sadness, hopelessness, loss of interest',
+    'Rapid or pressured speech during mania',
+    'Risky behavior during manic episodes',
+    'Difficulty concentrating',
+    'Changes in appetite and sleep',
+    'Suicidal thoughts during depression'
+  ],
+  causes: [
+    'Brain chemistry imbalances',
+    'Genetics and family history',
+    'Environmental triggers (stress, trauma)',
+    'Hormonal changes',
+    'Substance abuse (may trigger episodes)',
+    'Major life changes or stressful events'
+  ],
+  diagnosis: [
+    'Psychiatric evaluation and interview',
+    'Mood charting and symptom tracking',
+    'Medical history and physical exam',
+    'Rule out medical conditions',
+    'Assessment of manic and depressive episodes',
+    'Family history review'
+  ],
+  treatment: [
+    'Mood stabilizers (lithium, valproate)',
+    'Antipsychotic medications',
+    'Antidepressants (with mood stabilizers)',
+    'Psychotherapy (CBT, family therapy)',
+    'Lifestyle management',
+    'Hospitalization during severe episodes'
+  ],
+  prevention: [
+    'Take medications consistently',
+    'Recognize early warning signs',
+    'Maintain regular sleep schedule',
+    'Avoid alcohol and drugs',
+    'Manage stress effectively',
+    'Build strong support system'
+  ],
+  simpleExplanation: {
+    whatIs: 'Bipolar disorder is like having a mood elevator that gets stuck - sometimes you feel extremely high and energetic (mania), other times very low and depressed.',
+    howYouGet: 'It\'s caused by brain chemistry problems and often runs in families. Stress, trauma, or major life changes can trigger the first episode.',
+    howToFeel: 'During high periods, you might feel invincible, need little sleep, and make risky decisions. During low periods, you feel hopeless and exhausted.',
+    howToGetBetter: 'Doctors use mood-stabilizing medicines and therapy to even out the extreme highs and lows. Consistent treatment helps people live stable, productive lives.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'ptsd',
+  name: 'Post-Traumatic Stress Disorder (PTSD)',
+  category: 'Mental Health',
+  bodySystem: 'nervous',
+  summary: 'A mental health condition triggered by experiencing or witnessing a terrifying event, causing lasting psychological distress.',
+  symptoms: [
+    'Intrusive memories or flashbacks',
+    'Nightmares about the trauma',
+    'Severe emotional distress from trauma reminders',
+    'Avoidance of trauma-related thoughts or places',
+    'Negative changes in thinking and mood',
+    'Hypervigilance and being easily startled',
+    'Sleep problems and irritability',
+    'Difficulty concentrating'
+  ],
+  causes: [
+    'Exposure to traumatic events',
+    'Combat experience',
+    'Physical or sexual assault',
+    'Accidents or natural disasters',
+    'Witnessing violence or death',
+    'Childhood abuse or neglect',
+    'Medical emergencies'
+  ],
+  diagnosis: [
+    'Clinical interview and assessment',
+    'Trauma history evaluation',
+    'PTSD symptom scales',
+    'Rule out other mental health conditions',
+    'Assessment of functional impairment',
+    'Duration of symptoms (over 1 month)'
+  ],
+  treatment: [
+    'Trauma-focused psychotherapy (CPT, EMDR)',
+    'Cognitive behavioral therapy (CBT)',
+    'Medications (antidepressants, prazosin)',
+    'Group therapy',
+    'Exposure therapy',
+    'Support groups'
+  ],
+  prevention: [
+    'Seek early intervention after trauma',
+    'Build resilience and coping skills',
+    'Maintain social connections',
+    'Practice stress management',
+    'Avoid alcohol and drugs'
+  ],
+  simpleExplanation: {
+    whatIs: 'PTSD happens when your mind gets stuck processing a terrible experience, like your brain\'s alarm system won\'t turn off after danger has passed.',
+    howYouGet: 'It can develop after experiencing or seeing traumatic events like accidents, violence, combat, or natural disasters.',
+    howToFeel: 'You may have scary memories that feel real, nightmares, feel constantly on edge, and avoid things that remind you of the trauma.',
+    howToGetBetter: 'Special types of therapy help your brain process the trauma properly. Medicine can also help with symptoms like depression and sleep problems.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'adhd',
+  name: 'Attention Deficit Hyperactivity Disorder (ADHD)',
+  category: 'Mental Health',
+  bodySystem: 'nervous',
+  summary: 'A neurodevelopmental disorder characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning.',
+  symptoms: [
+    'Difficulty paying attention or focusing',
+    'Easily distracted by external stimuli',
+    'Forgetfulness in daily activities',
+    'Difficulty organizing tasks',
+    'Hyperactivity (restlessness, fidgeting)',
+    'Impulsive behavior and decision-making',
+    'Difficulty waiting turns',
+    'Interrupting others frequently'
+  ],
+  causes: [
+    'Genetics and family history',
+    'Brain development differences',
+    'Neurotransmitter imbalances',
+    'Prenatal exposure to alcohol or tobacco',
+    'Premature birth or low birth weight',
+    'Environmental toxins (lead exposure)',
+    'Brain injuries'
+  ],
+  diagnosis: [
+    'Comprehensive clinical evaluation',
+    'ADHD rating scales and questionnaires',
+    'Medical and developmental history',
+    'School or work performance assessment',
+    'Rule out other conditions',
+    'Input from family, teachers, or employers'
+  ],
+  treatment: [
+    'Stimulant medications (methylphenidate, amphetamines)',
+    'Non-stimulant medications (atomoxetine)',
+    'Behavioral therapy',
+    'Educational accommodations',
+    'Parent training and support',
+    'Lifestyle modifications (exercise, sleep)',
+    'Social skills training'
+  ],
+  prevention: [
+    'No known prevention (neurodevelopmental)',
+    'Avoid pregnancy risk factors',
+    'Early identification and intervention',
+    'Supportive environment and structure'
+  ],
+  simpleExplanation: {
+    whatIs: 'ADHD is when your brain has trouble with attention, sitting still, and thinking before acting - like having a remote control that keeps changing channels.',
+    howYouGet: 'You\'re usually born with it due to differences in brain development and genetics. It often runs in families.',
+    howToFeel: 'You might have trouble focusing, feel restless, forget things easily, and act without thinking about consequences.',
+    howToGetBetter: 'Doctors often prescribe medicines that help your brain focus better, plus therapy to learn coping strategies and organizational skills.'
+  },
+  severity: 'moderate',
+  commonness: 'common'
+},
   
   {
     id: 'anxiety-generalized',
