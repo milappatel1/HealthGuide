@@ -544,6 +544,26 @@ export const diseases: Disease[] = [
   },
 
   {
+  id: 'goodpasture-syndrome',
+  name: 'Goodpasture Syndrome',
+  category: 'Respiratory',
+  bodySystem: 'respiratory',
+  summary: 'A rare autoimmune disorder in which the immune system attacks the lungs and kidneys.',
+  symptoms: [
+    'Coughing up blood',
+    'Shortness of breath',
+    'Fatigue',
+    'Kidney failure (blood in urine, swelling)',
+    'Chest pain'
+  ],
+  causes: [
+    'Autoantibodies against the basement membrane of lungs and kidneys',
+    'Genetic susceptibility',
+    'Environmental exposures (smoking, hydrocarbon inhalation)'
+  ]
+},
+
+  {
   id: 'copd',
   name: 'Chronic Obstructive Pulmonary Disease (COPD)',
   category: 'Respiratory',
@@ -1029,6 +1049,27 @@ export const diseases: Disease[] = [
   commonness: 'very-common'
 },
 
+  {
+  id: 'pheochromocytoma',
+  name: 'Pheochromocytoma',
+  category: 'Endocrine',
+  bodySystem: 'endocrine',
+  summary: 'A rare tumor of the adrenal glands that causes overproduction of hormones, leading to episodes of high blood pressure.',
+  symptoms: [
+    'Severe headaches',
+    'Sweating',
+    'Rapid heartbeat (tachycardia)',
+    'High blood pressure',
+    'Anxiety or panic attacks',
+    'Paleness'
+  ],
+  causes: [
+    'Tumor of adrenal medulla',
+    'Genetic mutations (e.g., MEN2, VHL, NF1)',
+    'Excess catecholamine release'
+  ]
+},
+
 {
   id: 'hypothyroidism',
   name: 'Hypothyroidism',
@@ -1384,6 +1425,27 @@ export const diseases: Disease[] = [
     severity: 'severe',
     commonness: 'common'
   },
+
+  {
+  id: 'wilsons-disease',
+  name: 'Wilson’s Disease',
+  category: 'Neurological',
+  bodySystem: 'nervous',
+  summary: 'A genetic disorder in which excess copper builds up in the body, damaging the liver, brain, and other organs.',
+  symptoms: [
+    'Tremors',
+    'Difficulty speaking',
+    'Poor coordination',
+    'Personality changes',
+    'Liver disease symptoms (jaundice, swelling)',
+    'Kayser-Fleischer rings in the eyes'
+  ],
+  causes: [
+    'Genetic mutation in ATP7B gene',
+    'Autosomal recessive inheritance',
+    'Impaired copper transport and excretion'
+  ]
+},
 
   {
   id: 'migraine',
