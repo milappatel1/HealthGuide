@@ -718,7 +718,7 @@ export const diseases: Disease[] = [
   simpleExplanation: {
     whatIs: 'Acute bronchitis is when the tubes that carry air to your lungs get irritated and swollen, usually from a cold or flu.',
     howYouGet: 'Most of the time it comes from the same viruses that cause colds, or from breathing in irritating things like smoke.',
-    howToFeel: 'You'll have a nagging cough that may bring up mucus, feel tired, and have some chest discomfort.',
+    howToFeel: 'You will have a nagging cough that may bring up mucus, feel tired, and have some chest discomfort.',
     howToGetBetter: 'It usually goes away on its own with rest, fluids, and time. Cough medicine can help you feel more comfortable.'
   },
   severity: 'mild',
@@ -772,8 +772,8 @@ export const diseases: Disease[] = [
   ],
   simpleExplanation: {
     whatIs: 'Sleep apnea is when you stop breathing many times during sleep because your throat closes up, then you wake up gasping for air.',
-    howYouGet: 'It usually happens when you're overweight, have a thick neck, or your throat muscles are too relaxed during sleep.',
-    howToFeel: 'You'll snore loudly, feel very tired during the day even after sleeping, and may wake up with headaches.',
+    howYouGet: 'It usually happens when you are overweight, have a thick neck, or your throat muscles are too relaxed during sleep.',
+    howToFeel: 'You will snore loudly, feel very tired during the day even after sleeping, and may wake up with headaches.',
     howToGetBetter: 'Doctors often prescribe a CPAP machine that keeps your airways open while you sleep. Losing weight also helps a lot.'
   },
   severity: 'severe',
@@ -830,7 +830,7 @@ export const diseases: Disease[] = [
   simpleExplanation: {
     whatIs: 'A pulmonary embolism is when a blood clot travels to your lungs and blocks blood flow, like a cork stuck in a bottle.',
     howYouGet: 'It usually starts as a clot in your leg that breaks off and travels through your blood to your lungs.',
-    howToFeel: 'You'll suddenly have trouble breathing, sharp chest pain, and may cough up blood. It can be life-threatening.',
+    howToFeel: 'You will suddenly have trouble breathing, sharp chest pain, and may cough up blood. It can be life-threatening.',
     howToGetBetter: 'This is a medical emergency requiring immediate hospital treatment with blood-thinning medicines or procedures to remove the clot.'
   },
   severity: 'severe',
@@ -879,7 +879,7 @@ export const diseases: Disease[] = [
     'Palliative care'
   ],
   prevention: [
-    'Don't smoke or quit if you smoke',
+    'Do not smoke or quit if you smoke',
     'Avoid secondhand smoke',
     'Test home for radon',
     'Avoid carcinogens at work',
@@ -888,7 +888,7 @@ export const diseases: Disease[] = [
   simpleExplanation: {
     whatIs: 'Lung cancer is when cells in your lungs grow out of control and form tumors that can spread to other parts of your body.',
     howYouGet: 'Smoking is the main cause, but you can also get it from breathing in other harmful things like radon gas or asbestos.',
-    howToFeel: 'You may have a cough that won't go away, cough up blood, lose weight without trying, and feel very tired.',
+    howToFeel: 'You may have a cough that will not go away, cough up blood, lose weight without trying, and feel very tired.',
     howToGetBetter: 'Treatment depends on the type and stage, and may include surgery, chemotherapy, or radiation. Quitting smoking improves outcomes.'
   },
   severity: 'severe',
