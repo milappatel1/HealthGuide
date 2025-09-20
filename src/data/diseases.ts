@@ -2702,6 +2702,160 @@ export const diseases: Disease[] = [
   commonness: 'uncommon'
 },
 
+  {
+  id: 'major-depressive-disorder',
+  name: 'Major Depressive Disorder',
+  category: 'Mental Health',
+  bodySystem: 'mental',
+  summary: 'A mood disorder characterized by persistent feelings of sadness, loss of interest, and impaired daily functioning.',
+  symptoms: [
+    'Persistent sadness or low mood',
+    'Loss of interest or pleasure in activities',
+    'Fatigue or low energy',
+    'Changes in appetite or weight',
+    'Sleep disturbances (insomnia or oversleeping)',
+    'Difficulty concentrating',
+    'Feelings of worthlessness or guilt',
+    'Thoughts of death or suicide'
+  ],
+  causes: [
+    'Genetic predisposition',
+    'Chemical imbalance in the brain (neurotransmitters)',
+    'Chronic stress or trauma',
+    'Medical conditions (thyroid disorders, chronic illness)',
+    'Substance abuse'
+  ],
+  diagnosis: [
+    'Clinical psychiatric evaluation',
+    'Patient history and symptom assessment',
+    'Standardized questionnaires (PHQ-9, Beck Depression Inventory)',
+    'Rule out medical causes (blood tests, thyroid function)'
+  ],
+  treatment: [
+    'Antidepressant medications (SSRIs, SNRIs, tricyclics)',
+    'Psychotherapy (CBT, interpersonal therapy)',
+    'Lifestyle modifications (exercise, sleep hygiene)',
+    'Electroconvulsive therapy (ECT) for severe cases',
+    'Support groups'
+  ],
+  prevention: [
+    'Early treatment of depressive symptoms',
+    'Stress management techniques',
+    'Regular exercise and healthy diet',
+    'Avoid substance abuse',
+    'Strong social support network'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when your brain and mood are stuck in a prolonged period of sadness that affects daily life.',
+    howYouGet: 'It can come from genes, stress, brain chemistry, or physical illnesses.',
+    howToFeel: 'You may feel empty, tired, lose interest in things you love, or have trouble concentrating.',
+    howToGetBetter: 'Therapy, medication, lifestyle changes, and support can help your mood improve over time.'
+  },
+  severity: 'serious',
+  commonness: 'common'
+},
+{
+  id: 'bipolar-disorder',
+  name: 'Bipolar Disorder',
+  category: 'Mental Health',
+  bodySystem: 'mental',
+  summary: 'A mental health condition characterized by extreme mood swings, including emotional highs (mania or hypomania) and lows (depression).',
+  symptoms: [
+    'Episodes of elevated mood or irritability (mania)',
+    'High energy, reduced need for sleep',
+    'Impulsive or risky behaviors',
+    'Depressive episodes (sadness, fatigue)',
+    'Difficulty concentrating',
+    'Mood swings affecting relationships',
+    'Thoughts of self-harm during depressive phases'
+  ],
+  causes: [
+    'Genetic predisposition',
+    'Neurochemical imbalances',
+    'Stressful life events',
+    'Hormonal changes',
+    'Environmental factors'
+  ],
+  diagnosis: [
+    'Psychiatric evaluation',
+    'Patient history and symptom tracking',
+    'Mood charts or diaries',
+    'Rule out medical or substance-related causes'
+  ],
+  treatment: [
+    'Mood stabilizers (lithium, valproate)',
+    'Antipsychotic medications',
+    'Psychotherapy (CBT, family therapy)',
+    'Lifestyle management (sleep, routine, stress)',
+    'Hospitalization during severe episodes'
+  ],
+  prevention: [
+    'Early recognition of mood swings',
+    'Adherence to medication',
+    'Regular sleep and activity schedules',
+    'Avoid alcohol and recreational drugs',
+    'Strong support system'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when your mood swings between very high energy and deep depression.',
+    howYouGet: 'Mostly genes and brain chemistry, sometimes triggered by stress or life events.',
+    howToFeel: 'You can feel unstoppable and energetic, then suddenly very sad and hopeless.',
+    howToGetBetter: 'Medication, therapy, and routine help keep your mood stable and reduce risky behaviors.'
+  },
+  severity: 'serious',
+  commonness: 'common'
+},
+{
+  id: 'schizophrenia',
+  name: 'Schizophrenia',
+  category: 'Mental Health',
+  bodySystem: 'mental',
+  summary: 'A severe mental disorder affecting thought, perception, and behavior, often including hallucinations, delusions, and disorganized thinking.',
+  symptoms: [
+    'Hallucinations (hearing or seeing things that aren’t there)',
+    'Delusions (false beliefs)',
+    'Disorganized thinking and speech',
+    'Reduced emotional expression',
+    'Social withdrawal',
+    'Difficulty performing daily tasks',
+    'Cognitive impairments (memory, attention, planning)'
+  ],
+  causes: [
+    'Genetic predisposition',
+    'Neurochemical imbalances (dopamine, glutamate)',
+    'Prenatal or perinatal complications',
+    'Environmental stressors',
+    'Substance abuse can trigger or worsen symptoms'
+  ],
+  diagnosis: [
+    'Comprehensive psychiatric evaluation',
+    'Patient history and observation',
+    'Rule out medical or substance-induced causes',
+    'Standardized diagnostic criteria (DSM-5)'
+  ],
+  treatment: [
+    'Antipsychotic medications (typical and atypical)',
+    'Psychotherapy (CBT, social skills training)',
+    'Supportive care (occupational therapy, social support)',
+    'Hospitalization during acute episodes',
+    'Family education and involvement'
+  ],
+  prevention: [
+    'No guaranteed prevention',
+    'Early treatment of first symptoms',
+    'Avoid substance abuse',
+    'Supportive family and community environment'
+  ],
+  simpleExplanation: {
+    whatIs: 'It’s when your brain’s thoughts, perceptions, and emotions become very disorganized, sometimes causing hallucinations or false beliefs.',
+    howYouGet: 'Mostly genes and brain chemistry, sometimes triggered by stress or substance use.',
+    howToFeel: 'You may hear voices, see things, believe things that aren’t real, and have trouble thinking clearly.',
+    howToGetBetter: 'Medication, therapy, and support help manage symptoms and improve quality of life.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+
 {
   id: 'ptsd',
   name: 'Post-Traumatic Stress Disorder (PTSD)',
