@@ -1419,6 +1419,177 @@ export const diseases: Disease[] = [
   commonness: 'common'
 },
 
+  {
+  id: 'epilepsy',
+  name: 'Epilepsy',
+  category: 'Neurological',
+  bodySystem: 'nervous',
+  summary: 'A neurological disorder characterized by recurrent seizures due to abnormal electrical activity in the brain.',
+  symptoms: [
+    'Seizures (various types)',
+    'Temporary confusion',
+    'Staring spells',
+    'Uncontrollable jerking movements',
+    'Loss of consciousness',
+    'Fear, anxiety, or déjà vu',
+    'Memory problems after seizures'
+  ],
+  causes: [
+    'Genetic factors',
+    'Head trauma',
+    'Brain infections',
+    'Stroke',
+    'Brain tumors',
+    'Developmental disorders',
+    'Unknown causes (idiopathic)'
+  ],
+  diagnosis: [
+    'EEG (electroencephalogram)',
+    'MRI or CT brain scans',
+    'Blood tests',
+    'Neurological examination',
+    'Video EEG monitoring',
+    'PET scan (if needed)'
+  ],
+  treatment: [
+    'Anti-seizure medications',
+    'Vagus nerve stimulation',
+    'Ketogenic diet (especially in children)',
+    'Brain surgery (for drug-resistant cases)',
+    'Deep brain stimulation',
+    'Lifestyle modifications'
+  ],
+  prevention: [
+    'Prevent head injuries (wear helmets)',
+    'Control blood pressure and diabetes',
+    'Avoid excessive alcohol',
+    'Get adequate sleep',
+    'Take medications as prescribed'
+  ],
+  simpleExplanation: {
+    whatIs: 'Epilepsy is when your brain has sudden bursts of electrical activity that cause seizures, like short circuits in your brain\'s wiring.',
+    howYouGet: 'It can come from brain injuries, infections, genetics, or sometimes doctors don\'t know why it starts.',
+    howToFeel: 'During seizures, you might shake, stare blankly, feel confused, or lose consciousness. Between seizures, you usually feel normal.',
+    howToGetBetter: 'Most people take daily medicine that prevents seizures. Some might need surgery or special diets, but many people live normal lives.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'parkinsons-disease',
+  name: 'Parkinson\'s Disease',
+  category: 'Neurological',
+  bodySystem: 'nervous',
+  summary: 'A progressive nervous system disorder that affects movement, caused by the loss of dopamine-producing brain cells.',
+  symptoms: [
+    'Tremor (especially at rest)',
+    'Slowness of movement (bradykinesia)',
+    'Muscle stiffness',
+    'Balance and coordination problems',
+    'Shuffling walk',
+    'Reduced facial expression',
+    'Soft or slurred speech',
+    'Depression and anxiety'
+  ],
+  causes: [
+    'Loss of dopamine-producing neurons',
+    'Age (most common over 60)',
+    'Genetics (some forms)',
+    'Environmental toxins',
+    'Head trauma',
+    'Unknown factors'
+  ],
+  diagnosis: [
+    'Clinical examination and medical history',
+    'Response to dopamine medications',
+    'DaTscan (dopamine transporter scan)',
+    'Rule out other conditions',
+    'Neurological testing'
+  ],
+  treatment: [
+    'Levodopa/carbidopa',
+    'Dopamine agonists',
+    'MAO-B inhibitors',
+    'Physical therapy',
+    'Speech therapy',
+    'Deep brain stimulation (advanced cases)',
+    'Exercise programs'
+  ],
+  prevention: [
+    'No known prevention',
+    'Regular exercise may reduce risk',
+    'Avoid head injuries',
+    'Limit exposure to pesticides',
+    'Maintain social connections'
+  ],
+  simpleExplanation: {
+    whatIs: 'Parkinson\'s disease happens when brain cells that make dopamine (a chemical that helps control movement) start dying off.',
+    howYouGet: 'It\'s mostly related to aging, and sometimes genetics play a role. Environmental factors might contribute, but the exact cause is unknown.',
+    howToFeel: 'Your hands might shake when resting, you\'ll move more slowly, feel stiff, and have trouble with balance and walking.',
+    howToGetBetter: 'There\'s no cure, but medicines can replace the missing dopamine and help with symptoms. Exercise and therapy are also very important.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+},
+
+{
+  id: 'multiple-sclerosis',
+  name: 'Multiple Sclerosis (MS)',
+  category: 'Neurological',
+  bodySystem: 'nervous',
+  summary: 'An autoimmune disease where the immune system attacks the protective covering of nerve fibers, disrupting communication between the brain and body.',
+  symptoms: [
+    'Fatigue',
+    'Numbness or weakness in limbs',
+    'Electric shock sensations with neck movements',
+    'Vision problems (blurred or double vision)',
+    'Dizziness and balance problems',
+    'Muscle spasticity',
+    'Cognitive changes',
+    'Depression'
+  ],
+  causes: [
+    'Autoimmune attack on myelin',
+    'Genetic predisposition',
+    'Environmental factors (vitamin D deficiency)',
+    'Viral infections (possibly triggers)',
+    'Geographic factors (more common in certain latitudes)',
+    'Female gender (higher risk)'
+  ],
+  diagnosis: [
+    'MRI scans of brain and spinal cord',
+    'Lumbar puncture (spinal tap)',
+    'Blood tests (to rule out other conditions)',
+    'Evoked potential tests',
+    'Clinical examination and history'
+  ],
+  treatment: [
+    'Disease-modifying therapies (DMTs)',
+    'Corticosteroids for relapses',
+    'Physical therapy',
+    'Occupational therapy',
+    'Muscle relaxants',
+    'Symptom-specific medications',
+    'Rehabilitation programs'
+  ],
+  prevention: [
+    'No known prevention',
+    'Maintain adequate vitamin D levels',
+    'Avoid smoking',
+    'Manage stress',
+    'Stay physically active'
+  ],
+  simpleExplanation: {
+    whatIs: 'MS is when your immune system attacks the protective coating around your nerves, like stripping the insulation off electrical wires.',
+    howYouGet: 'It\'s an autoimmune condition that may be triggered by genetics, low vitamin D, or certain infections, but the exact cause is unknown.',
+    howToFeel: 'You may feel tired, numb, weak, have vision problems, or feel unsteady. Symptoms can come and go or get progressively worse.',
+    howToGetBetter: 'There\'s no cure, but medicines can slow the disease and reduce attacks. Physical therapy and lifestyle changes help manage symptoms.'
+  },
+  severity: 'severe',
+  commonness: 'uncommon'
+}
+
   // =============================================================================
   // MUSCULOSKELETAL DISEASES
   // =============================================================================
