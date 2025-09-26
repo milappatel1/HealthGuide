@@ -1,3041 +1,370 @@
 import { Disease, BodySystem } from '../types/Disease';
 
-// =============================================================================
-// COMPREHENSIVE DISEASE DATABASE
-// =============================================================================
-// Last Updated: January 2025
-// Total Conditions: 25+
-// Organization: Alphabetical within categories
-// Format: Consistent structure for easy expansion
-// =============================================================================
+export const bodySystems: BodySystem[] = [
+  {
+    id: 'cardiovascular',
+    name: 'Cardiovascular System',
+    description: 'Your heart and blood vessels work together like a delivery system, pumping blood with oxygen and nutrients to every part of your body.',
+    icon: 'Heart',
+    diseases: ['hypertension', 'heart-disease']
+  },
+  {
+    id: 'nervous',
+    name: 'Nervous System',
+    description: 'Your brain, spinal cord, and nerves act as your body\'s command center, controlling everything you think, feel, and do.',
+    icon: 'Brain',
+    diseases: ['migraine', 'epilepsy']
+  },
+  {
+    id: 'digestive',
+    name: 'Digestive System',
+    description: 'Your stomach, intestines, and other organs break down food into nutrients your body can use for energy and growth.',
+    icon: 'Apple',
+    diseases: ['gastritis', 'ibs']
+  },
+  {
+    id: 'respiratory',
+    name: 'Respiratory System',
+    description: 'Your lungs and airways bring fresh oxygen into your body and remove waste gases like carbon dioxide.',
+    icon: 'Lung',
+    diseases: ['asthma', 'pneumonia']
+  },
+  {
+    id: 'musculoskeletal',
+    name: 'Musculoskeletal System',
+    description: 'Your bones, muscles, and joints work together to give your body structure, support, and the ability to move.',
+    icon: 'Bone',
+    diseases: ['arthritis', 'osteoporosis']
+  },
+  {
+    id: 'endocrine',
+    name: 'Endocrine System',
+    description: 'Your glands produce hormones that act like chemical messengers, controlling growth, metabolism, and many body functions.',
+    icon: 'Zap',
+    diseases: ['diabetes', 'thyroid-disorders']
+  },
+  {
+    id: 'immune',
+    name: 'Immune System',
+    description: 'Your body\'s defense system that protects you from germs, viruses, and other harmful substances that could make you sick.',
+    icon: 'Shield',
+    diseases: ['allergies', 'autoimmune-disorders']
+  },
+  {
+    id: 'integumentary',
+    name: 'Integumentary System',
+    description: 'Your skin, hair, and nails form a protective barrier that keeps harmful things out and helps regulate your body temperature.',
+    icon: 'Sun',
+    diseases: ['eczema', 'psoriasis']
+  },
+  {
+    id: 'urinary',
+    name: 'Urinary System',
+    description: 'Your kidneys and bladder filter waste from your blood and remove it from your body through urine.',
+    icon: 'Droplets',
+    diseases: ['kidney-stones', 'uti']
+  },
+  {
+    id: 'reproductive',
+    name: 'Reproductive System',
+    description: 'The organs that allow humans to create new life and continue the human species.',
+    icon: 'Baby',
+    diseases: ['pcos', 'endometriosis']
+  },
+  {
+    id: 'lymphatic',
+    name: 'Lymphatic System',
+    description: 'A network of vessels and organs that helps your immune system fight infections and maintains fluid balance in your body.',
+    icon: 'Activity',
+    diseases: ['lymphedema', 'swollen-lymph-nodes']
+  },
+  {
+    id: 'sensory',
+    name: 'Sensory System',
+    description: 'Your eyes, ears, nose, tongue, and skin help you see, hear, smell, taste, and feel the world around you.',
+    icon: 'Eye',
+    diseases: ['vision-problems', 'hearing-loss']
+  }
+];
 
 export const diseases: Disease[] = [
-  
-  // =============================================================================
-  // CARDIOVASCULAR DISEASES
-  // =============================================================================
-  
   {
-    id: 'atrial-fibrillation',
-    name: 'Atrial Fibrillation',
-    category: 'Cardiovascular',
-    bodySystem: 'cardiovascular',
-    summary: 'An irregular and often rapid heart rhythm that can lead to blood clots, stroke, and other complications.',
+    id: 'common-cold',
+    name: 'Common Cold',
+    category: 'Viral Infection',
+    bodySystem: 'respiratory',
+    summary: 'A mild viral infection of the nose and throat that usually resolves on its own within a week.',
     symptoms: [
-      'Irregular heartbeat or palpitations',
-      'Rapid heartbeat',
-      'Chest pain or discomfort',
-      'Shortness of breath',
-      'Fatigue and weakness',
-      'Dizziness or lightheadedness',
-      'Reduced exercise tolerance'
+      'Runny or stuffy nose',
+      'Sneezing',
+      'Sore throat',
+      'Mild cough',
+      'Low-grade fever',
+      'Body aches',
+      'Fatigue'
     ],
     causes: [
-      'High blood pressure',
-      'Heart disease or heart defects',
-      'Overactive thyroid',
-      'Sleep apnea',
-      'Excessive alcohol consumption',
-      'Age (more common after 60)',
-      'Family history of atrial fibrillation'
+      'Rhinoviruses (most common)',
+      'Coronaviruses',
+      'Respiratory syncytial virus (RSV)',
+      'Parainfluenza viruses',
+      'Close contact with infected person',
+      'Touching contaminated surfaces'
     ],
     diagnosis: [
-      'Electrocardiogram (ECG)',
-      'Holter monitor (24-hour ECG)',
-      'Event monitor',
-      'Echocardiogram',
-      'Blood tests (thyroid function)',
-      'Chest X-ray'
+      'Usually diagnosed based on symptoms',
+      'Physical examination',
+      'No specific tests needed for typical cases',
+      'Throat swab if bacterial infection suspected'
     ],
     treatment: [
-      'Blood thinners (anticoagulants)',
-      'Heart rate control medications',
-      'Heart rhythm control medications',
-      'Cardioversion (electrical shock therapy)',
-      'Catheter ablation',
-      'Lifestyle modifications'
+      'Rest and plenty of fluids',
+      'Over-the-counter pain relievers',
+      'Throat lozenges or warm salt water gargles',
+      'Humidifier or steam inhalation',
+      'Decongestants for nasal congestion',
+      'Antibiotics are not effective (viral infection)'
     ],
     prevention: [
-      'Maintain healthy blood pressure',
-      'Exercise regularly',
-      'Eat a heart-healthy diet',
-      'Maintain healthy weight',
-      'Limit alcohol consumption',
-      'Don\'t smoke',
-      'Manage stress'
+      'Wash hands frequently',
+      'Avoid touching face with unwashed hands',
+      'Stay away from sick people',
+      'Don\'t share personal items',
+      'Maintain good overall health',
+      'Get adequate sleep'
     ],
     simpleExplanation: {
-      whatIs: 'Your heart has four rooms, and the top two rooms (atria) are supposed to beat in a steady rhythm. In atrial fibrillation, these rooms beat very fast and irregularly, like a drum that\'s out of rhythm.',
-      howYouGet: 'It can happen when your heart gets damaged from high blood pressure, heart disease, or other conditions. Sometimes it runs in families, and it becomes more common as people get older.',
-      howToFeel: 'You might feel like your heart is racing, fluttering, or skipping beats. You could feel tired, dizzy, or have trouble breathing, especially when you\'re active.',
-      howToGetBetter: 'Doctors can give you medicines to help control your heart rhythm and prevent blood clots. Sometimes they use special procedures to help your heart beat normally again.'
+      whatIs: 'A cold is when tiny germs called viruses get into your nose and throat, making you feel sick for a few days.',
+      howYouGet: 'You can catch a cold when someone who is sick coughs or sneezes near you, or when you touch something they touched and then touch your face.',
+      howToFeel: 'You might have a runny nose, sneeze a lot, have a scratchy throat, and feel tired. It\'s like your body is fighting off the bad germs.',
+      howToGetBetter: 'Rest in bed, drink lots of water, and your body will fight off the germs in about a week. Medicine can help you feel better while you heal.'
+    },
+    severity: 'mild',
+    commonness: 'very-common'
+  },
+  {
+    id: 'diabetes-type-2',
+    name: 'Type 2 Diabetes',
+    category: 'Metabolic Disorder',
+    bodySystem: 'endocrine',
+    summary: 'A condition where the body cannot properly use insulin to control blood sugar levels.',
+    symptoms: [
+      'Increased thirst and urination',
+      'Unexplained weight loss',
+      'Fatigue',
+      'Blurred vision',
+      'Slow-healing wounds',
+      'Frequent infections',
+      'Tingling in hands or feet'
+    ],
+    causes: [
+      'Insulin resistance',
+      'Genetics and family history',
+      'Being overweight or obese',
+      'Physical inactivity',
+      'Age (over 45)',
+      'High blood pressure',
+      'Abnormal cholesterol levels'
+    ],
+    diagnosis: [
+      'Fasting blood glucose test',
+      'Oral glucose tolerance test',
+      'Hemoglobin A1C test',
+      'Random blood glucose test',
+      'Regular screening for at-risk individuals'
+    ],
+    treatment: [
+      'Healthy diet and meal planning',
+      'Regular physical exercise',
+      'Blood glucose monitoring',
+      'Oral diabetes medications',
+      'Insulin therapy if needed',
+      'Regular medical check-ups'
+    ],
+    prevention: [
+      'Maintain healthy weight',
+      'Exercise regularly',
+      'Eat a balanced diet',
+      'Limit processed foods and sugar',
+      'Don\'t smoke',
+      'Regular health screenings'
+    ],
+    simpleExplanation: {
+      whatIs: 'Diabetes is when your body has trouble using sugar from food for energy, so the sugar stays in your blood instead of going into your cells.',
+      howYouGet: 'It usually happens when you get older, don\'t exercise much, or eat too much unhealthy food. Sometimes it runs in families.',
+      howToFeel: 'You might feel very thirsty, need to go to the bathroom a lot, feel tired, or have blurry vision because there\'s too much sugar in your blood.',
+      howToGetBetter: 'You need to eat healthy foods, exercise, and sometimes take medicine to help your body use sugar better. A doctor will help you learn how to take care of yourself.'
     },
     severity: 'moderate',
     commonness: 'common'
   },
-
   {
-  id: 'cardiac-tamponade',
-  name: 'Cardiac Tamponade',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A life-threatening condition where fluid builds up in the sac around the heart, compressing it and impairing its ability to pump blood.',
-  symptoms: [
-    'Severe shortness of breath',
-    'Low blood pressure',
-    'Rapid heartbeat',
-    'Fainting or near fainting',
-    'Chest pain or pressure',
-    'Distended neck veins',
-    'Weak pulses'
-  ],
-  causes: [
-    'Chest trauma',
-    'Heart surgery complications',
-    'Cancer spreading to the heart',
-    'Pericarditis',
-    'Kidney failure (uremia)',
-    'Aortic rupture',
-    'Tuberculosis (rare in developed countries)'
-  ],
-  diagnosis: [
-    'Echocardiogram (ultrasound of the heart)',
-    'Chest X-ray',
-    'Electrocardiogram (ECG)',
-    'CT scan or MRI',
-    'Physical exam (Beck’s triad: low BP, muffled heart sounds, jugular vein distension)'
-  ],
-  treatment: [
-    'Emergency pericardiocentesis (needle drainage)',
-    'Surgical pericardial window',
-    'IV fluids to stabilize blood pressure',
-    'Treating underlying cause (cancer, infection, trauma)'
-  ],
-  prevention: [
-    'Monitor and treat pericarditis early',
-    'Regular follow-up after heart surgery',
-    'Manage cancer promptly',
-    'Avoid untreated severe infections'
-  ],
-  simpleExplanation: {
-    whatIs: 'Your heart sits in a sac, and when fluid fills that sac, it squeezes the heart so it can’t pump properly.',
-    howYouGet: 'It can happen after an injury, infection, surgery, or cancer spreading to the heart area.',
-    howToFeel: 'You feel like you can’t breathe, may feel dizzy, weak, and your blood pressure can drop dangerously low.',
-    howToGetBetter: 'Doctors quickly drain the fluid around your heart so it can beat normally again, then treat the cause.'
+    id: 'hypertension',
+    name: 'High Blood Pressure (Hypertension)',
+    category: 'Cardiovascular Disorder',
+    bodySystem: 'cardiovascular',
+    summary: 'A condition where blood pushes against artery walls with too much force, potentially damaging blood vessels and organs.',
+    symptoms: [
+      'Often no symptoms (silent killer)',
+      'Headaches',
+      'Shortness of breath',
+      'Nosebleeds',
+      'Chest pain',
+      'Dizziness',
+      'Vision problems'
+    ],
+    causes: [
+      'Unknown cause (primary hypertension)',
+      'Kidney disease',
+      'Sleep apnea',
+      'Thyroid problems',
+      'Certain medications',
+      'Excessive salt intake',
+      'Lack of physical activity'
+    ],
+    diagnosis: [
+      'Blood pressure measurements',
+      'Multiple readings over time',
+      'Ambulatory blood pressure monitoring',
+      'Home blood pressure monitoring',
+      'Tests to check for organ damage'
+    ],
+    treatment: [
+      'Lifestyle changes (diet, exercise)',
+      'Reduce sodium intake',
+      'Limit alcohol consumption',
+      'Blood pressure medications',
+      'Regular monitoring',
+      'Stress management'
+    ],
+    prevention: [
+      'Maintain healthy weight',
+      'Exercise regularly',
+      'Eat less salt',
+      'Limit alcohol',
+      'Don\'t smoke',
+      'Manage stress'
+    ],
+    simpleExplanation: {
+      whatIs: 'High blood pressure means your heart is pushing blood through your body too hard, like water flowing through a hose with too much pressure.',
+      howYouGet: 'It can happen from eating too much salty food, not exercising, being stressed, or sometimes it just happens as you get older.',
+      howToFeel: 'Most people don\'t feel anything at first, which is why it\'s called the "silent killer." Sometimes you might get headaches or feel dizzy.',
+      howToGetBetter: 'Eat healthier foods with less salt, exercise more, and take medicine if your doctor says you need it. Check your blood pressure regularly.'
+    },
+    severity: 'moderate',
+    commonness: 'very-common'
   },
-  severity: 'severe',
-  commonness: 'rare'
-},
-{
-  id: 'endocarditis',
-  name: 'Endocarditis',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'An infection of the inner lining of the heart chambers and valves, often caused by bacteria entering the bloodstream.',
-  symptoms: [
-    'Fever and chills',
-    'Heart murmur',
-    'Fatigue',
-    'Night sweats',
-    'Shortness of breath',
-    'Swelling in feet, legs, or abdomen',
-    'Skin changes (tiny red or purple spots, splinter hemorrhages)'
-  ],
-  causes: [
-    'Bacteria entering bloodstream during dental procedures',
-    'IV drug use',
-    'Artificial heart valves',
-    'Congenital heart defects',
-    'Prolonged catheter use',
-    'Weakened immune system'
-  ],
-  diagnosis: [
-    'Blood cultures',
-    'Echocardiogram (to see valve infection)',
-    'Electrocardiogram (ECG)',
-    'Chest X-ray',
-    'CT scan',
-    'Lab tests (inflammatory markers)'
-  ],
-  treatment: [
-    'IV antibiotics (long course, weeks)',
-    'Surgical removal or repair of infected valves',
-    'Treating source of infection'
-  ],
-  prevention: [
-    'Good dental hygiene',
-    'Antibiotics before dental/surgical procedures (for high-risk patients)',
-    'Avoid IV drug use',
-    'Sterile catheter care'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s a dangerous infection inside your heart, usually on the valves.',
-    howYouGet: 'Bacteria sneak into your bloodstream from things like dental work or IV drug use, then stick to your heart.',
-    howToFeel: 'You may feel feverish, tired, sweaty, and develop heart problems.',
-    howToGetBetter: 'Doctors give long-term antibiotics, and sometimes surgery to fix or replace the heart valve.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-{
-  id: 'aortic-dissection',
-  name: 'Aortic Dissection',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A tear in the inner layer of the aorta’s wall that allows blood to flow between layers, creating a false channel and risking rupture.',
-  symptoms: [
-    'Sudden, severe chest or upper back pain (tearing or ripping sensation)',
-    'Shortness of breath',
-    'Loss of consciousness',
-    'Weak pulse in one arm compared to the other',
-    'Stroke-like symptoms',
-    'Low blood pressure'
-  ],
-  causes: [
-    'High blood pressure (hypertension)',
-    'Connective tissue disorders (Marfan syndrome, Ehlers-Danlos)',
-    'Trauma (car accident, fall)',
-    'Atherosclerosis',
-    'Heart surgery complications',
-    'Aortic aneurysm'
-  ],
-  diagnosis: [
-    'CT angiography (gold standard)',
-    'Transesophageal echocardiogram',
-    'MRI angiography',
-    'Chest X-ray (widened mediastinum)',
-    'Physical exam (blood pressure difference between arms)'
-  ],
-  treatment: [
-    'Emergency surgery (for ascending aorta)',
-    'Blood pressure control with IV medications',
-    'Stent placement (endovascular repair)',
-    'Long-term blood pressure management'
-  ],
-  prevention: [
-    'Control blood pressure',
-    'Regular screening if at risk (family history, genetic conditions)',
-    'Avoid stimulant drugs (like cocaine)',
-    'Treat aneurysms before rupture'
-  ],
-  simpleExplanation: {
-    whatIs: 'The main blood pipe from your heart tears open inside its wall, making blood go the wrong way.',
-    howYouGet: 'High blood pressure or weak tissue in the aorta can cause it to split apart.',
-    howToFeel: 'It feels like the worst, sharpest chest or back pain you can imagine, and it comes suddenly.',
-    howToGetBetter: 'Doctors rush to control your blood pressure and often do emergency surgery to repair the aorta.'
-  },
-  severity: 'severe',
-  commonness: 'rare'
-},
-
-
-  {
-  id: 'coronary-artery-disease',
-  name: 'Coronary Artery Disease (CAD)',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A condition where the coronary arteries become narrowed or blocked due to plaque buildup, reducing blood flow to the heart.',
-  symptoms: [
-    'Chest pain or pressure (angina)',
-    'Shortness of breath',
-    'Fatigue with exertion',
-    'Heart palpitations',
-    'Nausea or sweating during chest discomfort',
-    'Dizziness or fainting',
-    'Silent heart attacks (sometimes no symptoms)'
-  ],
-  causes: [
-    'Atherosclerosis (plaque buildup in arteries)',
-    'High blood pressure',
-    'High cholesterol',
-    'Smoking',
-    'Diabetes',
-    'Obesity',
-    'Sedentary lifestyle',
-    'Family history of heart disease'
-  ],
-  diagnosis: [
-    'Electrocardiogram (ECG)',
-    'Exercise stress test',
-    'Echocardiogram',
-    'Cardiac catheterization and angiogram',
-    'CT coronary angiography',
-    'Blood tests (cholesterol, triglycerides)'
-  ],
-  treatment: [
-    'Lifestyle modifications (diet, exercise, stop smoking)',
-    'Medications (statins, beta-blockers, aspirin, nitrates)',
-    'Angioplasty and stent placement',
-    'Coronary artery bypass surgery (CABG)',
-    'Cardiac rehabilitation programs'
-  ],
-  prevention: [
-    'Maintain healthy blood pressure and cholesterol',
-    'Exercise regularly',
-    'Eat a heart-healthy diet',
-    'Avoid smoking',
-    'Maintain healthy weight',
-    'Manage stress',
-    'Control diabetes if present'
-  ],
-  simpleExplanation: {
-    whatIs: 'Your heart needs blood through special tubes called arteries. In CAD, those tubes get clogged with fatty “gunk” called plaque, so less blood gets to the heart.',
-    howYouGet: 'It builds up over time if you eat unhealthy foods, smoke, or have high blood pressure or cholesterol. Family history can also make it more likely.',
-    howToFeel: 'You may feel chest pain, like someone is squeezing your chest, or get tired easily. Sometimes there are no symptoms until a heart attack happens.',
-    howToGetBetter: 'Doctors give medicine to lower cholesterol and blood pressure, and sometimes do procedures to open or bypass the clogged arteries.'
-  },
-  severity: 'severe',
-  commonness: 'very-common'
-},
-
-  {
-  id: 'heart-failure',
-  name: 'Heart Failure',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A chronic condition where the heart cannot pump blood effectively enough to meet the body’s needs.',
-  symptoms: [
-    'Shortness of breath (especially lying down)',
-    'Swelling in legs, ankles, or abdomen',
-    'Fatigue and weakness',
-    'Rapid or irregular heartbeat',
-    'Persistent cough or wheezing',
-    'Sudden weight gain from fluid buildup'
-  ],
-  causes: [
-    'Coronary artery disease',
-    'High blood pressure',
-    'Heart attack damage',
-    'Valve disease',
-    'Cardiomyopathy',
-    'Diabetes',
-    'Obesity'
-  ],
-  diagnosis: [
-    'Physical exam and history',
-    'Echocardiogram',
-    'Electrocardiogram (ECG)',
-    'Chest X-ray',
-    'Blood tests (BNP/NT-proBNP)',
-    'Cardiac MRI or CT'
-  ],
-  treatment: [
-    'Medications (ACE inhibitors, beta-blockers, diuretics)',
-    'Lifestyle modifications',
-    'Implantable devices (pacemaker, defibrillator)',
-    'Surgery (valve repair, bypass)',
-    'Heart transplant (severe cases)'
-  ],
-  prevention: [
-    'Manage blood pressure and cholesterol',
-    'Exercise regularly',
-    'Eat a heart-healthy diet',
-    'Quit smoking',
-    'Control diabetes',
-    'Limit alcohol'
-  ],
-  simpleExplanation: {
-    whatIs: 'Heart failure means the heart is weak and can not pump blood well enough, like a pump that is losing power.',
-    howYouGet: 'It usually happens after years of heart damage from things like high blood pressure, heart attacks, or clogged arteries.',
-    howToFeel: 'You may feel short of breath, swollen in your legs, and tired all the time.',
-    howToGetBetter: 'Medicines, lifestyle changes, and sometimes devices or surgery can help your heart work better.'
-  },
-  severity: 'severe',
-  commonness: 'common'
-},
-
-{
-  id: 'hypertension',
-  name: 'Hypertension (High Blood Pressure)',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A chronic condition where the force of the blood against artery walls is consistently too high, increasing the risk of heart disease and stroke.',
-  symptoms: [
-    'Often none (silent condition)',
-    'Headaches (sometimes)',
-    'Dizziness',
-    'Blurred vision',
-    'Nosebleeds (rare, in severe cases)'
-  ],
-  causes: [
-    'Genetics and family history',
-    'Obesity',
-    'High salt diet',
-    'Lack of physical activity',
-    'Stress',
-    'Excessive alcohol use',
-    'Chronic kidney disease'
-  ],
-  diagnosis: [
-    'Blood pressure measurement',
-    'Ambulatory blood pressure monitoring',
-    'Blood and urine tests',
-    'Electrocardiogram (ECG)',
-    'Echocardiogram (if complications suspected)'
-  ],
-  treatment: [
-    'Lifestyle changes (diet, exercise, stress management)',
-    'Medications (diuretics, ACE inhibitors, beta-blockers, calcium channel blockers)',
-    'Regular monitoring'
-  ],
-  prevention: [
-    'Maintain healthy weight',
-    'Eat low-salt, balanced diet',
-    'Exercise regularly',
-    'Limit alcohol and avoid smoking',
-    'Manage stress'
-  ],
-  simpleExplanation: {
-    whatIs: 'High blood pressure means your blood pushes too hard on your blood vessels, like too much water pressure in a hose.',
-    howYouGet: 'It comes from eating too much salt, being overweight, stress, or family history. It often sneaks up without symptoms.',
-    howToFeel: 'Usually you won’t feel it, but sometimes you may get headaches or dizziness.',
-    howToGetBetter: 'Healthy lifestyle and medicines help keep blood pressure normal and protect your heart, kidneys, and brain.'
-  },
-  severity: 'moderate',
-  commonness: 'very-common'
-},
-
-  {
-  id: 'stroke',
-  name: 'Stroke',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A medical emergency that occurs when blood flow to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients.',
-  symptoms: [
-    'Sudden numbness or weakness in face, arm, or leg',
-    'Sudden confusion or trouble speaking',
-    'Sudden trouble seeing in one or both eyes',
-    'Sudden trouble walking or loss of balance',
-    'Sudden severe headache',
-    'Drooping face on one side',
-    'Difficulty understanding speech'
-  ],
-  causes: [
-    'Blood clot blocking brain artery (ischemic stroke)',
-    'Bleeding in the brain (hemorrhagic stroke)',
-    'High blood pressure',
-    'Atrial fibrillation',
-    'Diabetes',
-    'High cholesterol',
-    'Smoking'
-  ],
-  diagnosis: [
-    'CT scan or MRI of brain',
-    'Blood tests',
-    'Electrocardiogram (ECG)',
-    'Carotid ultrasound',
-    'Echocardiogram',
-    'Neurological examination'
-  ],
-  treatment: [
-    'Clot-busting medications (if ischemic)',
-    'Emergency surgery (if hemorrhagic)',
-    'Blood pressure management',
-    'Physical and speech therapy',
-    'Occupational therapy',
-    'Long-term rehabilitation'
-  ],
-  prevention: [
-    'Control blood pressure and cholesterol',
-    'Do not smoke',
-    'Limit alcohol',
-    'Exercise regularly',
-    'Eat healthy diet',
-    'Manage diabetes',
-    'Treat atrial fibrillation'
-  ],
-  simpleExplanation: {
-    whatIs: 'A stroke happens when blood can not get to part of your brain, either because a blood vessel gets blocked or bursts. Without blood, brain cells start to die.',
-    howYouGet: 'It usually happens when you have high blood pressure, irregular heartbeat, or clogged arteries for a long time.',
-    howToFeel: 'You might suddenly feel weak on one side, have trouble speaking, or feel confused. Your face might droop on one side.',
-    howToGetBetter: 'Getting to the hospital fast is crucial. Doctors can use medicines or surgery to restore blood flow and prevent more damage.'
-  },
-  severity: 'severe',
-  commonness: 'common'
-},
-
-{
-  id: 'peripheral-artery-disease',
-  name: 'Peripheral Artery Disease (PAD)',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A condition where narrowed arteries reduce blood flow to the limbs, usually the legs, causing pain and increasing risk of infection.',
-  symptoms: [
-    'Leg pain when walking (claudication)',
-    'Coldness in lower leg or foot',
-    'Numbness or weakness in legs',
-    'Slow-healing sores on legs or feet',
-    'Shiny skin on legs',
-    'Hair loss on legs',
-    'Weak pulse in legs or feet'
-  ],
-  causes: [
-    'Atherosclerosis (plaque buildup in arteries)',
-    'Smoking',
-    'Diabetes',
-    'High blood pressure',
-    'High cholesterol',
-    'Age over 65',
-    'Family history'
-  ],
-  diagnosis: [
-    'Ankle-brachial index (ABI) test',
-    'Ultrasound',
-    'Angiography',
-    'Blood tests',
-    'Physical examination'
-  ],
-  treatment: [
-    'Lifestyle changes (exercise, quit smoking)',
-    'Medications (blood thinners, cholesterol drugs)',
-    'Angioplasty and stenting',
-    'Bypass surgery',
-    'Wound care for ulcers'
-  ],
-  prevention: [
-    'Do not smoke',
-    'Exercise regularly',
-    'Eat heart-healthy diet',
-    'Control diabetes and blood pressure',
-    'Manage cholesterol'
-  ],
-  simpleExplanation: {
-    whatIs: 'PAD is when the blood vessels in your legs get clogged, so less blood flows to your leg muscles and feet.',
-    howYouGet: 'It happens the same way heart disease does - from smoking, diabetes, high blood pressure, or high cholesterol over time.',
-    howToFeel: 'Your legs will hurt when you walk, and they might feel cold or numb. Cuts on your legs may heal slowly.',
-    howToGetBetter: 'Doctors help open the blocked arteries and give medicines to improve blood flow. Exercise and quitting smoking are very important.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-
-{
-  id: 'deep-vein-thrombosis',
-  name: 'Deep Vein Thrombosis (DVT)',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'A blood clot that forms in a deep vein, usually in the legs, which can be life-threatening if it travels to the lungs.',
-  symptoms: [
-    'Swelling in affected leg',
-    'Pain or tenderness in leg',
-    'Red or discolored skin',
-    'Warm feeling in affected area',
-    'Enlarged veins',
-    'Sometimes no symptoms'
-  ],
-  causes: [
-    'Prolonged sitting or bed rest',
-    'Surgery or injury',
-    'Pregnancy',
-    'Birth control pills or hormone therapy',
-    'Cancer',
-    'Inherited blood clotting disorders',
-    'Obesity'
-  ],
-  diagnosis: [
-    'Ultrasound of veins',
-    'D-dimer blood test',
-    'CT or MRI scan',
-    'Venography (contrast dye X-ray)'
-  ],
-  treatment: [
-    'Blood thinners (anticoagulants)',
-    'Clot-busting drugs (severe cases)',
-    'Compression stockings',
-    'Vena cava filter (if you can not take blood thinners)',
-    'Thrombectomy (surgical clot removal)'
-  ],
-  prevention: [
-    'Move regularly during long trips',
-    'Exercise regularly',
-    'Maintain healthy weight',
-    'Wear compression stockings if at risk',
-    'Stay hydrated'
-  ],
-  simpleExplanation: {
-    whatIs: 'DVT is when your blood forms a clot in a deep vein, usually in your leg, like thick jelly blocking a straw.',
-    howYouGet: 'It happens when blood moves too slowly, often from sitting too long, after surgery, or from certain medications.',
-    howToFeel: 'Your leg might swell up, hurt, and feel warm. The dangerous part is if the clot breaks off and goes to your lungs.',
-    howToGetBetter: 'Doctors give blood-thinning medicines to dissolve the clot and prevent new ones. Moving around helps prevent it.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'varicose-veins',
-  name: 'Varicose Veins',
-  category: 'Cardiovascular',
-  bodySystem: 'cardiovascular',
-  summary: 'Enlarged, twisted veins that are visible under the skin, most commonly in the legs, caused by weakened vein walls and valves.',
-  symptoms: [
-    'Bulging, twisted veins visible under skin',
-    'Aching or heavy feeling in legs',
-    'Burning or throbbing in legs',
-    'Muscle cramping and swelling',
-    'Worsened pain after sitting or standing',
-    'Itching around veins',
-    'Skin discoloration around veins'
-  ],
-  causes: [
-    'Weakened vein valves',
-    'Age (weakened vein walls)',
-    'Pregnancy (increased blood volume)',
-    'Family history',
-    'Prolonged standing',
-    'Obesity',
-    'Female hormones'
-  ],
-  diagnosis: [
-    'Physical examination',
-    'Ultrasound to check blood flow',
-    'Medical history review'
-  ],
-  treatment: [
-    'Compression stockings',
-    'Exercise and leg elevation',
-    'Sclerotherapy (injection treatment)',
-    'Laser treatment',
-    'Radiofrequency treatment',
-    'Surgery (vein stripping, phlebectomy)'
-  ],
-  prevention: [
-    'Exercise regularly',
-    'Maintain healthy weight',
-    'Avoid prolonged standing or sitting',
-    'Elevate legs when resting',
-    'Wear compression stockings'
-  ],
-  simpleExplanation: {
-    whatIs: 'Varicose veins are when the veins in your legs get stretched out and twisted because the little doors (valves) inside them do not close properly.',
-    howYouGet: 'It happens when you stand a lot, are pregnant, or have family members with the same problem. Age makes vein walls weaker.',
-    howToFeel: 'Your legs might ache, feel heavy, or cramp. You can see the twisted, bulging veins under your skin.',
-    howToGetBetter: 'Doctors can close off the bad veins with injections, lasers, or surgery. Wearing special stockings and elevating your legs helps too.'
-  },
-  severity: 'mild',
-  commonness: 'common'
-},
-
-  // =============================================================================
-  // RESPIRATORY DISEASES
-  // =============================================================================
-
   {
     id: 'asthma',
     name: 'Asthma',
-    category: 'Respiratory',
+    category: 'Respiratory Disorder',
     bodySystem: 'respiratory',
-    summary: 'A condition where your airways become narrow, swollen, and produce extra mucus, making breathing difficult.',
+    summary: 'A condition where airways become inflamed and narrow, making it difficult to breathe.',
     symptoms: [
+      'Wheezing',
       'Shortness of breath',
-      'Chest tightness or pain',
-      'Wheezing when exhaling',
-      'Coughing attacks',
-      'Trouble sleeping due to breathing',
-      'Fatigue during physical activity'
+      'Chest tightness',
+      'Coughing (especially at night)',
+      'Difficulty speaking',
+      'Fatigue during physical activity',
+      'Trouble sleeping due to breathing problems'
     ],
     causes: [
-      'Genetics',
-      'Environmental allergens (pollen, dust mites)',
+      'Allergens (pollen, dust mites, pet dander)',
       'Respiratory infections',
       'Physical activity',
       'Cold air',
       'Air pollutants and irritants',
-      'Stress and strong emotions'
+      'Strong emotions and stress',
+      'Certain medications'
     ],
     diagnosis: [
       'Medical history and physical exam',
       'Lung function tests (spirometry)',
       'Peak flow measurement',
-      'Allergy tests',
+      'Allergy testing',
       'Chest X-ray',
       'Response to bronchodilator medication'
     ],
     treatment: [
-      'Quick-relief inhalers (albuterol)',
+      'Quick-relief inhalers (rescue medications)',
       'Long-term control medications',
       'Allergy medications',
-      'Avoiding triggers',
-      'Creating an asthma action plan',
+      'Avoiding known triggers',
+      'Asthma action plan',
       'Regular monitoring'
     ],
     prevention: [
       'Identify and avoid triggers',
       'Take medications as prescribed',
-      'Monitor breathing daily',
-      'Get vaccinated for flu and pneumonia',
-      'Exercise regularly (with doctor\'s guidance)',
-      'Maintain a clean living environment'
+      'Get vaccinated against flu and pneumonia',
+      'Maintain good indoor air quality',
+      'Exercise regularly (with proper precautions)',
+      'Manage stress'
     ],
     simpleExplanation: {
-      whatIs: 'Asthma makes the tubes in your lungs get narrow and swollen, like drinking through a straw that gets squeezed. This makes it hard to breathe.',
-      howYouGet: 'Some people are born with lungs that are extra sensitive to things like dust, pets, or cold air. When they breathe these things in, their lungs get upset.',
-      howToFeel: 'It feels like you can\'t get enough air, your chest might feel tight, and you might make a whistling sound when you breathe out. It can be scary, but it\'s treatable.',
-      howToGetBetter: 'Doctors give you special inhalers that are like medicine you breathe in. You also learn what things make your asthma worse and try to avoid them, like staying away from things you\'re allergic to.'
+      whatIs: 'Asthma makes the tubes in your lungs get swollen and tight, making it hard to breathe, like trying to breathe through a narrow straw.',
+      howYouGet: 'Some people are born with it, and it can be triggered by things like dust, pets, exercise, or getting sick.',
+      howToFeel: 'You might wheeze, cough, feel like you can\'t catch your breath, or feel like someone is squeezing your chest.',
+      howToGetBetter: 'Use special medicines called inhalers that help open up your breathing tubes, and try to stay away from things that make it worse.'
     },
     severity: 'moderate',
     commonness: 'common'
   },
-
   {
-  id: 'sarcoidosis',
-  name: 'Sarcoidosis',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'An inflammatory disease where clusters of immune cells (granulomas) form in the lungs and other organs, interfering with normal function.',
-  symptoms: [
-    'Persistent dry cough',
-    'Shortness of breath',
-    'Chest pain',
-    'Fatigue',
-    'Fever',
-    'Swollen lymph nodes',
-    'Skin rashes or nodules'
-  ],
-  causes: [
-    'Exact cause unknown',
-    'Overactive immune response to unknown trigger',
-    'Possible genetic predisposition',
-    'Environmental exposures (dust, mold, chemicals)'
-  ],
-  diagnosis: [
-    'Chest X-ray (bilateral hilar lymphadenopathy)',
-    'CT scan of chest',
-    'Pulmonary function tests',
-    'Biopsy of lung tissue or lymph nodes',
-    'Blood tests (ACE levels, calcium)'
-  ],
-  treatment: [
-    'Corticosteroids (prednisone)',
-    'Immunosuppressive drugs (methotrexate, azathioprine)',
-    'Anti-TNF therapy in severe cases',
-    'Oxygen therapy (if advanced lung disease)'
-  ],
-  prevention: [
-    'No guaranteed prevention',
-    'Avoid exposure to lung irritants',
-    'Regular monitoring if family history exists'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when little clumps of immune cells grow inside your lungs and sometimes other organs, making them not work right.',
-    howYouGet: 'Doctors don’t know exactly why, but your immune system goes into overdrive after something like dust, chemicals, or maybe genes.',
-    howToFeel: 'You might feel very tired, cough a lot, and have trouble breathing.',
-    howToGetBetter: 'Steroids and medicines can calm your immune system so the clumps shrink and your lungs work better.'
-  },
-  severity: 'moderate',
-  commonness: 'uncommon'
-},
-  
-{
-  id: 'goodpasture-syndrome',
-  name: 'Goodpasture Syndrome',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A rare autoimmune disorder where antibodies attack the lungs and kidneys, leading to bleeding in the lungs and kidney failure.',
-  symptoms: [
-    'Coughing up blood (hemoptysis)',
-    'Shortness of breath',
-    'Fatigue',
-    'Chest pain',
-    'Bloody urine',
-    'Swelling in legs or ankles',
-    'Pale skin'
-  ],
-  causes: [
-    'Autoimmune reaction to basement membrane proteins',
-    'Genetic predisposition',
-    'Exposure to hydrocarbons, tobacco smoke, or viruses'
-  ],
-  diagnosis: [
-    'Chest X-ray or CT scan (lung bleeding)',
-    'Kidney function tests (BUN, creatinine)',
-    'Urinalysis (blood and protein in urine)',
-    'Blood tests (anti-GBM antibodies)',
-    'Lung or kidney biopsy'
-  ],
-  treatment: [
-    'Plasmapheresis (to remove antibodies)',
-    'Corticosteroids',
-    'Immunosuppressants (cyclophosphamide)',
-    'Dialysis (if kidney failure occurs)',
-    'Lung transplant in severe cases'
-  ],
-  prevention: [
-    'Avoid smoking',
-    'Limit exposure to hydrocarbons and toxins',
-    'Early treatment when symptoms first appear'
-  ],
-  simpleExplanation: {
-    whatIs: 'Your immune system makes a mistake and attacks your lungs and kidneys at the same time.',
-    howYouGet: 'It can happen if your genes and environment make your immune system misfire after smoke, infections, or chemical exposures.',
-    howToFeel: 'You cough up blood, feel short of breath, and your pee might turn dark or bloody.',
-    howToGetBetter: 'Doctors filter your blood to remove the bad antibodies and give you strong medicines to calm your immune system.'
-  },
-  severity: 'severe',
-  commonness: 'rare'
-},
-
-  {
-  id: 'copd',
-  name: 'Chronic Obstructive Pulmonary Disease (COPD)',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A group of progressive lung diseases, including emphysema and chronic bronchitis, that make it hard to breathe.',
-  symptoms: [
-    'Chronic cough with mucus',
-    'Shortness of breath (especially during activity)',
-    'Wheezing',
-    'Chest tightness',
-    'Frequent respiratory infections',
-    'Fatigue',
-    'Blue lips or fingernails in severe cases'
-  ],
-  causes: [
-    'Long-term smoking',
-    'Exposure to air pollutants',
-    'Chronic exposure to dust or chemicals',
-    'Genetic factors (alpha-1 antitrypsin deficiency)',
-    'History of frequent lung infections'
-  ],
-  diagnosis: [
-    'Medical history and physical exam',
-    'Spirometry (lung function test)',
-    'Chest X-ray',
-    'CT scan',
-    'Arterial blood gas test',
-    'Pulse oximetry'
-  ],
-  treatment: [
-    'Quitting smoking (most important step)',
-    'Bronchodilator inhalers',
-    'Steroid inhalers',
-    'Pulmonary rehabilitation',
-    'Oxygen therapy',
-    'Surgery in severe cases (lung volume reduction, transplant)'
-  ],
-  prevention: [
-    'Don’t smoke or quit if you do',
-    'Avoid secondhand smoke',
-    'Limit exposure to lung irritants',
-    'Get flu and pneumonia vaccines',
-    'Exercise regularly to strengthen lungs'
-  ],
-  simpleExplanation: {
-    whatIs: 'COPD makes your airways and lungs damaged, like old, stiff balloons that can’t fill and empty properly.',
-    howYouGet: 'It usually happens after years of smoking, breathing dirty air, or being exposed to harmful chemicals.',
-    howToFeel: 'You’ll have trouble catching your breath, cough a lot with mucus, and feel tired even after small activities.',
-    howToGetBetter: 'There’s no cure, but medicines, oxygen, and quitting smoking can help you breathe easier and live longer.'
-  },
-  severity: 'severe',
-  commonness: 'common'
-},
-
-  {
-  id: 'pneumonia',
-  name: 'Pneumonia',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'An infection that inflames the air sacs in one or both lungs, which may fill with fluid or pus.',
-  symptoms: [
-    'Cough with phlegm or pus',
-    'Fever and chills',
-    'Shortness of breath',
-    'Chest pain when breathing or coughing',
-    'Fatigue',
-    'Nausea, vomiting, or diarrhea'
-  ],
-  causes: [
-    'Bacterial infection (Streptococcus pneumoniae most common)',
-    'Viral infections (influenza, RSV, COVID-19)',
-    'Fungal infections (rare, in immunocompromised)',
-    'Aspiration of food or liquids'
-  ],
-  diagnosis: [
-    'Medical history and physical exam',
-    'Chest X-ray',
-    'Blood tests',
-    'Sputum culture',
-    'Pulse oximetry',
-    'CT scan (if needed)'
-  ],
-  treatment: [
-    'Antibiotics (for bacterial)',
-    'Antiviral or antifungal drugs (if indicated)',
-    'Fever reducers and pain relievers',
-    'Rest and fluids',
-    'Hospitalization with oxygen (severe cases)'
-  ],
-  prevention: [
-    'Vaccination (pneumococcal, flu, COVID-19)',
-    'Good hygiene',
-    'Avoid smoking',
-    'Strengthen immune system with healthy lifestyle'
-  ],
-  simpleExplanation: {
-    whatIs: 'Pneumonia is a lung infection that fills your air sacs with fluid, making it hard to breathe.',
-    howYouGet: 'It comes from bacteria, viruses, or fungi getting into your lungs, especially if your immune system is weak.',
-    howToFeel: 'You’ll cough, have fever, chest pain, and feel very tired. Breathing will be harder.',
-    howToGetBetter: 'Doctors use antibiotics or other medicines, plus rest and fluids. Sometimes you need hospital care with oxygen.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-
-{
-  id: 'tuberculosis',
-  name: 'Tuberculosis (TB)',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A serious infectious disease caused by Mycobacterium tuberculosis bacteria, primarily affecting the lungs but can spread to other organs.',
-  symptoms: [
-    'Persistent cough (3+ weeks)',
-    'Coughing up blood or sputum',
-    'Chest pain',
-    'Unintentional weight loss',
-    'Night sweats',
-    'Fever and chills',
-    'Fatigue'
-  ],
-  causes: [
-    'Infection with Mycobacterium tuberculosis',
-    'Spread through airborne droplets when an infected person coughs or sneezes'
-  ],
-  diagnosis: [
-    'Tuberculin skin test (Mantoux test)',
-    'Blood tests (IGRA)',
-    'Chest X-ray',
-    'Sputum smear and culture'
-  ],
-  treatment: [
-    'Combination antibiotic therapy (isoniazid, rifampin, ethambutol, pyrazinamide)',
-    '6–9 months treatment duration',
-    'Directly observed therapy (DOT) for adherence'
-  ],
-  prevention: [
-    'BCG vaccination (in high-risk areas)',
-    'Good ventilation in crowded spaces',
-    'Early detection and treatment of active cases'
-  ],
-  simpleExplanation: {
-    whatIs: 'TB is a lung infection that spreads through the air when someone sick coughs or sneezes.',
-    howYouGet: 'You can catch it if you spend time with someone who has active TB and you breathe in the bacteria.',
-    howToFeel: 'You’ll cough a lot, maybe cough up blood, lose weight, sweat at night, and feel weak.',
-    howToGetBetter: 'Doctors use a mix of antibiotics for many months to kill the bacteria and stop it from spreading.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'bronchitis-acute',
-  name: 'Acute Bronchitis',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A temporary inflammation of the lining of bronchial tubes that carry air to the lungs, usually caused by viral infections.',
-  symptoms: [
-    'Cough (may produce mucus)',
-    'Fatigue',
-    'Shortness of breath',
-    'Slight fever and chills',
-    'Chest discomfort',
-    'Sore throat',
-    'Body aches'
-  ],
-  causes: [
-    'Viral infections (cold or flu viruses)',
-    'Bacterial infections (less common)',
-    'Exposure to irritants (smoke, dust, fumes)',
-    'Air pollution'
-  ],
-  diagnosis: [
-    'Physical examination',
-    'Medical history',
-    'Chest X-ray (to rule out pneumonia)',
-    'Sputum test (if bacterial suspected)'
-  ],
-  treatment: [
-    'Rest and fluids',
-    'Cough suppressants',
-    'Pain relievers',
-    'Humidifier use',
-    'Antibiotics (only if bacterial)',
-    'Bronchodilators (if wheezing present)'
-  ],
-  prevention: [
-    'Wash hands frequently',
-    'Avoid smoking and secondhand smoke',
-    'Get flu vaccination',
-    'Wear mask around sick people',
-    'Avoid air pollutants'
-  ],
-  simpleExplanation: {
-    whatIs: 'Acute bronchitis is when the tubes that carry air to your lungs get irritated and swollen, usually from a cold or flu.',
-    howYouGet: 'Most of the time it comes from the same viruses that cause colds, or from breathing in irritating things like smoke.',
-    howToFeel: 'You will have a nagging cough that may bring up mucus, feel tired, and have some chest discomfort.',
-    howToGetBetter: 'It usually goes away on its own with rest, fluids, and time. Cough medicine can help you feel more comfortable.'
-  },
-  severity: 'mild',
-  commonness: 'very-common'
-},
-
-{
-  id: 'sleep-apnea',
-  name: 'Sleep Apnea',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A serious sleep disorder where breathing repeatedly stops and starts during sleep, disrupting rest and oxygen levels.',
-  symptoms: [
-    'Loud snoring',
-    'Gasping for air during sleep',
-    'Morning headaches',
-    'Excessive daytime sleepiness',
-    'Difficulty concentrating',
-    'Irritability',
-    'High blood pressure'
-  ],
-  causes: [
-    'Throat muscles relaxing too much',
-    'Obesity (extra tissue blocking airways)',
-    'Large neck circumference',
-    'Narrowed airways',
-    'Family history',
-    'Age (more common in older adults)',
-    'Male gender'
-  ],
-  diagnosis: [
-    'Sleep study (polysomnography)',
-    'Home sleep test',
-    'Medical history and physical exam',
-    'Assessment of daytime sleepiness'
-  ],
-  treatment: [
-    'CPAP (continuous positive airway pressure) machine',
-    'Weight loss',
-    'Oral appliances',
-    'Positional therapy',
-    'Surgery (severe cases)',
-    'Lifestyle changes'
-  ],
-  prevention: [
-    'Maintain healthy weight',
-    'Exercise regularly',
-    'Avoid alcohol and sedatives',
-    'Sleep on your side',
-    'Quit smoking'
-  ],
-  simpleExplanation: {
-    whatIs: 'Sleep apnea is when you stop breathing many times during sleep because your throat closes up, then you wake up gasping for air.',
-    howYouGet: 'It usually happens when you are overweight, have a thick neck, or your throat muscles are too relaxed during sleep.',
-    howToFeel: 'You will snore loudly, feel very tired during the day even after sleeping, and may wake up with headaches.',
-    howToGetBetter: 'Doctors often prescribe a CPAP machine that keeps your airways open while you sleep. Losing weight also helps a lot.'
-  },
-  severity: 'severe',
-  commonness: 'common'
-},
-
-{
-  id: 'pulmonary-embolism',
-  name: 'Pulmonary Embolism (PE)',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A life-threatening condition where a blood clot blocks an artery in the lungs, preventing blood flow and oxygen exchange.',
-  symptoms: [
-    'Sudden shortness of breath',
-    'Sharp chest pain (worse with breathing)',
-    'Coughing up blood',
-    'Rapid heart rate',
-    'Dizziness or fainting',
-    'Leg pain or swelling',
-    'Excessive sweating'
-  ],
-  causes: [
-    'Blood clot from deep vein thrombosis (DVT)',
-    'Prolonged immobility',
-    'Surgery or trauma',
-    'Cancer',
-    'Pregnancy',
-    'Birth control pills',
-    'Inherited clotting disorders'
-  ],
-  diagnosis: [
-    'CT pulmonary angiogram (CTPA)',
-    'D-dimer blood test',
-    'Chest X-ray',
-    'Echocardiogram',
-    'Arterial blood gas test',
-    'Ultrasound of legs'
-  ],
-  treatment: [
-    'Anticoagulant medications (blood thinners)',
-    'Thrombolytic therapy (clot-busting drugs)',
-    'Embolectomy (surgical clot removal)',
-    'Vena cava filter',
-    'Oxygen therapy',
-    'Hospitalization for monitoring'
-  ],
-  prevention: [
-    'Move regularly during long trips',
-    'Exercise regularly',
-    'Wear compression stockings',
-    'Stay hydrated',
-    'Take prescribed blood thinners if at risk'
-  ],
-  simpleExplanation: {
-    whatIs: 'A pulmonary embolism is when a blood clot travels to your lungs and blocks blood flow, like a cork stuck in a bottle.',
-    howYouGet: 'It usually starts as a clot in your leg that breaks off and travels through your blood to your lungs.',
-    howToFeel: 'You will suddenly have trouble breathing, sharp chest pain, and may cough up blood. It can be life-threatening.',
-    howToGetBetter: 'This is a medical emergency requiring immediate hospital treatment with blood-thinning medicines or procedures to remove the clot.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'lung-cancer',
-  name: 'Lung Cancer',
-  category: 'Respiratory',
-  bodySystem: 'respiratory',
-  summary: 'A type of cancer that begins in the lungs, most commonly caused by smoking, and can spread to other parts of the body.',
-  symptoms: [
-    'Persistent cough that worsens',
-    'Coughing up blood',
-    'Chest pain',
-    'Shortness of breath',
-    'Hoarseness',
-    'Unexplained weight loss',
-    'Bone pain',
-    'Fatigue'
-  ],
-  causes: [
-    'Smoking (leading cause)',
-    'Secondhand smoke exposure',
-    'Radon gas exposure',
-    'Asbestos exposure',
-    'Air pollution',
-    'Family history',
-    'Previous radiation therapy'
-  ],
-  diagnosis: [
-    'Chest X-ray',
-    'CT scan of chest',
-    'Sputum cytology',
-    'Tissue biopsy',
-    'PET scan',
-    'Molecular testing of tumor'
-  ],
-  treatment: [
-    'Surgery (if early stage)',
-    'Chemotherapy',
-    'Radiation therapy',
-    'Targeted therapy',
-    'Immunotherapy',
-    'Palliative care'
-  ],
-  prevention: [
-    'Do not smoke or quit if you smoke',
-    'Avoid secondhand smoke',
-    'Test home for radon',
-    'Avoid carcinogens at work',
-    'Eat healthy diet with fruits and vegetables'
-  ],
-  simpleExplanation: {
-    whatIs: 'Lung cancer is when cells in your lungs grow out of control and form tumors that can spread to other parts of your body.',
-    howYouGet: 'Smoking is the main cause, but you can also get it from breathing in other harmful things like radon gas or asbestos.',
-    howToFeel: 'You may have a cough that will not go away, cough up blood, lose weight without trying, and feel very tired.',
-    howToGetBetter: 'Treatment depends on the type and stage, and may include surgery, chemotherapy, or radiation. Quitting smoking improves outcomes.'
-  },
-  severity: 'severe',
-  commonness: 'common'
-},
-
-
-  // =============================================================================
-  // ENDOCRINE/METABOLIC DISEASES
-  // =============================================================================
-
-  {
-    id: 'diabetes-type-1',
-    name: 'Type 1 Diabetes',
-    category: 'Metabolic Disorders',
-    bodySystem: 'endocrine',
-    summary: 'An autoimmune condition where the body attacks insulin-producing cells in the pancreas, requiring lifelong insulin therapy.',
-    symptoms: [
-      'Excessive thirst and urination',
-      'Extreme hunger',
-      'Rapid weight loss',
-      'Fatigue and weakness',
-      'Blurred vision',
-      'Mood changes and irritability',
-      'Fruity-smelling breath'
-    ],
-    causes: [
-      'Autoimmune destruction of pancreatic cells',
-      'Genetic predisposition',
-      'Environmental triggers (viruses)',
-      'Family history',
-      'Usually develops in childhood or adolescence'
-    ],
-    diagnosis: [
-      'Blood glucose tests',
-      'A1C test',
-      'Autoantibody tests',
-      'C-peptide test',
-      'Ketone testing',
-      'Random plasma glucose test'
-    ],
-    treatment: [
-      'Insulin therapy (multiple daily injections)',
-      'Continuous glucose monitoring',
-      'Insulin pumps',
-      'Carbohydrate counting',
-      'Regular blood sugar monitoring',
-      'Healthy diet and exercise'
-    ],
-    prevention: [
-      'Cannot be prevented (autoimmune)',
-      'Early detection important',
-      'Family screening recommended',
-      'Healthy lifestyle to prevent complications'
-    ],
-    simpleExplanation: {
-      whatIs: 'Type 1 diabetes happens when your body\'s defense system accidentally attacks the part of your pancreas that makes insulin. Insulin is like a key that helps sugar get into your cells for energy.',
-      howYouGet: 'You\'re usually born with genes that make this more likely to happen, and something like a virus might trigger it. It\'s not caused by eating too much sugar or being overweight.',
-      howToFeel: 'You\'ll feel very thirsty and need to go to the bathroom a lot. You might lose weight even though you\'re eating more, and you\'ll feel very tired and weak.',
-      howToGetBetter: 'You\'ll need to take insulin shots or use an insulin pump every day for the rest of your life. You\'ll also learn to check your blood sugar and count carbohydrates in your food.'
-    },
-    severity: 'severe',
-    commonness: 'uncommon'
-  },
-
-  {
-  id: 'diabetes-type-2',
-  name: 'Type 2 Diabetes',
-  category: 'Metabolic Disorders',
-  bodySystem: 'endocrine',
-  summary: 'A chronic condition where the body becomes resistant to insulin or doesn’t make enough, leading to high blood sugar levels.',
-  symptoms: [
-    'Increased thirst and urination',
-    'Fatigue',
-    'Blurred vision',
-    'Slow-healing sores',
-    'Frequent infections',
-    'Numbness or tingling in hands/feet',
-    'Unintended weight loss (less common)'
-  ],
-  causes: [
-    'Insulin resistance',
-    'Obesity',
-    'Sedentary lifestyle',
-    'Unhealthy diet',
-    'Genetics and family history',
-    'Older age',
-    'History of gestational diabetes'
-  ],
-  diagnosis: [
-    'Fasting blood glucose test',
-    'A1C test',
-    'Oral glucose tolerance test',
-    'Random plasma glucose test'
-  ],
-  treatment: [
-    'Lifestyle modifications (diet, exercise)',
-    'Oral medications (metformin, sulfonylureas)',
-    'Injectable medications (GLP-1 agonists, insulin if needed)',
-    'Weight management',
-    'Regular blood sugar monitoring'
-  ],
-  prevention: [
-    'Maintain healthy weight',
-    'Exercise regularly',
-    'Eat a balanced, low-sugar diet',
-    'Avoid smoking and excessive alcohol',
-    'Regular blood sugar checks if at risk'
-  ],
-  simpleExplanation: {
-    whatIs: 'In type 2 diabetes, your body doesn’t use insulin properly. Insulin is the “key” that lets sugar from food into your cells. Without it working well, sugar builds up in your blood.',
-    howYouGet: 'It usually happens slowly from being overweight, not active enough, or having a family history of diabetes.',
-    howToFeel: 'You may feel thirsty all the time, pee a lot, feel tired, and get sick more often. Cuts may take longer to heal.',
-    howToGetBetter: 'Doctors help with healthy eating, exercise, and medicines to lower blood sugar. Sometimes insulin is needed if pills don’t work well enough.'
-  },
-  severity: 'moderate',
-  commonness: 'very-common'
-},
-
-  {
-  id: 'cushings-syndrome',
-  name: 'Cushing’s Syndrome',
-  category: 'Endocrine/Metabolic',
-  bodySystem: 'endocrine',
-  summary: 'A hormonal disorder caused by prolonged exposure to high levels of cortisol, either from medications or from the body producing too much.',
-  symptoms: [
-    'Weight gain (especially in face, upper back, and abdomen)',
-    'Round, puffy face (“moon face”)',
-    'Purple stretch marks on skin',
-    'Thin arms and legs with weak muscles',
-    'Easy bruising',
-    'High blood pressure',
-    'Mood changes (depression, anxiety, irritability)'
-  ],
-  causes: [
-    'Prolonged use of corticosteroid medications',
-    'Pituitary adenoma (Cushing’s disease)',
-    'Adrenal gland tumors',
-    'Ectopic ACTH-producing tumors (e.g., lung cancer)'
-  ],
-  diagnosis: [
-    '24-hour urinary free cortisol test',
-    'Late-night salivary cortisol test',
-    'Dexamethasone suppression test',
-    'MRI or CT of pituitary/adrenal glands'
-  ],
-  treatment: [
-    'Surgical removal of tumor (pituitary or adrenal)',
-    'Radiation therapy (if surgery not possible)',
-    'Medications to control cortisol (ketoconazole, metyrapone)',
-    'Gradual reduction of corticosteroid medications (if drug-induced)'
-  ],
-  prevention: [
-    'Avoid unnecessary long-term corticosteroid use',
-    'Monitor hormone levels with regular checkups if at risk'
-  ],
-  simpleExplanation: {
-    whatIs: 'Your body has too much of the stress hormone cortisol for too long.',
-    howYouGet: 'It can happen from taking steroid medicines, or if your body makes too much cortisol because of a tumor.',
-    howToFeel: 'You gain weight in odd places, bruise easily, and may feel tired, moody, or weak.',
-    howToGetBetter: 'Doctors treat the cause—like removing a tumor—or adjust medicines to lower your cortisol levels.'
-  },
-  severity: 'moderate',
-  commonness: 'uncommon'
-},
-{
-  id: 'addisons-disease',
-  name: 'Addison’s Disease',
-  category: 'Endocrine/Metabolic',
-  bodySystem: 'endocrine',
-  summary: 'A rare disorder in which the adrenal glands don’t produce enough cortisol and sometimes aldosterone, leading to fatigue, low blood pressure, and electrolyte imbalances.',
-  symptoms: [
-    'Chronic fatigue',
-    'Weight loss and decreased appetite',
-    'Low blood pressure (especially when standing)',
-    'Darkening of skin (hyperpigmentation)',
-    'Salt cravings',
-    'Nausea, vomiting, diarrhea',
-    'Mood changes and irritability'
-  ],
-  causes: [
-    'Autoimmune destruction of adrenal glands',
-    'Tuberculosis',
-    'Adrenal tumors or infections',
-    'Genetic disorders affecting adrenal development',
-    'Sudden withdrawal from long-term steroid therapy'
-  ],
-  diagnosis: [
-    'ACTH stimulation test',
-    'Blood tests (cortisol, ACTH, sodium, potassium)',
-    'CT or MRI of adrenal glands',
-    'Autoantibody testing'
-  ],
-  treatment: [
-    'Hormone replacement therapy (hydrocortisone, fludrocortisone)',
-    'Increased salt intake',
-    'Emergency injections of corticosteroids during crises',
-    'Lifelong monitoring and dose adjustments'
-  ],
-  prevention: [
-    'No known prevention (if autoimmune)',
-    'Monitor and manage infections that affect adrenal glands',
-    'Avoid sudden stopping of long-term steroids'
-  ],
-  simpleExplanation: {
-    whatIs: 'Your adrenal glands aren’t making enough hormones your body needs.',
-    howYouGet: 'Most often from your immune system attacking your adrenal glands, but sometimes from infections or tumors.',
-    howToFeel: 'You may feel weak, dizzy when standing, crave salt, and your skin may get darker.',
-    howToGetBetter: 'Doctors give you replacement hormones to take for life, and you need extra medicine when you’re sick or stressed.'
-  },
-  severity: 'moderate',
-  commonness: 'rare'
-},
-{
-  id: 'thyroid-storm',
-  name: 'Thyroid Storm',
-  category: 'Endocrine/Metabolic',
-  bodySystem: 'endocrine',
-  summary: 'A life-threatening complication of hyperthyroidism in which excessive thyroid hormones cause extreme overactivation of body systems.',
-  symptoms: [
-    'Very high fever',
-    'Rapid or irregular heartbeat',
-    'Severe sweating',
-    'Agitation, anxiety, or confusion',
-    'Tremors',
-    'Diarrhea and vomiting',
-    'Low blood pressure and shock (late stage)'
-  ],
-  causes: [
-    'Untreated or poorly managed hyperthyroidism',
-    'Infection',
-    'Surgery or trauma',
-    'Stopping thyroid medication suddenly',
-    'Radioactive iodine treatment'
-  ],
-  diagnosis: [
-    'Clinical diagnosis based on symptoms (medical emergency)',
-    'Blood tests (extremely elevated T3, T4, suppressed TSH)',
-    'Electrocardiogram (to assess heart rhythm)',
-    'Chest X-ray (rule out infection)'
-  ],
-  treatment: [
-    'Hospitalization and ICU monitoring',
-    'Beta blockers (to control heart rate)',
-    'Antithyroid drugs (propylthiouracil, methimazole)',
-    'Iodine solution (to block hormone release)',
-    'Corticosteroids',
-    'IV fluids and cooling measures'
-  ],
-  prevention: [
-    'Proper treatment and monitoring of hyperthyroidism',
-    'Take thyroid medications as prescribed',
-    'Treat infections quickly',
-    'Avoid sudden discontinuation of therapy'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when your thyroid goes into overdrive and floods your body with way too much hormone.',
-    howYouGet: 'Usually when someone with untreated thyroid disease gets very sick or stops their medicines suddenly.',
-    howToFeel: 'You get a super high fever, pounding heartbeat, sweating, shaking, and feel very anxious or confused.',
-    howToGetBetter: 'Doctors treat you in the hospital with medicines to slow your thyroid and protect your heart.'
-  },
-  severity: 'severe',
-  commonness: 'rare'
-},
-
-{
-  id: 'hypothyroidism',
-  name: 'Hypothyroidism',
-  category: 'Metabolic Disorders',
-  bodySystem: 'endocrine',
-  summary: 'A condition where the thyroid gland doesn\'t produce enough thyroid hormones, slowing down the body\'s metabolism.',
-  symptoms: [
-    'Fatigue and weakness',
-    'Weight gain',
-    'Cold intolerance',
-    'Dry skin and hair',
-    'Hair loss',
-    'Constipation',
-    'Depression or mood changes',
-    'Memory problems',
-    'Slow heart rate'
-  ],
-  causes: [
-    'Hashimoto\'s disease (autoimmune)',
-    'Thyroid surgery',
-    'Radiation treatment',
-    'Medications',
-    'Iodine deficiency',
-    'Congenital thyroid problems',
-    'Pituitary disorders'
-  ],
-  diagnosis: [
-    'TSH (thyroid-stimulating hormone) blood test',
-    'Free T4 blood test',
-    'Thyroid antibody tests',
-    'Physical examination',
-    'Medical history review'
-  ],
-  treatment: [
-    'Thyroid hormone replacement therapy (levothyroxine)',
-    'Regular monitoring and dose adjustment',
-    'Lifelong medication in most cases'
-  ],
-  prevention: [
-    'Ensure adequate iodine intake',
-    'Regular thyroid screening if at risk',
-    'No specific prevention for autoimmune causes'
-  ],
-  simpleExplanation: {
-    whatIs: 'Your thyroid is like your body\'s gas pedal - it controls how fast your body works. In hypothyroidism, it doesn\'t make enough hormone, so everything slows down.',
-    howYouGet: 'Sometimes your immune system attacks your thyroid by mistake, or it gets damaged by surgery or radiation. Some people are born with thyroid problems.',
-    howToFeel: 'You\'ll feel very tired, gain weight easily, feel cold all the time, and everything seems to move slower - even your thinking.',
-    howToGetBetter: 'Doctors give you thyroid hormone pills to replace what your thyroid can\'t make. You\'ll probably need to take them for life, but they work very well.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-
-{
-  id: 'hyperthyroidism',
-  name: 'Hyperthyroidism',
-  category: 'Metabolic Disorders',
-  bodySystem: 'endocrine',
-  summary: 'A condition where the thyroid gland produces too much thyroid hormone, speeding up the body\'s metabolism.',
-  symptoms: [
-    'Rapid heartbeat',
-    'Unintentional weight loss',
-    'Increased appetite',
-    'Nervousness and anxiety',
-    'Trembling hands',
-    'Heat intolerance and sweating',
-    'Changes in bowel patterns',
-    'Fatigue',
-    'Difficulty sleeping',
-    'Bulging eyes (in Graves\' disease)'
-  ],
-  causes: [
-    'Graves\' disease (autoimmune)',
-    'Toxic multinodular goiter',
-    'Toxic adenoma',
-    'Thyroiditis (inflammation)',
-    'Too much iodine',
-    'Too much thyroid medication'
-  ],
-  diagnosis: [
-    'TSH blood test (will be low)',
-    'Free T3 and T4 blood tests',
-    'Thyroid antibody tests',
-    'Radioactive iodine uptake test',
-    'Thyroid ultrasound'
-  ],
-  treatment: [
-    'Anti-thyroid medications',
-    'Radioactive iodine therapy',
-    'Thyroid surgery',
-    'Beta-blockers for symptoms',
-    'Eye treatment (for Graves\' disease)'
-  ],
-  prevention: [
-    'No specific prevention',
-    'Avoid excessive iodine intake',
-    'Manage stress',
-    'Don\'t smoke (worsens eye problems)'
-  ],
-  simpleExplanation: {
-    whatIs: 'Hyperthyroidism is when your thyroid gland is like a car with the gas pedal stuck down - it makes too much hormone and speeds everything up.',
-    howYouGet: 'Usually your immune system makes your thyroid work too hard, or you have lumps in your thyroid that produce extra hormone.',
-    howToFeel: 'Your heart races, you lose weight even though you eat more, feel hot and sweaty, anxious, and your hands might shake.',
-    howToGetBetter: 'Doctors can give medicine to slow down your thyroid, use radioactive treatment to shrink it, or sometimes remove part of it with surgery.'
-  },
-  severity: 'moderate',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'obesity',
-  name: 'Obesity',
-  category: 'Metabolic Disorders',
-  bodySystem: 'endocrine',
-  summary: 'A complex disorder involving excessive body fat that increases the risk of health problems like heart disease, diabetes, and high blood pressure.',
-  symptoms: [
-    'Excess body weight',
-    'Difficulty with physical activity',
-    'Shortness of breath',
-    'Increased sweating',
-    'Snoring or sleep apnea',
-    'Joint and back pain',
-    'Feeling tired easily',
-    'Depression or low self-esteem'
-  ],
-  causes: [
-    'Consuming more calories than burned',
-    'Genetics and family history',
-    'Sedentary lifestyle',
-    'Poor diet (high-calorie, processed foods)',
-    'Medical conditions (hypothyroidism, PCOS)',
-    'Medications (antidepressants, steroids)',
-    'Psychological factors',
-    'Socioeconomic factors'
-  ],
-  diagnosis: [
-    'Body Mass Index (BMI) calculation',
-    'Waist circumference measurement',
-    'Medical history and physical exam',
-    'Blood tests (diabetes, cholesterol, thyroid)',
-    'Assessment of related health conditions'
-  ],
-  treatment: [
-    'Dietary changes and calorie reduction',
-    'Increased physical activity',
-    'Behavioral therapy and counseling',
-    'Weight-loss medications (if appropriate)',
-    'Bariatric surgery (severe cases)',
-    'Long-term lifestyle modification'
-  ],
-  prevention: [
-    'Eat a balanced, portion-controlled diet',
-    'Exercise regularly',
-    'Limit processed and high-calorie foods',
-    'Monitor weight regularly',
-    'Get adequate sleep',
-    'Manage stress'
-  ],
-  simpleExplanation: {
-    whatIs: 'Obesity is when your body stores too much fat, which can make it harder for your body to work properly and stay healthy.',
-    howYouGet: 'It happens when you eat more calories than your body burns over a long time. Your genes, lifestyle, and environment all play a role.',
-    howToFeel: 'You might feel tired easily, have trouble moving around, and be at higher risk for other health problems like diabetes or heart disease.',
-    howToGetBetter: 'The key is eating healthier foods in smaller portions and being more active. Sometimes doctors can help with medicines or surgery for severe cases.'
-  },
-  severity: 'moderate',
-  commonness: 'very-common'
-},
-
-  // =============================================================================
-  // GASTROINTESTINAL DISEASES
-  // =============================================================================
-
-  {
-    id: 'gastroesophageal-reflux',
-    name: 'Gastroesophageal Reflux Disease (GERD)',
-    category: 'Gastrointestinal',
-    bodySystem: 'digestive',
-    summary: 'A chronic condition where stomach acid frequently flows back into the esophagus, causing irritation and symptoms.',
-    symptoms: [
-      'Heartburn (burning chest pain)',
-      'Acid regurgitation',
-      'Difficulty swallowing',
-      'Chronic cough',
-      'Hoarse voice',
-      'Feeling of lump in throat',
-      'Chest pain',
-      'Bad breath'
-    ],
-    causes: [
-      'Weak lower esophageal sphincter',
-      'Hiatal hernia',
-      'Obesity',
-      'Pregnancy',
-      'Smoking',
-      'Certain foods (spicy, fatty, acidic)',
-      'Large meals',
-      'Lying down after eating'
-    ],
-    diagnosis: [
-      'Medical history and symptoms',
-      'Upper endoscopy',
-      'Barium swallow X-ray',
-      '24-hour acid probe test',
-      'Esophageal manometry',
-      'Response to acid-suppressing medication'
-    ],
-    treatment: [
-      'Proton pump inhibitors (PPIs)',
-      'H2 receptor blockers',
-      'Antacids',
-      'Lifestyle modifications',
-      'Weight loss',
-      'Dietary changes',
-      'Surgery (severe cases)'
-    ],
-    prevention: [
-      'Maintain healthy weight',
-      'Avoid trigger foods',
-      'Eat smaller, frequent meals',
-      'Don\'t lie down after eating',
-      'Elevate head of bed',
-      'Quit smoking',
-      'Limit alcohol'
-    ],
-    simpleExplanation: {
-      whatIs: 'GERD is when the acid from your stomach goes back up into your food tube (esophagus), like when you burp but the acid stays and burns. There\'s supposed to be a door that keeps the acid in your stomach.',
-      howYouGet: 'The door between your stomach and food tube gets weak or doesn\'t close properly. This can happen from eating too much, being overweight, or eating foods that make more acid.',
-      howToFeel: 'You\'ll feel a burning pain in your chest, especially after eating or when lying down. You might taste sour liquid in your mouth or have a cough that won\'t go away.',
-      howToGetBetter: 'Doctors can give you medicine to reduce the acid in your stomach. You can also help by eating smaller meals, avoiding spicy foods, and not lying down right after eating.'
-    },
-    severity: 'moderate',
-    commonness: 'common'
-  },
-
-  {
-  id: 'crohns-disease',
-  name: 'Crohn’s Disease',
-  category: 'Gastrointestinal',
-  bodySystem: 'gastrointestinal',
-  summary: 'A chronic inflammatory bowel disease that can affect any part of the gastrointestinal tract, causing abdominal pain, diarrhea, and weight loss.',
-  symptoms: [
-    'Abdominal pain and cramping',
-    'Chronic diarrhea',
-    'Blood in stool',
-    'Weight loss',
-    'Fatigue',
-    'Fever',
-    'Mouth ulcers'
-  ],
-  causes: [
-    'Autoimmune reaction',
-    'Genetic predisposition',
-    'Environmental factors (diet, smoking)',
-    'Abnormal gut bacteria response'
-  ],
-  diagnosis: [
-    'Colonoscopy with biopsy',
-    'Endoscopy',
-    'CT or MRI enterography',
-    'Blood tests (anemia, inflammation markers)',
-    'Stool studies'
-  ],
-  treatment: [
-    'Anti-inflammatory medications (corticosteroids)',
-    'Immunosuppressants (azathioprine, methotrexate)',
-    'Biologics (infliximab, adalimumab)',
-    'Surgery to remove diseased sections of bowel',
-    'Dietary modifications'
-  ],
-  prevention: [
-    'Avoid smoking',
-    'Regular monitoring with GI specialist',
-    'Healthy diet and stress management'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when your immune system attacks your gut, causing swelling and sores anywhere along your digestive system.',
-    howYouGet: 'Doctors don’t know for sure, but it’s linked to genes, environment, and immune problems.',
-    howToFeel: 'You may have stomach pain, diarrhea, weight loss, and sometimes blood in your stool.',
-    howToGetBetter: 'Medicines calm your immune system, and sometimes surgery helps if parts of your gut are badly damaged.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-{
-  id: 'ulcerative-colitis',
-  name: 'Ulcerative Colitis',
-  category: 'Gastrointestinal',
-  bodySystem: 'gastrointestinal',
-  summary: 'A chronic inflammatory bowel disease that causes long-lasting inflammation and ulcers in the lining of the large intestine and rectum.',
-  symptoms: [
-    'Bloody diarrhea',
-    'Abdominal cramping',
-    'Urgent need to defecate',
-    'Weight loss',
-    'Fatigue',
-    'Fever',
-    'Joint pain'
-  ],
-  causes: [
-    'Autoimmune reaction',
-    'Genetic predisposition',
-    'Environmental triggers',
-    'Immune system imbalance'
-  ],
-  diagnosis: [
-    'Colonoscopy with biopsy',
-    'Flexible sigmoidoscopy',
-    'Stool sample tests',
-    'Blood tests (anemia, inflammation)',
-    'Imaging (CT/MRI)'
-  ],
-  treatment: [
-    'Anti-inflammatory drugs (mesalamine, steroids)',
-    'Immunosuppressants',
-    'Biologics (adalimumab, infliximab)',
-    'Surgery to remove colon in severe cases',
-    'Nutritional support'
-  ],
-  prevention: [
-    'Healthy diet and stress control',
-    'Avoid smoking',
-    'Regular GI monitoring'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when your colon gets swollen and develops open sores inside.',
-    howYouGet: 'Your immune system misfires and keeps attacking your colon lining.',
-    howToFeel: 'You’ll have bloody diarrhea, stomach cramps, and feel tired and weak.',
-    howToGetBetter: 'Medicines calm your immune system, but some people may need surgery if medicines don’t work.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-{
-  id: 'intestinal-ischemia',
-  name: 'Intestinal Ischemia',
-  category: 'Gastrointestinal',
-  bodySystem: 'gastrointestinal',
-  summary: 'A condition where blood flow to the intestines is reduced or blocked, leading to tissue injury or death.',
-  symptoms: [
-    'Sudden severe abdominal pain',
-    'Nausea and vomiting',
-    'Blood in stool',
-    'Diarrhea',
-    'Abdominal tenderness',
-    'Bloating',
-    'Fever (if advanced)'
-  ],
-  causes: [
-    'Blood clot in mesenteric arteries',
-    'Atherosclerosis',
-    'Low blood pressure or shock',
-    'Heart failure',
-    'Arrhythmias (atrial fibrillation)',
-    'Vasculitis'
-  ],
-  diagnosis: [
-    'CT angiography (to check blood flow)',
-    'Doppler ultrasound',
-    'Blood tests (lactate, white blood cells)',
-    'Colonoscopy (sometimes)',
-    'Exploratory surgery in severe cases'
-  ],
-  treatment: [
-    'Blood thinners (anticoagulants)',
-    'Thrombolytics (clot-dissolving drugs)',
-    'Surgery to remove clots or damaged bowel',
-    'Stent placement in arteries',
-    'Supportive care (IV fluids, antibiotics)'
-  ],
-  prevention: [
-    'Manage heart disease and blood pressure',
-    'Quit smoking',
-    'Use anticoagulants if prone to clots',
-    'Healthy diet and exercise'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when blood can’t get to part of your intestines, and they start to get damaged.',
-    howYouGet: 'Usually from a blood clot or blocked arteries, often in people with heart or blood vessel problems.',
-    howToFeel: 'Sudden sharp belly pain, vomiting, and sometimes blood in your poop.',
-    howToGetBetter: 'Doctors use blood thinners, clot-busting drugs, or surgery to restore blood flow.'
-  },
-  severity: 'severe',
-  commonness: 'rare'
-},
-  
-  {
-  id: 'irritable-bowel-syndrome',
-  name: 'Irritable Bowel Syndrome (IBS)',
-  category: 'Gastrointestinal',
-  bodySystem: 'digestive',
-  summary: 'A common disorder affecting the large intestine, causing abdominal pain, cramping, bloating, and changes in bowel habits.',
-  symptoms: [
-    'Abdominal pain or cramping',
-    'Bloating and gas',
-    'Diarrhea, constipation, or both',
-    'Mucus in stool',
-    'Changes in bowel movement frequency',
-    'Relief of pain after a bowel movement'
-  ],
-  causes: [
-    'Exact cause unknown',
-    'Abnormal gut muscle contractions',
-    'Increased sensitivity in intestines',
-    'Gut-brain interaction problems',
-    'Stress or anxiety',
-    'Certain foods (dairy, caffeine, fatty foods)',
-    'Hormonal changes (worse during menstruation)'
-  ],
-  diagnosis: [
-    'Medical history and symptom review',
-    'Physical exam',
-    'Blood tests (to rule out other conditions)',
-    'Stool tests',
-    'Colonoscopy (if needed)'
-  ],
-  treatment: [
-    'Dietary changes (low FODMAP diet)',
-    'Fiber supplements',
-    'Antidiarrheal medications',
-    'Laxatives for constipation',
-    'Antispasmodic medications',
-    'Stress management and therapy'
-  ],
-  prevention: [
-    'Identify and avoid trigger foods',
-    'Eat smaller, regular meals',
-    'Manage stress',
-    'Stay physically active',
-    'Get adequate sleep'
-  ],
-  simpleExplanation: {
-    whatIs: 'IBS is when your stomach and intestines get “out of sync,” causing tummy pain, gas, and changes in bathroom habits.',
-    howYouGet: 'Doctors aren’t sure exactly, but it’s linked to stress, sensitive guts, and certain foods. It’s not caused by infection or cancer.',
-    howToFeel: 'You may have stomach aches, diarrhea, constipation, or feel bloated like a balloon.',
-    howToGetBetter: 'Doctors suggest diet changes, stress control, and sometimes medicine to calm your intestines so they behave better.'
-  },
-  severity: 'mild',
-  commonness: 'very-common'
-},
-
-  // =============================================================================
-  // NEUROLOGICAL DISEASES
-  // =============================================================================
-
-  {
-    id: 'alzheimers-disease',
-    name: 'Alzheimer\'s Disease',
-    category: 'Neurological',
+    id: 'migraine',
+    name: 'Migraine Headaches',
+    category: 'Neurological Disorder',
     bodySystem: 'nervous',
-    summary: 'A progressive brain disorder that slowly destroys memory and thinking skills, and eventually the ability to carry out simple tasks.',
+    summary: 'Severe headaches often accompanied by nausea, vomiting, and sensitivity to light and sound.',
     symptoms: [
-      'Memory loss affecting daily activities',
-      'Difficulty planning or solving problems',
-      'Confusion with time or place',
-      'Trouble understanding visual images',
-      'Problems with speaking or writing',
-      'Misplacing things',
-      'Poor judgment',
-      'Withdrawal from activities',
-      'Changes in mood and personality'
-    ],
-    causes: [
-      'Age (primary risk factor)',
-      'Genetics and family history',
-      'Brain protein abnormalities (amyloid, tau)',
-      'Head trauma',
-      'Cardiovascular disease',
-      'Diabetes',
-      'Smoking',
-      'Lack of exercise'
-    ],
-    diagnosis: [
-      'Comprehensive medical evaluation',
-      'Cognitive and memory tests',
-      'Brain imaging (MRI, PET scans)',
-      'Blood tests',
-      'Neuropsychological testing',
-      'Ruling out other conditions'
-    ],
-    treatment: [
-      'Cholinesterase inhibitors',
-      'NMDA receptor antagonist',
-      'Managing behavioral symptoms',
-      'Creating safe environment',
-      'Maintaining routines',
-      'Social engagement',
-      'Physical activity'
-    ],
-    prevention: [
-      'Regular physical exercise',
-      'Mental stimulation',
-      'Social engagement',
-      'Healthy diet (Mediterranean)',
-      'Quality sleep',
-      'Managing cardiovascular risk factors',
-      'Avoiding head injuries'
-    ],
-    simpleExplanation: {
-      whatIs: 'Alzheimer\'s is a disease that affects the brain, making it hard to remember things, think clearly, and do everyday tasks. It\'s like the brain\'s filing system gets mixed up and damaged.',
-      howYouGet: 'It usually happens to older people, and sometimes it runs in families. Harmful proteins build up in the brain over many years, damaging the brain cells that help with memory and thinking.',
-      howToFeel: 'At first, you might forget recent things or get confused about where you are. As it gets worse, it becomes harder to recognize people, speak clearly, or take care of yourself.',
-      howToGetBetter: 'There\'s no cure yet, but doctors have medicines that can slow it down for a while. Staying active, eating healthy, and spending time with family and friends can help keep the brain working better for longer.'
-    },
-    severity: 'severe',
-    commonness: 'common'
-  },
-
-  {
-  id: 'migraine',
-  name: 'Migraine',
-  category: 'Neurological',
-  bodySystem: 'nervous',
-  summary: 'A neurological disorder characterized by recurrent headaches that are moderate to severe, often with nausea and sensitivity to light or sound.',
-  symptoms: [
-    'Intense, throbbing headache (often one side of head)',
-    'Nausea and vomiting',
-    'Sensitivity to light, sound, or smells',
-    'Visual disturbances (aura)',
-    'Tingling in arms or face',
-    'Difficulty speaking',
-    'Fatigue after headache'
-  ],
-  causes: [
-    'Genetics and family history',
-    'Abnormal brain activity affecting nerve signals',
-    'Hormonal changes',
-    'Stress',
-    'Certain foods (chocolate, cheese, caffeine)',
-    'Sleep disturbances',
-    'Environmental triggers (bright lights, strong smells)'
-  ],
-  diagnosis: [
-    'Medical history and symptom review',
-    'Neurological exam',
-    'MRI or CT scan (to rule out other causes)',
-    'Headache diary tracking triggers and frequency'
-  ],
-  treatment: [
-    'Pain relievers (NSAIDs, triptans)',
-    'Anti-nausea medications',
-    'Preventive medications (beta-blockers, anticonvulsants)',
-    'Lifestyle changes (stress management, sleep hygiene)',
-    'Avoiding known triggers'
-  ],
-  prevention: [
-    'Identify and avoid triggers',
-    'Maintain regular sleep schedule',
-    'Eat regular, balanced meals',
-    'Stay hydrated',
-    'Exercise regularly',
-    'Stress reduction techniques'
-  ],
-  simpleExplanation: {
-    whatIs: 'Migraines are super strong headaches that feel like pounding or throbbing, often making you sick and sensitive to light and sound.',
-    howYouGet: 'They run in families and can be triggered by stress, certain foods, or changes in hormones or sleep.',
-    howToFeel: 'Your head will hurt a lot, sometimes only on one side, and you may feel nauseous or see flashing lights.',
-    howToGetBetter: 'Doctors give medicine to stop the pain and sometimes medicine to prevent future attacks. Avoiding triggers also helps.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-
-  {
-  id: 'epilepsy',
-  name: 'Epilepsy',
-  category: 'Neurological',
-  bodySystem: 'nervous',
-  summary: 'A neurological disorder characterized by recurrent seizures due to abnormal electrical activity in the brain.',
-  symptoms: [
-    'Seizures (various types)',
-    'Temporary confusion',
-    'Staring spells',
-    'Uncontrollable jerking movements',
-    'Loss of consciousness',
-    'Fear, anxiety, or déjà vu',
-    'Memory problems after seizures'
-  ],
-  causes: [
-    'Genetic factors',
-    'Head trauma',
-    'Brain infections',
-    'Stroke',
-    'Brain tumors',
-    'Developmental disorders',
-    'Unknown causes (idiopathic)'
-  ],
-  diagnosis: [
-    'EEG (electroencephalogram)',
-    'MRI or CT brain scans',
-    'Blood tests',
-    'Neurological examination',
-    'Video EEG monitoring',
-    'PET scan (if needed)'
-  ],
-  treatment: [
-    'Anti-seizure medications',
-    'Vagus nerve stimulation',
-    'Ketogenic diet (especially in children)',
-    'Brain surgery (for drug-resistant cases)',
-    'Deep brain stimulation',
-    'Lifestyle modifications'
-  ],
-  prevention: [
-    'Prevent head injuries (wear helmets)',
-    'Control blood pressure and diabetes',
-    'Avoid excessive alcohol',
-    'Get adequate sleep',
-    'Take medications as prescribed'
-  ],
-  simpleExplanation: {
-    whatIs: 'Epilepsy is when your brain has sudden bursts of electrical activity that cause seizures, like short circuits in your brain\'s wiring.',
-    howYouGet: 'It can come from brain injuries, infections, genetics, or sometimes doctors don\'t know why it starts.',
-    howToFeel: 'During seizures, you might shake, stare blankly, feel confused, or lose consciousness. Between seizures, you usually feel normal.',
-    howToGetBetter: 'Most people take daily medicine that prevents seizures. Some might need surgery or special diets, but many people live normal lives.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'parkinsons-disease',
-  name: 'Parkinson\'s Disease',
-  category: 'Neurological',
-  bodySystem: 'nervous',
-  summary: 'A progressive nervous system disorder that affects movement, caused by the loss of dopamine-producing brain cells.',
-  symptoms: [
-    'Tremor (especially at rest)',
-    'Slowness of movement (bradykinesia)',
-    'Muscle stiffness',
-    'Balance and coordination problems',
-    'Shuffling walk',
-    'Reduced facial expression',
-    'Soft or slurred speech',
-    'Depression and anxiety'
-  ],
-  causes: [
-    'Loss of dopamine-producing neurons',
-    'Age (most common over 60)',
-    'Genetics (some forms)',
-    'Environmental toxins',
-    'Head trauma',
-    'Unknown factors'
-  ],
-  diagnosis: [
-    'Clinical examination and medical history',
-    'Response to dopamine medications',
-    'DaTscan (dopamine transporter scan)',
-    'Rule out other conditions',
-    'Neurological testing'
-  ],
-  treatment: [
-    'Levodopa/carbidopa',
-    'Dopamine agonists',
-    'MAO-B inhibitors',
-    'Physical therapy',
-    'Speech therapy',
-    'Deep brain stimulation (advanced cases)',
-    'Exercise programs'
-  ],
-  prevention: [
-    'No known prevention',
-    'Regular exercise may reduce risk',
-    'Avoid head injuries',
-    'Limit exposure to pesticides',
-    'Maintain social connections'
-  ],
-  simpleExplanation: {
-    whatIs: 'Parkinson\'s disease happens when brain cells that make dopamine (a chemical that helps control movement) start dying off.',
-    howYouGet: 'It\'s mostly related to aging, and sometimes genetics play a role. Environmental factors might contribute, but the exact cause is unknown.',
-    howToFeel: 'Your hands might shake when resting, you\'ll move more slowly, feel stiff, and have trouble with balance and walking.',
-    howToGetBetter: 'There\'s no cure, but medicines can replace the missing dopamine and help with symptoms. Exercise and therapy are also very important.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'multiple-sclerosis',
-  name: 'Multiple Sclerosis (MS)',
-  category: 'Neurological',
-  bodySystem: 'nervous',
-  summary: 'An autoimmune disease where the immune system attacks the protective covering of nerve fibers, disrupting communication between the brain and body.',
-  symptoms: [
-    'Fatigue',
-    'Numbness or weakness in limbs',
-    'Electric shock sensations with neck movements',
-    'Vision problems (blurred or double vision)',
-    'Dizziness and balance problems',
-    'Muscle spasticity',
-    'Cognitive changes',
-    'Depression'
-  ],
-  causes: [
-    'Autoimmune attack on myelin',
-    'Genetic predisposition',
-    'Environmental factors (vitamin D deficiency)',
-    'Viral infections (possibly triggers)',
-    'Geographic factors (more common in certain latitudes)',
-    'Female gender (higher risk)'
-  ],
-  diagnosis: [
-    'MRI scans of brain and spinal cord',
-    'Lumbar puncture (spinal tap)',
-    'Blood tests (to rule out other conditions)',
-    'Evoked potential tests',
-    'Clinical examination and history'
-  ],
-  treatment: [
-    'Disease-modifying therapies (DMTs)',
-    'Corticosteroids for relapses',
-    'Physical therapy',
-    'Occupational therapy',
-    'Muscle relaxants',
-    'Symptom-specific medications',
-    'Rehabilitation programs'
-  ],
-  prevention: [
-    'No known prevention',
-    'Maintain adequate vitamin D levels',
-    'Avoid smoking',
-    'Manage stress',
-    'Stay physically active'
-  ],
-  simpleExplanation: {
-    whatIs: 'MS is when your immune system attacks the protective coating around your nerves, like stripping the insulation off electrical wires.',
-    howYouGet: 'It\'s an autoimmune condition that may be triggered by genetics, low vitamin D, or certain infections, but the exact cause is unknown.',
-    howToFeel: 'You may feel tired, numb, weak, have vision problems, or feel unsteady. Symptoms can come and go or get progressively worse.',
-    howToGetBetter: 'There\'s no cure, but medicines can slow the disease and reduce attacks. Physical therapy and lifestyle changes help manage symptoms.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-  // =============================================================================
-  // MUSCULOSKELETAL DISEASES
-  // =============================================================================
-
-  {
-    id: 'arthritis-osteo',
-    name: 'Osteoarthritis',
-    category: 'Musculoskeletal',
-    bodySystem: 'musculoskeletal',
-    summary: 'The most common form of arthritis, occurring when the protective cartilage that cushions the ends of bones wears down over time.',
-    symptoms: [
-      'Joint pain during or after movement',
-      'Joint stiffness, especially in morning',
-      'Loss of flexibility',
-      'Grating sensation in joints',
-      'Bone spurs around affected joints',
-      'Swelling in some cases',
-      'Tenderness when pressure applied'
-    ],
-    causes: [
-      'Age-related wear and tear',
-      'Joint injury or overuse',
-      'Obesity (extra stress on joints)',
-      'Genetics',
-      'Bone deformities',
-      'Other diseases (diabetes, rheumatoid arthritis)'
-    ],
-    diagnosis: [
-      'Physical examination',
-      'X-rays',
-      'MRI (if needed)',
-      'Joint fluid analysis',
-      'Blood tests (to rule out other types)',
-      'Medical history'
-    ],
-    treatment: [
-      'Pain medications (acetaminophen, NSAIDs)',
-      'Physical therapy',
-      'Occupational therapy',
-      'Weight management',
-      'Joint injections (corticosteroids)',
-      'Assistive devices',
-      'Surgery (severe cases)'
-    ],
-    prevention: [
-      'Maintain healthy weight',
-      'Exercise regularly (low-impact)',
-      'Protect joints from injury',
-      'Use proper body mechanics',
-      'Strengthen muscles around joints',
-      'Eat anti-inflammatory foods'
-    ],
-    simpleExplanation: {
-      whatIs: 'Osteoarthritis is when the smooth, slippery coating (cartilage) on the ends of your bones wears away, like the tread wearing off a tire. This makes your bones rub together, which hurts.',
-      howYouGet: 'It usually happens as you get older because your joints have been used for many years. Being overweight, injuring a joint, or having it run in your family can make it more likely.',
-      howToFeel: 'Your joints will feel stiff and sore, especially when you first wake up or after sitting for a long time. Moving around usually helps, but too much activity can make it hurt more.',
-      howToGetBetter: 'Doctors can give you medicine for pain and suggest exercises to keep your joints moving. Losing weight if needed and using heat or cold packs can also help you feel better.'
-    },
-    severity: 'moderate',
-    commonness: 'common'
-  },
-
-  {
-  id: 'lupus',
-  name: 'Systemic Lupus Erythematosus (SLE)',
-  category: 'Musculoskeletal',
-  bodySystem: 'musculoskeletal',
-  summary: 'A chronic autoimmune disease where the immune system attacks multiple organs and tissues, including joints, skin, kidneys, and the nervous system.',
-  symptoms: [
-    'Joint pain and swelling',
-    'Butterfly-shaped rash on the face',
-    'Fatigue',
-    'Fever',
-    'Muscle pain',
-    'Photosensitivity (sensitivity to sunlight)',
-    'Mouth ulcers'
-  ],
-  causes: [
-    'Autoimmune attack on body tissues',
-    'Genetic predisposition',
-    'Hormonal factors (more common in women)',
-    'Environmental triggers (UV light, infections, medications)'
-  ],
-  diagnosis: [
-    'Blood tests (ANA, anti-dsDNA, anti-Smith antibodies)',
-    'Urine tests (for kidney involvement)',
-    'Chest X-ray (lung involvement)',
-    'Echocardiogram (heart involvement)',
-    'Physical exam (skin and joint findings)'
-  ],
-  treatment: [
-    'Anti-inflammatory drugs (NSAIDs)',
-    'Corticosteroids',
-    'Immunosuppressants (methotrexate, azathioprine)',
-    'Biologics (belimumab)',
-    'Lifestyle modifications (sun protection, stress reduction)'
-  ],
-  prevention: [
-    'Avoid excessive sun exposure',
-    'Quit smoking',
-    'Regular follow-ups with rheumatologist',
-    'Early treatment of infections'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when your immune system attacks your own joints, skin, and sometimes your organs.',
-    howYouGet: 'Doctors don’t know exactly, but it’s linked to genes, hormones, and triggers like sunlight or infections.',
-    howToFeel: 'You get achy, swollen joints, rashes, and may feel very tired or feverish.',
-    howToGetBetter: 'Medicines calm your immune system, and avoiding triggers like sunlight helps.'
-  },
-  severity: 'moderate',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'osteomyelitis',
-  name: 'Osteomyelitis',
-  category: 'Musculoskeletal',
-  bodySystem: 'musculoskeletal',
-  summary: 'A severe infection of the bone caused by bacteria or fungi, which can lead to bone destruction and sepsis if untreated.',
-  symptoms: [
-    'Severe localized bone pain',
-    'Fever and chills',
-    'Swelling, warmth, and redness over affected area',
-    'Fatigue',
-    'Limited movement of nearby joints',
-    'Drainage of pus (in chronic cases)'
-  ],
-  causes: [
-    'Bacterial infection (often Staphylococcus aureus)',
-    'Open fractures',
-    'Recent bone surgery or implants',
-    'Spread from nearby infection',
-    'Weakened immune system (diabetes, HIV)'
-  ],
-  diagnosis: [
-    'Blood cultures',
-    'Bone biopsy',
-    'X-rays (bone damage)',
-    'MRI or CT scan',
-    'Blood tests (elevated white blood cells, ESR, CRP)'
-  ],
-  treatment: [
-    'IV antibiotics (long course)',
-    'Surgical drainage of abscess',
-    'Removal of infected bone tissue',
-    'Hyperbaric oxygen therapy (sometimes)',
-    'Pain management'
-  ],
-  prevention: [
-    'Proper care of wounds and fractures',
-    'Sterile surgical techniques',
-    'Treat infections early',
-    'Good diabetes control'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s a serious infection inside your bone.',
-    howYouGet: 'Usually from bacteria entering through a wound, surgery, or spreading from another infection.',
-    howToFeel: 'You get sharp bone pain, fever, swelling, and sometimes pus leaking out.',
-    howToGetBetter: 'Doctors give you strong antibiotics and sometimes do surgery to clean the infection out of your bone.'
-  },
-  severity: 'severe',
-  commonness: 'rare'
-},
-
-
-  {
-  id: 'arthritis-rheumatoid',
-  name: 'Rheumatoid Arthritis (RA)',
-  category: 'Musculoskeletal',
-  bodySystem: 'musculoskeletal',
-  summary: 'An autoimmune disorder where the immune system attacks the joints, causing inflammation, pain, and eventual joint damage.',
-  symptoms: [
-    'Tender, warm, swollen joints',
-    'Joint stiffness (worse in morning)',
-    'Fatigue',
-    'Fever',
-    'Loss of appetite',
-    'Joint deformities in advanced stages'
-  ],
-  causes: [
-    'Autoimmune reaction',
-    'Genetic predisposition',
-    'Hormonal factors',
-    'Smoking (risk factor)',
-    'Environmental triggers (infections)'
-  ],
-  diagnosis: [
-    'Physical exam of joints',
-    'Blood tests (rheumatoid factor, anti-CCP antibodies)',
-    'Erythrocyte sedimentation rate (ESR)',
-    'C-reactive protein (CRP)',
-    'X-rays or MRI of joints'
-  ],
-  treatment: [
-    'Disease-modifying antirheumatic drugs (DMARDs)',
-    'Biologic agents',
-    'NSAIDs for pain',
-    'Steroids',
-    'Physical therapy',
-    'Surgery for severe joint damage'
-  ],
-  prevention: [
-    'No known prevention (autoimmune)',
-    'Stop smoking',
-    'Maintain healthy weight',
-    'Early diagnosis and treatment to prevent damage'
-  ],
-  simpleExplanation: {
-    whatIs: 'RA is when your body’s defense system attacks your joints by mistake, making them swollen, stiff, and painful.',
-    howYouGet: 'Doctors don’t know exactly why, but it’s linked to genetics, smoking, and immune system problems.',
-    howToFeel: 'Your joints will ache, feel stiff, and swell, especially in the morning. Over time, they may even change shape.',
-    howToGetBetter: 'Doctors use strong medicines to calm your immune system, reduce swelling, and protect your joints.'
-  },
-  severity: 'moderate',
-  commonness: 'uncommon'
-},
-
-  {
-  id: 'fibromyalgia',
-  name: 'Fibromyalgia',
-  category: 'Musculoskeletal',
-  bodySystem: 'musculoskeletal',
-  summary: 'A disorder characterized by widespread musculoskeletal pain, accompanied by fatigue, sleep, memory, and mood issues.',
-  symptoms: [
-    'Widespread muscle pain and tenderness',
-    'Chronic fatigue',
-    'Sleep disturbances',
-    'Morning stiffness',
-    'Headaches',
-    'Difficulty concentrating ("fibro fog")',
-    'Depression and anxiety',
-    'Irritable bowel syndrome',
-    'Sensitivity to temperature, light, and sound'
-  ],
-  causes: [
-    'Abnormal pain processing in the brain',
-    'Genetics and family history',
-    'Physical or emotional trauma',
-    'Infections',
-    'Sleep disorders',
-    'Stress',
-    'Other rheumatic conditions'
-  ],
-  diagnosis: [
-    'Clinical examination (tender point test)',
-    'Medical history and symptom assessment',
-    'Blood tests (to rule out other conditions)',
-    'No specific lab test for fibromyalgia',
-    'American College of Rheumatology criteria'
-  ],
-  treatment: [
-    'Pain medications (gabapentin, pregabalin)',
-    'Antidepressants (duloxetine, milnacipran)',
-    'Physical therapy',
-    'Regular exercise (low-impact)',
-    'Stress management',
-    'Cognitive behavioral therapy',
-    'Sleep improvement strategies'
-  ],
-  prevention: [
-    'No known prevention',
-    'Manage stress effectively',
-    'Get regular exercise',
-    'Maintain good sleep hygiene',
-    'Early treatment of symptoms'
-  ],
-  simpleExplanation: {
-    whatIs: 'Fibromyalgia is when your nervous system becomes overly sensitive to pain signals, making your muscles and joints hurt even when there\'s no injury.',
-    howYouGet: 'It may be triggered by stress, trauma, infections, or genetics, but doctors don\'t know exactly what causes the pain processing to go wrong.',
-    howToFeel: 'You\'ll have widespread muscle pain, feel exhausted, have trouble sleeping, and may feel mentally foggy or forgetful.',
-    howToGetBetter: 'There\'s no cure, but medicines, gentle exercise, stress management, and good sleep habits can help reduce pain and improve quality of life.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-
-{
-  id: 'osteoporosis',
-  name: 'Osteoporosis',
-  category: 'Musculoskeletal',
-  bodySystem: 'musculoskeletal',
-  summary: 'A bone disease that occurs when the body loses too much bone, makes too little bone, or both, leading to weak and brittle bones.',
-  symptoms: [
-    'Often no symptoms until fracture occurs',
-    'Back pain (from vertebral fractures)',
-    'Loss of height over time',
-    'Stooped posture',
-    'Bone fractures from minor falls',
-    'Easily broken wrist, hip, or spine'
-  ],
-  causes: [
-    'Hormonal changes (especially menopause)',
-    'Age-related bone loss',
-    'Calcium and vitamin D deficiency',
-    'Lack of physical activity',
-    'Smoking and excessive alcohol',
-    'Certain medications (steroids)',
-    'Family history',
-    'Small body frame'
-  ],
-  diagnosis: [
-    'Bone density scan (DEXA scan)',
-    'Medical history and physical exam',
-    'Blood tests (calcium, vitamin D)',
-    'X-rays (may show fractures)',
-    'Risk assessment tools'
-  ],
-  treatment: [
-    'Bisphosphonate medications',
-    'Hormone therapy (in some cases)',
-    'Calcium and vitamin D supplements',
-    'Weight-bearing exercises',
-    'Fall prevention strategies',
-    'Lifestyle modifications'
-  ],
-  prevention: [
-    'Get adequate calcium and vitamin D',
-    'Exercise regularly (weight-bearing and strength)',
-    'Don\'t smoke',
-    'Limit alcohol consumption',
-    'Prevent falls at home',
-    'Bone density screening'
-  ],
-  simpleExplanation: {
-    whatIs: 'Osteoporosis is when your bones become weak and brittle, like old wood that breaks easily, because your body isn\'t making enough new bone.',
-    howYouGet: 'It happens when you age, especially after menopause in women, or from not getting enough calcium, vitamin D, or exercise over time.',
-    howToFeel: 'You usually won\'t feel anything until you break a bone easily from a minor fall or bump. You might notice getting shorter or developing a hunched back.',
-    howToGetBetter: 'Doctors give medicines to strengthen bones, plus calcium and vitamin D supplements. Weight-bearing exercise helps build stronger bones.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-
-{
-  id: 'gout',
-  name: 'Gout',
-  category: 'Musculoskeletal',
-  bodySystem: 'musculoskeletal',
-  summary: 'A form of inflammatory arthritis caused by too much uric acid in the blood, leading to painful crystal deposits in joints.',
-  symptoms: [
-    'Intense joint pain (often big toe)',
-    'Sudden onset of pain (often at night)',
-    'Swelling and redness in affected joint',
-    'Warmth in the joint',
-    'Limited range of motion',
-    'Tophi (hard lumps under skin)',
-    'Kidney stones (in some cases)'
-  ],
-  causes: [
-    'High levels of uric acid in blood',
-    'Diet high in purines (red meat, seafood, alcohol)',
-    'Obesity',
-    'Genetics and family history',
-    'Kidney disease',
-    'Certain medications (diuretics)',
-    'Medical conditions (hypertension, diabetes)'
-  ],
-  diagnosis: [
-    'Joint fluid analysis (uric acid crystals)',
-    'Blood test for uric acid levels',
-    'X-rays of affected joints',
-    'Ultrasound of joints',
-    'Dual-energy CT scan'
-  ],
-  treatment: [
-    'NSAIDs for acute attacks',
-    'Colchicine',
-    'Corticosteroids',
-    'Uric acid-lowering medications (allopurinol)',
-    'Dietary changes',
-    'Weight management',
-    'Increased fluid intake'
-  ],
-  prevention: [
-    'Limit high-purine foods',
-    'Reduce alcohol consumption',
-    'Maintain healthy weight',
-    'Stay well hydrated',
-    'Limit sugary drinks',
-    'Exercise regularly'
-  ],
-  simpleExplanation: {
-    whatIs: 'Gout is when too much uric acid in your blood forms sharp crystals in your joints, causing sudden, severe pain like glass shards in your joint.',
-    howYouGet: 'It happens when you eat too many foods high in purines (like red meat and beer), are overweight, or have kidney problems that can\'t clear uric acid well.',
-    howToFeel: 'You\'ll have sudden, intense pain in a joint (often your big toe) that comes on quickly, usually at night, with swelling and redness.',
-    howToGetBetter: 'Doctors give medicine for the pain during attacks and other medicines to keep uric acid levels low. Changing your diet helps prevent future attacks.'
-  },
-  severity: 'moderate',
-  commonness: 'uncommon'
-},
-
-  // =============================================================================
-  // MENTAL HEALTH CONDITIONS
-  // =============================================================================
-{
-  id: 'depression-major',
-  name: 'Major Depressive Disorder (Depression)',
-  category: 'Mental Health',
-  bodySystem: 'nervous',
-  summary: 'A serious mood disorder that causes persistent feelings of sadness, loss of interest, and difficulty with daily functioning.',
-  symptoms: [
-    'Persistent sadness or low mood',
-    'Loss of interest in hobbies or activities',
-    'Changes in appetite and weight',
-    'Sleep problems (insomnia or oversleeping)',
-    'Fatigue and low energy',
-    'Feelings of worthlessness or guilt',
-    'Difficulty concentrating',
-    'Thoughts of death or suicide'
-  ],
-  causes: [
-    'Imbalance of brain chemicals',
-    'Genetics and family history',
-    'Trauma or stressful life events',
-    'Chronic illness or pain',
-    'Substance abuse',
-    'Hormonal changes'
-  ],
-  diagnosis: [
-    'Psychiatric evaluation',
-    'Patient interview and history',
-    'Standardized depression screening tools (PHQ-9)',
-    'Rule out medical causes with blood tests',
-    'Symptom duration (2+ weeks)'
-  ],
-  treatment: [
-    'Antidepressant medications (SSRIs, SNRIs, etc.)',
-    'Psychotherapy (CBT, interpersonal therapy)',
-    'Lifestyle changes (exercise, sleep, nutrition)',
-    'Support groups',
-    'Severe cases: hospitalization or ECT'
-  ],
-  prevention: [
-    'Manage stress effectively',
-    'Stay physically active',
-    'Maintain strong social connections',
-    'Seek help early when symptoms start',
-    'Avoid alcohol and drugs'
-  ],
-  simpleExplanation: {
-    whatIs: 'Depression is when your brain’s “happiness switch” doesn’t work properly, leaving you stuck in sadness and low energy.',
-    howYouGet: 'It can come from brain chemistry, tough life events, or sometimes run in families. Anyone can get it.',
-    howToFeel: 'You’ll feel sad most of the time, lose interest in things you once enjoyed, and may struggle to eat, sleep, or focus.',
-    howToGetBetter: 'Doctors help with medicines and therapy to lift your mood. Talking to loved ones, exercising, and staying connected can also make a big difference.'
-  },
-  severity: 'severe',
-  commonness: 'common'
-},
-
-{
-  id: 'bipolar-disorder',
-  name: 'Bipolar Disorder',
-  category: 'Mental Health',
-  bodySystem: 'nervous',
-  summary: 'A mental health condition causing extreme mood swings that include emotional highs (mania or hypomania) and lows (depression).',
-  symptoms: [
-    'Manic episodes: elevated mood, increased energy, decreased need for sleep',
-    'Depressive episodes: sadness, hopelessness, loss of interest',
-    'Rapid or pressured speech during mania',
-    'Risky behavior during manic episodes',
-    'Difficulty concentrating',
-    'Changes in appetite and sleep',
-    'Suicidal thoughts during depression'
-  ],
-  causes: [
-    'Brain chemistry imbalances',
-    'Genetics and family history',
-    'Environmental triggers (stress, trauma)',
-    'Hormonal changes',
-    'Substance abuse (may trigger episodes)',
-    'Major life changes or stressful events'
-  ],
-  diagnosis: [
-    'Psychiatric evaluation and interview',
-    'Mood charting and symptom tracking',
-    'Medical history and physical exam',
-    'Rule out medical conditions',
-    'Assessment of manic and depressive episodes',
-    'Family history review'
-  ],
-  treatment: [
-    'Mood stabilizers (lithium, valproate)',
-    'Antipsychotic medications',
-    'Antidepressants (with mood stabilizers)',
-    'Psychotherapy (CBT, family therapy)',
-    'Lifestyle management',
-    'Hospitalization during severe episodes'
-  ],
-  prevention: [
-    'Take medications consistently',
-    'Recognize early warning signs',
-    'Maintain regular sleep schedule',
-    'Avoid alcohol and drugs',
-    'Manage stress effectively',
-    'Build strong support system'
-  ],
-  simpleExplanation: {
-    whatIs: 'Bipolar disorder is like having a mood elevator that gets stuck - sometimes you feel extremely high and energetic (mania), other times very low and depressed.',
-    howYouGet: 'It\'s caused by brain chemistry problems and often runs in families. Stress, trauma, or major life changes can trigger the first episode.',
-    howToFeel: 'During high periods, you might feel invincible, need little sleep, and make risky decisions. During low periods, you feel hopeless and exhausted.',
-    howToGetBetter: 'Doctors use mood-stabilizing medicines and therapy to even out the extreme highs and lows. Consistent treatment helps people live stable, productive lives.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-  {
-  id: 'major-depressive-disorder',
-  name: 'Major Depressive Disorder',
-  category: 'Mental Health',
-  bodySystem: 'mental',
-  summary: 'A mood disorder characterized by persistent feelings of sadness, loss of interest, and impaired daily functioning.',
-  symptoms: [
-    'Persistent sadness or low mood',
-    'Loss of interest or pleasure in activities',
-    'Fatigue or low energy',
-    'Changes in appetite or weight',
-    'Sleep disturbances (insomnia or oversleeping)',
-    'Difficulty concentrating',
-    'Feelings of worthlessness or guilt',
-    'Thoughts of death or suicide'
-  ],
-  causes: [
-    'Genetic predisposition',
-    'Chemical imbalance in the brain (neurotransmitters)',
-    'Chronic stress or trauma',
-    'Medical conditions (thyroid disorders, chronic illness)',
-    'Substance abuse'
-  ],
-  diagnosis: [
-    'Clinical psychiatric evaluation',
-    'Patient history and symptom assessment',
-    'Standardized questionnaires (PHQ-9, Beck Depression Inventory)',
-    'Rule out medical causes (blood tests, thyroid function)'
-  ],
-  treatment: [
-    'Antidepressant medications (SSRIs, SNRIs, tricyclics)',
-    'Psychotherapy (CBT, interpersonal therapy)',
-    'Lifestyle modifications (exercise, sleep hygiene)',
-    'Electroconvulsive therapy (ECT) for severe cases',
-    'Support groups'
-  ],
-  prevention: [
-    'Early treatment of depressive symptoms',
-    'Stress management techniques',
-    'Regular exercise and healthy diet',
-    'Avoid substance abuse',
-    'Strong social support network'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when your brain and mood are stuck in a prolonged period of sadness that affects daily life.',
-    howYouGet: 'It can come from genes, stress, brain chemistry, or physical illnesses.',
-    howToFeel: 'You may feel empty, tired, lose interest in things you love, or have trouble concentrating.',
-    howToGetBetter: 'Therapy, medication, lifestyle changes, and support can help your mood improve over time.'
-  },
-  severity: 'serious',
-  commonness: 'common'
-},
-
-{
-  id: 'schizophrenia',
-  name: 'Schizophrenia',
-  category: 'Mental Health',
-  bodySystem: 'mental',
-  summary: 'A severe mental disorder affecting thought, perception, and behavior, often including hallucinations, delusions, and disorganized thinking.',
-  symptoms: [
-    'Hallucinations (hearing or seeing things that aren’t there)',
-    'Delusions (false beliefs)',
-    'Disorganized thinking and speech',
-    'Reduced emotional expression',
-    'Social withdrawal',
-    'Difficulty performing daily tasks',
-    'Cognitive impairments (memory, attention, planning)'
-  ],
-  causes: [
-    'Genetic predisposition',
-    'Neurochemical imbalances (dopamine, glutamate)',
-    'Prenatal or perinatal complications',
-    'Environmental stressors',
-    'Substance abuse can trigger or worsen symptoms'
-  ],
-  diagnosis: [
-    'Comprehensive psychiatric evaluation',
-    'Patient history and observation',
-    'Rule out medical or substance-induced causes',
-    'Standardized diagnostic criteria (DSM-5)'
-  ],
-  treatment: [
-    'Antipsychotic medications (typical and atypical)',
-    'Psychotherapy (CBT, social skills training)',
-    'Supportive care (occupational therapy, social support)',
-    'Hospitalization during acute episodes',
-    'Family education and involvement'
-  ],
-  prevention: [
-    'No guaranteed prevention',
-    'Early treatment of first symptoms',
-    'Avoid substance abuse',
-    'Supportive family and community environment'
-  ],
-  simpleExplanation: {
-    whatIs: 'It’s when your brain’s thoughts, perceptions, and emotions become very disorganized, sometimes causing hallucinations or false beliefs.',
-    howYouGet: 'Mostly genes and brain chemistry, sometimes triggered by stress or substance use.',
-    howToFeel: 'You may hear voices, see things, believe things that aren’t real, and have trouble thinking clearly.',
-    howToGetBetter: 'Medication, therapy, and support help manage symptoms and improve quality of life.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'ptsd',
-  name: 'Post-Traumatic Stress Disorder (PTSD)',
-  category: 'Mental Health',
-  bodySystem: 'nervous',
-  summary: 'A mental health condition triggered by experiencing or witnessing a terrifying event, causing lasting psychological distress.',
-  symptoms: [
-    'Intrusive memories or flashbacks',
-    'Nightmares about the trauma',
-    'Severe emotional distress from trauma reminders',
-    'Avoidance of trauma-related thoughts or places',
-    'Negative changes in thinking and mood',
-    'Hypervigilance and being easily startled',
-    'Sleep problems and irritability',
-    'Difficulty concentrating'
-  ],
-  causes: [
-    'Exposure to traumatic events',
-    'Combat experience',
-    'Physical or sexual assault',
-    'Accidents or natural disasters',
-    'Witnessing violence or death',
-    'Childhood abuse or neglect',
-    'Medical emergencies'
-  ],
-  diagnosis: [
-    'Clinical interview and assessment',
-    'Trauma history evaluation',
-    'PTSD symptom scales',
-    'Rule out other mental health conditions',
-    'Assessment of functional impairment',
-    'Duration of symptoms (over 1 month)'
-  ],
-  treatment: [
-    'Trauma-focused psychotherapy (CPT, EMDR)',
-    'Cognitive behavioral therapy (CBT)',
-    'Medications (antidepressants, prazosin)',
-    'Group therapy',
-    'Exposure therapy',
-    'Support groups'
-  ],
-  prevention: [
-    'Seek early intervention after trauma',
-    'Build resilience and coping skills',
-    'Maintain social connections',
-    'Practice stress management',
-    'Avoid alcohol and drugs'
-  ],
-  simpleExplanation: {
-    whatIs: 'PTSD happens when your mind gets stuck processing a terrible experience, like your brain\'s alarm system won\'t turn off after danger has passed.',
-    howYouGet: 'It can develop after experiencing or seeing traumatic events like accidents, violence, combat, or natural disasters.',
-    howToFeel: 'You may have scary memories that feel real, nightmares, feel constantly on edge, and avoid things that remind you of the trauma.',
-    howToGetBetter: 'Special types of therapy help your brain process the trauma properly. Medicine can also help with symptoms like depression and sleep problems.'
-  },
-  severity: 'severe',
-  commonness: 'uncommon'
-},
-
-{
-  id: 'adhd',
-  name: 'Attention Deficit Hyperactivity Disorder (ADHD)',
-  category: 'Mental Health',
-  bodySystem: 'nervous',
-  summary: 'A neurodevelopmental disorder characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning.',
-  symptoms: [
-    'Difficulty paying attention or focusing',
-    'Easily distracted by external stimuli',
-    'Forgetfulness in daily activities',
-    'Difficulty organizing tasks',
-    'Hyperactivity (restlessness, fidgeting)',
-    'Impulsive behavior and decision-making',
-    'Difficulty waiting turns',
-    'Interrupting others frequently'
-  ],
-  causes: [
-    'Genetics and family history',
-    'Brain development differences',
-    'Neurotransmitter imbalances',
-    'Prenatal exposure to alcohol or tobacco',
-    'Premature birth or low birth weight',
-    'Environmental toxins (lead exposure)',
-    'Brain injuries'
-  ],
-  diagnosis: [
-    'Comprehensive clinical evaluation',
-    'ADHD rating scales and questionnaires',
-    'Medical and developmental history',
-    'School or work performance assessment',
-    'Rule out other conditions',
-    'Input from family, teachers, or employers'
-  ],
-  treatment: [
-    'Stimulant medications (methylphenidate, amphetamines)',
-    'Non-stimulant medications (atomoxetine)',
-    'Behavioral therapy',
-    'Educational accommodations',
-    'Parent training and support',
-    'Lifestyle modifications (exercise, sleep)',
-    'Social skills training'
-  ],
-  prevention: [
-    'No known prevention (neurodevelopmental)',
-    'Avoid pregnancy risk factors',
-    'Early identification and intervention',
-    'Supportive environment and structure'
-  ],
-  simpleExplanation: {
-    whatIs: 'ADHD is when your brain has trouble with attention, sitting still, and thinking before acting - like having a remote control that keeps changing channels.',
-    howYouGet: 'You\'re usually born with it due to differences in brain development and genetics. It often runs in families.',
-    howToFeel: 'You might have trouble focusing, feel restless, forget things easily, and act without thinking about consequences.',
-    howToGetBetter: 'Doctors often prescribe medicines that help your brain focus better, plus therapy to learn coping strategies and organizational skills.'
-  },
-  severity: 'moderate',
-  commonness: 'common'
-},
-  
-  {
-    id: 'anxiety-generalized',
-    name: 'Generalized Anxiety Disorder',
-    category: 'Mental Health',
-    bodySystem: 'nervous',
-    summary: 'A mental health condition characterized by excessive, persistent worry and anxiety about various aspects of daily life.',
-    symptoms: [
-      'Excessive worry about everyday situations',
-      'Restlessness or feeling on edge',
+      'Intense throbbing headache',
+      'Nausea and vomiting',
+      'Sensitivity to light and sound',
+      'Visual disturbances (aura)',
+      'Dizziness',
       'Fatigue',
-      'Difficulty concentrating',
-      'Irritability',
-      'Muscle tension',
-      'Sleep disturbances',
-      'Physical symptoms (sweating, nausea)'
+      'Mood changes'
     ],
     causes: [
-      'Brain chemistry and genetics',
-      'Personality factors',
-      'Life experiences and trauma',
-      'Medical conditions',
-      'Substance use',
-      'Stress and major life changes'
+      'Hormonal changes',
+      'Certain foods and drinks',
+      'Stress',
+      'Changes in sleep patterns',
+      'Physical factors (bright lights, loud sounds)',
+      'Weather changes',
+      'Medications'
     ],
     diagnosis: [
-      'Clinical interview',
-      'Anxiety assessment scales',
-      'Medical examination',
-      'Blood tests (to rule out medical causes)',
-      'Psychological evaluation',
-      'Symptom duration and severity assessment'
+      'Medical history',
+      'Physical and neurological examination',
+      'Headache diary',
+      'MRI or CT scan (if needed)',
+      'Blood tests to rule out other conditions'
     ],
     treatment: [
-      'Anti-anxiety medications',
-      'Antidepressants',
-      'Cognitive behavioral therapy (CBT)',
-      'Relaxation techniques',
-      'Mindfulness and meditation',
-      'Lifestyle modifications',
-      'Support groups'
+      'Pain-relieving medications',
+      'Preventive medications',
+      'Lifestyle changes',
+      'Stress management',
+      'Regular sleep schedule',
+      'Avoiding known triggers'
     ],
     prevention: [
-      'Stress management techniques',
-      'Regular exercise',
-      'Adequate sleep',
-      'Limit caffeine and alcohol',
-      'Practice relaxation',
-      'Maintain social connections',
-      'Seek help early'
+      'Identify and avoid triggers',
+      'Maintain regular sleep schedule',
+      'Manage stress',
+      'Stay hydrated',
+      'Exercise regularly',
+      'Eat regular meals'
     ],
     simpleExplanation: {
-      whatIs: 'Generalized anxiety disorder is when your brain\'s worry system gets stuck in the "on" position, making you feel anxious and scared about many different things, even when there\'s no real danger.',
-      howYouGet: 'Some people are born with brains that worry more easily, and stressful events or changes in life can trigger it. It\'s like having an overactive alarm system in your mind.',
-      howToFeel: 'You\'ll worry constantly about many things - work, family, health, money - and feel restless, tired, and tense. Your mind might race with "what if" thoughts that are hard to stop.',
-      howToGetBetter: 'Doctors can give you medicine to calm your anxiety and teach you techniques to manage worry thoughts. Learning relaxation skills and talking to a therapist can help you feel much calmer.'
+      whatIs: 'A migraine is a really bad headache that can make you feel sick to your stomach and make lights and sounds hurt your head.',
+      howYouGet: 'They can be caused by stress, certain foods, not getting enough sleep, or sometimes they just happen.',
+      howToFeel: 'Your head will hurt really badly, usually on one side, and you might feel like throwing up or want to hide in a dark, quiet room.',
+      howToGetBetter: 'Take medicine your doctor gives you, rest in a dark room, and try to figure out what triggers your migraines so you can avoid them.'
     },
     severity: 'moderate',
     commonness: 'common'
   }
 ];
-
-// =============================================================================
-// BODY SYSTEMS CLASSIFICATION
-// =============================================================================
-
-export const bodySystems: BodySystem[] = [
-  {
-    id: 'cardiovascular',
-    name: 'Heart & Blood',
-    description: 'Your heart, blood vessels, and blood that carry oxygen and nutrients throughout your body.',
-    icon: 'Heart',
-    diseases: ['atrial-fibrillation', 'coronary-artery-disease', 'hypertension']
-  },
-  {
-    id: 'respiratory',
-    name: 'Breathing System',
-    description: 'Your lungs, airways, and breathing muscles that help you get oxygen.',
-    icon: 'Lung',
-    diseases: ['asthma', 'bronchitis', 'common-cold', 'copd', 'pneumonia']
-  },
-  {
-    id: 'endocrine',
-    name: 'Hormones & Metabolism',
-    description: 'Glands that make hormones to control growth, metabolism, and other body functions.',
-    icon: 'Zap',
-    diseases: ['diabetes-type-1', 'diabetes-type-2', 'hypothyroidism']
-  },
-  {
-    id: 'digestive',
-    name: 'Digestive System',
-    description: 'Your stomach, intestines, and other organs that break down and absorb food.',
-    icon: 'Apple',
-    diseases: ['gastroesophageal-reflux', 'irritable-bowel-syndrome']
-  },
-  {
-    id: 'nervous',
-    name: 'Brain & Nerves',
-    description: 'Your brain, spinal cord, and nerves that control everything in your body.',
-    icon: 'Brain',
-    diseases: ['alzheimers-disease', 'migraine', 'depression-major', 'anxiety-generalized']
-  },
-  {
-    id: 'musculoskeletal',
-    name: 'Bones & Muscles',
-    description: 'Your bones, muscles, and joints that help you move and support your body.',
-    icon: 'Bone',
-    diseases: ['arthritis-osteo', 'arthritis-rheumatoid']
-  }
-];
-
-// =============================================================================
-// EXPANSION TEMPLATE FOR NEW DISEASES
-// =============================================================================
-/*
-TEMPLATE FOR ADDING NEW DISEASES:
-
-{
-  id: 'disease-name-kebab-case',
-  name: 'Disease Name',
-  category: 'Medical Category',
-  bodySystem: 'system-id',
-  summary: 'Brief, clear summary of the condition in one sentence.',
-  symptoms: [
-    'List of common symptoms',
-    'Each symptom on separate line',
-    'Use clear, understandable language'
-  ],
-  causes: [
-    'List of known causes',
-    'Risk factors',
-    'Contributing factors'
-  ],
-  diagnosis: [
-    'Diagnostic tests',
-    'Examination procedures',
-    'Medical assessments'
-  ],
-  treatment: [
-    'Treatment options',
-    'Medications',
-    'Therapies and procedures'
-  ],
-  prevention: [
-    'Prevention strategies',
-    'Lifestyle modifications',
-    'Risk reduction methods'
-  ],
-  simpleExplanation: {
-    whatIs: 'Simple explanation using analogies and everyday language',
-    howYouGet: 'How the condition develops or is acquired',
-    howToFeel: 'What symptoms feel like in simple terms',
-    howToGetBetter: 'Treatment approach in simple language'
-  },
-  severity: 'mild' | 'moderate' | 'severe',
-  commonness: 'rare' | 'uncommon' | 'common' | 'very-common'
-}
-
-CATEGORIES TO EXPAND:
-- Dermatological (Skin conditions)
-- Infectious Diseases
-- Oncological (Cancer-related)
-- Pediatric Conditions
-- Women's Health
-- Men's Health
-- Genetic Disorders
-- Eye and Vision
-- Ear, Nose, and Throat
-- Urological
-- Hematological (Blood disorders)
-
-DATE NEW ADDITIONS FOR TRACKING:
-// Added [Date]: [Disease Name] - [Brief reason for addition]
-*/

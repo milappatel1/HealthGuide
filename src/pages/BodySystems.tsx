@@ -1,6 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Zap, Apple, Brain, Bone, Sun as Lung } from 'lucide-react';
+import { 
+  Heart, 
+  Zap, 
+  Apple, 
+  Brain, 
+  Bone, 
+  Sun as Lung, 
+  Shield,
+  Sun,
+  Droplets,
+  Baby,
+  Activity,
+  Eye
+} from 'lucide-react';
 import { bodySystems, diseases } from '../data/diseases';
 
 const BodySystems: React.FC = () => {
@@ -11,7 +24,13 @@ const BodySystems: React.FC = () => {
       Apple,
       Brain,
       Bone,
-      Lung
+      Lung,
+      Shield,
+      Sun,
+      Droplets,
+      Baby,
+      Activity,
+      Eye
     };
     return icons[iconName as keyof typeof icons] || Heart;
   };
