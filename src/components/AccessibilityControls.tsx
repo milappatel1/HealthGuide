@@ -1,20 +1,27 @@
 import React from 'react';
-import { Moon, Sun, Type, Minus, Plus } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
-import { useFontSize, FontSize } from '../hooks/useFontSize';
+
+// Removed: import { useFontSize, FontSize } from '../hooks/useFontSize';
 
 const AccessibilityControls: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
-  const { fontSize, setFontSize } = useFontSize();
-
+  // Removed: const { fontSize, setFontSize } = useFontSize();
+  
+  // Removed: font size definitions and array
+  /*
   const fontSizes: { size: FontSize; label: string }[] = [
     { size: 'small', label: 'A' },
     { size: 'medium', label: 'A' },
     { size: 'large', label: 'A' }
   ];
+  */
 
   return (
     <div className="flex items-center gap-2 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+      
+      {/* Removed: Font Size Controls block */}
+      {/*
       <div className="flex items-center gap-1">
         <span className="text-xs text-gray-600 dark:text-gray-400 font-medium">Font:</span>
         {fontSizes.map((fs, index) => (
@@ -37,6 +44,7 @@ const AccessibilityControls: React.FC = () => {
       </div>
       
       <div className="w-px h-6 bg-gray-300 dark:bg-gray-600"></div>
+      */}
       
       <button
         onClick={toggleTheme}
