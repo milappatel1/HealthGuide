@@ -7,7 +7,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your heart and blood vessels work together like a delivery system, pumping blood with oxygen and nutrients to every part of your body.",
     icon: "Heart",
-    diseases: ["hypertension", "heart-disease", "stroke"],
+    diseases: ["stroke"],
   },
   {
     id: "nervous",
@@ -15,7 +15,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your brain, spinal cord, and nerves act as your body's command center, controlling everything you think, feel, and do.",
     icon: "Brain",
-    diseases: ["migraine", "depression", "anxiety", "epilepsy"],
+    diseases: ["depression"],
   },
   {
     id: "digestive",
@@ -23,14 +23,14 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your stomach, intestines, and other organs break down food into nutrients your body can use for energy and growth.",
     icon: "Apple",
-    diseases: ["gastritis", "ibs", "acid-reflux", "food-poisoning"],
+    diseases: ["gastritis"],
   },
   {
     id: "respiratory",
     name: "Respiratory System",
     description: "Your lungs and airways bring fresh oxygen into your body and remove waste gases like carbon dioxide.",
     icon: "Lung",
-    diseases: ["asthma", "pneumonia", "common-cold", "bronchitis", "flu"],
+    diseases: ["common-cold"],
   },
   {
     id: "musculoskeletal",
@@ -38,7 +38,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your bones, muscles, and joints work together to give your body structure, support, and the ability to move.",
     icon: "Bone",
-    diseases: ["arthritis", "osteoporosis", "back-pain", "tendinitis"],
+    diseases: ["arthritis"],
   },
   {
     id: "endocrine",
@@ -46,7 +46,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your glands produce hormones that act like chemical messengers, controlling growth, metabolism, and many body functions.",
     icon: "Zap",
-    diseases: ["diabetes-type-2", "diabetes-type-1", "thyroid-disorders"],
+    diseases: ["diabetes-type-1"],
   },
   {
     id: "immune",
@@ -54,7 +54,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your body's defense system that protects you from germs, viruses, and other harmful substances that could make you sick.",
     icon: "Shield",
-    diseases: ["allergies", "autoimmune-disorders", "hiv-aids"],
+    diseases: ["hiv/aids"],
   },
   {
     id: "integumentary",
@@ -62,21 +62,21 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your skin, hair, and nails form a protective barrier that keeps harmful things out and helps regulate your body temperature.",
     icon: "Sun",
-    diseases: ["eczema", "psoriasis", "acne", "skin-cancer"],
+    diseases: ["skin-cancer"],
   },
   {
     id: "urinary",
     name: "Urinary System",
     description: "Your kidneys and bladder filter waste from your blood and remove it from your body through urine.",
     icon: "Droplets",
-    diseases: ["kidney-stones", "uti", "kidney-disease"],
+    diseases: ["kidney-stones"],
   },
   {
     id: "reproductive",
     name: "Reproductive System",
     description: "The organs that allow humans to create new life and continue the human species.",
     icon: "Baby",
-    diseases: ["pcos", "endometriosis", "erectile-dysfunction"],
+    diseases: ["pcos"],
   },
   {
     id: "lymphatic",
@@ -84,7 +84,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "A network of vessels and organs that helps your immune system fight infections and maintains fluid balance in your body.",
     icon: "Activity",
-    diseases: ["lymphedema", "swollen-lymph-nodes"],
+    diseases: ["lymphedema"],
   },
   {
     id: "sensory",
@@ -92,7 +92,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your eyes, ears, nose, tongue, and skin help you see, hear, smell, taste, and feel the world around you.",
     icon: "Eye",
-    diseases: ["vision-problems", "hearing-loss", "tinnitus"],
+    diseases: ["tinnitus"],
   },
 ]
 
@@ -156,126 +156,6 @@ export const diseases: Disease[] = [
     commonness: "very-common",
   },
   {
-    id: "flu",
-    name: "Influenza (Flu)",
-    category: "Viral Infection",
-    bodySystem: "respiratory",
-    summary: "A contagious respiratory illness caused by influenza viruses that can cause mild to severe illness.",
-    symptoms: [
-      "High fever",
-      "Body aches and chills",
-      "Fatigue and weakness",
-      "Headache",
-      "Dry cough",
-      "Sore throat",
-      "Runny or stuffy nose",
-    ],
-    causes: [
-      "Influenza A viruses",
-      "Influenza B viruses",
-      "Seasonal outbreaks",
-      "Close contact with infected people",
-      "Breathing in droplets from coughs/sneezes",
-      "Touching contaminated surfaces",
-    ],
-    diagnosis: [
-      "Physical examination",
-      "Rapid influenza diagnostic tests",
-      "RT-PCR tests",
-      "Symptom assessment",
-      "Medical history",
-    ],
-    treatment: [
-      "Antiviral medications (if started early)",
-      "Rest and plenty of fluids",
-      "Fever reducers and pain relievers",
-      "Cough suppressants",
-      "Stay home to avoid spreading",
-      "Seek medical care if symptoms worsen",
-    ],
-    prevention: [
-      "Get annual flu vaccine",
-      "Wash hands frequently",
-      "Avoid close contact with sick people",
-      "Cover coughs and sneezes",
-      "Stay home when sick",
-      "Avoid touching face with unwashed hands",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "The flu is like a really bad cold caused by different germs that make you feel much sicker with high fever and body aches.",
-      howYouGet:
-        "You catch it the same way as a cold, but flu germs are stronger and spread more easily, especially during flu season.",
-      howToFeel:
-        "You'll feel much worse than with a cold - high fever, your whole body will ache, and you'll be very tired and weak.",
-      howToGetBetter:
-        "Rest in bed, drink lots of fluids, take medicine for fever and aches, and get a flu shot every year to prevent it.",
-    },
-    severity: "moderate",
-    commonness: "very-common",
-  },
-  {
-    id: "bronchitis",
-    name: "Bronchitis",
-    category: "Respiratory Infection",
-    bodySystem: "respiratory",
-    summary: "Inflammation of the bronchial tubes that carry air to the lungs, causing cough and mucus production.",
-    symptoms: [
-      "Persistent cough with mucus",
-      "Fatigue",
-      "Shortness of breath",
-      "Slight fever and chills",
-      "Chest discomfort",
-      "Wheezing",
-      "Sore throat",
-    ],
-    causes: [
-      "Viral infections (most common)",
-      "Bacterial infections",
-      "Smoking",
-      "Air pollution",
-      "Chemical fumes",
-      "Dust exposure",
-      "Weakened immune system",
-    ],
-    diagnosis: [
-      "Physical examination",
-      "Chest X-ray",
-      "Sputum culture",
-      "Pulmonary function tests",
-      "Medical history",
-      "Blood tests (if needed)",
-    ],
-    treatment: [
-      "Rest and fluids",
-      "Cough suppressants or expectorants",
-      "Bronchodilators for wheezing",
-      "Antibiotics (only if bacterial)",
-      "Humidifier or steam inhalation",
-      "Avoid smoking and irritants",
-    ],
-    prevention: [
-      "Don't smoke",
-      "Avoid secondhand smoke",
-      "Get vaccinated (flu, pneumonia)",
-      "Wash hands frequently",
-      "Avoid air pollutants",
-      "Wear mask in dusty environments",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Bronchitis is when the tubes that carry air to your lungs get swollen and irritated, making you cough up mucus.",
-      howYouGet:
-        "Usually from the same germs that cause colds and flu, or from breathing in smoke, dust, or other irritating things.",
-      howToFeel:
-        "You'll have a bad cough that brings up mucus, feel tired, and might have trouble breathing or feel chest tightness.",
-      howToGetBetter:
-        "Rest, drink lots of fluids, use a humidifier, and avoid smoke. Most cases get better on their own in a few weeks.",
-    },
-    severity: "mild",
-    commonness: "common",
-  },
-  {
     id: "depression",
     name: "Depression",
     category: "Mental Health Disorder",
@@ -335,191 +215,6 @@ export const diseases: Disease[] = [
     },
     severity: "moderate",
     commonness: "common",
-  },
-  {
-    id: "anxiety",
-    name: "Anxiety Disorders",
-    category: "Mental Health Disorder",
-    bodySystem: "nervous",
-    summary: "A group of conditions characterized by excessive worry, fear, and physical symptoms of anxiety.",
-    symptoms: [
-      "Excessive worry or fear",
-      "Restlessness or feeling on edge",
-      "Rapid heartbeat",
-      "Sweating",
-      "Trembling or shaking",
-      "Difficulty concentrating",
-      "Sleep problems",
-    ],
-    causes: [
-      "Genetics",
-      "Brain chemistry imbalances",
-      "Traumatic experiences",
-      "Chronic stress",
-      "Medical conditions",
-      "Caffeine or substance use",
-      "Personality factors",
-    ],
-    diagnosis: [
-      "Mental health evaluation",
-      "Physical examination",
-      "Anxiety questionnaires",
-      "Medical history",
-      "Rule out medical conditions",
-      "DSM-5 criteria assessment",
-    ],
-    treatment: [
-      "Cognitive behavioral therapy",
-      "Anti-anxiety medications",
-      "Relaxation techniques",
-      "Exposure therapy",
-      "Lifestyle modifications",
-      "Support groups",
-    ],
-    prevention: [
-      "Practice stress management",
-      "Exercise regularly",
-      "Limit caffeine and alcohol",
-      "Get adequate sleep",
-      "Learn relaxation techniques",
-      "Maintain social connections",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Anxiety is when you worry too much about things and feel scared or nervous even when there's no real danger.",
-      howYouGet:
-        "It can run in families, be caused by stressful events, or happen because of changes in brain chemicals that control emotions.",
-      howToFeel:
-        "You'll worry a lot, feel restless, your heart might beat fast, you might sweat or shake, and have trouble sleeping.",
-      howToGetBetter:
-        "Learn ways to relax and manage worry, talk to a therapist, sometimes take medicine, and practice deep breathing or meditation.",
-    },
-    severity: "moderate",
-    commonness: "very-common",
-  },
-  {
-    id: "epilepsy",
-    name: "Epilepsy",
-    category: "Neurological Disorder",
-    bodySystem: "nervous",
-    summary:
-      "A neurological disorder characterized by recurrent seizures due to abnormal electrical activity in the brain.",
-    symptoms: [
-      "Seizures (various types)",
-      "Temporary confusion",
-      "Staring spells",
-      "Uncontrollable jerking movements",
-      "Loss of consciousness",
-      "Fear or anxiety",
-      "Déjà vu sensations",
-    ],
-    causes: [
-      "Genetic factors",
-      "Head trauma",
-      "Brain infections",
-      "Stroke",
-      "Brain tumors",
-      "Developmental disorders",
-      "Unknown causes (idiopathic)",
-    ],
-    diagnosis: [
-      "Electroencephalogram (EEG)",
-      "MRI or CT scans",
-      "Blood tests",
-      "Neurological examination",
-      "Medical history",
-      "Seizure description from witnesses",
-    ],
-    treatment: [
-      "Anti-seizure medications",
-      "Ketogenic diet",
-      "Vagus nerve stimulation",
-      "Brain surgery (in some cases)",
-      "Responsive neurostimulation",
-      "Lifestyle modifications",
-    ],
-    prevention: [
-      "Take medications as prescribed",
-      "Get adequate sleep",
-      "Avoid seizure triggers",
-      "Limit alcohol consumption",
-      "Manage stress",
-      "Wear medical identification",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Epilepsy is when the electrical signals in your brain sometimes get mixed up, causing seizures where you might shake, stare, or lose consciousness.",
-      howYouGet:
-        "It can be something you're born with, caused by a head injury, brain infection, or sometimes doctors don't know why it happens.",
-      howToFeel:
-        "During a seizure, you might shake uncontrollably, stare into space, feel confused, or not remember what happened.",
-      howToGetBetter:
-        "Take special medicines every day to prevent seizures, get enough sleep, avoid things that trigger seizures, and always wear a medical bracelet.",
-    },
-    severity: "moderate",
-    commonness: "uncommon",
-  },
-  {
-    id: "heart-disease",
-    name: "Heart Disease",
-    category: "Cardiovascular Disorder",
-    bodySystem: "cardiovascular",
-    summary:
-      "A range of conditions affecting the heart, including coronary artery disease, heart attacks, and heart failure.",
-    symptoms: [
-      "Chest pain or discomfort",
-      "Shortness of breath",
-      "Fatigue",
-      "Irregular heartbeat",
-      "Swelling in legs or feet",
-      "Dizziness",
-      "Nausea",
-    ],
-    causes: [
-      "High cholesterol",
-      "High blood pressure",
-      "Smoking",
-      "Diabetes",
-      "Obesity",
-      "Family history",
-      "Sedentary lifestyle",
-    ],
-    diagnosis: [
-      "Electrocardiogram (ECG)",
-      "Blood tests",
-      "Chest X-ray",
-      "Echocardiogram",
-      "Stress tests",
-      "Cardiac catheterization",
-    ],
-    treatment: [
-      "Lifestyle changes",
-      "Medications (various types)",
-      "Angioplasty and stents",
-      "Bypass surgery",
-      "Pacemakers or defibrillators",
-      "Heart transplant (severe cases)",
-    ],
-    prevention: [
-      "Don't smoke",
-      "Exercise regularly",
-      "Eat heart-healthy diet",
-      "Maintain healthy weight",
-      "Control blood pressure and cholesterol",
-      "Manage diabetes",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Heart disease is when your heart or the blood vessels that feed your heart don't work properly, making it hard to pump blood.",
-      howYouGet:
-        "It usually develops over time from things like eating unhealthy foods, not exercising, smoking, or having high blood pressure.",
-      howToFeel:
-        "You might have chest pain, feel short of breath, get tired easily, or feel like your heart is beating irregularly.",
-      howToGetBetter:
-        "Eat healthy foods, exercise, take medicines your doctor prescribes, don't smoke, and sometimes need procedures to fix blocked arteries.",
-    },
-    severity: "severe",
-    commonness: "very-common",
   },
   {
     id: "stroke",
@@ -645,235 +340,6 @@ export const diseases: Disease[] = [
     commonness: "uncommon",
   },
   {
-    id: "thyroid-disorders",
-    name: "Thyroid Disorders",
-    category: "Endocrine Disorder",
-    bodySystem: "endocrine",
-    summary:
-      "Conditions affecting the thyroid gland, including hyperthyroidism (overactive) and hypothyroidism (underactive).",
-    symptoms: [
-      "Weight changes (gain or loss)",
-      "Fatigue or restlessness",
-      "Heart rate changes",
-      "Temperature sensitivity",
-      "Hair loss or thinning",
-      "Mood changes",
-      "Sleep problems",
-    ],
-    causes: [
-      "Autoimmune conditions",
-      "Iodine deficiency or excess",
-      "Thyroid nodules",
-      "Genetics",
-      "Medications",
-      "Radiation exposure",
-      "Pregnancy",
-    ],
-    diagnosis: [
-      "Blood tests (TSH, T3, T4)",
-      "Thyroid antibody tests",
-      "Thyroid ultrasound",
-      "Radioactive iodine uptake test",
-      "Physical examination",
-      "Medical history",
-    ],
-    treatment: [
-      "Thyroid hormone replacement",
-      "Anti-thyroid medications",
-      "Radioactive iodine therapy",
-      "Surgery (in some cases)",
-      "Beta-blockers for symptoms",
-      "Regular monitoring",
-    ],
-    prevention: [
-      "Ensure adequate iodine intake",
-      "Regular check-ups",
-      "Avoid excessive iodine",
-      "Manage stress",
-      "Don't smoke",
-      "Monitor family history",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Thyroid disorders happen when the butterfly-shaped gland in your neck makes too much or too little of the hormones that control your metabolism.",
-      howYouGet:
-        "It can be caused by autoimmune problems, not getting enough iodine, genetics, or sometimes just happens as you age.",
-      howToFeel:
-        "If it's overactive, you'll feel jittery, lose weight, and have a fast heartbeat. If underactive, you'll feel tired, gain weight, and be cold.",
-      howToGetBetter:
-        "Take thyroid hormone pills if it's underactive, or medicines to slow it down if overactive. Regular blood tests help adjust treatment.",
-    },
-    severity: "moderate",
-    commonness: "common",
-  },
-  {
-    id: "acid-reflux",
-    name: "Acid Reflux (GERD)",
-    category: "Digestive Disorder",
-    bodySystem: "digestive",
-    summary: "A condition where stomach acid flows back into the esophagus, causing heartburn and other symptoms.",
-    symptoms: [
-      "Heartburn",
-      "Regurgitation of food or sour liquid",
-      "Difficulty swallowing",
-      "Chest pain",
-      "Chronic cough",
-      "Hoarse voice",
-      "Feeling of lump in throat",
-    ],
-    causes: [
-      "Weak lower esophageal sphincter",
-      "Hiatal hernia",
-      "Obesity",
-      "Pregnancy",
-      "Smoking",
-      "Certain foods and drinks",
-      "Medications",
-    ],
-    diagnosis: [
-      "Medical history and symptoms",
-      "Upper endoscopy",
-      "Barium swallow X-ray",
-      "pH monitoring",
-      "Esophageal manometry",
-      "Response to acid-suppressing medication",
-    ],
-    treatment: [
-      "Proton pump inhibitors",
-      "H2 receptor blockers",
-      "Antacids",
-      "Lifestyle modifications",
-      "Weight loss",
-      "Surgery (severe cases)",
-    ],
-    prevention: [
-      "Avoid trigger foods",
-      "Eat smaller meals",
-      "Don't lie down after eating",
-      "Maintain healthy weight",
-      "Elevate head of bed",
-      "Don't smoke",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Acid reflux is when stomach acid comes back up into your food tube (esophagus), causing a burning feeling in your chest.",
-      howYouGet:
-        "It happens when the muscle that keeps stomach acid down doesn't work properly, often from eating certain foods or being overweight.",
-      howToFeel:
-        "You'll feel burning in your chest (heartburn), taste sour liquid in your mouth, or have trouble swallowing.",
-      howToGetBetter:
-        "Take medicines that reduce stomach acid, avoid spicy or fatty foods, eat smaller meals, and don't lie down right after eating.",
-    },
-    severity: "mild",
-    commonness: "very-common",
-  },
-  {
-    id: "food-poisoning",
-    name: "Food Poisoning",
-    category: "Foodborne Illness",
-    bodySystem: "digestive",
-    summary:
-      "Illness caused by consuming contaminated food or beverages containing harmful bacteria, viruses, or toxins.",
-    symptoms: ["Nausea and vomiting", "Diarrhea", "Stomach cramps", "Fever", "Headache", "Dehydration", "Weakness"],
-    causes: [
-      "Bacterial contamination (Salmonella, E. coli)",
-      "Viral infections (Norovirus)",
-      "Parasites",
-      "Toxins from bacteria",
-      "Improper food handling",
-      "Undercooked meat or eggs",
-      "Contaminated water",
-    ],
-    diagnosis: [
-      "Medical history and symptoms",
-      "Physical examination",
-      "Stool culture",
-      "Blood tests",
-      "Food history assessment",
-      "Rapid diagnostic tests",
-    ],
-    treatment: [
-      "Rest and fluid replacement",
-      "Electrolyte solutions",
-      "Bland diet when tolerated",
-      "Antibiotics (in some cases)",
-      "Anti-diarrheal medications (limited use)",
-      "Hospitalization (severe cases)",
-    ],
-    prevention: [
-      "Cook food to proper temperatures",
-      "Wash hands frequently",
-      "Avoid cross-contamination",
-      "Refrigerate perishables promptly",
-      "Don't eat expired food",
-      "Be cautious with raw foods",
-    ],
-    simpleExplanation: {
-      whatIs: "Food poisoning is when you get sick from eating food that has harmful germs, bacteria, or toxins in it.",
-      howYouGet:
-        "You get it from eating food that wasn't cooked properly, was left out too long, or was contaminated with germs.",
-      howToFeel: "You'll feel sick to your stomach, throw up, have diarrhea, stomach cramps, and might have a fever.",
-      howToGetBetter:
-        "Rest, drink lots of fluids to stay hydrated, eat bland foods when you can, and most cases get better in a few days.",
-    },
-    severity: "mild",
-    commonness: "common",
-  },
-  {
-    id: "back-pain",
-    name: "Back Pain",
-    category: "Musculoskeletal Disorder",
-    bodySystem: "musculoskeletal",
-    summary: "Pain in the back that can range from mild to severe and may be acute or chronic.",
-    symptoms: [
-      "Aching or stiffness in back",
-      "Sharp or shooting pain",
-      "Pain that radiates to legs",
-      "Muscle spasms",
-      "Limited range of motion",
-      "Difficulty standing straight",
-      "Pain worsens with movement",
-    ],
-    causes: [
-      "Muscle or ligament strain",
-      "Herniated discs",
-      "Arthritis",
-      "Osteoporosis",
-      "Poor posture",
-      "Heavy lifting",
-      "Sedentary lifestyle",
-    ],
-    diagnosis: ["Physical examination", "Medical history", "X-rays", "MRI or CT scan", "Blood tests", "Bone scan"],
-    treatment: [
-      "Rest and activity modification",
-      "Pain medications",
-      "Physical therapy",
-      "Heat and cold therapy",
-      "Massage therapy",
-      "Injections or surgery (severe cases)",
-    ],
-    prevention: [
-      "Exercise regularly",
-      "Maintain good posture",
-      "Use proper lifting techniques",
-      "Maintain healthy weight",
-      "Sleep on supportive mattress",
-      "Avoid prolonged sitting",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Back pain is when your back hurts, which can happen in your muscles, bones, or the discs between your spine bones.",
-      howYouGet:
-        "It can happen from lifting something heavy the wrong way, sitting too much, sleeping wrong, or just from getting older.",
-      howToFeel:
-        "Your back will ache, feel stiff, or have sharp pains that might go down your legs, making it hard to move normally.",
-      howToGetBetter:
-        "Rest but stay gently active, use heat or ice, take pain medicine, do stretches, and see a physical therapist if it doesn't get better.",
-    },
-    severity: "mild",
-    commonness: "very-common",
-  },
-  {
     id: "tendinitis",
     name: "Tendinitis",
     category: "Musculoskeletal Disorder",
@@ -926,67 +392,6 @@ export const diseases: Disease[] = [
     },
     severity: "mild",
     commonness: "common",
-  },
-  {
-    id: "acne",
-    name: "Acne",
-    category: "Skin Disorder",
-    bodySystem: "integumentary",
-    summary: "A skin condition that occurs when hair follicles become clogged with oil and dead skin cells.",
-    symptoms: [
-      "Blackheads and whiteheads",
-      "Pimples and pustules",
-      "Cysts and nodules",
-      "Oily skin",
-      "Scarring",
-      "Redness and inflammation",
-      "Tender or painful bumps",
-    ],
-    causes: [
-      "Hormonal changes",
-      "Excess oil production",
-      "Clogged hair follicles",
-      "Bacteria (P. acnes)",
-      "Genetics",
-      "Certain cosmetics",
-      "Stress",
-    ],
-    diagnosis: [
-      "Visual examination",
-      "Medical history",
-      "Assessment of acne severity",
-      "Rule out other skin conditions",
-      "Hormonal evaluation (if needed)",
-      "Family history review",
-    ],
-    treatment: [
-      "Topical retinoids",
-      "Benzoyl peroxide",
-      "Antibiotics (topical or oral)",
-      "Hormonal therapy",
-      "Isotretinoin (severe cases)",
-      "Professional extractions",
-    ],
-    prevention: [
-      "Gentle daily cleansing",
-      "Use non-comedogenic products",
-      "Don't pick or squeeze pimples",
-      "Remove makeup before bed",
-      "Manage stress",
-      "Avoid touching face",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Acne is when the tiny holes in your skin (pores) get clogged with oil and dead skin, creating pimples, blackheads, and whiteheads.",
-      howYouGet:
-        "It usually happens during puberty when hormones make your skin produce more oil, but it can happen at any age.",
-      howToFeel:
-        "You'll have bumps, pimples, or blackheads on your face, chest, or back that might be red, sore, or embarrassing.",
-      howToGetBetter:
-        "Wash your face gently twice a day, use acne medicines, don't pick at pimples, and see a dermatologist for severe acne.",
-    },
-    severity: "mild",
-    commonness: "very-common",
   },
   {
     id: "skin-cancer",
@@ -1050,130 +455,7 @@ export const diseases: Disease[] = [
     commonness: "common",
   },
   {
-    id: "kidney-disease",
-    name: "Chronic Kidney Disease",
-    category: "Kidney Disorder",
-    bodySystem: "urinary",
-    summary:
-      "A gradual loss of kidney function over time, affecting the body's ability to filter waste and excess water.",
-    symptoms: [
-      "Fatigue and weakness",
-      "Swelling in legs, ankles, feet",
-      "Shortness of breath",
-      "Nausea and vomiting",
-      "Changes in urination",
-      "High blood pressure",
-      "Loss of appetite",
-    ],
-    causes: [
-      "Diabetes",
-      "High blood pressure",
-      "Polycystic kidney disease",
-      "Glomerulonephritis",
-      "Autoimmune diseases",
-      "Genetic disorders",
-      "Prolonged obstruction",
-    ],
-    diagnosis: [
-      "Blood tests (creatinine, BUN)",
-      "Urine tests",
-      "Glomerular filtration rate (GFR)",
-      "Kidney ultrasound",
-      "Kidney biopsy",
-      "Medical history",
-    ],
-    treatment: [
-      "Blood pressure control",
-      "Diabetes management",
-      "Dietary modifications",
-      "Medications for complications",
-      "Dialysis (advanced stages)",
-      "Kidney transplant",
-    ],
-    prevention: [
-      "Control diabetes and blood pressure",
-      "Maintain healthy weight",
-      "Don't smoke",
-      "Exercise regularly",
-      "Limit alcohol",
-      "Regular medical check-ups",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Chronic kidney disease is when your kidneys slowly stop working well at filtering waste and extra water from your blood.",
-      howYouGet:
-        "It usually develops from diabetes, high blood pressure, or other conditions that damage the kidneys over many years.",
-      howToFeel:
-        "You might feel tired, have swollen feet or legs, feel short of breath, or notice changes in how much you urinate.",
-      howToGetBetter:
-        "Control diabetes and blood pressure, eat a kidney-friendly diet, take prescribed medicines, and in severe cases, need dialysis or a kidney transplant.",
-    },
-    severity: "severe",
-    commonness: "common",
-  },
-  {
-    id: "erectile-dysfunction",
-    name: "Erectile Dysfunction",
-    category: "Sexual Health Disorder",
-    bodySystem: "reproductive",
-    summary: "The inability to achieve or maintain an erection sufficient for sexual intercourse.",
-    symptoms: [
-      "Difficulty getting an erection",
-      "Difficulty maintaining an erection",
-      "Reduced sexual desire",
-      "Anxiety about sexual performance",
-      "Relationship stress",
-      "Low self-esteem",
-      "Depression",
-    ],
-    causes: [
-      "Cardiovascular disease",
-      "Diabetes",
-      "High blood pressure",
-      "Obesity",
-      "Smoking",
-      "Psychological factors",
-      "Certain medications",
-    ],
-    diagnosis: [
-      "Medical history",
-      "Physical examination",
-      "Blood tests",
-      "Psychological evaluation",
-      "Nocturnal penile tumescence test",
-      "Ultrasound",
-    ],
-    treatment: [
-      "Oral medications (PDE5 inhibitors)",
-      "Lifestyle changes",
-      "Counseling or therapy",
-      "Vacuum devices",
-      "Injections",
-      "Surgery (implants)",
-    ],
-    prevention: [
-      "Exercise regularly",
-      "Maintain healthy weight",
-      "Don't smoke",
-      "Limit alcohol",
-      "Manage stress",
-      "Control diabetes and blood pressure",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Erectile dysfunction is when a man has trouble getting or keeping an erection that's firm enough for sexual activity.",
-      howYouGet:
-        "It can be caused by health problems like diabetes or heart disease, stress, anxiety, or side effects from some medicines.",
-      howToFeel:
-        "You might feel frustrated, embarrassed, or worried about sexual performance, which can affect relationships and self-confidence.",
-      howToGetBetter:
-        "Talk to a doctor about treatment options like medications, make healthy lifestyle changes, and consider counseling if stress is a factor.",
-    },
-    severity: "moderate",
-    commonness: "common",
-  },
-  {
-    id: "hiv-aids",
+    id: "hiv/aids",
     name: "HIV/AIDS",
     category: "Immune Deficiency",
     bodySystem: "immune",
