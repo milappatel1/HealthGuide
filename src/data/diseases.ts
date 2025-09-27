@@ -54,7 +54,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your body's defense system that protects you from germs, viruses, and other harmful substances that could make you sick.",
     icon: "Shield",
-    diseases: ["hiv/aids"],
+    diseases: ["hiv-aids"],
   },
   {
     id: "integumentary",
@@ -544,73 +544,71 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "very-common",
 },
-
-
-
-  
-  
-  
-  {
-    id: "hiv/aids",
-    name: "HIV/AIDS",
-    category: "Immune Deficiency",
-    bodySystem: "immune",
-    summary: "A virus that attacks the immune system, potentially leading to AIDS if untreated.",
-    symptoms: [
-      "Flu-like symptoms (early stage)",
-      "Persistent fatigue",
-      "Swollen lymph nodes",
-      "Recurring infections",
-      "Unexplained weight loss",
-      "Night sweats",
-      "Skin rashes",
-    ],
-    causes: [
-      "HIV virus transmission",
-      "Unprotected sexual contact",
-      "Sharing needles",
-      "Mother-to-child transmission",
-      "Contaminated blood transfusions",
-      "Occupational exposure",
-      "Organ transplantation",
-    ],
-    diagnosis: [
-      "HIV antibody tests",
-      "HIV antigen tests",
-      "Viral load tests",
-      "CD4 cell count",
-      "Rapid HIV tests",
-      "Home testing kits",
-    ],
-    treatment: [
-      "Antiretroviral therapy (ART)",
-      "Regular monitoring",
-      "Treatment of opportunistic infections",
-      "Preventive medications",
-      "Lifestyle modifications",
-      "Psychological support",
-    ],
-    prevention: [
-      "Practice safe sex",
-      "Don't share needles",
-      "Get tested regularly",
-      "Pre-exposure prophylaxis (PrEP)",
-      "Post-exposure prophylaxis (PEP)",
-      "Screen blood donations",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "HIV is a virus that attacks your body's defense system, making it hard to fight off infections and diseases.",
-      howYouGet:
-        "It spreads through certain body fluids during unprotected sex, sharing needles, or from mother to baby during birth.",
-      howToFeel:
-        "At first you might feel like you have the flu, then feel fine for years, but without treatment, you'll get sick more often.",
-      howToGetBetter:
-        "Take HIV medicines every day as prescribed, which can keep you healthy and prevent spreading it to others. Early treatment is very important.",
-    },
-    severity: "severe",
-    commonness: "uncommon",
+ {
+  id: "hiv-aids",
+  name: "HIV/AIDS",
+  category: "Viral Immune System Disorder",
+  bodySystem: "immune",
+  summary: "HIV (Human Immunodeficiency Virus) is a virus that attacks the body's immune system, specifically CD4+ T cells. If left untreated, HIV can progress to AIDS (Acquired Immunodeficiency Syndrome), the most advanced stage of HIV infection. With modern treatment, people with HIV can live long, healthy lives and prevent transmission to others.",
+  symptoms: [
+    "Acute HIV (2-4 weeks after infection): Flu-like symptoms including fever, chills, rash, night sweats, muscle aches, sore throat, fatigue, swollen lymph nodes, and mouth ulcers",
+    "Chronic HIV (asymptomatic stage): May have no symptoms for years, but the virus continues to multiply and damage the immune system",
+    "Advanced HIV/AIDS: Rapid weight loss, recurring fever, profuse night sweats, extreme fatigue, prolonged swelling of lymph glands, diarrhea lasting more than a week, sores in mouth/anus/genitals",
+    "Opportunistic infections: Pneumonia, tuberculosis, oral thrush, shingles, and other infections that take advantage of weakened immunity",
+    "Neurological symptoms: Memory loss, depression, confusion, and other cognitive issues",
+  ],
+  causes: [
+    "Unprotected sexual contact (vaginal, anal, or oral) with an infected person",
+    "Sharing needles, syringes, or other drug injection equipment with someone who has HIV",
+    "Mother-to-child transmission during pregnancy, childbirth, or breastfeeding",
+    "Blood transfusions or organ transplants (extremely rare in developed countries due to screening)",
+    "Occupational exposure (healthcare workers through needle sticks)",
+    "HIV cannot be transmitted through: casual contact, air/water, saliva, sweat, tears, closed-mouth kissing, sharing food/drinks, toilet seats, or insect bites",
+  ],
+  diagnosis: [
+    "HIV antibody tests (most common): Detect antibodies your body makes in response to HIV, typically accurate 3-12 weeks after exposure",
+    "HIV antigen/antibody tests: Can detect HIV earlier, usually 2-6 weeks after exposure",
+    "HIV RNA tests: Detect the virus itself and can identify infection 1-4 weeks after exposure",
+    "Rapid HIV tests: Provide results in 20 minutes or less, but positive results need confirmation",
+    "CD4+ cell count: Measures immune system health and helps guide treatment decisions",
+    "Viral load tests: Measure the amount of HIV in the blood to monitor treatment effectiveness",
+  ],
+  treatment: [
+    "Antiretroviral Therapy (ART): Combination of HIV medicines taken daily that prevent HIV from multiplying and allow the immune system to recover",
+    "Goal of treatment: Achieve and maintain an 'undetectable' viral load, which means the person cannot transmit HIV sexually (U=U: Undetectable = Untransmittable)",
+    "Regular monitoring: CD4+ counts and viral load tests every 3-6 months to ensure treatment is working",
+    "Treatment of opportunistic infections: Antibiotics, antivirals, or antifungals for infections that occur due to weakened immunity",
+    "Preventive medications: Prophylactic treatments to prevent certain opportunistic infections in people with very low CD4+ counts",
+    "Mental health support: Counseling and support groups to address psychological aspects of living with HIV",
+    "Important: With consistent treatment, people with HIV can have near-normal life expectancy",
+  ],
+  prevention: [
+    "Use condoms consistently and correctly during all sexual activity 🛡️",
+    "Get tested regularly for HIV and other STIs, and know your partner's status",
+    "Pre-Exposure Prophylaxis (PrEP): Daily medication for high-risk individuals that can reduce infection risk by up to 99%",
+    "Post-Exposure Prophylaxis (PEP): Emergency treatment within 72 hours of potential exposure",
+    "Never share needles, syringes, or other drug injection equipment",
+    "Limit number of sexual partners and avoid partners with unknown HIV status",
+    "Consider male circumcision, which can reduce risk of HIV acquisition",
+    "Pregnant women with HIV should receive treatment to prevent mother-to-child transmission",
+  ],
+  simpleExplanation: {
+    whatIs:
+      "HIV is like a sneaky computer virus, but instead of attacking your computer, it attacks your body's security system (your immune system). It specifically targets the 'security guards' called CD4+ T cells that help your body fight off germs and diseases. AIDS happens when so many security guards are destroyed that your body can't protect itself anymore.",
+    howYouGet:
+      "HIV spreads through certain body fluids like blood, semen, vaginal fluids, and breast milk. The most common ways are through unprotected sex or sharing needles. It's important to know that you can't get HIV from hugging, shaking hands, sharing food, or being around someone who has it.",
+    howToFeel:
+      "At first, you might feel like you have the flu for a few weeks, then feel completely normal for years. That's because HIV is very quiet while it's slowly damaging your immune system. Without treatment, your body eventually becomes too weak to fight off even simple infections that wouldn't normally make healthy people sick.",
+    howToGetBetter:
+      "The amazing news is that HIV treatment today is incredibly effective! Medicine called ART (antiretroviral therapy) works like a powerful shield that stops the virus from making copies of itself. When people take their medicine every day as prescribed, the virus becomes 'undetectable' – meaning it's so low it can't be measured and can't be passed to others. People with HIV who stay on treatment can live completely normal, healthy lives. The key is taking medicine consistently and working closely with healthcare providers. 💊❤️",
   },
+  severity: "severe",
+  commonness: "uncommon",
+},
+
+
+
+  
   {
     id: "tinnitus",
     name: "Tinnitus",
