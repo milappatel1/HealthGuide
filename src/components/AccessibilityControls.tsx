@@ -4,7 +4,7 @@ import { useTheme } from '../hooks/useTheme';
 
 const AccessibilityControls: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
-  const { fontSize, setFontSize } = setFontSize();
+  const { fontSize, setFontSize } = useFontSize();
 
   return (
     <div className="w-min mx-auto p-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
