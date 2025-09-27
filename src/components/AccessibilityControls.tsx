@@ -21,13 +21,6 @@ const AccessibilityControls: React.FC = () => {
         {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
       </button>
 
-      {/* Font Size Indicator (currently only 'small' is an option) */}
-      <button
-        // No onClick action needed since 'small' is the only size and is already active
-        // If you had more sizes, you would use setFontSize here.
-        className="p-2 rounded-lg transition-colors bg-gray-100 dark:bg-gray-700 text-blue-600 dark:text-blue-400 font-semibold"
-        aria-label={`Current font size is ${fontSize}`}
-      >
         <Type size={16} /> {/* A generic 'Type' icon */}
         <span className="sr-only">Current size: {fontSize}</span>
       </button>
