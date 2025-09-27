@@ -59,7 +59,8 @@ const BodySystems: React.FC = () => {
           const systemDiseases = getSystemDiseases(system.id);
           
           return (
-            <div
+            <Link
+              to={`/body-system/${system.id}`}
               key={system.id}
               className="group bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
             >
@@ -129,7 +130,7 @@ const BodySystems: React.FC = () => {
                   </p>
                 </div>
               )}
-            </div>
+            </Link>
           );
         })}
       </div>

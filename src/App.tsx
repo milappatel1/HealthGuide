@@ -8,6 +8,7 @@ import BodySystems from './pages/BodySystems';
 import CommonQuestions from './pages/CommonQuestions';
 import About from './pages/About';
 import SearchResults from './pages/SearchResults';
+import BodySystemDiseases from './pages/BodySystemDiseases';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/disease/:id" element={<DiseaseDetail />} />
           <Route path="/diseases" element={<AllDiseases />} />
           <Route path="/body-systems" element={<BodySystems />} />
+          <Route path="/body-system/:systemId" element={<BodySystemDiseases />} />
           <Route path="/common-questions" element={<CommonQuestions />} />
           <Route path="/about" element={<About />} />
           <Route path="/search" element={<SearchResults />} />
