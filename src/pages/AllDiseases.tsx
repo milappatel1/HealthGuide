@@ -1,13 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Filter, Grid, List } from 'lucide-react';
-import { diseases } from '../data/diseases';
+import { diseases, bodySystems } from '../data/diseases';
 import SearchBar from '../components/SearchBar';
 
 const AllDiseases: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [severityFilter, setSeverityFilter] = useState<string>('all');
   const [commonnessFilter, setCommonnessFilter] = useState<string>('all');
+  const [bodySystemFilter, setBodySystemFilter] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const filteredDiseases = useMemo(() => {
@@ -19,10 +20,11 @@ const AllDiseases: React.FC = () => {
       
       const matchesSeverity = severityFilter === 'all' || disease.severity === severityFilter;
       const matchesCommonness = commonnessFilter === 'all' || disease.commonness === commonnessFilter;
+      const matchesBodySystem = bodySystemFilter === 'all' || disease.bodySystem === bodySystemFilter;
       
-      return matchesSearch && matchesSeverity && matchesCommonness;
+      return matchesSearch && matchesSeverity && matchesCommonness && matchesBodySystem;
     });
-  }, [searchQuery, severityFilter, commonnessFilter]);
+  }, [searchQuery, severityFilter, commonnessFilter, bodySystemFilter]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -75,6 +77,19 @@ const AllDiseases: React.FC = () => {
               <option value="common">Common</option>
               <option value="uncommon">Uncommon</option>
               <option value="rare">Rare</option>
+            </select>
+
+            <select
+              value={bodySystemFilter}
+              onChange={(e) => setBodySystemFilter(e.target.value)}
+              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">All Body Systems</option>
+              {bodySystems.map((system) => (
+                <option key={system.id} value={system.id}>
+                  {system.name}
+                </option>
+              ))}
             </select>
           </div>
 
