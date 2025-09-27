@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Filter, Grid, List } from 'lucide-react';
+import { Search, Filter, Grid2x2 as Grid, List } from 'lucide-react';
 import { diseases, bodySystems } from '../data/diseases';
 import SearchBar from '../components/SearchBar';
 
