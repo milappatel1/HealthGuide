@@ -54,7 +54,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your body's defense system that protects you from germs, viruses, and other harmful substances that could make you sick.",
     icon: "Shield",
-    diseases: ["hiv-aids"],
+    diseases: ["hiv-aids", "goodpasture-syndrome"],
   },
   {
     id: "integumentary",
