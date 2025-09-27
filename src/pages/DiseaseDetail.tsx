@@ -49,11 +49,11 @@ const DiseaseDetail: React.FC = () => {
       </div>
 
       {/* Header */}
-      <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 mb-8">
-        {/* Wrap tags inside a responsive container */}
-        <div className="flex flex-wrap items-center gap-4 mb-6 break-words">
+      <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100 dark:border-gray-700 mb-8">
+        {/* Tags - Stacked on small screens, horizontal on larger screens */}
+        <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-3 mb-6">
           <div
-            className={`px-4 py-2 rounded-full text-sm font-medium ${
+            className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap ${
               disease.severity === 'mild'
                 ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
                 : disease.severity === 'moderate'
@@ -65,7 +65,7 @@ const DiseaseDetail: React.FC = () => {
           </div>
 
           <div
-            className={`px-4 py-2 rounded-full text-sm font-medium ${
+            className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap ${
               disease.commonness === 'very-common'
                 ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
@@ -74,34 +74,34 @@ const DiseaseDetail: React.FC = () => {
             {disease.commonness.replace('-', ' ')}
           </div>
 
-          <div className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
+          <div className="px-3 py-1.5 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap">
             {disease.category}
           </div>
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 leading-tight">
           {disease.name}
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           {disease.summary}
         </p>
       </div>
 
       {/* Simple Explanation for Kids */}
-      <div className="w-full bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-2xl p-8 mb-8 border border-pink-100 dark:border-pink-800">
+      <div className="w-full bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-2xl p-4 sm:p-6 lg:p-8 mb-8 border border-pink-100 dark:border-pink-800">
         <div className="flex items-center mb-6">
-          <div className="w-12 h-12 bg-pink-100 dark:bg-pink-900 rounded-xl flex items-center justify-center mr-4">
-            <Baby className="h-6 w-6 text-pink-600 dark:text-pink-400" />
+          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-pink-100 dark:bg-pink-900 rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+            <Baby className="h-5 w-5 sm:h-6 sm:w-6 text-pink-600 dark:text-pink-400" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">
             Simple Explanation
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {Object.entries(disease.simpleExplanation).map(([key, value]) => (
-            <div key={key} className="bg-white/50 dark:bg-gray-800/50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+            <div key={key} className="bg-white/50 dark:bg-gray-800/50 rounded-xl p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
                 {key === 'whatIs'
                   ? 'What is it?'
                   : key === 'howYouGet'
@@ -110,26 +110,26 @@ const DiseaseDetail: React.FC = () => {
                   ? 'How will you feel?'
                   : 'How to get better?'}
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{value}</p>
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{value}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Medical Information Sections */}
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {sections.map((section) => {
           const IconComponent = section.icon;
           return (
             <div
               key={section.id}
-              className="w-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700"
+              className="w-full bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100 dark:border-gray-700"
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
-                  <IconComponent className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                  <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100">
                   {section.title}
                 </h2>
               </div>
@@ -138,10 +138,10 @@ const DiseaseDetail: React.FC = () => {
                 {section.items.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl"
+                    className="flex items-start space-x-3 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-xl"
                   >
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item}</p>
+                    <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
@@ -151,7 +151,7 @@ const DiseaseDetail: React.FC = () => {
       </div>
 
       {/* Disclaimer */}
-      <div className="mt-12 w-full p-6 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-2xl">
+      <div className="mt-8 sm:mt-12 w-full p-4 sm:p-6 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-2xl">
         <div className="flex items-start space-x-3">
           <AlertCircle className="h-5 w-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
           <div>
