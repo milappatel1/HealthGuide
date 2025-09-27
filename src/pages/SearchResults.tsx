@@ -74,10 +74,9 @@ const SearchResults: React.FC = () => {
     return results;
   }, [query]);
 
-  // Removed getMatchTypeLabel as the 'Disease name' case is no longer needed
+  // Match Type Label helper function
   const getMatchTypeLabel = (matchType: string) => {
     switch (matchType) {
-      // 'name' case is effectively removed from display
       case 'category': return 'Category Match';
       case 'symptom': return 'Symptom Match';
       case 'summary': return 'Description Match';
@@ -134,7 +133,6 @@ const SearchResults: React.FC = () => {
 
       {/* Results */}
       {!query.trim() ? (
-        // ... (No query UI)
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
@@ -145,7 +143,6 @@ const SearchResults: React.FC = () => {
           </p>
         </div>
       ) : searchResults.length === 0 ? (
-        // ... (No results UI)
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
@@ -174,30 +171,27 @@ const SearchResults: React.FC = () => {
                 to={`/disease/${result.disease.id}`}
                 className="block bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
               >
-                {/* FIX: Use flex-wrap to allow elements to stack on small screens.
-                  Changed primary flex container to contain the title and the two tags.
-                */}
                 <div className="flex flex-wrap items-center mb-3 gap-2">
                   
-                  {/* Disease Name (Flex item 1, allowed to grow/shrink) */}
+                  {/* Disease Name */}
                   <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate min-w-0">
                     {result.disease.name}
                   </h2>
 
-                  {/* Commonness and Severity Tags (Flex item 2, forced to stay together and not shrink) */}
+                  {/* Commonness and Severity Tags */}
                   <div className="flex space-x-2 flex-shrink-0 ml-auto sm:ml-2">
-                    {/* Commonness Tag */}
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium uppercase flex-shrink-0 ${getCommonnessClass(result.disease.commonness as Disease['commonness'])}`}>
+                    {/* Commonness Tag - FIX: Removed 'uppercase' class */}
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium flex-shrink-0 ${getCommonnessClass(result.disease.commonness as Disease['commonness'])}`}>
                       {result.disease.commonness}
                     </div>
-                    {/* Severity Tag */}
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium uppercase flex-shrink-0 ${getSeverityClass(result.disease.severity as Disease['severity'])}`}>
+                    {/* Severity Tag - FIX: Removed 'uppercase' class */}
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium flex-shrink-0 ${getSeverityClass(result.disease.severity as Disease['severity'])}`}>
                       {result.disease.severity}
                     </div>
                   </div>
                 </div>
 
-                {/* Match Type is now conditionally shown AFTER the title line, only if it's NOT a 'name' match */}
+                {/* Match Type is only shown if it's NOT a 'name' match */}
                 {result.matchType !== 'name' && (
                     <span className="mb-2 inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full">
                       {getMatchTypeLabel(result.matchType)}
