@@ -475,7 +475,7 @@ export const diseases: Disease[] = [
 },
   {
   id: "arthritis",
-  name: "Arthritis (general)",
+  name: "Arthritis (General)",
   category: "Joint and Musculoskeletal Disorder",
   bodySystem: "musculoskeletal",
   summary: "A group of conditions involving inflammation of one or more joints, causing pain, swelling, stiffness, and reduced range of motion. There are over 100 different types of arthritis, with osteoarthritis and rheumatoid arthritis being the most common forms.",
