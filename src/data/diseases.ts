@@ -216,6 +216,68 @@ export const diseases: Disease[] = [
     severity: "moderate",
     commonness: "common",
   },
+ {
+    id: "tendinitis",
+    name: "Tendinitis/Tendinopathy",
+    category: "Musculoskeletal Condition",
+    bodySystem: "musculoskeletal",
+    summary: "An overuse condition causing pain, swelling, and irritation in a tendon, which is the thick, flexible cord that attaches muscle to bone. While 'itis' means inflammation, modern understanding suggests it's often due to a series of tiny tears (microtears) in the tendon tissue rather than just inflammation.",
+    symptoms: [
+      "A dull, aching pain that gets worse with movement, often centered around a joint.",
+      "Tenderness to the touch over the affected tendon.",
+      "Mild swelling, warmth, or redness in the area.",
+      "Stiffness and reduced range of motion, especially in the morning.",
+      "A crackling or grating sensation (crepitus) when moving the joint.",
+      "Weakness in the affected limb or a lump that can be felt along the tendon.",
+    ],
+    causes: [
+      "Repetitive motions from sports (like tennis elbow, golfer's elbow, pitcher's shoulder) or work (like typing or using tools). 🛠️",
+      "A sudden increase in the amount or intensity of physical activity without proper conditioning.",
+      "Sudden, acute injury or trauma to the tendon.",
+      "Poor posture or body mechanics, which places extra stress on certain tendons.",
+      "Aging, as tendons become less flexible and more prone to injury over time.",
+      "Underlying medical conditions like rheumatoid arthritis or diabetes.",
+    ],
+    diagnosis: [
+      "Physical Exam: A doctor will check for pain, swelling, and tenderness and assess your range of motion.",
+      "Medical History: Discussing your symptoms, activity levels, and past injuries.",
+      "Imaging Tests: While not always needed, they can rule out other issues.",
+      "An ultrasound can show tendon thickening or tears in real time.",
+      "An MRI provides a highly detailed image of the tendon and surrounding soft tissues.",],
+    treatment: [
+      "The RICE Method (Initial Care):",
+      "Rest: Stop the activity that is causing the pain.",
+      "Ice: Apply a cold pack for 15-20 minutes several times a day to reduce pain and swelling. 🧊",
+      "Compression: Use an elastic bandage to wrap the area, which can help minimize swelling.",
+      "Elevation: Keep the injured area raised above the level of your heart.",
+      "Medication: Over-the-counter anti-inflammatory drugs (NSAIDs) like ibuprofen or naproxen can help manage pain.",
+      "Physical Therapy: A therapist can guide you through specific exercises to strengthen the muscles and improve flexibility, which is key for long-term recovery.",
+      "Medical Procedures: For persistent cases, a doctor might suggest corticosteroid injections to reduce inflammation or other treatments like platelet-rich plasma (PRP) therapy to promote healing.",
+    ],
+    prevention: [
+      "Warm-up and Cool-down: Always perform gentle dynamic stretches before activity and static stretches after.",
+      "Gradual Progression: Avoid doing too much, too soon. Increase the intensity and duration of exercise slowly.",
+      "Use Proper Form: Whether at the gym or at work, ensure your technique is correct to avoid unnecessary strain.",
+      "Cross-Train: Mix up your activities to avoid overworking the same set of tendons repeatedly.",
+      "Ergonomics: Adjust your workspace to ensure it's set up to support good posture and reduce repetitive strain.",
+    ],
+    simpleExplanation: {
+      whatIs:
+        "Imagine the strong, rubber-band-like cords that connect your muscles to your bones—those are tendons. Tendinitis is when one of those 'rubber bands' gets irritated, frayed, and painful from being used too much or in the wrong way.",
+      howYouGet:
+        "It usually happens from doing the same motion over and over, like playing a sport, typing, or lifting. It can also happen if you suddenly start a new, intense activity your body isn't used to, or simply as tendons get older and less stretchy.",
+      howToFeel:
+        "It feels like a nagging ache right near a joint, like your elbow, shoulder, or heel. It hurts more when you move it, and the spot might feel sore if you press on it. Sometimes it can feel stiff and a bit swollen, too.",
+      howToGetBetter:
+        "The first step is to give it a break from whatever activity caused the pain. Using ice packs helps calm it down. Later, a physical therapist can show you special stretches and exercises to make the tendon strong and healthy again. Healing takes time, so patience is important! 💪",
+    },
+    severity: "moderate",
+    commonness: "common",
+  },
+
+
+
+  
   {
     id: "stroke",
     name: "Stroke",
@@ -339,60 +401,7 @@ export const diseases: Disease[] = [
     severity: "severe",
     commonness: "uncommon",
   },
-  {
-    id: "tendinitis",
-    name: "Tendinitis",
-    category: "Musculoskeletal Disorder",
-    bodySystem: "musculoskeletal",
-    summary: "Inflammation of tendons, the thick cords that attach muscles to bones, causing pain and tenderness.",
-    symptoms: [
-      "Pain and tenderness near joints",
-      "Stiffness",
-      "Swelling",
-      "Pain worsens with movement",
-      "Weakness in affected area",
-      "Crackling sensation when moving",
-      "Reduced range of motion",
-    ],
-    causes: [
-      "Repetitive motions",
-      "Sudden injury",
-      "Age-related wear",
-      "Sports activities",
-      "Poor posture",
-      "Overuse of joints",
-      "Certain medical conditions",
-    ],
-    diagnosis: ["Physical examination", "Medical history", "X-rays", "Ultrasound", "MRI scan", "Movement tests"],
-    treatment: [
-      "Rest and avoid aggravating activities",
-      "Ice therapy",
-      "Anti-inflammatory medications",
-      "Physical therapy",
-      "Stretching exercises",
-      "Corticosteroid injections",
-    ],
-    prevention: [
-      "Warm up before exercise",
-      "Use proper technique in sports",
-      "Take breaks during repetitive activities",
-      "Strengthen muscles around joints",
-      "Maintain good posture",
-      "Gradually increase activity intensity",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Tendinitis is when the strong cords (tendons) that connect your muscles to your bones get swollen and painful.",
-      howYouGet:
-        "It happens from doing the same motion over and over, like throwing a ball, or from suddenly injuring a tendon.",
-      howToFeel:
-        "The area around your joint will hurt and feel tender, especially when you move it, and it might be swollen.",
-      howToGetBetter:
-        "Rest the sore area, put ice on it, take anti-inflammatory medicine, and do gentle stretches to help it heal.",
-    },
-    severity: "mild",
-    commonness: "common",
-  },
+  
   {
     id: "skin-cancer",
     name: "Skin Cancer",
