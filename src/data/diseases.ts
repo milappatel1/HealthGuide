@@ -679,7 +679,81 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "common",
 },
-
+{
+  id: "gastritis",
+  name: "Gastritis",
+  category: "Digestive System Disorder",
+  bodySystem: "digestive",
+  summary: "Inflammation, irritation, or erosion of the stomach lining (mucosa). It can occur suddenly (acute gastritis) or develop gradually over time (chronic gastritis). The stomach lining becomes inflamed and may produce less acid and fewer enzymes needed for digestion.",
+  symptoms: [
+    "Upper abdominal pain or burning sensation (dyspepsia)",
+    "Nausea and vomiting",
+    "Loss of appetite",
+    "Feeling of fullness after eating small amounts",
+    "Bloating and gas",
+    "Indigestion and heartburn",
+    "Belching or burping",
+    "Black, tarry stools (melena) - may indicate bleeding",
+    "Vomiting blood or coffee-ground-like material (severe cases)",
+    "Unexplained weight loss",
+    "Hiccups",
+  ],
+  causes: [
+    "Helicobacter pylori (H. pylori) bacterial infection - most common cause worldwide",
+    "Long-term use of nonsteroidal anti-inflammatory drugs (NSAIDs) like aspirin, ibuprofen, naproxen",
+    "Excessive alcohol consumption",
+    "Chronic stress and anxiety",
+    "Spicy, acidic, or fatty foods (can trigger symptoms in sensitive individuals)",
+    "Smoking tobacco",
+    "Autoimmune disorders where the body attacks stomach lining cells",
+    "Bile reflux from the small intestine back into the stomach",
+    "Certain medications like corticosteroids or potassium supplements",
+    "Age-related thinning of stomach lining",
+    "Crohn's disease or other inflammatory conditions",
+  ],
+  diagnosis: [
+    "Medical history and physical examination, focusing on abdominal tenderness",
+    "H. pylori testing through breath test, stool sample, or blood test",
+    "Upper endoscopy (EGD) - camera inserted through mouth to directly view stomach lining",
+    "Upper GI series (barium swallow) - X-rays after drinking contrast solution",
+    "Stool tests to check for blood or H. pylori bacteria",
+    "Blood tests to check for anemia (which could indicate bleeding)",
+    "Tissue biopsy during endoscopy if abnormal areas are found",
+  ],
+  treatment: [
+    "H. pylori eradication: Triple therapy with two antibiotics (amoxicillin, clarithromycin) plus proton pump inhibitor for 10-14 days",
+    "Acid-suppressing medications: Proton pump inhibitors (omeprazole, esomeprazole) or H2 blockers (ranitidine, famotidine)",
+    "Antacids for quick symptom relief from stomach acid",
+    "Discontinue or reduce NSAIDs, alcohol, and smoking",
+    "Dietary modifications: Avoid spicy, acidic, fatty foods; eat smaller, more frequent meals",
+    "Stress management through relaxation techniques, exercise, or counseling",
+    "Probiotics to help restore healthy gut bacteria balance",
+    "Protective agents like sucralfate that coat and protect the stomach lining",
+    "Treatment of underlying conditions if gastritis is secondary to other diseases",
+  ],
+  prevention: [
+    "Practice good hygiene: Wash hands frequently to prevent H. pylori infection 🧼",
+    "Use NSAIDs sparingly and always with food; consider alternatives for pain relief",
+    "Limit alcohol consumption or avoid it completely",
+    "Don't smoke tobacco products",
+    "Manage stress through healthy coping mechanisms like exercise, meditation, or hobbies",
+    "Eat a balanced diet with plenty of fruits and vegetables; avoid excessive spicy or acidic foods",
+    "Eat smaller, more frequent meals rather than large meals",
+    "Avoid eating late at night or lying down immediately after eating",
+  ],
+  simpleExplanation: {
+    whatIs:
+      "Gastritis is like having a sunburn on the inside of your stomach. The protective lining of your stomach gets red, swollen, and irritated, just like your skin does when it's burned. This makes your stomach sensitive and can cause pain, especially when stomach acid touches the inflamed areas.",
+    howYouGet:
+      "It usually happens when something irritates your stomach lining over time. The most common culprit is a sneaky bacteria called H. pylori that can live in your stomach, or from taking too many pain medications like ibuprofen. Stress, spicy foods, alcohol, and smoking can also irritate your stomach lining and make it inflamed.",
+    howToFeel:
+      "It often feels like a burning or gnawing pain in your upper belly, especially when your stomach is empty or after eating certain foods. You might feel nauseous, lose your appetite, or feel uncomfortably full after eating just a little bit. Some people describe it as having a constant 'stomach ache' that won't go away.",
+    howToGetBetter:
+      "The good news is that gastritis usually heals well with the right treatment! If bacteria is the cause, antibiotics can clear it up. Medications can reduce stomach acid to give your stomach lining time to heal, like putting aloe on a sunburn. Avoiding irritating foods and drinks, managing stress, and eating smaller meals can help your stomach recover. Most people feel much better within a few weeks of treatment. 🌱💊",
+  },
+  severity: "mild",
+  commonness: "common",
+},
 
 
 
