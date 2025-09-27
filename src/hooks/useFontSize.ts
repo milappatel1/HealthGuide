@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-export type FontSize = 'small' | 'medium' | 'large';
+export type FontSize = 'small';
 
 export const useFontSize = () => {
   const [fontSize, setFontSize] = useState<FontSize>(() => {
     const saved = localStorage.getItem('fontSize');
-    return (saved as FontSize) || 'medium';
+    return (saved as FontSize) || 'small';
   });
 
   useEffect(() => {
