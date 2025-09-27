@@ -30,7 +30,7 @@ export const bodySystems: BodySystem[] = [
     name: "Respiratory System",
     description: "Your lungs and airways bring fresh oxygen into your body and remove waste gases like carbon dioxide.",
     icon: "Lung",
-    diseases: ["common-cold"],
+    diseases: ["common-cold", "sarcoidosis", "asthma"],
   },
   {
     id: "musculoskeletal",
