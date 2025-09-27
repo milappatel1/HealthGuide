@@ -7,7 +7,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your heart and blood vessels work together like a delivery system, pumping blood with oxygen and nutrients to every part of your body.",
     icon: "Heart",
-    diseases: ["stroke"],
+    diseases: ["stroke", "hypotension", "hypertension", "coronary-artery-disease", "cardiac-tamponade", "atrial-fibrillation"],
   },
   {
     id: "nervous",
