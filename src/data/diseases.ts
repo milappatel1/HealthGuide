@@ -274,7 +274,6 @@ export const diseases: Disease[] = [
     severity: "moderate",
     commonness: "common",
   },
-  
   {
     id: "stroke",
     name: "Stroke (Cerebrovascular Accident)",
@@ -343,71 +342,74 @@ export const diseases: Disease[] = [
     severity: "severe",
     commonness: "common",
   },
+ {
+  id: "diabetes-type-1",
+  name: "Type 1 Diabetes",
+  category: "Autoimmune Disorder",
+  bodySystem: "endocrine",
+  summary:
+    "A chronic autoimmune condition where the body’s immune system mistakenly attacks and destroys the insulin-producing beta cells in the pancreas. Without insulin, the body can’t properly regulate blood sugar (glucose) levels, leading to dangerously high blood sugar. People with Type 1 diabetes must take insulin for life to survive.",
+  symptoms: [
+    "Frequent urination (especially at night) and excessive thirst (polydipsia).",
+    "Extreme hunger, even after eating.",
+    "Unexplained weight loss, despite normal or increased appetite.",
+    "Constant fatigue, weakness, or low energy.",
+    "Blurred vision caused by high blood sugar affecting the eyes.",
+    "Irritability, mood changes, or difficulty concentrating.",
+    "Fruity-smelling breath (from ketones in the blood).",
+    "Nausea, vomiting, or abdominal pain (especially if diabetic ketoacidosis develops).",
+    "Slow healing of cuts and frequent infections.",
+  ],
+  causes: [
+    "Autoimmune Reaction: The immune system attacks and destroys insulin-producing beta cells in the pancreas.",
+    "Genetic Factors: Certain genes increase the risk of developing Type 1 diabetes.",
+    "Environmental Triggers: Possible triggers include viral infections or toxins that activate the immune response.",
+    "Family History: Having a parent or sibling with Type 1 diabetes increases risk.",
+    "Age: Most often diagnosed in children, teens, or young adults, though it can occur at any age.",
+    "Unknown Factors: The exact cause is not fully understood.",
+  ],
+  diagnosis: [
+    "Blood Glucose Tests: Measures blood sugar levels; a fasting glucose ≥126 mg/dL or random glucose ≥200 mg/dL may indicate diabetes.",
+    "Hemoglobin A1C Test: Shows the average blood sugar level over the past 2–3 months; an A1C of 6.5% or higher suggests diabetes.",
+    "Autoantibody Tests: Detect specific antibodies that signal an autoimmune attack on the pancreas.",
+    "C-Peptide Test: Low levels indicate little or no insulin production.",
+    "Ketone Testing: Checks for ketones in blood or urine, which can signal diabetic ketoacidosis (DKA).",
+    "Medical History and Symptoms: A doctor will review symptoms like excessive thirst, urination, and weight loss.",
+  ],
+  treatment: [
+    "Insulin Therapy 💉: Lifelong insulin replacement through injections or an insulin pump to control blood sugar.",
+    "Blood Glucose Monitoring: Frequent checks using a glucometer or continuous glucose monitor (CGM) to keep blood sugar within target range.",
+    "Carbohydrate Counting: Tracking carbs to adjust insulin doses accurately.",
+    "Healthy, Balanced Diet: Focus on whole grains, lean proteins, fruits, and vegetables while managing carb intake.",
+    "Regular Exercise: Helps improve insulin sensitivity and blood sugar control.",
+    "Education and Support: Diabetes self-management education is key for long-term success.",
+    "Regular Medical Check-ups: Ongoing care from a diabetes care team to monitor complications and adjust treatment.",
+    "Emergency Awareness: Recognizing and treating hypoglycemia (low blood sugar) or hyperglycemia (high blood sugar) promptly.",
+  ],
+  prevention: [
+    "Currently, there is no known way to prevent Type 1 diabetes.",
+    "Early Detection: Monitoring at-risk individuals (with family history) may help catch symptoms early.",
+    "Healthy Lifestyle: While it can’t prevent Type 1 diabetes, maintaining overall health supports better blood sugar control.",
+    "Manage Other Conditions: Treating autoimmune diseases or infections promptly may reduce complications.",
+    "Stay Up-to-Date with Care: Regular screenings for eye, kidney, and nerve health help prevent long-term complications.",
+  ],
+  simpleExplanation: {
+    whatIs:
+      "Type 1 diabetes is when your body’s defense system attacks the part of your pancreas that makes insulin — the hormone that helps control your blood sugar. Without insulin, sugar builds up in your blood instead of going into your cells for energy.",
+    howYouGet:
+      "You don’t get it from eating sugar or being unhealthy. It happens because of your genes and your immune system. It often starts in kids or teens, but adults can get it too.",
+    howToFeel:
+      "You’ll feel very thirsty, need to pee a lot, and might lose weight even though you’re hungry. You may feel weak, tired, and your breath could smell fruity. If it gets really bad, you can feel sick and need emergency care.",
+    howToGetBetter:
+      "Since your body can’t make insulin anymore, you’ll need to take insulin every day — either with shots or a pump. You’ll check your blood sugar, eat healthy foods, and exercise. With good care, you can live a full, healthy life! 💉🍎🏃‍♂️",
+  },
+  severity: "severe",
+  commonness: "uncommon",
+},
+
 
 
   
-  {
-    id: "diabetes-type-1",
-    name: "Type 1 Diabetes",
-    category: "Autoimmune Disorder",
-    bodySystem: "endocrine",
-    summary:
-      "An autoimmune condition where the body attacks insulin-producing cells, requiring lifelong insulin therapy.",
-    symptoms: [
-      "Excessive thirst and urination",
-      "Extreme hunger",
-      "Unexplained weight loss",
-      "Fatigue and weakness",
-      "Blurred vision",
-      "Irritability and mood changes",
-      "Fruity-smelling breath",
-    ],
-    causes: [
-      "Autoimmune destruction of beta cells",
-      "Genetic predisposition",
-      "Environmental triggers",
-      "Viral infections",
-      "Unknown factors",
-      "Family history",
-      "Age (often diagnosed in childhood)",
-    ],
-    diagnosis: [
-      "Blood glucose tests",
-      "Hemoglobin A1C test",
-      "Autoantibody tests",
-      "C-peptide test",
-      "Ketone testing",
-      "Medical history and symptoms",
-    ],
-    treatment: [
-      "Insulin therapy (lifelong)",
-      "Blood glucose monitoring",
-      "Carbohydrate counting",
-      "Regular exercise",
-      "Healthy diet",
-      "Regular medical check-ups",
-    ],
-    prevention: [
-      "No known prevention",
-      "Early detection important",
-      "Maintain healthy lifestyle",
-      "Regular screening for at-risk individuals",
-      "Manage other health conditions",
-      "Stay up-to-date with medical care",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Type 1 diabetes is when your body's defense system destroys the cells that make insulin, so your body can't control blood sugar.",
-      howYouGet:
-        "It's an autoimmune disease that you're usually born with, and it often starts when you're a child or teenager.",
-      howToFeel:
-        "You'll be very thirsty, need to pee a lot, lose weight even though you're hungry, and feel very tired.",
-      howToGetBetter:
-        "You need to take insulin shots or use an insulin pump every day, check your blood sugar, eat healthy, and exercise regularly.",
-    },
-    severity: "severe",
-    commonness: "uncommon",
-  },
   
   {
     id: "skin-cancer",
