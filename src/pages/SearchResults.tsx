@@ -4,6 +4,20 @@ import { Search, ArrowLeft } from 'lucide-react';
 import { diseases } from '../data/diseases';
 import SearchBar from '../components/SearchBar';
 
+// Define the expected structure for a single disease item for better type safety
+// Assuming disease now includes 'severity' and 'commonness' properties.
+type Disease = typeof diseases[0] & {
+  severity: 'mild' | 'moderate' | 'severe';
+  commonness: 'rare' | 'uncommon' | 'common' | 'very common';
+};
+
+// Update the search results type
+type SearchResult = {
+  disease: Disease;
+  matchType: 'name' | 'category' | 'symptom' | 'summary';
+  matchedText: string;
+};
+
 const SearchResults: React.FC = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get('q') || '';
@@ -12,13 +26,11 @@ const SearchResults: React.FC = () => {
     if (!query.trim()) return [];
 
     const lowerQuery = query.toLowerCase();
-    const results: Array<{
-      disease: typeof diseases[0];
-      matchType: 'name' | 'category' | 'symptom' | 'summary';
-      matchedText: string;
-    }> = [];
+    // Enforce the new type for results array
+    const results: Array<SearchResult> = [];
 
-    diseases.forEach(disease => {
+    // Cast 'diseases' to the expected Disease array type for safe property access
+    (diseases as Disease[]).forEach(disease => {
       // Check disease name
       if (disease.name.toLowerCase().includes(lowerQuery)) {
         results.push({
@@ -40,7 +52,7 @@ const SearchResults: React.FC = () => {
       }
 
       // Check symptoms
-      const matchedSymptom = disease.symptoms.find(symptom => 
+      const matchedSymptom = disease.symptoms.find(symptom =>
         symptom.toLowerCase().includes(lowerQuery)
       );
       if (matchedSymptom) {
@@ -75,8 +87,30 @@ const SearchResults: React.FC = () => {
     }
   };
 
+  // Helper function for commonness styling
+  const getCommonnessClass = (commonness: Disease['commonness']) => {
+    switch (commonness) {
+      case 'very common': return 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300';
+      case 'common': return 'bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300';
+      case 'uncommon': return 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300';
+      case 'rare': return 'bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300';
+      default: return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+    }
+  };
+
+  // Helper function for severity styling
+  const getSeverityClass = (severity: Disease['severity']) => {
+    switch (severity) {
+      case 'mild': return 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300';
+      case 'moderate': return 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300';
+      case 'severe': return 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300';
+      default: return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+    }
+  };
+
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    // FIX: Added 'w-full overflow-x-hidden' to ensure no horizontal scrolling outside the main content area
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full overflow-x-hidden">
       {/* Header */}
       <div className="mb-8">
         <Link
@@ -92,8 +126,9 @@ const SearchResults: React.FC = () => {
         </h1>
         
         {query && (
+          // FIX: Added 'break-words' to prevent long queries from overflowing
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Showing results for: <span className="font-semibold">"{query}"</span>
+            Showing results for: <span className="font-semibold break-words">"{query}"</span>
           </p>
         )}
 
@@ -103,6 +138,7 @@ const SearchResults: React.FC = () => {
 
       {/* Results */}
       {!query.trim() ? (
+        // ... (No query UI)
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
@@ -113,6 +149,7 @@ const SearchResults: React.FC = () => {
           </p>
         </div>
       ) : searchResults.length === 0 ? (
+        // ... (No results UI)
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
@@ -139,25 +176,29 @@ const SearchResults: React.FC = () => {
               <Link
                 key={`${result.disease.id}-${index}`}
                 to={`/disease/${result.disease.id}`}
-                className="block bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
+                // FIX: Reduced padding for mobile
+                className="block bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-center space-x-3">
-                    <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {/* FIX: Use flex-wrap to allow elements to stack on small screens */}
+                <div className="flex flex-wrap items-start justify-between mb-3 gap-2">
+                  <div className="flex items-center space-x-3 min-w-0 flex-grow">
+                    {/* FIX: Added 'truncate' and 'min-w-0' to prevent long disease names from pushing tags off-screen */}
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate min-w-0">
                       {result.disease.name}
                     </h2>
-                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full">
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full flex-shrink-0">
                       {getMatchTypeLabel(result.matchType)}
                     </span>
                   </div>
-                  <div className="flex space-x-2">
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      result.disease.severity === 'mild' 
-                        ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
-                        : result.disease.severity === 'moderate'
-                        ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
-                        : 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'
-                    }`}>
+
+                  {/* Commonness and Severity Tags - FIX: Grouped and ensured they don't grow */}
+                  <div className="flex space-x-2 flex-shrink-0">
+                    {/* Commonness Tag */}
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium uppercase flex-shrink-0 ${getCommonnessClass(result.disease.commonness as Disease['commonness'])}`}>
+                      {result.disease.commonness}
+                    </div>
+                    {/* Severity Tag */}
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium uppercase flex-shrink-0 ${getSeverityClass(result.disease.severity as Disease['severity'])}`}>
                       {result.disease.severity}
                     </div>
                   </div>
@@ -167,12 +208,13 @@ const SearchResults: React.FC = () => {
                   {result.disease.category}
                 </p>
                 
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                {/* FIX: Added 'line-clamp-3' (requires line-clamp plugin) for summary to keep card size consistent on mobile */}
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3">
                   {result.disease.summary}
                 </p>
                 
                 {result.matchType === 'symptom' && (
-                  <div className="mt-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                  <div className="mt-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg overflow-x-auto">
                     <p className="text-sm text-gray-600 dark:text-gray-300">
                       <span className="font-medium">Matched symptom:</span> {result.matchedText}
                     </p>
