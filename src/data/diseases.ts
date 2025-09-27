@@ -62,7 +62,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your skin, hair, and nails form a protective barrier that keeps harmful things out and helps regulate your body temperature.",
     icon: "Sun",
-    diseases: ["skin-cancer"],
+    diseases: ["melanoma"],
   },
   {
     id: "urinary",
