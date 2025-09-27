@@ -9,6 +9,7 @@ const Navigation: React.FC = () => {
   const location = useLocation()
 
   const navItems = [
+    { path: "/", label: "Home" },
     { path: "/diseases", label: "All Diseases" },
     { path: "/body-systems", label: "Body Systems" },
     { path: "/common-questions", label: "Common Questions" },
