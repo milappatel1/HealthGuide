@@ -183,7 +183,7 @@ const HomePage: React.FC = () => {
                 return (
                   <Link
                     key={system.id}
-                    to="/body-systems"
+                    to="/body-systems/{system.id}"
                     className="group bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
                   >
                     <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
