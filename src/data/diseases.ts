@@ -158,9 +158,6 @@ export const diseases: Disease[] = [
     severity: "mild",
     commonness: "very-common",
   },
-
-
-    
   {
     id: "depression",
     name: "Depression",
