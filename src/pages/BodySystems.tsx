@@ -54,7 +54,7 @@ const BodySystems: React.FC = () => {
                   <IconComponent className="h-8 w-8 text-white" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words leading-tight hyphens-auto">
+                  <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors break-words leading-tight hyphens-auto">
                     {system.name}
                   </h2>
                   <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
