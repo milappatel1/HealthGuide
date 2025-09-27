@@ -20,11 +20,6 @@ const AccessibilityControls: React.FC = () => {
       >
         {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
       </button>
-
-        <Type size={16} /> {/* A generic 'Type' icon */}
-        <span className="sr-only">Current size: {fontSize}</span>
-      </button>
-
     </div>
   );
 };
