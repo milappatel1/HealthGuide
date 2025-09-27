@@ -211,7 +211,7 @@ export const diseases: Disease[] = [
       howToFeel:
         "It can feel like you're carrying a very heavy weight all the time. You might feel exhausted but unable to sleep, or hungry but with no desire to eat. It can make it hard to focus, and you might feel lonely and believe that things will never get better.",
       howToGetBetter:
-        "Getting better is a team effort. Talking to a therapist is like having a coach who can teach you skills to manage your thoughts and feelings. Sometimes, a doctor might prescribe medicine that acts like a reset button for your brain's chemicals. Taking care of your body by exercising and eating well is also a huge help. The most important step is reaching out and asking for help. ❤️",
+        "Getting better is a team effort. Talking to a therapist is like having a coach who can teach you skills to manage your thoughts and feelings. Sometimes, a doctor might prescribe medicine like SSRIs that promotes neuroplasticity, which is the brain's ability to change and form new connections. Taking care of your body by exercising and eating well is also a huge help. The most important step is reaching out and asking for help. ❤️",
     },
     severity: "moderate",
     commonness: "common",
