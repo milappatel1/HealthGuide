@@ -276,7 +276,7 @@ export const diseases: Disease[] = [
   },
   {
     id: "stroke",
-    name: "Stroke (Cerebrovascular Accident)",
+    name: "Stroke",
     category: "Cardiovascular Emergency",
     bodySystem: "cardiovascular",
     summary: "A life-threatening medical emergency that happens when blood flow to part of the brain is interrupted, depriving brain cells of oxygen and nutrients. Without oxygen, brain cells begin to die within minutes, which can cause permanent damage or death if not treated immediately. There are two main types: ischemic (caused by a blockage) and hemorrhagic (caused by bleeding).",
