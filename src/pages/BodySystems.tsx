@@ -99,7 +99,7 @@ const BodySystems: React.FC = () => {
                     ))}
                     {systemDiseases.length > 3 && (
                       <Link
-                        to="/diseases"
+                        to={`/body-system/${system.id}`}
                         className="block p-3 text-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm transition-colors"
                       >
                         View {systemDiseases.length - 3} more condition{systemDiseases.length - 3 !== 1 ? "s" : ""}
