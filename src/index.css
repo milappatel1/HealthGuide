@@ -42,6 +42,14 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  
+  .hyphens-auto {
+    word-break: break-word; /* Ensure basic word breaking works */
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto; /* Webkit prefix for compatibility */
+    -ms-hyphens: auto; /* Microsoft prefix for compatibility */
+    hyphens: auto; /* Standard property */
+  }
 }
 
 /* Smooth scrolling */
