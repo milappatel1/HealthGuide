@@ -148,7 +148,7 @@ export const diseases: Disease[] = [
     ],
     simpleExplanation: {
       whatIs:
-        "A cold is when tiny, invisible germs called viruses have a little party in your nose and throat. It's not dangerous, but it can make you feel tired and yucky for about a week while your body works to kick them out.",
+        "A cold is when tiny, invisible germs called viruses have a little party in your nose and throat. It\'s not dangerous, but it can make you feel tired and yucky for about a week while your body works to kick them out.",
       howYouGet:
         "You can catch it if you're near a sick person when they cough or sneeze, sending tiny virus droplets into the air. You can also get it by touching something they touched (like a toy or phone) and then touching your own eyes, nose, or mouth.",
       howToFeel:
