@@ -830,7 +830,78 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "common",
 },
-
+{
+  id: "pcos",
+  name: "PCOS (Polycystic Ovary Syndrome)",
+  category: "Reproductive Disorder",
+  bodySystem: "reproductive",
+  summary: "A common hormonal disorder affecting women of reproductive age, characterized by irregular menstrual periods, excess androgen (male hormone) levels, and polycystic ovaries. Despite its name, not all women with PCOS actually have cysts on their ovaries. It's one of the leading causes of infertility but is highly treatable.",
+  symptoms: [
+    "Irregular or absent menstrual periods (oligomenorrhea or amenorrhea)",
+    "Heavy menstrual bleeding when periods do occur",
+    "Excess hair growth on face, chest, back, or buttocks (hirsutism)",
+    "Male-pattern baldness or thinning hair on the scalp",
+    "Acne, especially on face, chest, and upper back",
+    "Weight gain or difficulty losing weight, particularly around the midsection",
+    "Darkened skin patches (acanthosis nigricans) on neck, armpits, or groin",
+    "Skin tags in armpits or neck area",
+    "Difficulty getting pregnant or infertility",
+    "Mood changes including depression, anxiety, or irritability",
+    "Fatigue and low energy levels",
+  ],
+  causes: [
+    "Insulin resistance - the body can't use insulin effectively, leading to high insulin levels",
+    "Hormonal imbalance with elevated androgens (testosterone and other male hormones)",
+    "Genetics - having a mother or sister with PCOS increases risk",
+    "Low-grade inflammation that stimulates ovaries to produce androgens",
+    "Abnormal fetal development due to excess androgen exposure in the womb",
+    "Environmental factors like diet, stress, and lifestyle",
+    "The exact cause is unknown, but it's likely a combination of genetic and environmental factors",
+  ],
+  diagnosis: [
+    "Medical history including menstrual patterns, weight changes, and family history",
+    "Physical examination to check for signs of excess androgens (hair growth, acne, hair loss)",
+    "Pelvic exam and ultrasound to examine ovaries for cysts or enlarged ovaries",
+    "Blood tests to measure hormone levels (androgens, LH, FSH, insulin)",
+    "Glucose tolerance test to check for insulin resistance and diabetes risk",
+    "Lipid profile to assess cardiovascular risk factors",
+    "Rotterdam criteria: Diagnosis requires 2 of 3 features - irregular ovulation, excess androgens, or polycystic ovaries on ultrasound",
+    "Rule out other conditions like thyroid disorders or adrenal problems",
+  ],
+  treatment: [
+    "Lifestyle modifications: Weight loss through diet and exercise can significantly improve symptoms and hormone balance",
+    "Birth control pills to regulate menstrual cycles and reduce androgen levels",
+    "Metformin to improve insulin sensitivity and help with weight management",
+    "Anti-androgen medications (spironolactone) to reduce hair growth and acne",
+    "Fertility treatments like clomiphene or letrozole for women trying to conceive",
+    "Hair removal treatments (laser therapy, electrolysis) for excess hair growth",
+    "Topical treatments for acne and skin darkening",
+    "Ovarian drilling (laparoscopic surgery) in some cases to stimulate ovulation",
+    "Mental health support and counseling for mood and self-esteem issues",
+  ],
+  prevention: [
+    "Maintain a healthy weight through balanced diet and regular exercise 🏃‍♀️",
+    "Eat a low-glycemic diet rich in whole grains, lean proteins, and vegetables",
+    "Engage in regular physical activity to improve insulin sensitivity",
+    "Manage stress through relaxation techniques, yoga, or meditation",
+    "Get adequate sleep (7-9 hours per night) to support hormone balance",
+    "Limit processed foods, sugary drinks, and refined carbohydrates",
+    "Consider supplements like inositol or vitamin D if recommended by healthcare provider",
+    "Regular medical check-ups to monitor for diabetes and cardiovascular risks",
+  ],
+  simpleExplanation: {
+    whatIs:
+      "PCOS is like your body's hormone orchestra playing out of tune. Your ovaries are producing too many male hormones (androgens), which throws off your whole menstrual cycle and affects how your body processes sugar. It's called 'polycystic' because the ovaries can look like they have many small cysts, but these are actually just eggs that didn't mature properly.",
+    howYouGet:
+      "It's mostly about genetics - if your mom or sister has it, you're more likely to have it too. But it's not something you 'catch' or something you did wrong. Your body just processes hormones and insulin differently than other people. Think of it like having a different metabolic blueprint that needs special attention.",
+    howToFeel:
+      "Many women feel frustrated because their periods are unpredictable or missing, they might struggle with weight gain even when eating healthy, and they may develop acne or unwanted hair growth. It can affect self-esteem and make planning difficult when you never know when your period will come. Some women also feel tired or moody due to the hormone imbalances.",
+    howToGetBetter:
+      "The great news is that PCOS is very manageable! Small lifestyle changes can make a huge difference - even losing 5-10% of your body weight can help balance hormones and improve symptoms. Eating foods that don't spike your blood sugar and staying active are like giving your body the right fuel to work better. Medications can help regulate periods and reduce unwanted symptoms. Many women with PCOS go on to have healthy pregnancies and live completely normal lives once they find the right treatment plan. 💪✨",
+  },
+  severity: "mild",
+  commonness: "common",
+},
 
 
 
