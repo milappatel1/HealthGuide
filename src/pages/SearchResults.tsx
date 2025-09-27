@@ -87,12 +87,12 @@ const SearchResults: React.FC = () => {
           Back to Home
         </Link>
         
-        <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
           Search Results
         </h1>
         
         {query && (
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 break-words">
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
             Showing results for: <span className="font-semibold">"{query}"</span>
           </p>
         )}
@@ -105,23 +105,23 @@ const SearchResults: React.FC = () => {
       {!query.trim() ? (
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-          <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
             No search query provided
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 px-4">
+          <p className="text-gray-600 dark:text-gray-400">
             Please enter a search term to find health conditions, symptoms, or categories.
           </p>
         </div>
       ) : searchResults.length === 0 ? (
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-          <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
             No results found
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 px-4 break-words">
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
             We couldn't find any conditions matching "{query}". Try:
           </p>
-          <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 space-y-1 px-4">
+          <div className="text-sm text-gray-500 dark:text-gray-400 space-y-1">
             <p>• Checking your spelling</p>
             <p>• Using different keywords</p>
             <p>• Searching for symptoms instead of condition names</p>
@@ -130,7 +130,7 @@ const SearchResults: React.FC = () => {
         </div>
       ) : (
         <div className="space-y-6">
-          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-400">
             Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''}
           </p>
           
@@ -139,21 +139,19 @@ const SearchResults: React.FC = () => {
               <Link
                 key={`${result.disease.id}-${index}`}
                 to={`/disease/${result.disease.id}`}
-                className="block bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
+                className="block bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
               >
-                {/* Header section with responsive layout */}
-                <div className="mb-3">
-                  {/* Title */}
-                  <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight break-words mb-2">
-                    {result.disease.name}
-                  </h2>
-                  
-                  {/* Tags row - all badges in one row that wraps */}
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full whitespace-nowrap">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center space-x-3">
+                    <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      {result.disease.name}
+                    </h2>
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full">
                       {getMatchTypeLabel(result.matchType)}
                     </span>
-                    <div className={`px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap ${
+                  </div>
+                  <div className="flex space-x-2">
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
                       result.disease.severity === 'mild' 
                         ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
                         : result.disease.severity === 'moderate'
@@ -165,17 +163,17 @@ const SearchResults: React.FC = () => {
                   </div>
                 </div>
                 
-                <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-3">
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
                   {result.disease.category}
                 </p>
                 
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed break-words">
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   {result.disease.summary}
                 </p>
                 
                 {result.matchType === 'symptom' && (
                   <div className="mt-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 break-words">
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
                       <span className="font-medium">Matched symptom:</span> {result.matchedText}
                     </p>
                   </div>
