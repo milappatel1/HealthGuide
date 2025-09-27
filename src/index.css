@@ -42,6 +42,10 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+   .hyphens-auto {
+     hyphens: auto;
+  }
 }
 
 /* Smooth scrolling */
