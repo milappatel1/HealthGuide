@@ -218,10 +218,10 @@ export const diseases: Disease[] = [
   },
  {
     id: "tendinitis",
-    name: "Tendinitis",
+    name: "Tendinitis (Tendinopathy)",
     category: "Musculoskeletal Condition",
     bodySystem: "musculoskeletal",
-    summary: "An overuse condition causing pain, swelling, and irritation in a tendon, which is the thick, flexible cord that attaches muscle to bone. While 'itis' means inflammation, modern understanding suggests it's often due to a series of tiny tears (microtears) in the tendon tissue rather than just inflammation.",
+    summary: "An overuse condition causing pain, swelling, and irritation in a tendon, which is the thick, flexible cord that attaches muscle to bone. While 'itis' means inflammation, modern understanding suggests it's often due to a series of tiny tears (microtears) in the tendon tissue which lead to the inflammation.",
     symptoms: [
       "A dull, aching pain that gets worse with movement, often centered around a joint.",
       "Tenderness to the touch over the affected tendon.",
