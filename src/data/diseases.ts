@@ -159,8 +159,8 @@ whatItFeelsLike:
 howToGetBetter:
 "Your body is the hero and will fight off the cold on its own! To help your body win, you should rest a lot, drink plenty of water or juice, and eat healthy foods. Medicine from the store can't cure the cold, but it can help your stuffy nose or sore throat feel better while your body does all the hard work.",
 },
-severity: "Mild",
-commonness: "Extremely Common",
+severity: "mild",
+commonness: "common",
 },
 
   
