@@ -161,7 +161,7 @@ export const diseases: Disease[] = [
   },
    {
     id: "depression",
-    name: "Depression",
+    name: "Depression (Major Depressive Disorder)",
     category: "Mental Health Disorder",
     bodySystem: "nervous",
     summary: "A serious medical illness that negatively affects how you feel, the way you think, and how you act. It's more than just feeling sad; it's a persistent mood disorder that causes a loss of interest in activities you once enjoyed and can lead to a variety of emotional and physical problems.",
