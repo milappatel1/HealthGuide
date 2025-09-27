@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Heart, Menu, X } from 'lucide-react';
-// Assuming AccessibilityControls is available/imported
-// import AccessibilityControls from './AccessibilityControls'; 
+import AccessibilityControls from './AccessibilityControls';
 
-// Mock component for AccessibilityControls for single-file context
-const AccessibilityControls = () => (
-  <div className="flex items-center space-x-2">
-    {/* Placeholder for theme toggle or font size controls */}
-    <div className="h-5 w-5 rounded-full bg-gray-200 dark:bg-gray-700 cursor-pointer" title="Accessibility Controls"></div>
-  </div>
-);
-
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -25,9 +16,6 @@ const Navigation = () => {
 
   return (
     <nav className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
-      {/* This div wraps the main header content (Logo, Desktop Nav, Buttons) 
-        and applies responsive padding and max-width, keeping it centered.
-      */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -68,27 +56,17 @@ const Navigation = () => {
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Navigation (Dropdown) 
-        This is now a direct child of <nav> and spans the full screen width (w-full).
-        This prevents horizontal overflow/scrolling on small screens.
-      */}
-      {isMenuOpen && (
-        <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700 w-full">
-          {/* This inner div re-applies the responsive horizontal padding 
-            (px-4 sm:px-6 lg:px-8) to align the menu items with the main header content.
-          */}
-          <div className="px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col space-y-2">
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  // Removed 'px-4' from the Link itself to avoid double padding 
-                  // and allow the hover/active state to span the full width of the padded container.
-                  className={`block py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                     location.pathname === item.path
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
                       : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -99,8 +77,8 @@ const Navigation = () => {
               ))}
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };
