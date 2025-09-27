@@ -121,7 +121,7 @@ const AllDiseases: React.FC = () => {
       {/* Results Count */}
       <div className="mb-6">
         <p className="text-gray-600 dark:text-gray-400">
-          Showing {filteredDiseases.length} of {diseases.length} conditions
+          Showing {filteredDiseases.length} conditions
         </p>
       </div>
 
