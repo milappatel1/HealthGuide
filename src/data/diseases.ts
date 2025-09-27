@@ -148,13 +148,14 @@ export const diseases: Disease[] = [
     ],
     simpleExplanation: {
       whatIs:
-        "A cold is when tiny, invisible germs called viruses have a little party in your nose and throat. It\'s not dangerous, but it can make you feel tired and yucky for about a week while your body works to kick them out.",
+        "A cold is when tiny, invisible germs called viruses have a little party in your nose and throat. It's not dangerous, but it can make you feel tired and yucky for about a week while your body works to kick them out.",
       howYouGet:
         "You can catch it if you're near a sick person when they cough or sneeze, sending tiny virus droplets into the air. You can also get it by touching something they touched (like a toy or phone) and then touching your own eyes, nose, or mouth.",
       howToFeel:
         "It often starts with a prickly throat. Soon, you might get a runny or stuffy nose, start sneezing a lot, and feel sleepy. This is your body telling you it's busy fighting off the virus germs! 🤺",
       howToGetBetter:
         "Your body is the hero and will fight off the cold on its own! To help your body win, you should rest a lot, drink plenty of water or juice, and eat healthy foods. Medicine from the store can't cure the cold, but it can help your stuffy nose or sore throat feel better while your body does all the hard work.",
+    },
     severity: "mild",
     commonness: "very-common",
   },
