@@ -38,7 +38,7 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your bones, muscles, and joints work together to give your body structure, support, and the ability to move.",
     icon: "Bone",
-    diseases: ["arthritis"],
+    diseases: ["arthritis", "tendinitis"],
   },
   {
     id: "endocrine",
@@ -472,6 +472,77 @@ export const diseases: Disease[] = [
   },
   severity: "severe",
   commonness: "uncommon",
+},
+  {
+  id: "arthritis",
+  name: "Arthritis",
+  category: "Joint and Musculoskeletal Disorder",
+  bodySystem: "musculoskeletal",
+  summary: "A group of conditions involving inflammation of one or more joints, causing pain, swelling, stiffness, and reduced range of motion. There are over 100 different types of arthritis, with osteoarthritis and rheumatoid arthritis being the most common forms.",
+  symptoms: [
+    "Joint pain that may be constant or come and go",
+    "Joint stiffness, especially in the morning or after periods of inactivity",
+    "Swelling in and around joints",
+    "Reduced range of motion in affected joints",
+    "Warmth and redness around joints",
+    "Fatigue and general feeling of being unwell",
+    "Joint deformity in advanced cases",
+    "Muscle weakness around affected joints",
+    "Grinding or crackling sounds when moving joints (crepitus)",
+    "Difficulty performing daily activities like opening jars or climbing stairs",
+  ],
+  causes: [
+    "Age-related wear and tear of joint cartilage (osteoarthritis)",
+    "Autoimmune system attacking joint tissues (rheumatoid arthritis)",
+    "Genetic predisposition and family history",
+    "Previous joint injuries or trauma",
+    "Infections that affect joints (septic arthritis)",
+    "Metabolic disorders like gout (uric acid crystal buildup)",
+    "Obesity putting extra stress on weight-bearing joints",
+    "Repetitive joint use from occupation or sports",
+    "Autoimmune conditions like lupus or psoriasis",
+  ],
+  diagnosis: [
+    "Physical examination to check for joint swelling, tenderness, and range of motion.",
+    "Medical history review including family history and symptom timeline.",
+    "Blood tests to check for inflammatory markers (ESR, CRP), rheumatoid factor, and other autoimmune markers.",
+    "X-rays to show joint damage, bone spurs, or cartilage loss.",
+    "MRI or CT scans for detailed images of soft tissues and cartilage.",
+    "Joint fluid analysis (arthrocentesis) to check for infection, crystals, or inflammatory cells.",
+    "Ultrasound to visualize joint inflammation and fluid buildup.",
+  ],
+  treatment: [
+    "Medications: NSAIDs (ibuprofen, naproxen) for pain and inflammation, disease-modifying antirheumatic drugs (DMARDs) for autoimmune types, corticosteroid injections for severe flares.",
+    "Physical Therapy: Exercises to maintain joint flexibility, strengthen supporting muscles, and improve range of motion.",
+    "Occupational Therapy: Learning joint protection techniques and using adaptive tools for daily activities.",
+    "Weight Management: Maintaining healthy weight to reduce stress on joints, especially knees and hips.",
+    "Hot and Cold Therapy: Heat to relax muscles and improve circulation, cold to reduce inflammation and numb pain.",
+    "Low-Impact Exercise: Swimming, cycling, or walking to maintain joint mobility without excessive stress.",
+    "Surgical Options: Joint replacement, arthroscopy, or joint fusion for severe cases that don't respond to conservative treatment.",
+    "Alternative Therapies: Acupuncture, massage, or supplements like glucosamine (though evidence varies).",
+  ],
+  prevention: [
+    "Maintain a healthy weight to reduce stress on weight-bearing joints. ⚖️",
+    "Stay physically active with low-impact exercises to keep joints flexible and muscles strong.",
+    "Use proper body mechanics when lifting, bending, or performing repetitive tasks.",
+    "Protect joints during sports and physical activities with appropriate gear.",
+    "Eat an anti-inflammatory diet rich in omega-3 fatty acids, fruits, and vegetables.",
+    "Don't ignore joint injuries – seek prompt treatment to prevent long-term damage.",
+    "Avoid smoking, which can worsen inflammation and slow healing.",
+    "Get regular check-ups, especially if you have family history of arthritis.",
+  ],
+  simpleExplanation: {
+    whatIs:
+      "Arthritis is like rust forming in the hinges of a door – except it's happening in your joints where bones meet. The smooth, slippery cartilage that normally helps your joints move easily gets damaged or inflamed, making movement painful and stiff.",
+    howYouGet:
+      "Sometimes it happens because your joints have been working hard for many years and the cartilage just wears down (like tires on a car). Other times, your body's immune system gets confused and starts attacking your own joint tissues, thinking they're harmful invaders.",
+    howToFeel:
+      "It often feels like your joints are rusty and creaky, especially when you first wake up or after sitting still for a while. You might feel like you need to 'warm up' your joints before they move smoothly. Some days are worse than others, and weather changes might make your joints feel more achy.",
+    howToGetBetter:
+      "While there's no cure for most types of arthritis, you can definitely feel better! Think of managing arthritis like taking care of a garden – it needs regular attention. Gentle exercise keeps your joints moving like oil on hinges, medicines can calm down inflammation, and physical therapy teaches you the best ways to move without causing more pain. The key is working with your healthcare team to find the right combination of treatments that work for you. 🌱",
+  },
+  severity: "moderate",
+  commonness: "very-common",
 },
 
 
