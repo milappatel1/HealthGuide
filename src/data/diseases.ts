@@ -98,72 +98,122 @@ export const bodySystems: BodySystem[] = [
 
 export const diseases: Disease[] = [
   {
-id: "common-cold",
-name: "Common Cold",
-category: "Viral Upper Respiratory Tract Infection",
-bodySystem: "Upper Respiratory System (Nose, Throat, Sinuses)",
-summary: "A very common and mild viral infection that affects the nose and throat. It is self-limiting, meaning it typically resolves on its own without specific treatment, usually within 7 to 10 days.",
-symptoms: [
-"Runny or stuffy nose (congestion)",
-"Sore or scratchy throat",
-"Sneezing",
-"Cough",
-"Post-nasal drip (the feeling of mucus dripping down your throat)",
-"Watery eyes",
-"Mild headache or body aches",
-"Low-grade fever (more common in children)",
-"General feeling of being unwell (malaise)",
-],
-causes: {
-causativeAgents: [
-"Rhinoviruses (the most frequent cause, responsible for 30-50% of colds)",
-"Seasonal Coronaviruses (Note: these are different from the virus that causes COVID-19)",
-"Respiratory syncytial virus (RSV)",
-"Parainfluenza viruses",
-"Adenoviruses",
-],
-howItSpreads: [
-"Inhaling airborne respiratory droplets from an infected person's cough or sneeze.",
-"Touching your eyes, nose, or mouth after coming into contact with a contaminated surface (like a doorknob) or having direct contact with a sick person (like shaking hands).",
-]
-},
-diagnosis: [
-"Diagnosis is almost always based on the classic signs and symptoms.",
-"A doctor may perform a physical exam, looking at the nose, throat, and ears, and listening to the lungs.",
-"Lab tests are rarely needed but may be used to rule out other conditions like the flu, COVID-19, or strep throat if symptoms are severe or unusual.",
-],
-treatment: [
-"There is no cure for the common cold; treatment focuses on relieving symptoms while your body's immune system fights off the virus.",
-"Rest: Get plenty of sleep to help your body recover.",
-"Hydration: Drink lots of fluids like water, juice, or warm broth to prevent dehydration.",
-"Symptom Relief: Use over-the-counter medications like pain relievers (acetaminophen, ibuprofen), decongestants, or cough syrups as needed.",
-"Sore Throat Soothers: Gargle with warm salt water or use throat lozenges.",
-"Ease Congestion: Use a humidifier or saline nasal spray to help clear a stuffy nose.",
-"Important: Antibiotics are completely ineffective against viruses and should not be used to treat a common cold.",
-],
-prevention: [
-"Frequent handwashing with soap and water is the single most effective preventive measure. 🧼",
-"Avoid touching your eyes, nose, and mouth with unwashed hands.",
-"Keep your distance from people who are actively sick.",
-"Cover your mouth and nose with a tissue or your elbow when you cough or sneeze.",
-"Clean and disinfect frequently touched surfaces.",
-"Support your immune system by getting enough sleep, eating a healthy diet, and staying active.",
-],
-simpleExplanation: {
-whatIs:
-"A cold is when tiny, invisible germs called viruses have a little party in your nose and throat. It's not dangerous, but it can make you feel tired and yucky for about a week while your body works to kick them out.",
-howYouGetIt:
-"You can catch it if you're near a sick person when they cough or sneeze, sending tiny virus droplets into the air. You can also get it by touching something they touched (like a toy or phone) and then touching your own eyes, nose, or mouth.",
-whatItFeelsLike:
-"It often starts with a tickly throat. Soon, you might get a runny or stuffy nose, start sneezing a lot, and feel sleepy. This is your body telling you it's busy fighting off the virus germs! 🤺",
-howToGetBetter:
-"Your body is the hero and will fight off the cold on its own! To help your body win, you should rest a lot, drink plenty of water or juice, and eat healthy foods. Medicine from the store can't cure the cold, but it can help your stuffy nose or sore throat feel better while your body does all the hard work.",
-},
-severity: "mild",
-commonness: "common",
-},
-
-  
+    id: "common-cold",
+    name: "Common Cold",
+    category: "Viral Infection",
+    bodySystem: "respiratory",
+    summary: "A mild viral infection of the nose and throat that usually resolves on its own within a week.",
+    symptoms: [
+      "Runny or stuffy nose",
+      "Sneezing",
+      "Sore throat",
+      "Mild cough",
+      "Low-grade fever",
+      "Body aches",
+      "Fatigue",
+    ],
+    causes: [
+      "Rhinoviruses (most common)",
+      "Coronaviruses",
+      "Respiratory syncytial virus (RSV)",
+      "Parainfluenza viruses",
+      "Close contact with infected person",
+      "Touching contaminated surfaces",
+    ],
+    diagnosis: [
+      "Usually diagnosed based on symptoms",
+      "Physical examination",
+      "No specific tests needed for typical cases",
+      "Throat swab if bacterial infection suspected",
+    ],
+    treatment: [
+      "Rest and plenty of fluids",
+      "Over-the-counter pain relievers",
+      "Throat lozenges or warm salt water gargles",
+      "Humidifier or steam inhalation",
+      "Decongestants for nasal congestion",
+      "Antibiotics are not effective (viral infection)",
+    ],
+    prevention: [
+      "Wash hands frequently",
+      "Avoid touching face with unwashed hands",
+      "Stay away from sick people",
+      "Don't share personal items",
+      "Maintain good overall health",
+      "Get adequate sleep",
+    ],
+    simpleExplanation: {
+      whatIs:
+        "A cold is when tiny germs called viruses get into your nose and throat, making you feel sick for a few days.",
+      howYouGet:
+        "You can catch a cold when someone who is sick coughs or sneezes near you, or when you touch something they touched and then touch your face.",
+      howToFeel:
+        "You might have a runny nose, sneeze a lot, have a scratchy throat, and feel tired. It's like your body is fighting off the bad germs.",
+      howToGetBetter:
+        "Rest in bed, drink lots of water, and your body will fight off the germs in about a week. Medicine can help you feel better while you heal.",
+    },
+    severity: "mild",
+    commonness: "very-common",
+  },
+  {
+    id: "flu",
+    name: "Influenza (Flu)",
+    category: "Viral Infection",
+    bodySystem: "respiratory",
+    summary: "A contagious respiratory illness caused by influenza viruses that can cause mild to severe illness.",
+    symptoms: [
+      "High fever",
+      "Body aches and chills",
+      "Fatigue and weakness",
+      "Headache",
+      "Dry cough",
+      "Sore throat",
+      "Runny or stuffy nose",
+    ],
+    causes: [
+      "Influenza A viruses",
+      "Influenza B viruses",
+      "Seasonal outbreaks",
+      "Close contact with infected people",
+      "Breathing in droplets from coughs/sneezes",
+      "Touching contaminated surfaces",
+    ],
+    diagnosis: [
+      "Physical examination",
+      "Rapid influenza diagnostic tests",
+      "RT-PCR tests",
+      "Symptom assessment",
+      "Medical history",
+    ],
+    treatment: [
+      "Antiviral medications (if started early)",
+      "Rest and plenty of fluids",
+      "Fever reducers and pain relievers",
+      "Cough suppressants",
+      "Stay home to avoid spreading",
+      "Seek medical care if symptoms worsen",
+    ],
+    prevention: [
+      "Get annual flu vaccine",
+      "Wash hands frequently",
+      "Avoid close contact with sick people",
+      "Cover coughs and sneezes",
+      "Stay home when sick",
+      "Avoid touching face with unwashed hands",
+    ],
+    simpleExplanation: {
+      whatIs:
+        "The flu is like a really bad cold caused by different germs that make you feel much sicker with high fever and body aches.",
+      howYouGet:
+        "You catch it the same way as a cold, but flu germs are stronger and spread more easily, especially during flu season.",
+      howToFeel:
+        "You'll feel much worse than with a cold - high fever, your whole body will ache, and you'll be very tired and weak.",
+      howToGetBetter:
+        "Rest in bed, drink lots of fluids, take medicine for fever and aches, and get a flu shot every year to prevent it.",
+    },
+    severity: "moderate",
+    commonness: "very-common",
+  },
   {
     id: "bronchitis",
     name: "Bronchitis",
