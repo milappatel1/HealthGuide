@@ -406,72 +406,79 @@ export const diseases: Disease[] = [
   severity: "severe",
   commonness: "uncommon",
 },
-
-
-
-  
-  
-  {
-    id: "skin-cancer",
-    name: "Skin Cancer",
-    category: "Cancer",
-    bodySystem: "integumentary",
-    summary: "Abnormal growth of skin cells, most commonly caused by UV radiation from sun exposure.",
-    symptoms: [
-      "New growths or moles",
-      "Changes in existing moles",
-      "Sores that don't heal",
-      "Rough, scaly patches",
-      "Asymmetrical or irregular borders",
-      "Color changes in moles",
-      "Bleeding or itching lesions",
-    ],
-    causes: [
-      "UV radiation from sun",
-      "Tanning beds",
-      "Fair skin",
-      "Family history",
-      "Multiple moles",
-      "Weakened immune system",
-      "Previous skin cancer",
-    ],
-    diagnosis: [
-      "Skin examination",
-      "Dermoscopy",
-      "Skin biopsy",
-      "Imaging studies",
-      "Lymph node examination",
-      "Medical history",
-    ],
-    treatment: [
-      "Surgical excision",
-      "Mohs surgery",
-      "Radiation therapy",
-      "Chemotherapy",
-      "Immunotherapy",
-      "Targeted therapy",
-    ],
-    prevention: [
-      "Use sunscreen (SPF 30+)",
-      "Seek shade during peak hours",
-      "Wear protective clothing",
-      "Avoid tanning beds",
-      "Regular skin self-exams",
-      "Annual dermatologist visits",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Skin cancer is when skin cells grow abnormally and form tumors, usually because of too much sun exposure over time.",
-      howYouGet:
-        "It develops from UV rays from the sun or tanning beds that damage skin cells, especially if you have fair skin or burn easily.",
-      howToFeel:
-        "You might notice new spots, moles that change shape or color, sores that don't heal, or rough patches on your skin.",
-      howToGetBetter:
-        "See a dermatologist right away for suspicious spots. Treatment usually involves removing the cancer, and early detection is very important.",
-    },
-    severity: "severe",
-    commonness: "common",
+{
+  id: "melanoma",
+  name: "Melanoma",
+  category: "Cancer",
+  bodySystem: "integumentary",
+  summary:
+    "The most serious type of skin cancer, melanoma begins in melanocytes — the cells that produce melanin, the pigment that gives skin its color. It can develop in existing moles or appear as a new dark spot on the skin. Melanoma grows quickly and can spread (metastasize) to other parts of the body if not detected early, but when caught early, it’s highly treatable.",
+  symptoms: [
+    "A new mole or dark spot that looks unusual or changes over time.",
+    "An existing mole that changes in size, shape, or color.",
+    "Asymmetrical moles — one half looks different from the other.",
+    "Irregular, blurry, or uneven borders.",
+    "Multiple or uneven colors (brown, black, red, white, or blue) within the same spot.",
+    "A mole larger than 6 mm (about the size of a pencil eraser).",
+    "Itching, tenderness, or pain in a mole or spot.",
+    "Bleeding, oozing, or crusting lesions.",
+    "Dark streaks under nails or spots on palms or soles.",
+  ],
+  causes: [
+    "Ultraviolet (UV) radiation from sunlight ☀️.",
+    "Tanning bed use (artificial UV exposure).",
+    "Fair skin, light hair, and light eyes (less natural protection from UV rays).",
+    "History of frequent or severe sunburns, especially in childhood.",
+    "Having many moles or atypical (irregular) moles.",
+    "Family history of melanoma.",
+    "Weakened immune system.",
+    "Genetic mutations in certain genes (like BRAF or CDKN2A).",
+  ],
+  diagnosis: [
+    "Skin Examination: A dermatologist checks for suspicious moles or spots using the ABCDE rule (Asymmetry, Border, Color, Diameter, Evolving).",
+    "Dermoscopy: A magnified lighted tool that helps visualize deeper skin layers.",
+    "Skin Biopsy: A small sample is taken from the lesion and examined under a microscope to confirm melanoma.",
+    "Lymph Node Biopsy: Checks if cancer has spread to nearby lymph nodes.",
+    "Imaging Tests: CT, MRI, or PET scans may be used for advanced cases to see if it has spread.",
+    "Staging: Determines how deep the melanoma is and whether it has spread, which guides treatment.",
+  ],
+  treatment: [
+    "Surgical Excision ✂️: The main treatment — removing the melanoma and some surrounding healthy tissue.",
+    "Sentinel Lymph Node Biopsy: Done for deeper melanomas to check if cancer has spread.",
+    "Immunotherapy: Boosts the body’s immune system to attack cancer cells (often used in advanced melanoma).",
+    "Targeted Therapy: Medications that target specific genetic changes (like BRAF mutations).",
+    "Radiation Therapy: Used to destroy remaining cancer cells or treat areas where melanoma has spread.",
+    "Chemotherapy: Less common now, but may be used for widespread melanoma.",
+    "Ongoing Follow-up: Regular skin checks and imaging for recurrence.",
+  ],
+  prevention: [
+    "Use Broad-Spectrum Sunscreen 🧴: SPF 30 or higher every day, reapply every 2 hours.",
+    "Avoid Peak Sun: Stay out of direct sunlight between 10 a.m. and 4 p.m.",
+    "Wear Protective Gear: Hats, sunglasses, and long sleeves when outdoors.",
+    "Skip Tanning Beds: Artificial UV rays are just as harmful as the sun.",
+    "Check Your Skin Monthly: Look for new or changing moles — use mirrors or ask for help.",
+    "See a Dermatologist Annually: Especially if you have risk factors like fair skin or family history.",
+    "Follow the ABCDE Rule: Asymmetry, Border, Color, Diameter, Evolving — if any apply, get it checked.",
+  ],
+  simpleExplanation: {
+    whatIs:
+      "Melanoma is a serious type of skin cancer that starts in the cells that give your skin its color. It’s dangerous because it can grow quickly and spread to other parts of the body if not treated early.",
+    howYouGet:
+      "It usually happens after years of sun exposure or using tanning beds. People with fair skin, lots of moles, or a family history are more at risk.",
+    howToFeel:
+      "You might notice a mole that looks different from others — it could change shape, color, or size, or start bleeding or itching. It might not hurt, which is why checking your skin is so important.",
+    howToGetBetter:
+      "A doctor can remove it with surgery, and if it’s caught early, that’s often enough. If it spreads, treatments like immunotherapy or targeted drugs can help fight it. The key is catching it early and protecting your skin from the sun. ☀️🧴",
   },
+  severity: "severe",
+  commonness: "uncommon",
+},
+
+
+
+  
+  
+  
   {
     id: "hiv/aids",
     name: "HIV/AIDS",
