@@ -142,17 +142,18 @@ const SearchResults: React.FC = () => {
                 className="block bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
               >
                 {/* Header section with responsive layout */}
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 space-y-2 sm:space-y-0">
-                  <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 min-w-0 flex-1">
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight break-words">
-                      {result.disease.name}
-                    </h2>
-                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full self-start whitespace-nowrap">
+                <div className="mb-3">
+                  {/* Title */}
+                  <h2 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight break-words mb-2">
+                    {result.disease.name}
+                  </h2>
+                  
+                  {/* Tags row - all badges in one row that wraps */}
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-xs font-medium rounded-full whitespace-nowrap">
                       {getMatchTypeLabel(result.matchType)}
                     </span>
-                  </div>
-                  <div className="flex space-x-2 flex-shrink-0">
-                    <div className={`px-2 sm:px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap ${
+                    <div className={`px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap ${
                       result.disease.severity === 'mild' 
                         ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
                         : result.disease.severity === 'moderate'
