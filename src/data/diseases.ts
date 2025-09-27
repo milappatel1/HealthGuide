@@ -605,69 +605,93 @@ export const diseases: Disease[] = [
   severity: "severe",
   commonness: "uncommon",
 },
+  {
+  id: "tinnitus",
+  name: "Tinnitus",
+  category: "Auditory/Hearing Disorder",
+  bodySystem: "sensory",
+  summary: "A condition characterized by hearing sounds (ringing, buzzing, hissing, or other noises) that aren't actually present in the environment. It's often described as 'ringing in the ears' but can manifest as various phantom sounds. Tinnitus is a symptom rather than a disease itself and can be temporary or chronic.",
+  symptoms: [
+    "Ringing, buzzing, hissing, whistling, or roaring sounds in one or both ears",
+    "Sounds may be constant or intermittent",
+    "Volume may vary from barely noticeable to loud enough to interfere with daily activities",
+    "Sounds may be high-pitched or low-pitched",
+    "Difficulty concentrating due to the phantom sounds",
+    "Sleep disturbances and insomnia",
+    "Anxiety, irritability, or depression related to the constant noise",
+    "Hearing loss or muffled hearing (often accompanies tinnitus)",
+    "Sensitivity to normal environmental sounds (hyperacusis)",
+    "Feeling of fullness or pressure in the ears",
+  ],
+  causes: [
+    "Noise-induced hearing loss from loud music, machinery, or sudden loud sounds",
+    "Age-related hearing loss (presbycusis)",
+    "Earwax blockage pressing against the eardrum",
+    "Middle ear infections or fluid buildup",
+    "Medications (ototoxic drugs) including aspirin, certain antibiotics, diuretics, and chemotherapy drugs",
+    "Meniere's disease (inner ear disorder)",
+    "Head or neck injuries affecting auditory nerves",
+    "Blood vessel disorders or high blood pressure",
+    "Temporomandibular joint (TMJ) disorders",
+    "Acoustic neuroma (benign tumor on auditory nerve)",
+    "Stress, anxiety, and fatigue can worsen symptoms",
+  ],
+  diagnosis: [
+    "Detailed medical history including onset, duration, and characteristics of the tinnitus",
+    "Physical examination of ears, head, and neck",
+    "Hearing tests (audiometry) to assess hearing loss and identify frequencies affected",
+    "Tinnitus evaluation including pitch and loudness matching",
+    "Blood tests to check for underlying conditions like thyroid problems or anemia",
+    "Imaging studies (MRI or CT scan) if structural problems or tumors are suspected",
+    "Review of current medications to identify potential ototoxic drugs",
+    "Assessment of psychological impact and quality of life effects",
+  ],
+  treatment: [
+    "Treating underlying conditions: Remove earwax blockages, treat infections, manage blood pressure, or adjust medications causing tinnitus",
+    "Hearing aids: Can help with hearing loss and often reduce tinnitus perception by amplifying external sounds",
+    "Sound therapy: White noise machines, nature sounds, or specialized tinnitus maskers to provide relief",
+    "Tinnitus retraining therapy (TRT): Combines sound therapy with counseling to help the brain learn to ignore tinnitus",
+    "Cognitive behavioral therapy (CBT): Helps change negative thought patterns and develop coping strategies",
+    "Medications: While no specific drugs cure tinnitus, antidepressants or anti-anxiety medications may help with associated depression or anxiety",
+    "Lifestyle modifications: Reduce caffeine, alcohol, and nicotine; manage stress; get adequate sleep",
+    "Avoid silence: Background sounds can help mask tinnitus and prevent fixation on the phantom sounds",
+  ],
+  prevention: [
+    "Protect your hearing: Use earplugs or noise-canceling headphones in loud environments 🎧",
+    "Keep music and TV at reasonable volumes (follow the 60/60 rule: no more than 60% volume for 60 minutes)",
+    "Take breaks from noisy activities to give your ears time to recover",
+    "Manage stress through relaxation techniques, exercise, or meditation",
+    "Maintain good cardiovascular health through diet and exercise",
+    "Clean ears gently and avoid using cotton swabs deep in the ear canal",
+    "Get regular hearing checkups, especially if you work in noisy environments",
+    "Be cautious with medications known to affect hearing and discuss alternatives with your doctor",
+  ],
+  simpleExplanation: {
+    whatIs:
+      "Tinnitus is like having a radio stuck on a station with static that only you can hear. Your ears or brain are creating phantom sounds - ringing, buzzing, or hissing - even though there's no actual sound source. It's your auditory system's way of trying to 'fill in' missing sound information, kind of like how your eye creates a blind spot that your brain fills in.",
+    howYouGet:
+      "It often happens when the tiny hair cells in your inner ear get damaged, usually from loud noises over time (like concerts or machinery) or sudden loud sounds. Sometimes it's caused by simple things like earwax blockage, or it can be a side effect of certain medications. Stress and anxiety can also make it worse or more noticeable.",
+    howToFeel:
+      "It can feel like you're constantly listening to a sound that no one else can hear, which can be very frustrating and exhausting. Some people describe it as a tea kettle whistling, crickets chirping, or a constant 'eeeee' sound. It might be worse at night when it's quiet, and it can make it hard to concentrate or sleep peacefully.",
+    howToGetBetter:
+      "While there's often no 'cure' that makes tinnitus completely disappear, there are many ways to manage it successfully! The goal is to train your brain to notice the tinnitus less, like how you stop noticing the hum of a refrigerator. Sound therapy, hearing aids, and relaxation techniques can provide significant relief. Many people find that once they learn coping strategies and reduce their anxiety about the sound, it becomes much less bothersome and doesn't interfere with their daily life. 🔇✨",
+  },
+  severity: "moderate",
+  commonness: "common",
+},
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   
-  {
-    id: "tinnitus",
-    name: "Tinnitus",
-    category: "Hearing Disorder",
-    bodySystem: "sensory",
-    summary: "The perception of ringing, buzzing, or other sounds in the ears when no external sound is present.",
-    symptoms: [
-      "Ringing in ears",
-      "Buzzing or humming sounds",
-      "Clicking or hissing",
-      "Sounds may be constant or intermittent",
-      "May affect one or both ears",
-      "Difficulty concentrating",
-      "Sleep problems",
-    ],
-    causes: [
-      "Hearing loss",
-      "Loud noise exposure",
-      "Ear infections",
-      "Earwax buildup",
-      "Certain medications",
-      "Head or neck injuries",
-      "Blood pressure problems",
-    ],
-    diagnosis: [
-      "Hearing examination",
-      "Medical history",
-      "Physical examination of ears",
-      "Audiometry tests",
-      "Tinnitus matching",
-      "Imaging studies (if needed)",
-    ],
-    treatment: [
-      "Treat underlying conditions",
-      "Hearing aids",
-      "Sound therapy",
-      "Tinnitus retraining therapy",
-      "Counseling",
-      "Relaxation techniques",
-    ],
-    prevention: [
-      "Protect ears from loud noises",
-      "Use ear protection",
-      "Keep ears clean",
-      "Manage stress",
-      "Limit caffeine and alcohol",
-      "Regular hearing check-ups",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Tinnitus is when you hear ringing, buzzing, or other sounds in your ears even when it's quiet around you.",
-      howYouGet:
-        "It can happen from loud noises, ear infections, earwax, some medicines, or sometimes just from getting older.",
-      howToFeel:
-        "You'll hear sounds that aren't really there, which can be annoying, make it hard to concentrate, or keep you awake at night.",
-      howToGetBetter:
-        "Treat any ear problems, use hearing aids if needed, try sound therapy or relaxation techniques, and protect your ears from loud noises.",
-    },
-    severity: "mild",
-    commonness: "common",
-  },
 ]
