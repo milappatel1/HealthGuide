@@ -50,23 +50,30 @@ const DiseaseDetail: React.FC = () => {
 
       {/* Header */}
       <div className="w-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 mb-8">
-        <div className="flex flex-wrap items-center gap-4 mb-6">
-          <div className={`px-4 py-2 rounded-full text-sm font-medium ${
-            disease.severity === 'mild' 
-              ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
-              : disease.severity === 'moderate'
-              ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
-              : 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'
-          }`}>
+        {/* Wrap tags inside a responsive container */}
+        <div className="flex flex-wrap items-center gap-4 mb-6 break-words">
+          <div
+            className={`px-4 py-2 rounded-full text-sm font-medium ${
+              disease.severity === 'mild'
+                ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
+                : disease.severity === 'moderate'
+                ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
+                : 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'
+            }`}
+          >
             {disease.severity} severity
           </div>
-          <div className={`px-4 py-2 rounded-full text-sm font-medium ${
-            disease.commonness === 'very-common'
-              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
-              : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-          }`}>
+
+          <div
+            className={`px-4 py-2 rounded-full text-sm font-medium ${
+              disease.commonness === 'very-common'
+                ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+            }`}
+          >
             {disease.commonness.replace('-', ' ')}
           </div>
+
           <div className="px-4 py-2 bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
             {disease.category}
           </div>
@@ -95,14 +102,15 @@ const DiseaseDetail: React.FC = () => {
           {Object.entries(disease.simpleExplanation).map(([key, value]) => (
             <div key={key} className="bg-white/50 dark:bg-gray-800/50 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                {key === 'whatIs' ? 'What is it?' :
-                 key === 'howYouGet' ? 'How do you get it?' :
-                 key === 'howToFeel' ? 'How will you feel?' :
-                 'How to get better?'}
+                {key === 'whatIs'
+                  ? 'What is it?'
+                  : key === 'howYouGet'
+                  ? 'How do you get it?'
+                  : key === 'howToFeel'
+                  ? 'How will you feel?'
+                  : 'How to get better?'}
               </h3>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {value}
-              </p>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{value}</p>
             </div>
           ))}
         </div>
@@ -113,7 +121,10 @@ const DiseaseDetail: React.FC = () => {
         {sections.map((section) => {
           const IconComponent = section.icon;
           return (
-            <div key={section.id} className="w-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+            <div
+              key={section.id}
+              className="w-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700"
+            >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
                   <IconComponent className="h-6 w-6 text-blue-600 dark:text-blue-400" />
@@ -125,11 +136,12 @@ const DiseaseDetail: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {section.items.map((item, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                  <div
+                    key={index}
+                    className="flex items-start space-x-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl"
+                  >
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      {item}
-                    </p>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item}</p>
                   </div>
                 ))}
               </div>
@@ -147,8 +159,9 @@ const DiseaseDetail: React.FC = () => {
               Important Medical Disclaimer
             </h3>
             <p className="text-sm text-yellow-700 dark:text-yellow-300 leading-relaxed">
-              This information is for educational purposes only and should not replace professional medical advice. 
-              Always consult with a healthcare provider for proper diagnosis and treatment of medical conditions.
+              This information is for educational purposes only and should not replace professional
+              medical advice. Always consult with a healthcare provider for proper diagnosis and
+              treatment of medical conditions.
             </p>
           </div>
         </div>
