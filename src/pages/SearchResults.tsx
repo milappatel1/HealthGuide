@@ -161,7 +161,7 @@ const SearchResults: React.FC = () => {
       ) : (
         <div className="space-y-6">
           <p className="text-gray-600 dark:text-gray-400">
-            Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} (Click to the disease to read more)
+            Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} (Click the disease to learn more)
           </p>
           
           <div className="space-y-4">
@@ -174,7 +174,7 @@ const SearchResults: React.FC = () => {
                 <div className="flex flex-wrap items-center mb-3 gap-2">
                   
                   {/* Disease Name */}
-                  <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate min-w-0">
+                  <h2 className="text-m font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate min-w-0">
                     {result.disease.name}
                   </h2>
 
