@@ -1,39 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Search, Users, Shield, BookOpen, Zap } from 'lucide-react';
 import SearchBar from '../components/SearchBar';
-import { bodySystems } from '../data/diseases';
-import { getAllConditions } from '../services/medicalConditionsApi';
-import { fetchDiseaseDetails } from '../services/diseaseDetailsApi';
-import type { Disease } from '../types/Disease';
+import { diseases, bodySystems } from '../data/diseases';
 
 const HomePage: React.FC = () => {
-  const [featuredDiseases, setFeaturedDiseases] = useState<Disease[]>([]);
-  const [loading, setLoading] = useState(true);
+  const featuredDiseases = diseases.slice(0, 3);
   const featuredSystems = bodySystems.slice(0, 3);
-
-  useEffect(() => {
-    async function loadFeaturedDiseases() {
-      try {
-        const conditions = await getAllConditions(10);
-
-        const diseasePromises = conditions.slice(0, 3).map(condition =>
-          fetchDiseaseDetails(condition.name, condition.medlinePlusUrl)
-        );
-
-        const diseases = await Promise.all(diseasePromises);
-        const validDiseases = diseases.filter((d): d is Disease => d !== null);
-
-        setFeaturedDiseases(validDiseases);
-      } catch (error) {
-        console.error('Error loading featured diseases:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadFeaturedDiseases();
-  }, []);
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
@@ -60,9 +33,10 @@ const HomePage: React.FC = () => {
                 <SearchBar />
               </div>
 
+              {/* Quick Stats */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto pt-4">
                 {[
-                  { value: '1000+', label: 'Conditions Explained', color: 'text-blue-600 dark:text-blue-400' },
+                  { value: `${diseases.length}+`, label: 'Conditions Explained', color: 'text-blue-600 dark:text-blue-400' },
                   { value: bodySystems.length, label: 'Body Systems', color: 'text-green-600 dark:text-green-400' },
                   { value: '100%', label: 'Free Access', color: 'text-purple-600 dark:text-purple-400' },
                 ].map((stat, idx) => (
@@ -148,58 +122,39 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {loading ? (
-                <>
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 animate-pulse"
-                    >
-                      <div className="flex gap-2 mb-4">
-                        <div className="h-6 w-16 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                        <div className="h-6 w-20 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                      </div>
-                      <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded mb-3"></div>
-                      <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
-                      <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+              {featuredDiseases.map((disease) => (
+                <Link
+                  key={disease.id}
+                  to={`/disease/${disease.id}`}
+                  className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+                >
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      disease.severity === 'mild' 
+                        ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
+                        : disease.severity === 'moderate'
+                        ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
+                        : 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'
+                    }`}>
+                      {disease.severity}
                     </div>
-                  ))}
-                </>
-              ) : (
-                featuredDiseases.map((disease) => (
-                  <Link
-                    key={disease.id}
-                    to={`/disease/${disease.id}`}
-                    className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
-                  >
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        disease.severity === 'mild'
-                          ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
-                          : disease.severity === 'moderate'
-                          ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
-                          : 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'
-                      }`}>
-                        {disease.severity}
-                      </div>
-                      <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        disease.commonness === 'very-common'
-                          ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
-                          : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-                      }`}>
-                        {disease.commonness.replace('-', ' ')}
-                      </div>
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      disease.commonness === 'very-common'
+                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
+                    }`}>
+                      {disease.commonness.replace('-', ' ')}
                     </div>
-
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
-                      {disease.name}
-                    </h3>
-                    <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-                      {disease.summary}
-                    </p>
-                  </Link>
-                ))
-              )}
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
+                    {disease.name}
+                  </h3>
+                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {disease.summary}
+                  </p>
+                </Link>
+              ))}
             </div>
           </section>
 
