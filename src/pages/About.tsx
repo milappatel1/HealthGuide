@@ -61,7 +61,8 @@ const About: React.FC = () => {
           </h3>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
             All of my content is carefully researched and based on reliable medical sources, 
-            ensuring you receive accurate, trustworthy health information.
+            ensuring you receive accurate, trustworthy health information. I use many reputable 
+            databases, as well as carefully learning before including it in my website.
           </p>
         </div>
 
