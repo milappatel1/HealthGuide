@@ -1,109 +1,46 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, ArrowLeft } from 'lucide-react';
-import { diseases } from '../data/diseases';
 import SearchBar from '../components/SearchBar';
+import { searchConditions } from '../services/medicalConditionsApi';
+import type { Disease } from '../types/Disease';
 
-// Define the expected structure for a single disease item for better type safety
-type Disease = typeof diseases[0] & {
-  severity: 'mild' | 'moderate' | 'severe';
-  commonness: 'rare' | 'uncommon' | 'common' | 'very common';
-};
-
-// Update the search results type
-type SearchResult = {
-  disease: Disease;
-  matchType: 'name' | 'category' | 'symptom' | 'summary';
-  matchedText: string;
-};
+interface ConditionResult {
+  name: string;
+  id: string;
+}
 
 const SearchResults: React.FC = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get('q') || '';
+  const [searchResults, setSearchResults] = useState<ConditionResult[]>([]);
+  const [loading, setLoading] = useState(false);
 
-  const searchResults = useMemo(() => {
-    if (!query.trim()) return [];
-
-    const lowerQuery = query.toLowerCase();
-    const results: Array<SearchResult> = [];
-
-    (diseases as Disease[]).forEach(disease => {
-      // Check disease name
-      if (disease.name.toLowerCase().includes(lowerQuery)) {
-        results.push({
-          disease,
-          matchType: 'name',
-          matchedText: disease.name
-        });
+  useEffect(() => {
+    async function performSearch() {
+      if (!query.trim()) {
+        setSearchResults([]);
         return;
       }
 
-      // Check category
-      if (disease.category.toLowerCase().includes(lowerQuery)) {
-        results.push({
-          disease,
-          matchType: 'category',
-          matchedText: disease.category
-        });
-        return;
+      setLoading(true);
+      try {
+        const conditions = await searchConditions(query);
+        const results = conditions.map(condition => ({
+          name: condition.name,
+          id: condition.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+        }));
+        setSearchResults(results);
+      } catch (error) {
+        console.error('Error searching conditions:', error);
+      } finally {
+        setLoading(false);
       }
+    }
 
-      // Check symptoms
-      const matchedSymptom = disease.symptoms.find(symptom =>
-        symptom.toLowerCase().includes(lowerQuery)
-      );
-      if (matchedSymptom) {
-        results.push({
-          disease,
-          matchType: 'symptom',
-          matchedText: matchedSymptom
-        });
-        return;
-      }
-
-      // Check summary
-      if (disease.summary.toLowerCase().includes(lowerQuery)) {
-        results.push({
-          disease,
-          matchType: 'summary',
-          matchedText: disease.summary
-        });
-      }
-    });
-
-    return results;
+    performSearch();
   }, [query]);
 
-  // Match Type Label helper function
-  const getMatchTypeLabel = (matchType: string) => {
-    switch (matchType) {
-      case 'category': return 'Category Match';
-      case 'symptom': return 'Symptom Match';
-      case 'summary': return 'Description Match';
-      default: return 'Match';
-    }
-  };
-
-  // Helper function for commonness styling
-  const getCommonnessClass = (commonness: Disease['commonness']) => {
-    switch (commonness) {
-      case 'very common': return 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300';
-      case 'common': return 'bg-teal-100 dark:bg-teal-900 text-teal-700 dark:text-teal-300';
-      case 'uncommon': return 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300';
-      case 'rare': return 'bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300';
-      default: return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
-    }
-  };
-
-  // Helper function for severity styling
-  const getSeverityClass = (severity: Disease['severity']) => {
-    switch (severity) {
-      case 'mild': return 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300';
-      case 'moderate': return 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300';
-      case 'severe': return 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300';
-      default: return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
-    }
-  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full overflow-x-hidden">
@@ -131,7 +68,6 @@ const SearchResults: React.FC = () => {
         <SearchBar />
       </div>
 
-      {/* Results */}
       {!query.trim() ? (
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
@@ -141,6 +77,19 @@ const SearchResults: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-400">
             Please enter a search term to find health conditions, symptoms, or categories.
           </p>
+        </div>
+      ) : loading ? (
+        <div className="space-y-4">
+          {[1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100 dark:border-gray-700 animate-pulse"
+            >
+              <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded mb-3 w-2/3"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
+            </div>
+          ))}
         </div>
       ) : searchResults.length === 0 ? (
         <div className="text-center py-16">
@@ -163,56 +112,20 @@ const SearchResults: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-400">
             Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''}
           </p>
-          
+
           <div className="space-y-4">
             {searchResults.map((result, index) => (
               <Link
-                key={`${result.disease.id}-${index}`}
-                to={`/disease/${result.disease.id}`}
+                key={`${result.id}-${index}`}
+                to={`/disease/${result.id}`}
                 className="block bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
               >
-                <div className="flex flex-wrap items-center mb-3 gap-2">
-                  
-                  {/* Disease Name */}
-                  <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate min-w-0">
-                    {result.disease.name}
-                  </h2>
-
-                  {/* Commonness and Severity Tags */}
-                  <div className="flex space-x-2 flex-shrink-0 ml-auto sm:ml-2">
-                    {/* Commonness Tag - FIX: Removed 'uppercase' class */}
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium flex-shrink-0 ${getCommonnessClass(result.disease.commonness as Disease['commonness'])}`}>
-                      {result.disease.commonness}
-                    </div>
-                    {/* Severity Tag - FIX: Removed 'uppercase' class */}
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium flex-shrink-0 ${getSeverityClass(result.disease.severity as Disease['severity'])}`}>
-                      {result.disease.severity}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Match Type is only shown if it's NOT a 'name' match */}
-                {result.matchType !== 'name' && (
-                    <span className="mb-2 inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full">
-                      {getMatchTypeLabel(result.matchType)}
-                    </span>
-                )}
-                
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                  {result.disease.category}
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+                  {result.name}
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Click to view detailed information about this condition.
                 </p>
-                
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3">
-                  {result.disease.summary}
-                </p>
-                
-                {result.matchType === 'symptom' && (
-                  <div className="mt-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg overflow-x-auto">
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      <span className="font-medium">Matched symptom:</span> {result.matchedText}
-                    </p>
-                  </div>
-                )}
               </Link>
             ))}
           </div>

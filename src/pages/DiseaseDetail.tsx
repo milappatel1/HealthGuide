@@ -1,13 +1,89 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, AlertCircle, Stethoscope, Shield, Heart, Baby } from 'lucide-react';
-import { diseases } from '../data/diseases';
+import { searchConditions } from '../services/medicalConditionsApi';
+import { fetchDiseaseDetails } from '../services/diseaseDetailsApi';
+import type { Disease } from '../types/Disease';
 
 const DiseaseDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const disease = diseases.find(d => d.id === id);
+  const [disease, setDisease] = useState<Disease | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  if (!disease) {
+  useEffect(() => {
+    async function loadDiseaseDetails() {
+      if (!id) {
+        setError(true);
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const searchTerm = id.replace(/-/g, ' ');
+        const conditions = await searchConditions(searchTerm);
+
+        if (conditions.length === 0) {
+          setError(true);
+          setLoading(false);
+          return;
+        }
+
+        const firstCondition = conditions[0];
+        const diseaseData = await fetchDiseaseDetails(firstCondition.name, firstCondition.medlinePlusUrl);
+
+        if (diseaseData) {
+          setDisease(diseaseData);
+        } else {
+          setError(true);
+        }
+      } catch (err) {
+        console.error('Error loading disease details:', err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadDiseaseDetails();
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-8">
+        <div className="mb-8">
+          <Link
+            to="/diseases"
+            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to All Diseases
+          </Link>
+        </div>
+        <div className="space-y-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 animate-pulse">
+            <div className="flex gap-2 mb-6">
+              <div className="h-6 w-20 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+              <div className="h-6 w-24 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+            </div>
+            <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded mb-4 w-3/4"></div>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+            <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 animate-pulse">
+            <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded mb-4 w-1/2"></div>
+            <div className="space-y-2">
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !disease) {
     return (
       <div className="w-full px-4 sm:px-6 lg:px-8 py-16 text-center">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">

@@ -1,30 +1,53 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Filter, Grid2x2 as Grid, List } from 'lucide-react';
-import { diseases, bodySystems } from '../data/diseases';
+import { bodySystems } from '../data/diseases';
 import SearchBar from '../components/SearchBar';
+import { getAllConditions } from '../services/medicalConditionsApi';
+
+interface ConditionResult {
+  name: string;
+  id: string;
+}
 
 const AllDiseases: React.FC = () => {
+  const [allDiseases, setAllDiseases] = useState<ConditionResult[]>([]);
+  const [filteredDiseases, setFilteredDiseases] = useState<ConditionResult[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [severityFilter, setSeverityFilter] = useState<string>('all');
-  const [commonnessFilter, setCommonnessFilter] = useState<string>('all');
-  const [bodySystemFilter, setBodySystemFilter] = useState<string>('all');
+  const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const filteredDiseases = useMemo(() => {
-    return diseases.filter(disease => {
-      const matchesSearch = searchQuery === '' || 
-        disease.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        disease.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        disease.symptoms.some(symptom => symptom.toLowerCase().includes(searchQuery.toLowerCase()));
-      
-      const matchesSeverity = severityFilter === 'all' || disease.severity === severityFilter;
-      const matchesCommonness = commonnessFilter === 'all' || disease.commonness === commonnessFilter;
-      const matchesBodySystem = bodySystemFilter === 'all' || disease.bodySystem === bodySystemFilter;
-      
-      return matchesSearch && matchesSeverity && matchesCommonness && matchesBodySystem;
-    });
-  }, [searchQuery, severityFilter, commonnessFilter, bodySystemFilter]);
+  useEffect(() => {
+    async function loadDiseases() {
+      try {
+        const conditions = await getAllConditions(100);
+        const results = conditions.map(condition => ({
+          name: condition.name,
+          id: condition.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+        }));
+        setAllDiseases(results);
+        setFilteredDiseases(results);
+      } catch (error) {
+        console.error('Error loading diseases:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadDiseases();
+  }, []);
+
+  useEffect(() => {
+    if (searchQuery === '') {
+      setFilteredDiseases(allDiseases);
+    } else {
+      const lowerQuery = searchQuery.toLowerCase();
+      const filtered = allDiseases.filter(disease =>
+        disease.name.toLowerCase().includes(lowerQuery)
+      );
+      setFilteredDiseases(filtered);
+    }
+  }, [searchQuery, allDiseases]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -48,49 +71,10 @@ const AllDiseases: React.FC = () => {
           />
         </div>
 
-        {/* Filters and View Toggle */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div className="flex flex-wrap items-center gap-4">
-            <div className="flex items-center space-x-2">
-              <Filter className="h-4 w-4 text-gray-500" />
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Filters:</span>
-            </div>
-            
-            <select
-              value={severityFilter}
-              onChange={(e) => setSeverityFilter(e.target.value)}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="all">All Severities</option>
-              <option value="mild">Mild</option>
-              <option value="moderate">Moderate</option>
-              <option value="severe">Severe</option>
-            </select>
-
-            <select
-              value={commonnessFilter}
-              onChange={(e) => setCommonnessFilter(e.target.value)}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="all">All Commonness</option>
-              <option value="very-common">Very Common</option>
-              <option value="common">Common</option>
-              <option value="uncommon">Uncommon</option>
-              <option value="rare">Rare</option>
-            </select>
-
-            <select
-              value={bodySystemFilter}
-              onChange={(e) => setBodySystemFilter(e.target.value)}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="all">All Body Systems</option>
-              {bodySystems.map((system) => (
-                <option key={system.id} value={system.id}>
-                  {system.name}
-                </option>
-              ))}
-            </select>
+          <div className="flex items-center space-x-2">
+            <Filter className="h-4 w-4 text-gray-500" />
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">View:</span>
           </div>
 
           <div className="flex items-center space-x-2">
@@ -125,20 +109,35 @@ const AllDiseases: React.FC = () => {
         </p>
       </div>
 
-      {/* Diseases Grid/List */}
-      {filteredDiseases.length === 0 ? (
+      {loading ? (
+        <div className={viewMode === 'grid'
+          ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+          : 'space-y-4'
+        }>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div
+              key={i}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-700 animate-pulse"
+            >
+              <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded mb-3"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded"></div>
+            </div>
+          ))}
+        </div>
+      ) : filteredDiseases.length === 0 ? (
         <div className="text-center py-16">
           <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
             No conditions found
           </h3>
           <p className="text-gray-600 dark:text-gray-400">
-            Try adjusting your search terms or filters.
+            Try adjusting your search terms.
           </p>
         </div>
       ) : (
-        <div className={viewMode === 'grid' 
-          ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' 
+        <div className={viewMode === 'grid'
+          ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
           : 'space-y-4'
         }>
           {filteredDiseases.map((disease) => (
@@ -149,72 +148,14 @@ const AllDiseases: React.FC = () => {
                 viewMode === 'grid' ? 'p-6' : 'p-6 flex items-center space-x-6'
               }`}
             >
-              {viewMode === 'grid' ? (
-                <>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      disease.severity === 'mild' 
-                        ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
-                        : disease.severity === 'moderate'
-                        ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
-                        : 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'
-                    }`}>
-                      {disease.severity}
-                    </div>
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      disease.commonness === 'very-common'
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-                    }`}>
-                      {disease.commonness.replace('-', ' ')}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                    {disease.name}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                    {disease.category}
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3">
-                    {disease.summary}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {disease.name}
-                      </h3>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {disease.category}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                      {disease.summary}
-                    </p>
-                  </div>
-                  <div className="flex flex-col space-y-2">
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium text-center ${
-                      disease.severity === 'mild' 
-                        ? 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300'
-                        : disease.severity === 'moderate'
-                        ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300'
-                        : 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300'
-                    }`}>
-                      {disease.severity}
-                    </div>
-                    <div className={`px-3 py-1 rounded-full text-xs font-medium text-center ${
-                      disease.commonness === 'very-common'
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
-                    }`}>
-                      {disease.commonness.replace('-', ' ')}
-                    </div>
-                  </div>
-                </>
-              )}
+              <div className="flex-1 min-w-0">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {disease.name}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Click to view detailed information about this condition.
+                </p>
+              </div>
             </Link>
           ))}
         </div>
