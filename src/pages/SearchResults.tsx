@@ -161,7 +161,7 @@ const SearchResults: React.FC = () => {
       ) : (
         <div className="space-y-6">
           <p className="text-gray-600 dark:text-gray-400">
-            Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''}
+            Found {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} (Click to read more)
           </p>
           
           <div className="space-y-4">
