@@ -10,6 +10,7 @@ type Disease = typeof diseases[0] & {
   commonness: 'rare' | 'uncommon' | 'common' | 'very common';
 };
 
+
 // Update the search results type
 type SearchResult = {
   disease: Disease;
