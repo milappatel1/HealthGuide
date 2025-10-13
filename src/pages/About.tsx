@@ -156,7 +156,7 @@ const About: React.FC = () => {
               Important Medical Disclaimer
             </h2>
             <p className="text-yellow-700 dark:text-yellow-300 leading-relaxed mb-4">
-              HealthExplain provides educational information for learning purposes only. 
+              MedExplained provides educational information for learning purposes only. 
               This website is not intended to replace professional medical advice, diagnosis, or treatment.
             </p>
             <div className="space-y-2 text-sm text-yellow-600 dark:text-yellow-400">
@@ -172,7 +172,7 @@ const About: React.FC = () => {
       {/* Contact Info */}
       <div className="text-center mt-12 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
-          Thank You for Visiting HealthExplain
+          Thank You for Visiting MedExplained
         </h2>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           I am committed to making health information accessible and understandable for everyone. 

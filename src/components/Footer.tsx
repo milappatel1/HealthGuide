@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                 <Heart className="h-5 w-5 text-white" />
               </div>
               <span className="text-lg font-bold bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
-                HealthExplain
+                MedExplained
               </span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
           <p className="text-center text-xs text-gray-500 dark:text-gray-500">
-            © 2025 HealthExplain. Educational content for informational purposes only.
+            © 2025 MedExplained. Educational content for informational purposes only.
           </p>
         </div>
       </div>

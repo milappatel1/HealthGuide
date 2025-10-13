@@ -27,7 +27,7 @@ const Navigation: React.FC = () => {
             </div>
             <span className="hidden xs:inline text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400 bg-clip-text text-transparent">
               <span className="sm:hidden">Health</span>
-              <span className="hidden sm:inline">HealthExplain</span>
+              <span className="hidden sm:inline">MedExplained</span>
             </span>
           </Link>
 

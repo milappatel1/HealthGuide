@@ -10,9 +10,9 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    id: 'what-is-healthexplain',
-    question: 'What is HealthExplain and who is it for?',
-    answer: 'HealthExplain is a free educational website that explains medical conditions in simple, easy-to-understand language. It\'s designed for patients, families, caregivers, students, and anyone who wants to learn about health conditions without getting overwhelmed by medical jargon. I include special "Simple Explanation" sections that are perfect for children or anyone who prefers straightforward explanations.',
+    id: 'what-is-medexplained',
+    question: 'What is MedExplained and who is it for?',
+    answer: 'MedExplained is a free educational website that explains medical conditions in simple, easy-to-understand language. It\'s designed for patients, families, caregivers, students, and anyone who wants to learn about health conditions without getting overwhelmed by medical jargon. I include special "Simple Explanation" sections that are perfect for children or anyone who prefers straightforward explanations.',
     category: 'About'
   },
   {
@@ -35,8 +35,8 @@ const faqs: FAQ[] = [
   },
   {
     id: 'accessibility-features',
-    question: 'What accessibility features does HealthExplain offer?',
-    answer: 'I\'ve designed HealthExplain to be accessible to everyone. My features include adjustable font sizes (small, medium, large), dark mode for comfortable reading in low light, high contrast colors for readability, mobile-responsive design that works on all devices, and clear, simple language throughout. You can find the accessibility controls in the top navigation bar.',
+    question: 'What accessibility features does MedExplained offer?',
+    answer: 'I\'ve designed MedExplained to be accessible to everyone. My features include adjustable font sizes (small, medium, large), dark mode for comfortable reading in low light, high contrast colors for readability, mobile-responsive design that works on all devices, and clear, simple language throughout. You can find the accessibility controls in the top navigation bar.',
     category: 'Features'
   },
   {
@@ -53,14 +53,14 @@ const faqs: FAQ[] = [
   },
   {
     id: 'medication-information',
-    question: 'Does HealthExplain provide medication information?',
+    question: 'Does MedExplained provide medication information?',
     answer: 'While I mention general types of treatments and medications in our disease pages, I don\'t provide detailed medication information, dosages, or drug interactions. For specific medication questions, always consult with a pharmacist, doctor, or other healthcare professional. They can provide personalized advice based on your specific situation and medical history.',
     category: 'Medical'
   },
   {
     id: 'kids-content',
     question: 'Is this website appropriate for children?',
-    answer: 'Yes! I\'ve designed HealthExplain to be family-friendly and appropriate for all ages. My "Simple Explanation" sections are specifically written to help children understand health conditions in a non-scary, age-appropriate way. However, I recommend that adults review the content first and be available to answer any questions children might have while reading.',
+    answer: 'Yes! I\'ve designed MedExplained to be family-friendly and appropriate for all ages. My "Simple Explanation" sections are specifically written to help children understand health conditions in a non-scary, age-appropriate way. However, I recommend that adults review the content first and be available to answer any questions children might have while reading.',
     category: 'Family'
   },
   {
@@ -108,7 +108,7 @@ const CommonQuestions: React.FC = () => {
           Common Questions
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Find answers to frequently asked questions about HealthExplain, 
+          Find answers to frequently asked questions about MedExplained, 
           medical information, and how to use our website effectively.
         </p>
       </div>
