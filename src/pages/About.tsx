@@ -10,11 +10,11 @@ const About: React.FC = () => {
           <Heart className="h-10 w-10 text-white" />
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">
-          About HealthExplain
+          About MedExplained
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
           Hey everyone, my name is Milap Patel, and I believe that everyone deserves to understand their health. 
-          HealthExplain makes complex medical information accessible, 
+          MedExplained makes complex medical information accessible, 
           clear, and easy to understand for people of all ages and backgrounds.
         </p>
       </div>
@@ -96,7 +96,7 @@ const About: React.FC = () => {
       {/* What Makes Us Different */}
       <div className="bg-gradient-to-r from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20 rounded-2xl p-8 mb-12">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
-          What Makes HealthExplain Different?
+          What Makes MedExplained Different?
         </h2>
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
