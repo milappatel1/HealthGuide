@@ -56,7 +56,7 @@ const HomePage: React.FC = () => {
           <section>
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-                Why Choose HealthExplain?
+                Why Choose MedExplained?
               </h2>
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed px-2">
                 I make complex medical information accessible to everyone, from curious kids to concerned adults.
@@ -209,7 +209,7 @@ const HomePage: React.FC = () => {
                   Start Learning Today
                 </h2>
                 <p className="text-base sm:text-lg lg:text-xl opacity-90 leading-relaxed">
-                  Join thousands of people who trust HealthExplain for clear, 
+                  Join thousands of people who trust MedExplained for clear, 
                   reliable health information that's easy to understand.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
