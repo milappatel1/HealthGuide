@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, ArrowLeft } from 'lucide-react';
-import { diseases } from '../data/diseases';
+import { diseases, bodySystems } from '../data/diseases';
 import SearchBar from '../components/SearchBar';
 
 // Define the expected structure for a single disease item for better type safety
@@ -28,6 +28,26 @@ const SearchResults: React.FC = () => {
     const lowerQuery = query.toLowerCase();
     const results: Array<SearchResult> = [];
 
+    // Check if query matches a body system
+    const matchedSystem = bodySystems.find(system =>
+      system.name.toLowerCase() === lowerQuery
+    );
+
+    if (matchedSystem) {
+      // Return all diseases from this body system
+      (diseases as Disease[]).forEach(disease => {
+        if (matchedSystem.diseases.includes(disease.id)) {
+          results.push({
+            disease,
+            matchType: 'name',
+            matchedText: disease.name
+          });
+        }
+      });
+      return results;
+    }
+
+    // Standard disease search
     (diseases as Disease[]).forEach(disease => {
       // Check disease name
       if (disease.name.toLowerCase().includes(lowerQuery)) {
