@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { diseases } from '../data/diseases';
+import { diseases, bodySystems } from '../data/diseases';
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
@@ -9,8 +9,8 @@ interface SearchBarProps {
   className?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ 
-  onSearch, 
+const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
   placeholder = "Search diseases or body systems...",
   className = ""
 }) => {
@@ -22,19 +22,19 @@ const SearchBar: React.FC<SearchBarProps> = ({
   useEffect(() => {
     if (query.length > 1) {
       const allTerms = new Set<string>();
-      
+
       diseases.forEach(disease => {
-        // Add disease name
         if (disease.name.toLowerCase().includes(query.toLowerCase())) {
           allTerms.add(disease.name);
         }
-        
-        // Add category
-        if (disease.category.toLowerCase().includes(query.toLowerCase())) {
-          allTerms.add(disease.category);
+      });
+
+      bodySystems.forEach(system => {
+        if (system.name.toLowerCase().includes(query.toLowerCase())) {
+          allTerms.add(system.name);
         }
       });
-      
+
       setSuggestions(Array.from(allTerms).slice(0, 5));
       setShowSuggestions(true);
     } else {
