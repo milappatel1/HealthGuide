@@ -297,7 +297,7 @@ export const diseases: Disease[] = [
 },
 {
   id: "stroke",
-  name: "Stroke (Cerebrovascular Accident or CVA)",
+  name: "Stroke (Cerebrovascular Accident)",
   category: "Cardiovascular Emergency",
   bodySystem: "cardiovascular",
   summary: "A stroke is a life-threatening medical emergency that occurs when blood flow to part of your brain is suddenly interrupted or severely reduced, depriving brain tissue of vital oxygen and nutrients. Brain cells are extremely sensitive and begin dying within just minutes of losing their blood supply, which is why stroke is often called a 'brain attack' - similar to how a heart attack affects the heart. There are two main types: ischemic strokes (about 87% of cases) caused by blockages that cut off blood flow, and hemorrhagic strokes (about 13% of cases) caused by blood vessels bursting and bleeding into or around the brain. Every second counts during a stroke - immediate emergency medical treatment can mean the difference between full recovery, permanent disability, or death. Quick action to restore blood flow can save brain tissue, prevent disability, and save lives. Remember: time lost is brain lost.",
