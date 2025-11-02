@@ -11,7 +11,7 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ 
   onSearch, 
-  placeholder = "Search diseases, symptoms, or body systems...",
+  placeholder = "Search diseases or body systems...",
   className = ""
 }) => {
   const [query, setQuery] = useState('');
@@ -28,13 +28,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
         if (disease.name.toLowerCase().includes(query.toLowerCase())) {
           allTerms.add(disease.name);
         }
-        
-        // Add symptoms
-        disease.symptoms.forEach(symptom => {
-          if (symptom.toLowerCase().includes(query.toLowerCase())) {
-            allTerms.add(symptom);
-          }
-        });
         
         // Add category
         if (disease.category.toLowerCase().includes(query.toLowerCase())) {
