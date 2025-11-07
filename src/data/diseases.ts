@@ -1410,6 +1410,11 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "very-common",
 },
+
+
+
+
+  
   {
   id: "hypotension",
   name: "Hypotension (Low Blood Pressure)",
@@ -1490,6 +1495,11 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "common",
 },
+
+
+
+
+  
   {
   id: "peripheral-artery-disease",
   name: "Peripheral Artery Disease (PAD)",
@@ -1568,6 +1578,12 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "common",
 },
+
+
+
+
+
+  
   {
   id: "deep-vein-thrombosis",
   name: "Deep Vein Thrombosis (DVT)",
@@ -1645,6 +1661,12 @@ export const diseases: Disease[] = [
   severity: "severe",
   commonness: "uncommon",
 },
+
+
+
+
+
+  
   {
   id: "varicose-veins",
   name: "Varicose Veins",
@@ -1719,6 +1741,11 @@ export const diseases: Disease[] = [
   severity: "mild",
   commonness: "very-common",
 },
+
+
+
+
+  
   {
   id: "asthma",
   name: "Asthma",
@@ -1797,6 +1824,9 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "very-common",
 },
+
+
+  
   {
   id: "sarcoidosis",
   name: "Sarcoidosis",
@@ -1873,6 +1903,12 @@ export const diseases: Disease[] = [
   severity: "moderate",
   commonness: "uncommon",
 },
+
+
+
+
+
+  
   {
   id: "goodpasture-syndrome",
   name: "Goodpasture Syndrome",
