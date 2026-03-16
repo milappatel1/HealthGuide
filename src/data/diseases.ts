@@ -1,5 +1,6 @@
 import type { Disease, BodySystem } from "../types/Disease"
 
+
 export const bodySystems: BodySystem[] = [
   {
     id: "cardiovascular",
