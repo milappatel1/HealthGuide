@@ -1750,14 +1750,14 @@ export const diseases: Disease[] = [
   },
 
   {
-    id: "goodpasture-syndrome ",
-    name: "Goodpasture Syndrome (Anti-GBM Disease) ",
-    category: "Autoimmune/Pulmonary-Renal Disease ",
-    bodySystem: "immune ",
+    id: "goodpasture-syndrome",
+    name: "Goodpasture Syndrome (Anti-GBM Disease)",
+    category: "Autoimmune/Pulmonary-Renal Disease",
+    bodySystem: "immune",
     summary:
-      "Goodpasture syndrome is a rare but life-threatening autoimmune disease in which your immune system mistakenly produces antibodies that attack a specific protein called type IV collagen, which forms the structural foundation of tiny blood vessels in your lungs and kidneys. This rogue immune response causes severe bleeding in the lungs and rapid, progressive kidney failure. Unlike many chronic conditions that develop slowly, Goodpasture syndrome often strikes suddenly and progresses quickly over days to weeks, making it a true medical emergency that requires immediate hospitalization and aggressive treatment. The disease gets its name from Dr. Ernest Goodpasture, who first described it in 1919. While historically devastating, modern medicine has transformed the outlook for patients — with early recognition and prompt treatment, the vast majority of people survive and can preserve kidney function or recover from lung damage. Long-term management typically involves immunosuppressive medications and, in cases of irreversible kidney damage, dialysis or kidney transplantation. ",
+      "Goodpasture syndrome is a rare but life-threatening autoimmune disease in which your immune system mistakenly produces antibodies that attack a specific protein called type IV collagen, which forms the structural foundation of tiny blood vessels in your lungs and kidneys. This rogue immune response causes severe bleeding in the lungs and rapid, progressive kidney failure. Unlike many chronic conditions that develop slowly, Goodpasture syndrome often strikes suddenly and progresses quickly over days to weeks, making it a true medical emergency that requires immediate hospitalization and aggressive treatment. The disease gets its name from Dr. Ernest Goodpasture, who first described it in 1919. While historically devastating, modern medicine has transformed the outlook for patients — with early recognition and prompt treatment, the vast majority of people survive and can preserve kidney function or recover from lung damage. Long-term management typically involves immunosuppressive medications and, in cases of irreversible kidney damage, dialysis or kidney transplantation.",
     symptoms: [
-      "Coughing up blood (hemoptysis) that can range from occasional blood-streaked sputum to large, alarming volumes of bright red blood. This occurs because the attacking antibodies damage the delicate capillaries in the lungs, causing blood to leak into the air sacs. The amount of bleeding doesn't always correlate with how much your lungs are actually damaged. ",
+      "Coughing up blood (hemoptysis) that can range from occasional blood-streaked sputum to large, alarming volumes of bright red blood. This occurs because the attacking antibodies damage the delicate capillaries in the lungs, causing blood to leak into the air sacs. The amount of bleeding doesn't always correlate with how much your lungs are actually damaged.",
       "Rapidly worsening shortness of breath and a feeling of suffocation or drowning, even at rest. As blood fills the alveoli (air sacs), oxygen can't properly enter your bloodstream, leading to dangerous drops in blood oxygen levels and extreme respiratory distress. ",
       "Chest pain, tightness, or a burning sensation behind the breastbone, often worsening with deep breaths or coughing. This is caused by lung tissue irritation and bleeding within the airways. ",
       "Profound fatigue, weakness, and pallor (pale skin) that develops quickly. This is primarily due to anemia from internal bleeding in the lungs and kidneys, combined with the body's massive inflammatory response and failing kidney function. ",
