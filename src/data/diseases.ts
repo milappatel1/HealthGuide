@@ -1,7 +1,8 @@
 import type { Disease, BodySystem } from "../types/Disease";
 
 export const bodySystems: BodySystem[] = [
-  {
+
+{
     id: "cardiovascular",
     name: "Cardiovascular System",
     description:
@@ -25,7 +26,19 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your brain, spinal cord, and nerves act as your body's command center, controlling everything you think, feel, and do.",
     icon: "Brain",
-    diseases: ["depression"],
+    diseases: [
+      "depression",
+      "generalized-anxiety-disorder",
+      "adhd",
+      "ptsd",
+      "schizophrenia",
+      "bipolar-disorder",
+      "multiple-sclerosis",
+      "parkinsons-disease",
+      "epilepsy",
+      "migraine",
+      "alzheimers-disease",
+    ],
   },
   {
     id: "digestive",
@@ -33,7 +46,14 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your stomach, intestines, and other organs break down food into nutrients your body can use for energy and growth.",
     icon: "Apple",
-    diseases: ["gastritis"],
+    diseases: [
+      "gastritis",
+      "irritable-bowel-syndrome",
+      "intestinal-ischemia",
+      "ulcerative-colitis",
+      "crohns-disease",
+      "gastroesophageal-reflux",
+    ],
   },
   {
     id: "respiratory",
@@ -41,7 +61,18 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your lungs and airways bring fresh oxygen into your body and remove waste gases like carbon dioxide.",
     icon: "Lung",
-    diseases: ["common-cold", "sarcoidosis", "asthma"],
+    diseases: [
+      "common-cold",
+      "sarcoidosis",
+      "asthma",
+      "copd",
+      "pneumonia",
+      "tuberculosis",
+      "acute-bronchitis",
+      "sleep-apnea",
+      "pulmonary-embolism",
+      "lung-cancer",
+    ],
   },
   {
     id: "musculoskeletal",
@@ -49,7 +80,16 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your bones, muscles, and joints work together to give your body structure, support, and the ability to move.",
     icon: "Bone",
-    diseases: ["arthritis", "tendinitis"],
+    diseases: [
+      "arthritis",
+      "tendinitis",
+      "gout",
+      "osteoporosis",
+      "fibromyalgia",
+      "rheumatoid-arthritis",
+      "osteomyelitis",
+      "osteoarthritis",
+    ],
   },
   {
     id: "endocrine",
@@ -57,7 +97,17 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your glands produce hormones that act like chemical messengers, controlling growth, metabolism, and many body functions.",
     icon: "Zap",
-    diseases: ["diabetes-type-1", "pcos"],
+    diseases: [
+      "diabetes-type-1",
+      "pcos",
+      "type-2-diabetes",
+      "cushings-syndrome",
+      "addisons-disease",
+      "thyroid-storm",
+      "hypothyroidism",
+      "hyperthyroidism",
+      "obesity",
+    ],
   },
   {
     id: "immune",
@@ -65,7 +115,11 @@ export const bodySystems: BodySystem[] = [
     description:
       "Your body's defense system that protects you from germs, viruses, and other harmful substances that could make you sick.",
     icon: "Shield",
-    diseases: ["hiv-aids", "goodpasture-syndrome"],
+    diseases: [
+      "hiv-aids",
+      "goodpasture-syndrome",
+      "systemic-lupus-erythematosus",
+    ],
   },
   {
     id: "integumentary",
@@ -110,7 +164,6 @@ export const bodySystems: BodySystem[] = [
 ];
 
 export const diseases: Disease[] = [
-
   // Cardiovascular System
   {
     id: "stroke",
@@ -741,6 +794,253 @@ export const diseases: Disease[] = [
     commonness: "common",
   },
 
+  {
+    id: "deep-vein-thrombosis",
+    name: "Deep Vein Thrombosis (DVT)",
+    category: "Cardiovascular Condition",
+    bodySystem: "cardiovascular",
+    summary:
+      "Deep Vein Thrombosis (DVT) is a serious condition in which a blood clot — a thickened, gel-like mass of blood cells and clotting proteins — forms inside one of the deep veins of the body, most commonly in the leg. Unlike the superficial veins visible just beneath the skin, deep veins run through the muscles and carry the majority of blood returning from the limbs back to the heart. When a clot forms in one of these deep vessels, it can partially or completely block blood flow, causing pain, swelling, and damage to the vein. The immediate danger of DVT, however, extends far beyond the leg itself. A portion of the clot can break free, travel through the bloodstream, and lodge in the arteries of the lungs — a life-threatening emergency called pulmonary embolism (PE). Together, DVT and pulmonary embolism are referred to as venous thromboembolism (VTE), one of the leading causes of preventable death in hospitalized patients and a significant cause of sudden death in the general population. DVT is both treatable and, in many situations, preventable — making awareness of its risk factors, symptoms, and warning signs critically important.",
+    symptoms: [
+      "Swelling in one leg (or rarely one arm) that appears without an obvious injury is one of the most common signs of DVT. The swelling occurs because the clot obstructs the normal return of blood through the deep vein, causing fluid to back up and leak into the surrounding tissues. The swelling may involve the entire leg or be localized to the calf, ankle, or foot depending on where the clot is located.",
+      "Pain or tenderness in the leg, most commonly felt in the calf and often described as a cramping, aching, or throbbing sensation. The pain may worsen when walking, standing, or flexing the foot upward toward the shin. Unlike a pulled muscle, the pain of DVT tends to be persistent rather than improving with rest, and is often accompanied by swelling.",
+      "Warmth over the affected area of the leg, which results from the inflammatory response triggered by the clot. The skin over the clot site may feel noticeably warmer to the touch compared to the same area on the opposite leg.",
+      "Redness or a reddish-blue discoloration of the skin over the affected area, again reflecting the underlying inflammation and impaired blood flow. The discoloration may appear patchy or diffuse and can extend over a larger area than just the clot site.",
+      "Visible surface veins that appear more prominent or engorged than usual, as blood that would normally flow through the blocked deep vein is rerouted through superficial veins near the skin surface, causing them to dilate and become more visible.",
+      "A feeling of heaviness or fullness in the affected leg that worsens throughout the day, particularly with prolonged standing or sitting, and may be partially relieved by elevating the leg.",
+      "In some cases, particularly with DVT in the iliac veins of the pelvis or the femoral vein of the upper thigh, the entire limb from groin to foot may become severely swollen, pale, and extremely painful — a condition called phlegmasia alba dolens. In the most extreme cases this can progress to phlegmasia cerulea dolens, where the limb turns a deep blue-purple and faces a risk of gangrene from complete venous outflow obstruction.",
+      "Critically important — symptoms of pulmonary embolism require immediate emergency care: sudden shortness of breath or difficulty breathing that appears without obvious cause, sharp chest pain that worsens with deep breathing or coughing, coughing up blood, a rapid or irregular heartbeat, lightheadedness or fainting, and a sense of impending doom. If any of these symptoms occur — whether or not you know you have a DVT — call 911 immediately. Pulmonary embolism can be fatal within minutes.",
+      "Up to half of all DVT cases cause no symptoms whatsoever, a phenomenon called silent DVT. These clots are often discovered incidentally during testing for another condition or only become apparent when a pulmonary embolism occurs. The absence of leg symptoms does not mean a DVT is not present or not dangerous.",
+    ],
+    causes: [
+      "DVT develops when one or more of three conditions — collectively known as Virchow's Triad — are present: slowed or stagnant blood flow through the vein, damage or injury to the vein wall, and an increased tendency of the blood to clot (hypercoagulability). In most cases of DVT, at least two of these three factors are operating simultaneously.",
+      "Prolonged immobility is one of the most common triggers for DVT. When you sit or lie still for extended periods — during long-haul flights or car trips, prolonged bed rest from illness or surgery, or extended periods of sitting at a desk — the calf muscles that normally help pump blood upward through the leg veins are inactive. Blood pools and stagnates in the deep veins, creating conditions favorable for clot formation.",
+      "Surgery, particularly orthopedic procedures involving the hips, knees, and pelvis, carries a very high risk of DVT. Surgery combines multiple risk factors simultaneously: the operation directly injures blood vessels and surrounding tissues, general anesthesia causes peripheral vasodilation and slows blood flow, patients are immobile during and after the procedure, and the stress of surgery activates the body's clotting systems.",
+      "Hospitalization and serious illness significantly elevate DVT risk. Being confined to a bed for days or weeks, the inflammatory state that accompanies major illness, dehydration, and the intravenous lines and catheters that can injure vein walls all contribute. DVT is one of the most common and serious complications of hospitalization.",
+      "Cancer and its treatments are strongly associated with DVT. Many tumors secrete substances that directly activate the clotting cascade. Chemotherapy agents damage blood vessel walls and can cause hypercoagulability. Central venous catheters used for chemotherapy delivery can trigger clots in the large veins where they sit.",
+      "Inherited (genetic) clotting disorders cause some people's blood to clot more readily than normal. Factor V Leiden mutation is the most common inherited thrombophilia, affecting up to 5% of the general population and significantly elevating DVT risk. Prothrombin gene mutation, protein C deficiency, protein S deficiency, and antithrombin deficiency are other inherited conditions that increase clotting tendency. People with these disorders may experience DVT at a young age, repeatedly, or with minimal provocation.",
+      "Acquired hypercoagulable states include conditions that increase clotting tendency without being inherited. Antiphospholipid syndrome is an autoimmune condition where the immune system produces antibodies that attack normal proteins involved in blood clotting, causing a paradoxical tendency to form clots. Inflammatory conditions like inflammatory bowel disease and lupus increase systemic inflammation and clotting tendency. Severe dehydration reduces blood volume and increases its viscosity.",
+      "Hormonal factors are an important and underrecognized contributor to DVT risk. Estrogen-containing medications — including combined oral contraceptive pills and hormone replacement therapy — increase the liver's production of clotting factors, raising DVT risk by two to four times above baseline. Pregnancy dramatically elevates DVT risk due to increased estrogen levels, compression of the pelvic veins by the growing uterus, and a naturally increased clotting tendency that protects against hemorrhage at delivery. The postpartum period, particularly the first six weeks after delivery, carries an especially elevated risk.",
+      "Obesity increases DVT risk through multiple mechanisms including compression of pelvic veins by abdominal fat, chronic systemic inflammation, reduced mobility, and hormonal changes associated with excess adipose tissue.",
+      "Previous DVT is one of the strongest risk factors for future DVT. A prior clot often causes permanent damage to the vein's internal valves (post-thrombotic syndrome), impairing normal blood return and creating conditions for recurrent clot formation in the same or adjacent veins.",
+      "Heart failure and other conditions that impair cardiac output reduce the velocity of blood flow through the venous system, promoting stagnation and clot formation in the deep veins.",
+      "Varicose veins and superficial venous insufficiency, while primarily involving veins near the skin, are associated with an increased risk of DVT, possibly because the underlying venous dysfunction affects deeper vessels as well.",
+    ],
+    diagnosis: [
+      "Diagnosis of DVT cannot be reliably made on clinical grounds alone — many other conditions cause leg pain and swelling, and up to half of DVTs cause no symptoms. Objective testing is always required to confirm or exclude the diagnosis.",
+      "The Wells Score is a validated clinical prediction tool that doctors use to estimate the probability of DVT before ordering tests. It assigns points based on specific clinical features such as active cancer, recent immobility, calf swelling greater than 3 cm compared to the other leg, pitting edema, collateral superficial veins, and whether an alternative diagnosis is at least as likely. The resulting score categorizes patients as low, moderate, or high probability, guiding the sequence of subsequent testing.",
+      "D-dimer blood test measures a fragment of protein released when a blood clot breaks down in the body. An elevated D-dimer indicates that clotting and clot breakdown are occurring somewhere in the body and raises suspicion for DVT or pulmonary embolism. Critically, D-dimer is highly sensitive but not specific — many conditions other than DVT can elevate it, including infection, inflammation, cancer, pregnancy, and recent surgery. A normal D-dimer result in a low-probability patient is highly reassuring and can effectively exclude DVT without the need for imaging. An elevated D-dimer alone cannot confirm DVT and always requires follow-up imaging.",
+      "Compression Ultrasound is the primary imaging test for DVT and is the first-line investigation in most patients with suspected DVT. It is non-invasive, widely available, does not use radiation, and is highly accurate for detecting clots in the deep veins of the leg above the knee. The test involves pressing a handheld ultrasound probe along the course of the deep veins while a technician observes whether the vein compresses normally with pressure. A vein containing a clot will not compress fully, which is the key diagnostic finding. Doppler flow measurements can also identify areas of absent or reduced blood flow within the vein.",
+      "Whole-leg ultrasound extends the examination from the groin all the way down to the calf veins, capturing isolated distal (below-the-knee) DVTs that may be missed by a proximal-only scan. Whether to routinely image the calf veins is debated among specialists, as isolated calf DVTs are generally less dangerous than proximal clots but can extend upward if untreated.",
+      "CT Venography involves injecting intravenous contrast dye and using a CT scanner to image the deep veins, providing detailed anatomical information particularly in the pelvis and abdomen where ultrasound has limitations. It is often performed simultaneously with CT pulmonary angiography (CTPA) when pulmonary embolism is suspected alongside DVT.",
+      "MR Venography uses magnetic resonance imaging to visualize the deep veins and is particularly useful for imaging the pelvic and abdominal veins, detecting May-Thurner syndrome (compression of the left iliac vein by the overlying artery), and evaluating DVT in pregnant patients where radiation exposure should be minimized.",
+      "Conventional contrast venography — injecting dye directly into a foot vein and taking X-ray images — was historically the gold standard for DVT diagnosis but has been almost entirely replaced by compression ultrasound in modern practice due to its invasiveness and the risk of the procedure itself causing phlebitis or clot formation.",
+      "Once DVT is confirmed, further evaluation depends on the clinical context. In young patients, those with DVT occurring at unusual sites, those with recurrent DVT, or those without an obvious provokable cause, testing for underlying inherited or acquired thrombophilias may be performed. In patients with unprovoked DVT, evaluation for occult malignancy may be considered given the strong association between cancer and DVT.",
+    ],
+    treatment: [
+      "The primary goals of DVT treatment are to prevent the clot from extending or propagating further, to prevent pulmonary embolism, to restore normal blood flow through the vein, and to reduce the risk of long-term complications and recurrence. Treatment is tailored to the individual based on the clot's location, the presence of pulmonary embolism, the underlying cause, bleeding risk, and other medical conditions.",
+      "Anticoagulation (Blood Thinners): This is the cornerstone of DVT treatment. Anticoagulant medications do not dissolve an existing clot — your body's own natural fibrinolytic system gradually breaks it down over weeks to months — but they prevent the clot from growing larger and dramatically reduce the risk of new clots forming, including pulmonary embolism. There are several anticoagulant options, and the choice depends on the individual patient's situation.",
+      "Direct Oral Anticoagulants (DOACs) — including rivaroxaban (Xarelto), apixaban (Eliquis), dabigatran (Pradaxa), and edoxaban — have become the preferred first-line treatment for most patients with DVT. They are taken by mouth as pills, require no routine blood monitoring, have predictable effects, have fewer food and drug interactions than older agents, and have been shown to be at least as effective as traditional anticoagulants with a lower risk of major bleeding. They are not suitable in certain situations, including severe kidney disease, pregnancy, and some cases of cancer-associated thrombosis.",
+      "Low Molecular Weight Heparin (LMWH) — including enoxaparin (Lovenox) and dalteparin — is given as a once- or twice-daily injection under the skin. It is preferred for DVT in pregnancy (because DOACs cross the placenta and are not safe for the fetus), cancer-associated DVT, and patients who cannot swallow pills. It does not require routine blood monitoring and is highly effective.",
+      "Warfarin (Coumadin) is an older oral anticoagulant that has been used for decades. It requires regular blood tests (INR monitoring) to ensure the dose is in the therapeutic range, has numerous food and drug interactions (particularly with vitamin K-containing foods like leafy greens), and has a slower onset of action requiring initial bridging with heparin. It has been largely replaced by DOACs for most patients but remains appropriate in certain situations, including mechanical heart valves and some patients with antiphospholipid syndrome.",
+      "Unfractionated Heparin (UFH) is given intravenously in a hospital setting and provides rapid, titratable anticoagulation. It is used primarily for patients with very severe DVT or pulmonary embolism requiring close monitoring, patients with significant kidney impairment, and as a bridge to warfarin or when rapid reversal of anticoagulation may be needed.",
+      "Duration of Anticoagulation: How long to continue anticoagulation is one of the most important and individualized decisions in DVT management. The minimum treatment duration is typically three months for DVT provoked by a temporary, reversible risk factor (such as surgery or immobility). For unprovoked DVT — where no clear trigger can be identified — the risk of recurrence after stopping anticoagulation is high, and extended or indefinite treatment is often recommended. For DVT associated with active cancer, anticoagulation is typically continued for as long as the cancer is active or being treated. The decision to extend anticoagulation must balance the ongoing risk of recurrence against the cumulative risk of anticoagulant-related bleeding.",
+      "Compression Stockings: Graduated elastic compression stockings that apply firm pressure at the ankle, tapering to lighter pressure at the thigh, help reduce swelling, alleviate pain, and support the return of blood through the leg veins. They have historically been recommended to prevent post-thrombotic syndrome, though recent evidence suggests their role in this is more limited than previously thought. They remain valuable for symptom relief and are generally recommended during the acute phase of DVT.",
+      "Elevation and Activity: Keeping the affected leg elevated above the level of the heart when resting reduces swelling and discomfort. Contrary to older advice that recommended strict bed rest, current evidence supports early ambulation (walking) once anticoagulation is established. Early mobilization does not increase the risk of pulmonary embolism and may actually reduce pain and swelling more effectively than rest.",
+      "Catheter-Directed Thrombolysis (CDT): In carefully selected patients with extensive, proximal DVT — particularly large clots in the iliac veins and inferior vena cava causing severe limb symptoms — catheter-directed thrombolysis may be considered. This involves threading a catheter directly into the clot and infusing powerful clot-dissolving drugs (thrombolytics like alteplase) directly at the site. CDT can more rapidly restore venous patency and may reduce the risk of post-thrombotic syndrome, but carries a significantly higher risk of major bleeding (including intracranial hemorrhage) and is reserved for young, otherwise healthy patients with severe, extensive DVT and low bleeding risk.",
+      "Mechanical Thrombectomy: Catheter-based devices can be used to physically break up and remove thrombus from large veins. This may be combined with catheter-directed thrombolysis as part of a pharmacomechanical approach. It is performed in specialized vascular centers for select cases of severe DVT.",
+      "Inferior Vena Cava (IVC) Filter: In patients who have DVT but cannot receive anticoagulation because of a very high bleeding risk (such as active internal bleeding or very recent major surgery), a small metal filter can be placed inside the inferior vena cava — the large vein that carries blood from the lower body to the heart — through a catheter-based procedure. The filter acts as a physical trap to catch clots that break free from leg veins before they reach the lungs. IVC filters are not a substitute for anticoagulation and do not treat the underlying clot. They are associated with their own complications including filter thrombosis and long-term venous insufficiency. Retrievable filters should be removed as soon as anticoagulation can be safely initiated.",
+      "Post-Thrombotic Syndrome (PTS) Management: Up to 40% of patients with proximal DVT develop post-thrombotic syndrome — a chronic condition characterized by persistent leg swelling, heaviness, pain, skin changes (thickening, darkening, and sometimes ulceration), and dilated superficial veins. PTS results from permanent damage to the vein's internal valves by the clot, causing chronic venous insufficiency. Management includes consistent use of compression stockings, leg elevation, regular walking to activate the calf muscle pump, and wound care for venous ulcers. PTS has no cure, making prevention through effective acute treatment and early mobilization all the more important.",
+    ],
+    prevention: [
+      "Move regularly and avoid prolonged immobility, particularly during long-distance travel. On flights longer than four hours, get up and walk the aisle every one to two hours, perform seated calf raises and ankle circles frequently during the flight, stay well hydrated, and avoid alcohol, which promotes dehydration. On long car journeys, stop every two hours to get out and walk. These simple measures keep the calf muscle pump active and prevent blood from stagnating in the leg veins.",
+      "If you are hospitalized or having surgery, discuss DVT prevention with your medical team before your procedure. In hospitalized patients — particularly those undergoing major surgery or confined to bed — mechanical and pharmacological prophylaxis reduces DVT risk dramatically. Mechanical measures include pneumatic compression devices (inflatable sleeves placed around the legs that rhythmically squeeze and release to simulate walking) and compression stockings. Pharmacological prophylaxis involves low doses of anticoagulant medication (typically LMWH or low-dose aspirin in some orthopedic settings) given prophylactically to prevent clot formation. Patients should not be passive recipients of hospital care — asking your care team about DVT prevention is appropriate and important.",
+      "Get up and move as soon as safely possible after surgery or illness. Early mobilization is one of the most effective ways to prevent hospital-acquired DVT. Work with nurses and physical therapists to begin walking as soon as your condition allows, even if it is just a short trip to the bathroom initially.",
+      "Maintain a healthy body weight throughout adulthood. Obesity is an independent risk factor for DVT through multiple mechanisms. Even moderate weight loss in overweight individuals reduces venous pressure in the legs, decreases systemic inflammation, and lowers DVT risk.",
+      "Stay well hydrated every day, not just during travel. Dehydration increases blood viscosity — making it thicker and stickier — which promotes clot formation. This is particularly relevant during illness, hot weather, or intense physical activity when fluid losses are greater than usual.",
+      "If you take estrogen-containing medications — oral contraceptive pills or hormone replacement therapy — discuss your DVT risk with your doctor, particularly if you have other risk factors like obesity, smoking, immobility, or a personal or family history of DVT. For women with significant thrombotic risk factors, alternative contraception methods or hormone delivery routes (such as transdermal patches, which have a lower thrombotic risk than oral pills) may be preferable.",
+      "If you are pregnant or have recently given birth, be aware that this period carries significantly elevated DVT risk. Report any leg swelling, pain, or redness to your obstetric team promptly, as DVT in pregnancy requires urgent evaluation and treatment. Women with a history of DVT, known thrombophilia, or multiple other risk factors may be offered prophylactic anticoagulation during pregnancy and the postpartum period.",
+      "If you have a known thrombophilia or a personal or family history of DVT, ensure that your healthcare providers are aware of this before any surgical procedure, hospitalization, or significant period of immobility. Prophylactic anticoagulation and other preventive measures should be planned proactively in these higher-risk situations.",
+      "Do not smoke. Smoking damages vein walls and promotes the inflammatory and hypercoagulable state that predisposes to DVT. Smoking cessation benefits the venous system as well as the arterial system.",
+      "If you have had a previous DVT, take your prescribed anticoagulation for the full recommended duration and attend all follow-up appointments. Stopping anticoagulation prematurely is a leading cause of DVT recurrence. Discuss with your doctor whether extended anticoagulation is appropriate for your situation, and understand the warning signs of recurrence so you can seek prompt evaluation if symptoms return.",
+      "Know the warning signs of DVT and pulmonary embolism, and seek medical attention immediately if they occur. Recognizing symptoms early — unexplained leg swelling and pain, or sudden shortness of breath and chest pain — and acting on them without delay can be lifesaving. Never dismiss these symptoms as muscle strain or indigestion without medical evaluation, particularly if you have known risk factors.",
+    ],
+    simpleExplanation: {
+      whatIs:
+        "Blood is supposed to flow continuously through your body — but sometimes, under the right conditions, it can clot inside a vein while still inside your body, forming a solid, jelly-like mass called a thrombus. Deep vein thrombosis, or DVT, is when this happens inside one of the large, deep veins that run through your leg muscles and carry blood back up to your heart. These deep veins are hidden well beneath the skin, which is why a clot there can be hard to detect by looking or feeling alone. The clot acts like a partial or complete blockage in a pipe, preventing blood from flowing back normally and causing the leg to swell and ache. The reason DVT is taken so seriously is that a piece of the clot can break off, travel through the bloodstream all the way to the lungs, and get stuck there — blocking blood flow in the lungs in a condition called pulmonary embolism, which can be rapidly fatal. DVT is not a rare or exotic condition — it is one of the most common serious vascular emergencies, affecting hundreds of thousands of people every year, and it is also one of the most preventable.",
+      howYouGet:
+        "Blood clots form in deep veins when three things go wrong, alone or together. First, blood flow slows down or becomes stagnant — this happens during long periods of sitting still, like on a long flight or while recovering in a hospital bed, because the leg muscles that normally help push blood upward aren't moving. Second, the vein wall gets damaged — surgery, injury, or an intravenous line can irritate the inner lining of a vein and trigger clotting at that spot. Third, the blood itself becomes more prone to clotting — this can happen due to certain medications like birth control pills, pregnancy, cancer, inherited genetic conditions that affect the clotting system, or severe illness. In most cases of DVT, at least two of these factors are present at the same time, which is why major surgery is such a high-risk period — it combines all three. Long flights, hospital stays, cancer treatment, pregnancy, obesity, smoking, and inherited clotting disorders all raise the risk in their own ways. Understanding your personal risk factors is key to knowing when to be vigilant.",
+      howToFeel:
+        "DVT in the leg most commonly causes swelling in one leg that doesn't have an obvious explanation — one leg looks noticeably puffier than the other, particularly around the calf and ankle. Along with the swelling, there is usually a persistent aching, cramping, or throbbing pain in the calf that doesn't go away with rest the way a typical muscle cramp would. The skin over the affected area may feel warmer than the surrounding skin and may look red or discolored. The leg might feel heavy or tight, like something is stuffed inside it. These symptoms often worsen throughout the day, particularly if you've been sitting or standing for a long time. However — and this is critically important — about half of all people with DVT feel absolutely nothing. The clot can be silently present without any pain or swelling until it becomes large enough to block flow or until a piece breaks off and travels to the lungs. This is why the warning signs of pulmonary embolism — sudden unexplained breathlessness, chest pain that worsens when you breathe in, coughing up blood, or feeling faint — must always be taken seriously and treated as an emergency by calling 911 immediately.",
+      howToGetBetter:
+        "If you are diagnosed with DVT, treatment begins right away with blood-thinning medication called anticoagulants. The most commonly used today are tablets called DOACs — drugs like rivaroxaban or apixaban — that you take by mouth at home without needing regular blood tests. These medications don't dissolve the clot that's already there, but they stop it from growing bigger and prevent new ones from forming, giving your body's own natural systems time to slowly break down the existing clot over weeks and months. Most people are treated entirely at home without needing to be hospitalized, which is a significant change from DVT management in previous decades. You will wear compression stockings on the affected leg to reduce swelling and discomfort, and you should keep walking normally — early activity is now encouraged rather than bed rest. How long you take blood thinners depends on what caused your DVT: if it was triggered by a temporary, obvious cause like surgery, three months is typically sufficient; if no clear cause is found, longer or even indefinite treatment may be recommended. The most important things during recovery are taking your medication exactly as prescribed every single day without missing doses, watching for any signs of pulmonary embolism, attending your follow-up appointments, and reporting any unusual bleeding to your doctor promptly. Most people with DVT recover fully with proper treatment, though some develop chronic leg symptoms from vein damage that require ongoing management.",
+    },
+    severity: "moderate",
+    commonness: "common",
+  },
+
+  {
+    id: "varicose-veins",
+    name: "Varicose Veins",
+    category: "Vascular Disorder",
+    bodySystem: "cardiovascular",
+    summary:
+      "Varicose veins are enlarged, twisted veins that bulge just beneath the surface of the skin — most commonly in the legs. They develop when the tiny one-way valves inside your veins stop working properly, causing blood to pool and pressure to build up. Think of your veins as a network of one-way streets sending blood back to your heart: varicose veins happen when some of those streets develop broken traffic signals, causing gridlock and bulging roads. While they're often dismissed as a cosmetic concern, varicose veins can cause real physical discomfort — aching, heaviness, swelling, and in more serious cases, skin changes or ulcers. The good news is that treatment options today range from simple lifestyle changes to minimally invasive procedures, and most people see significant improvement. Varicose veins are not a sign of weakness or laziness — they're a structural issue influenced heavily by genetics, hormones, and the simple fact that humans walk upright against gravity all day.",
+    symptoms: [
+      "Visibly twisted, rope-like, or bulging veins just under the skin — typically dark blue or purple in color, and most noticeable in the calves, backs of the knees, and inner thighs. They may protrude enough to feel raised when you run your fingers along the leg.",
+      "Aching, throbbing, or heavy sensation in the legs — often described as a dull, persistent tiredness that worsens after standing or sitting for long periods and improves when legs are elevated. Many people say their legs feel 'full' or 'loaded.'",
+      "Swelling of the lower legs and ankles (edema) — especially toward the end of the day or after prolonged standing. The swelling typically reduces overnight when legs are horizontal.",
+      "Itching, burning, or tingling around the affected veins — the skin over varicose veins can become irritated, dry, or inflamed as blood pools and presses outward on surrounding tissue.",
+      "Muscle cramping or restless legs — particularly at night, affecting sleep quality. The legs may feel an irresistible urge to move, or sudden sharp cramps can jolt a person awake.",
+      "Skin changes in advanced cases: The skin around the ankles and lower legs may darken to a brownish or reddish hue (called lipodermatosclerosis), become hard and leathery, or develop a scaly, eczema-like rash (venous eczema or stasis dermatitis).",
+      "Venous ulcers in severe, long-standing cases: Open sores, most often near the inner ankle, that are slow to heal and prone to infection — a sign that the vein disease has significantly compromised tissue health.",
+      "Spider veins: Small clusters of red, blue, or purple thread-like veins near the skin surface, often appearing alongside varicose veins. While usually painless and cosmetic, they can cause localized burning or itching.",
+      "Pain or tenderness that worsens with warmth: Hot weather, hot baths, or a warm day can dilate veins further, exacerbating discomfort.",
+      "A feeling of worsened symptoms during menstruation or pregnancy — hormonal fluctuations relax vein walls, temporarily increasing pooling and discomfort.",
+      "Important Note: Many people with significant varicose veins experience no pain at all, while others with smaller ones may have substantial discomfort. Symptom severity does not always correlate with vein size or appearance.",
+    ],
+    causes: [
+      "Faulty or weakened vein valves (primary cause): Inside healthy veins, tiny one-way valves open to let blood flow toward the heart and close to prevent backflow. When these valves weaken or become damaged, blood flows backward (called reflux) and pools in the vein, stretching it until it bulges. This is the core mechanism of all varicose veins.",
+      "Genetics: The single strongest risk factor. If one parent has varicose veins, your risk is roughly 40-50%; if both parents do, the risk rises to over 90%. Inherited traits determine the structural integrity of vein walls and valve tissue.",
+      "Prolonged standing or sitting: Occupations that require standing for hours — nurses, teachers, retail workers, chefs — place sustained gravitational pressure on leg veins, gradually overpowering the valves. Sitting for long periods (especially with legs dependent) similarly impairs venous return.",
+      "Pregnancy: Multiple factors converge — increased blood volume (up to 50% more), hormonal changes (particularly progesterone) that relax vein walls, and the growing uterus physically compressing the major veins of the pelvis, all of which raise pressure in leg veins. Varicose veins that appear during pregnancy often improve postpartum but may not resolve completely, and worsen with each subsequent pregnancy.",
+      "Age-related tissue changes: Vein walls and valves naturally lose elasticity and tone over time. Varicose veins become significantly more common after 50, though they can appear in young adults.",
+      "Sex and hormonal influences: Women develop varicose veins at roughly twice the rate of men. Estrogen and progesterone relax smooth muscle in vein walls, making them more prone to dilation. Hormonal contraceptives and hormone replacement therapy may further elevate risk.",
+      "Excess body weight (obesity): Extra weight increases intra-abdominal pressure, which is transmitted to leg veins and compresses pelvic veins, impairing outflow from the legs. Weight also places direct pressure on vessel walls.",
+      "Prior deep vein thrombosis (DVT): A blood clot in a deep vein can damage valves and block drainage, causing blood to reroute through surface veins under increased pressure — a condition called post-thrombotic syndrome.",
+      "Physical inactivity: The calf muscle acts as a pump, squeezing blood upward with each step. Sedentary lifestyles deprive leg veins of this mechanical assistance, increasing pooling.",
+      "Height: Taller individuals have longer veins and greater hydrostatic pressure column, putting more mechanical strain on valves in the lower leg.",
+    ],
+    diagnosis: [
+      "Clinical History and Symptom Review: Your doctor will ask about the duration, location, and nature of symptoms, as well as risk factors including family history, occupational demands, pregnancies, previous clots, and current medications.",
+      "Physical Examination: Performed while you're standing, so veins are fully distended. The clinician will visually inspect and manually palpate the legs, noting the distribution, size, and texture of affected veins. They may perform a tourniquet or tap test to assess valve incompetence.",
+      "Duplex Ultrasound (Gold Standard): The definitive diagnostic tool. A non-invasive scan that combines standard ultrasound (to see vein structure) with Doppler ultrasound (to measure blood flow direction and speed). It reveals which valves are failing, whether deep veins are involved, and if any blood clots are present. This guides all treatment decisions.",
+      "Ruling Out Deep Vein Thrombosis (DVT): Because DVT can mimic or cause varicose veins, and because treating varicose veins in the presence of an undetected clot can be dangerous, ruling out DVT is an essential step — typically with duplex ultrasound.",
+      "Photoplethysmography (PPG): A non-invasive test using light sensors to measure venous refill time in the leg. Helpful for assessing overall venous function, especially post-treatment.",
+      "CT or MR Venography: Reserved for complex cases — for example, when pelvic vein incompetence or compression (May-Thurner syndrome) is suspected as the underlying cause of leg varicose veins.",
+      "CEAP Classification: Venous disease is graded using the standardized CEAP system (C0–C6), from no visible disease to active venous ulcers. This classification guides treatment urgency and insurance coverage.",
+      "Referral to a Vascular Specialist or Interventional Radiologist: For symptomatic or progressive varicose veins, specialist evaluation ensures the correct imaging and procedure plan.",
+    ],
+    treatment: [
+      "Conservative (First-Line) Management: Recommended for mild to moderate symptoms, or while awaiting a procedure.",
+      "Graduated Compression Stockings: The cornerstone of conservative care. Medical-grade stockings (typically 20–30 mmHg) apply graded external pressure — tightest at the ankle, decreasing up the leg — to mechanically support the vein wall and reduce reflux. Worn daily, they significantly reduce aching, swelling, and fatigue. Proper fit by a trained fitter is essential.",
+      "Leg Elevation: Raising the legs above heart level for 15–30 minutes several times daily allows gravity to assist venous return, reducing pressure and swelling. Sleeping with the foot of the bed slightly elevated can help overnight.",
+      "Regular Exercise: Walking, swimming, and cycling activate the calf-muscle pump, dramatically improving venous return. Even ankle circles during prolonged sitting or standing make a meaningful difference.",
+      "Weight Management: Reducing excess weight lowers intra-abdominal pressure and decreases the mechanical load on leg veins.",
+      "Sclerotherapy: A liquid or foam chemical (sclerosant) is injected directly into the varicose vein, irritating and sealing its inner lining. The treated vein gradually scars and is reabsorbed by the body. Highly effective for small to medium veins and spider veins. Usually done in clinic with no anesthesia. Multiple sessions may be needed.",
+      "Endovenous Laser Ablation (EVLA) / Radiofrequency Ablation (RFA): The current gold standard for treating large varicose veins. A thin fiber or catheter is inserted into the vein under ultrasound guidance. Laser or radiofrequency energy heats and seals the vein from the inside, causing it to collapse and be absorbed. Performed under local anesthesia in 30–60 minutes. Patients walk immediately and return to normal activity within days. Highly effective with low recurrence rates.",
+      "Foam Sclerotherapy (Ultrasound-Guided): A foamed version of sclerosant — bubbles replacing liquid — increases surface contact with the vein wall, making it more effective for larger veins than standard liquid injection. Guided by ultrasound for accuracy.",
+      "Surgical Ligation and Stripping: Now largely replaced by endovenous techniques, but still used when veins are very large, tortuous, or unsuitable for catheter-based treatment. Under general or spinal anesthesia, the great saphenous vein is tied off and pulled through small incisions. Longer recovery (1–2 weeks) but durable outcomes.",
+      "Ambulatory Phlebectomy (Microphlebectomy): Small varicose vein branches are removed through tiny punctures (no stitches needed) using a small hook. Done under local anesthesia in clinic. Excellent cosmetic and symptomatic results.",
+      "Mechanochemical Ablation (MOCA) and Cyanoacrylate Glue: Newer, minimally invasive techniques that close veins without heat — reducing the risk of nerve injury. MOCA combines a rotating wire with sclerosant; glue ablation uses a medical adhesive. Both are performed without tumescent anesthesia.",
+      "Treatment of Venous Ulcers: Requires compression therapy, wound care, and addressing the underlying vein incompetence — often urgently. Specialist referral is essential.",
+    ],
+    prevention: [
+      "Stay Active: Walk, cycle, or swim regularly to keep the calf-muscle pump engaged. Even short walks every 30 minutes during prolonged sitting or standing significantly reduces venous pooling.",
+      "Elevate Your Legs: Rest with your legs raised above heart level when possible — especially after long periods on your feet.",
+      "Wear Compression Stockings Proactively: If you have a family history of varicose veins, a job that requires prolonged standing, or are pregnant, wearing graduated compression stockings daily can delay or prevent development.",
+      "Maintain a Healthy Weight: Every kilogram of excess weight adds pressure to pelvic and leg veins. Weight management is one of the most impactful prevention strategies.",
+      "Avoid Prolonged Standing or Sitting: If your job requires it, take movement breaks, shift your weight frequently, or use anti-fatigue mats. Flex and circle your ankles when you can't move.",
+      "Avoid Tight Clothing Around the Waist or Groin: Tight waistbands, belts, or shapewear can compress outflow veins and increase pressure in leg veins.",
+      "Avoid High Heels for Extended Periods: Low or flat shoes engage the calf muscle more effectively than heels, improving venous return. Save high heels for short-duration events.",
+      "Stay Hydrated: Proper hydration maintains healthy blood viscosity, reducing the workload on veins.",
+      "During Pregnancy: Use maternity compression stockings from early pregnancy, elevate legs daily, sleep on your left side (reducing pressure on the inferior vena cava), and stay active with walks and prenatal exercise.",
+      "Don't Cross Your Legs While Sitting: This can restrict blood flow from the lower leg, increasing venous pressure over time.",
+      "Monitor and Act Early: If you notice early varicosities or spider veins, consult a vascular specialist before they progress — early intervention is simpler, less expensive, and more effective.",
+    ],
+    simpleExplanation: {
+      whatIs:
+        "Varicose veins are like old garden hoses that have lost their pressure and shape. Your veins are supposed to carry blood back up to your heart, and they use little valves — like tiny trapdoors — to keep blood from sliding back down. When those trapdoors stop working properly, blood pools and pressure builds up, stretching the vein walls outward until they bulge and twist under your skin. The result is those raised, bluish-purple ropes you can see and sometimes feel in your legs. It's a plumbing problem, not a sign that anything is catastrophically wrong — but it is a sign your vein walls and valves need some support.",
+      howYouGet:
+        "Mostly it's in your genes — if your parents had them, there's a good chance you will too. But a lot of everyday things make them more likely: standing or sitting for long hours, being pregnant, gaining weight, or simply getting older. Every time you stand, gravity is pushing blood down your legs, and your vein valves are working hard to push it back up. Over years of that pressure — especially without much movement — the valves can wear out. It's not about being unhealthy or lazy; it's about the forces your veins face every day and how sturdy the valves you inherited happen to be.",
+      howToFeel:
+        "Your legs might feel heavy and tired by the end of the day — like someone has attached weights to them. There can be a dull ache or throbbing, especially after being on your feet for hours, and you might notice swelling around your ankles that wasn't there in the morning. Sometimes the skin over the veins itches or burns. At night, legs might cramp or feel restless. For many people the veins look worse than they feel; for others, the discomfort is significant even when the veins don't look that dramatic. Either way, your legs are telling you the plumbing is under pressure.",
+      howToGetBetter:
+        "The great news is that varicose veins respond really well to treatment, and modern procedures are quick, mostly painless, and let you walk out of the clinic the same day. Compression stockings are the first step — they essentially do the job of the broken valves, squeezing blood back upward. Keeping active (even just walking more), putting your feet up when you rest, and managing your weight all take pressure off the veins. For veins that are more problematic, doctors can close them with heat (laser or radiofrequency), injections, or tiny incisions — and your body simply reroutes blood through healthier vessels nearby. Most people see a big improvement in both appearance and comfort. You don't have to just live with it.",
+    },
+    severity: "mild",
+    commonness: "common",
+  },
+  {
+  id:  "sarcoidosis ",
+  name:  "Sarcoidosis ",
+  category:  "Multisystem Inflammatory Disease ",
+  bodySystem:  "respiratory ",
+  summary:
+    "Sarcoidosis is a complex inflammatory disease of unknown cause characterized by the formation of tiny clumps of inflammatory cells called granulomas in various organs throughout the body. While it can affect virtually any organ system, it most commonly targets the lungs and lymph nodes in the chest. These granulomas form when your immune system overreacts to an unknown trigger, walling off the perceived threat but unintentionally disrupting normal tissue function. The disease varies dramatically from person to person — some people have no symptoms and the condition resolves on its own within a few months or years, while others develop chronic, progressive inflammation that can lead to permanent organ damage, particularly in the lungs, heart, eyes, or skin. Sarcoidosis most often appears in adults between the ages of 20 and 40, and it is slightly more common and often more severe in people of African descent. Although there is currently no cure, most people with sarcoidosis can manage their symptoms effectively with medication, lifestyle adjustments, and regular monitoring, and many live full, active lives with normal life expectancy. ",
+  symptoms: [
+ "Persistent dry cough that doesn't improve with typical cough medicines or cold remedies. This cough is caused by inflammation and granuloma formation in the lung tissue, which irritates the airways and triggers the cough reflex even without mucus or infection. ",
+ "Shortness of breath (dyspnea), especially during physical activity or exercise. As granulomas accumulate in the lungs, they can stiffen the lung tissue and reduce its ability to expand fully and exchange oxygen efficiently, making even simple tasks like walking or climbing stairs feel exhausting. ",
+ "Chest pain or tightness that may feel like a dull ache or pressure behind the breastbone. This often occurs due to inflammation of the lung lining (pleura) or enlarged lymph nodes in the chest pressing on nearby structures. ",
+ "Profound and persistent fatigue that feels disproportionate to your activity level. This isn't just normal tiredness — it's a deep, draining exhaustion that doesn't improve with rest, caused by systemic inflammation and the body's constant immune activation. ",
+ "Fever, night sweats, and unexplained weight loss, which reflect the body's ongoing inflammatory response. These systemic symptoms are common during active phases of the disease and can mimic infections or other autoimmune conditions. ",
+ "Swollen or tender lymph nodes, particularly in the chest (hilar lymphadenopathy), neck, armpits, or groin. In many cases, chest lymph node enlargement is only visible on X-rays, but peripheral nodes may be felt as firm, rubbery lumps under the skin. ",
+ "Skin manifestations including reddish-purple bumps or nodules (often on the shins, called erythema nodosum), flat patches, or scar tissue changes. Skin involvement occurs in about 25% of patients and can sometimes be the first noticeable sign of the disease. ",
+ "Eye problems such as blurred vision, eye pain, redness, light sensitivity, or a gritty feeling. Uveitis (inflammation inside the eye) is a common complication of sarcoidosis and requires prompt treatment to prevent permanent vision damage. ",
+ "Joint pain, stiffness, and swelling, particularly in the ankles, knees, wrists, or small joints of the hands. Arthritis associated with sarcoidosis is often temporary but can be quite painful during flare-ups. ",
+ "Enlarged liver or spleen, which may cause a feeling of fullness in the upper abdomen or left upper quadrant. While often asymptomatic, organ enlargement can sometimes lead to discomfort or affect liver function test results. ",
+ "Cardiac involvement (in about 5-10% of cases) which can cause heart palpitations, irregular heartbeats, chest pain, shortness of breath, or fainting. When granulomas form in the heart tissue, they can disrupt electrical signals and weaken the heart muscle, making this one of the most serious manifestations. ",
+ "Neurological symptoms (neurosarcoidosis) in rare cases, including headaches, facial drooping, numbness, tingling, or even seizures. These occur when inflammation affects the brain, spinal cord, or peripheral nerves. ",
+],
+causes: [
+ "Unknown exact cause with suspected immune dysregulation: Sarcoidosis is fundamentally an exaggerated immune response, but what triggers it remains one of medicine's mysteries. Your immune system mistakenly identifies a harmless substance as a threat, forming granulomas to contain it, but fails to clear it, leading to chronic inflammation. ",
+ "Genetic predisposition and family history: Sarcoidosis tends to run in families, and certain genetic markers (particularly in the HLA region) significantly increase susceptibility. People of African, Scandinavian, Irish, or Puerto Rican descent have higher incidence rates, and having a first-degree relative with the disease increases your risk several-fold. ",
+ "Environmental and infectious triggers: Researchers believe that in genetically susceptible individuals, exposure to certain airborne substances — such as bacteria (like Mycobacteria or Propionibacteria), viruses, mold, dust, or chemicals — may trigger the abnormal immune response. The exact trigger likely varies from person to person. ",
+ "Age and demographic factors: The disease most commonly develops between ages 20 and 40, though it can occur at any age. It affects women slightly more often than men, and in many populations, it tends to be more severe in Black Americans compared to white Americans. ",
+ "Immune system hyperactivity: Unlike autoimmune diseases where the body attacks specific self-tissues, sarcoidosis involves a heightened cell-mediated immune response (specifically T-cells and macrophages) that forms granulomas in multiple organs without a clear external cause. ",
+],
+diagnosis: [
+ "Chest X-ray: Usually the first imaging test performed. It often reveals characteristic bilateral hilar lymphadenopathy (enlarged lymph nodes in both sides of the chest) and/or lung infiltrates. Chest X-rays are also used to stage sarcoidosis (Stage I-IV) based on lung and lymph node involvement. ",
+ "High-resolution CT scan (HRCT) of the chest: Provides detailed cross-sectional images of the lungs and lymph nodes, revealing the characteristic pattern of small nodules, fibrosis, or honeycombing in advanced cases. HRCT is far more sensitive than standard X-rays for detecting early or subtle lung changes. ",
+ "Tissue biopsy: The definitive diagnostic test. A small sample of affected tissue (usually from the lungs via bronchoscopy, or from skin lesions, lymph nodes, or other involved organs) is examined under a microscope. The presence of non-caseating granulomas — tightly packed clusters of immune cells without central tissue death — strongly confirms sarcoidosis. ",
+ "Pulmonary function tests (PFTs): Measure how well your lungs are working by assessing lung volume, airflow, and gas exchange. In sarcoidosis, PFTs often show a restrictive pattern (reduced lung capacity) and decreased diffusion capacity, indicating stiffness and scarring in the lung tissue. ",
+ "Blood tests: Check for markers of inflammation (like elevated erythrocyte sedimentation rate or C-reactive protein), high calcium levels (hypercalcemia occurs in 10-20% of patients due to increased vitamin D activation by granulomas), elevated angiotensin-converting enzyme (ACE) levels (produced by granulomas, though not specific or reliable alone), and kidney/liver function. ",
+ "Bronchoscopy with bronchoalveolar lavage (BAL): A thin tube is passed through the mouth or nose into the lungs to collect fluid and cells. The fluid is analyzed for immune cell ratios (typically showing elevated lymphocytes and CD4/CD8 ratio >3.5), which supports the diagnosis and helps rule out infections or cancers. ",
+ "Electrocardiogram (ECG) and echocardiogram: Ordered if cardiac involvement is suspected based on symptoms like palpitations or fainting. These tests check for heart rhythm abnormalities, structural changes, or reduced pumping function. Cardiac MRI or PET scans may be used for more detailed evaluation. ",
+ "Eye examination by an ophthalmologist: Essential even if you have no eye symptoms, as uveitis can be silent initially. Slit-lamp exams can detect inflammation inside the eye before it causes permanent damage. ",
+ "Rule-out testing: Doctors will perform tests to exclude other conditions that mimic sarcoidosis, such as tuberculosis, fungal infections, lymphoma, or other autoimmune diseases, before confirming the diagnosis. ",
+],
+treatment: [
+ "Observation and monitoring for mild or asymptomatic cases: Many people with early-stage sarcoidosis (especially Stage I or II) experience spontaneous remission within 6 months to 2 years without any treatment. In these cases, regular check-ups, lung function tests, and imaging are used to monitor the disease while avoiding unnecessary medication side effects. ",
+ "Corticosteroids (primarily prednisone): The first-line treatment for active, progressive, or organ-threatening sarcoidosis. Steroids powerfully suppress inflammation and shrink granulomas, relieving symptoms and preventing permanent damage. Treatment typically starts with a higher dose that is gradually tapered over months or years based on response. Long-term use requires monitoring for side effects like weight gain, osteoporosis, high blood pressure, and increased infection risk. ",
+ "Immunosuppressive medications: When steroids aren't enough, cause intolerable side effects, or need to be tapered, doctors add steroid-sparing agents like methotrexate, azathioprine, mycophenolate mofetil, or leflunomide. These medications modulate the immune system more gently over time, allowing for lower steroid doses and better long-term control. ",
+ "Biologic therapies: For severe, treatment-resistant sarcoidosis, drugs like infliximab or adalimumab (TNF-alpha inhibitors) may be used. These target specific inflammatory pathways and can be highly effective when conventional treatments fail, though they carry increased infection risk. ",
+ "Organ-specific treatments: Depending on which organs are affected, additional therapies may be needed. Eye drops containing steroids or dilating drops treat ocular sarcoidosis. Topical steroid creams or injections help skin lesions. Bronchodilators or oxygen therapy may be used for significant lung impairment. Cardiac sarcoidosis may require pacemakers, defibrillators, or specialized heart failure medications. ",
+ "Management of hypercalcemia: Since sarcoidosis can cause abnormally high blood calcium levels, doctors may recommend avoiding calcium supplements, limiting vitamin D intake, staying well-hydrated, and occasionally using medications like hydroxychloroquine or bisphosphonates to lower calcium levels. ",
+ "Pulmonary rehabilitation and physical therapy: For patients with chronic lung involvement, structured exercise programs, breathing techniques, and energy conservation strategies improve stamina, reduce breathlessness, and enhance quality of life. ",
+ "Regular multidisciplinary follow-up: Sarcoidosis requires ongoing care from pulmonologists, rheumatologists, ophthalmologists, and sometimes cardiologists or dermatologists. Routine monitoring of lung function, blood tests, imaging, and symptom tracking ensures timely adjustments to treatment and early detection of complications. ",
+],
+prevention: [
+ "Complete prevention is not currently possible: Since the exact cause of sarcoidosis remains unknown and likely involves a complex interaction between genetics and unidentified environmental triggers, there is no proven way to prevent the disease from developing in the first place. ",
+ "Avoid known respiratory irritants: While they don't cause sarcoidosis, smoking, vaping, heavy air pollution, industrial dust, chemical fumes, and mold exposure can worsen lung inflammation and accelerate disease progression. Quitting smoking and using protective masks in high-risk environments is strongly recommended. ",
+ "Maintain a strong immune foundation through healthy lifestyle habits: Eating a balanced, anti-inflammatory diet rich in fruits, vegetables, whole grains, and omega-3 fatty acids supports overall immune regulation. Regular moderate exercise improves lung capacity, reduces systemic inflammation, and helps manage fatigue. ",
+ "Protect and monitor your eyes: Since eye involvement can be silent but vision-threatening, anyone diagnosed with sarcoidosis should have regular ophthalmologic exams (at least annually, or as recommended by your doctor) to catch and treat uveitis early. ",
+ "Stay up-to-date with vaccinations and preventive care: Because sarcoidosis and its treatments (especially steroids and immunosuppressants) can weaken your immune system, staying current on flu, pneumonia, and other recommended vaccines reduces the risk of serious infections. ",
+ "Manage stress and prioritize sleep: Chronic stress and poor sleep can exacerbate inflammation and fatigue. Incorporating stress-reduction techniques like mindfulness, yoga, deep breathing, or counseling can improve symptom management and overall wellbeing. ",
+ "Adhere strictly to prescribed medications and follow-up schedules: If you are on treatment, taking medications exactly as directed and attending regular monitoring appointments is crucial to prevent flare-ups, minimize side effects, and catch organ complications early. Never stop steroids abruptly without medical supervision. ",
+ "Educate yourself and advocate for your health: Sarcoidosis is often misunderstood and can be difficult to diagnose. Keeping detailed symptom logs, asking questions, and seeking care from specialists experienced with the disease ensures you receive the most accurate diagnosis and personalized treatment plan. ",
+],
+simpleExplanation: {
+whatIs:
+ "Sarcoidosis is like your body’s immune system getting overzealous and building tiny, unnecessary fortresses in your organs. These fortresses are called granulomas — small clusters of immune cells that form when your body thinks it’s fighting something dangerous, even when there isn’t a real threat. They most commonly show up in your lungs and lymph nodes, but they can pop up almost anywhere. For many people, these granulomas cause mild symptoms or disappear on their own. But in others, they stick around, causing inflammation, stiffness, and fatigue that can interfere with daily life. The good news is that with the right care, most people manage it well and live full, normal lives. ",
+howYouGet:
+ "Doctors still aren’t completely sure why sarcoidosis happens, but it seems to be a mix of your genes and something in your environment that flips a switch in your immune system. If you have a family history or certain genetic backgrounds, your immune system might be more prone to overreacting. When exposed to something like a common virus, bacteria, dust, or chemical, your immune system goes into overdrive and forms those granulomas. It’s not contagious, you can’t catch it from someone else, and it’s definitely not your fault. It’s just your body’s defense system getting a little too enthusiastic. ",
+howToFeel:
+ "It often starts with a nagging dry cough that just won’t quit, and you might feel short of breath when doing things that used to be easy, like walking up stairs. A deep, bone-weary fatigue is one of the most common complaints — it’s not just being tired, it’s feeling completely drained even after a full night’s sleep. Some people get skin rashes or tender bumps on their legs, while others notice eye irritation, blurry vision, or aching joints. In active phases, you might run a low-grade fever, sweat at night, or lose weight without trying. The symptoms can come and go, flare up during stress, or settle into a quiet background hum. It’s unpredictable, but knowing what to expect helps. ",
+howToGetBetter:
+ "Many people with mild sarcoidosis don’t need any treatment at all — their bodies naturally calm down and the granulomas fade over months or years. When symptoms are more active or affecting organs like the lungs, heart, or eyes, doctors usually start with corticosteroids (like prednisone) to dial down the inflammation. These work really well, but because long-term use has side effects, doctors often add other immune-modulating medications so you can take lower steroid doses. Regular check-ups, lung function tests, and eye exams are crucial to catch changes early. Staying active, eating well, avoiding smoke and irritants, and managing stress all help your body stay balanced. While there’s no cure yet, modern treatments are highly effective, and most people with sarcoidosis live completely normal, active lives. You’re not alone in this — with a good care team and consistent management, you can absolutely thrive. ",
+},
+severity:  "moderate ",
+commonness:  "uncommon ",
+},
+
+
+
+
+
+
+
+
   // Nervous System
   {
     id: "depression",
@@ -961,6 +1261,91 @@ export const diseases: Disease[] = [
         "Your body is the real hero and will win the fight against the cold all by itself without needing any special medicine. To help your body perform at its best, you should rest as much as possible (your body heals faster when you sleep), drink plenty of water or juice to stay hydrated, and eat nutritious foods to give your body energy. Store-bought medicines can't actually cure the cold or make it go away faster, but they can make uncomfortable symptoms feel better while your immune system does the hard work of defeating the virus.",
     },
     severity: "mild",
+    commonness: "very-common",
+  },
+
+  {
+    id: "asthma",
+    name: "Asthma",
+    category: "Chronic Respiratory Disorder",
+    bodySystem: "respiratory",
+    summary:
+      "Asthma is a chronic condition in which the airways — the tubes that carry air in and out of your lungs — become inflamed, narrowed, and oversensitive. When exposed to certain triggers, these airways tighten, swell, and fill with extra mucus, making it hard to breathe. Think of your airways like a flexible garden hose: in asthma, the hose walls are perpetually irritated and prone to sudden squeezing, which chokes the airflow. Between episodes, many people breathe completely normally — asthma isn't a constant state of struggling to breathe, but rather an underlying sensitivity that can flare unpredictably. With the right treatment plan, the vast majority of people with asthma control their symptoms well, exercise freely, sleep through the night, and live full, unrestricted lives. Asthma is not a weakness, not caused by anxiety alone, and not something people simply need to 'push through.' It's a real, measurable inflammatory condition of the airways — and it responds very well to modern medicine.",
+    symptoms: [
+      "Wheezing: A high-pitched whistling or squeaky sound when breathing — particularly noticeable on exhaling. It's caused by air being forced through narrowed airways. Not all asthma causes wheezing, and not all wheezing is asthma.",
+      "Shortness of breath: A feeling of not being able to get enough air in, often described as trying to breathe through a wet towel or a half-closed straw. Can range from mild breathlessness on exertion to a frightening inability to speak in full sentences.",
+      "Chest tightness: A pressing, squeezing, or heavy sensation in the chest — as though a band is being tightened around the ribcage. Often the first symptom people notice, sometimes mistaken for a cardiac problem.",
+      "Persistent or recurring cough: Especially at night or early morning. In cough-variant asthma, this may be the only symptom — a dry, irritating cough that doesn't respond to typical cold remedies and worsens with cold air, exercise, or laughter.",
+      "Nighttime and early-morning worsening: Asthma symptoms classically follow a circadian pattern, peaking between 2–4 AM and again around waking. This is driven by natural dips in cortisol, changes in airway tone, and increased exposure to dust mites and cool air.",
+      "Exercise-induced symptoms: Breathing hard during or after physical activity — especially in cold, dry air — can trigger bronchoconstriction. Symptoms typically peak 5–15 minutes after exercise stops. This is called exercise-induced bronchoconstriction (EIB) and can occur even in people with otherwise well-controlled asthma.",
+      "Worsening with triggers: Symptoms predictably flare after exposure to specific triggers such as allergens, smoke, cold air, strong smells, respiratory infections, or stress. Tracking trigger patterns is key to management.",
+      "Symptom-free intervals: Between flares, breathing can be completely normal — a hallmark feature that distinguishes asthma from conditions like COPD, where airflow limitation tends to be persistent.",
+      "Severe attack signs (emergency): Extreme breathlessness at rest, inability to speak more than a few words, bluish lips or fingernails (cyanosis), use of neck or abdominal muscles to breathe, no improvement from a rescue inhaler, silent chest (no wheeze audible — a dangerous sign that airflow is critically reduced). These require immediate emergency care.",
+      "Important Note: Asthma presentation varies enormously. Some people only experience symptoms during exercise or illness; others deal with daily symptoms. Severity can also change over time — childhood asthma sometimes remits in adulthood, only to return later.",
+    ],
+    causes: [
+      "Airway inflammation and hyperresponsiveness (core mechanism): In asthma, the lining of the airways is chronically inflamed — even when no symptoms are present. This inflammation makes airways hypersensitive, so they overreact to stimuli that wouldn't affect normal airways, triggering bronchoconstriction (muscle tightening), mucosal swelling, and excess mucus production.",
+      "Genetic predisposition: Asthma runs strongly in families. Multiple genes are implicated, particularly those related to immune regulation and airway structure. Having a parent with asthma roughly doubles a child's risk.",
+      "Allergic sensitization (atopy): The most common underlying driver, especially in childhood-onset asthma. People with eczema, hay fever, or food allergies (the 'atopic triad') are at significantly higher risk. The immune system is primed to overreact to harmless proteins — like pollen or pet dander — triggering an inflammatory cascade in the airways.",
+      "Common allergen triggers: Dust mites (the leading indoor allergen worldwide), pet dander (especially cats and dogs), mold spores, cockroach droppings, pollen (grass, tree, weed). These provoke allergic asthma.",
+      "Non-allergic triggers: Cold or dry air, exercise, tobacco smoke (active and passive), air pollution (particulate matter, ozone, nitrogen dioxide), strong odors or fumes (cleaning products, paint, perfume), respiratory viral infections (especially rhinovirus — the common cold), and stress or strong emotions.",
+      "Respiratory infections in early childhood: Viral infections — particularly RSV and rhinovirus — in the first years of life can disrupt normal immune development and significantly increase asthma risk. The 'hygiene hypothesis' suggests that reduced early microbial exposure in developed countries has contributed to rising asthma rates.",
+      "Occupational exposures: Asthma can develop in adulthood as a result of repeated workplace exposure to sensitizing agents — flour dust, latex, isocyanates (in spray painting and foam manufacturing), wood dust, or chemical fumes. This is called occupational asthma and can be severe.",
+      "Obesity: Excess body weight increases mechanical pressure on the lungs, promotes systemic inflammation, and alters airway function. Obesity is an independent risk factor for developing asthma and for making existing asthma harder to control.",
+      "Hormonal factors: Asthma often changes around puberty (more common in boys before, more common in women after), during menstruation, pregnancy, and menopause — suggesting a hormonal influence on airway inflammation.",
+      "Aspirin and NSAID sensitivity: In a subset of patients (aspirin-exacerbated respiratory disease, or AERD), nonsteroidal anti-inflammatory drugs trigger severe bronchoconstriction — a separate mechanism from allergic asthma.",
+      "Gastroesophageal reflux disease (GERD): Acid refluxing into the esophagus can trigger airway reflexes and worsen asthma, particularly nighttime symptoms.",
+    ],
+    diagnosis: [
+      "Detailed Medical History: Your doctor will ask about the nature, timing, and pattern of symptoms; known triggers; personal or family history of allergies, eczema, or hay fever; occupational exposures; smoking history; and medication use. The symptom pattern is often the strongest clue.",
+      "Physical Examination: The doctor will listen to your lungs with a stethoscope for wheeze, and examine the nose and throat for signs of allergic disease (nasal polyps, swollen turbinates). Between attacks, the exam is often completely normal.",
+      "Spirometry (Key Diagnostic Test): You blow into a device that measures how much air you can exhale and how fast. Asthma typically shows an obstructive pattern — reduced FEV1/FVC ratio — that improves significantly (≥12% and 200 mL) after a bronchodilator (salbutamol inhaler). This reversibility is a diagnostic hallmark.",
+      "Peak Flow Measurement: A handheld device measures your peak expiratory flow rate. Variability in peak flow readings over time (especially morning-to-evening variation >20%) supports an asthma diagnosis. Patients can monitor this at home to detect early deterioration.",
+      "Bronchial Provocation Testing: If spirometry is normal but asthma is still suspected, a methacholine or exercise challenge test deliberately exposes the airways to a trigger to see if they respond with bronchoconstriction. A positive test confirms airway hyperresponsiveness.",
+      "Fractional Exhaled Nitric Oxide (FeNO): A quick, non-invasive breath test that measures airway inflammation. Elevated FeNO (>40 ppb in adults) suggests eosinophilic (allergic-type) inflammation and predicts good response to inhaled corticosteroids.",
+      "Allergy Testing: Skin-prick tests or specific IgE blood tests (RAST/ImmunoCAP) identify which allergens are sensitizing the immune system, guiding allergen avoidance strategies and immunotherapy decisions.",
+      "Chest X-Ray: Usually normal in asthma, but ordered to rule out other causes of symptoms (pneumonia, pneumothorax, heart failure). A CT scan is reserved for cases where alternative diagnoses are suspected.",
+      "Differential Diagnosis: Conditions that can mimic asthma include vocal cord dysfunction, COPD, heart failure, bronchiectasis, and eosinophilic granulomatosis. A thorough workup distinguishes these.",
+      "Asthma Severity Classification: Once diagnosed, asthma is classified as intermittent, mild persistent, moderate persistent, or severe persistent — based on symptom frequency, nighttime awakening, lung function, and impact on daily activities. This guides the treatment step.",
+    ],
+    treatment: [
+      "The Two Pillars of Asthma Treatment: All asthma management rests on (1) controller medications that reduce underlying inflammation long-term, and (2) reliever medications that rapidly open the airways during symptoms. Most people need both.",
+      "Reliever (Rescue) Inhalers — Short-Acting Beta-2 Agonists (SABAs): Salbutamol (albuterol) is the most widely used. It rapidly relaxes the smooth muscle around the airways, providing relief within minutes. Used on demand for symptoms and before exercise. Frequent use (more than 2 days/week) signals the need to step up controller therapy.",
+      "Inhaled Corticosteroids (ICS) — The Cornerstone of Control: Medications like beclometasone, budesonide, and fluticasone are the most effective long-term controllers for persistent asthma. Taken daily by inhaler, they reduce airway inflammation, decrease sensitivity, and dramatically lower the risk of severe attacks and hospitalizations. These are not the same as anabolic steroids — they are safe for long-term use at standard doses.",
+      "Long-Acting Beta-2 Agonists (LABAs): Formoterol or salmeterol, always combined with an ICS (never used alone in asthma). These provide prolonged bronchodilation over 12 hours, improving symptom control for moderate-to-severe asthma.",
+      "ICS/Formoterol Single Inhaler Therapy (MART): A major advance in asthma care — a single inhaler combining an ICS with fast-acting formoterol is used both as a daily controller AND as a rescue inhaler. This 'one inhaler' approach simplifies treatment and is now the preferred strategy for many patients.",
+      "Leukotriene Receptor Antagonists (LTRAs): Montelukast, taken as a daily tablet, blocks inflammatory signaling molecules in the airway. Useful as an add-on or alternative, especially in aspirin-sensitive asthma and allergic asthma with co-existing rhinitis.",
+      "Biologics for Severe Asthma: For patients with severe, uncontrolled asthma despite high-dose ICS/LABA, injectable biologic therapies target specific inflammatory pathways. Omalizumab (anti-IgE), mepolizumab and benralizumab (anti-eosinophil), and dupilumab (anti-IL-4/IL-13) can dramatically reduce attacks in carefully selected patients.",
+      "Allergen Immunotherapy (Desensitization): Subcutaneous injections or sublingual tablets/drops gradually train the immune system to tolerate specific allergens, reducing allergic reactivity over years. Particularly effective for house dust mite and grass pollen-triggered asthma.",
+      "Short-Course Oral Corticosteroids: Prednisolone tablets are used for 5–7 days to treat acute flares that don't respond to reliever inhalers. They rapidly suppress severe inflammation. Long-term use carries significant side effects and is avoided where possible.",
+      "Trigger Avoidance: Identifying and reducing exposure to personal triggers — covering mattresses and pillows in dust-mite-proof covers, removing carpets, keeping pets out of bedrooms, avoiding tobacco smoke, using air purifiers for mold and pollen — meaningfully reduces attack frequency.",
+      "Written Asthma Action Plan: Every person with asthma should have a personalized written plan — developed with their doctor — detailing daily controller use, how to recognize worsening, when to increase reliever use, when to start oral steroids, and when to seek emergency care. This single intervention reduces hospitalizations significantly.",
+      "Emergency Treatment: A severe acute attack (status asthmaticus) requires high-dose nebulized bronchodilators, systemic corticosteroids, controlled oxygen, and sometimes intravenous magnesium sulfate or intubation in an ICU setting.",
+    ],
+    prevention: [
+      "Identify and Avoid Your Personal Triggers: Keep a symptom diary to map patterns to exposures. Common controllable triggers include dust mites, pet dander, mold, tobacco smoke, certain foods (sulfites in wine and dried fruit), aspirin/NSAIDs, and specific workplace chemicals.",
+      "Control Allergen Exposure at Home: Encase mattresses, pillows, and duvets in allergen-proof covers. Wash bedding weekly at 60°C. Reduce soft furnishings, soft toys, and carpets in bedrooms. Use a high-efficiency particulate (HEPA) air purifier. Keep humidity below 50% to inhibit dust mites and mold.",
+      "Don't Smoke — and Avoid Secondhand Smoke: Tobacco smoke is one of the most potent asthma irritants. It reduces the effectiveness of inhaled corticosteroids and dramatically accelerates lung function decline. If you smoke, stopping is the single most impactful thing you can do for your asthma.",
+      "Take Your Controller Inhaler Every Day: Even when you feel completely well. Inhaled corticosteroids prevent inflammation from building up silently — stopping them because symptoms have improved often leads to a rebound flare weeks later.",
+      "Use Your Inhaler Correctly: Studies consistently show that more than 70% of patients use inhalers incorrectly, significantly reducing drug delivery to the lungs. Ask your pharmacist or nurse to check your technique regularly, and consider a spacer device with pressurized inhalers.",
+      "Get Vaccinated: Annual flu vaccination and the pneumococcal vaccine are recommended for all people with asthma. Respiratory infections are the leading trigger for severe attacks.",
+      "Monitor Your Lung Function: Regular peak flow readings at home can detect deteriorating asthma days before symptoms become severe, allowing early action.",
+      "Manage Co-existing Conditions: Treat allergic rhinitis aggressively (nasal corticosteroid sprays, antihistamines) — 'one airway, one disease.' Address GERD, obesity, and obstructive sleep apnea, all of which worsen asthma control.",
+      "Warm Up Before Exercise: A gentle 10–15 minute warm-up using interval exercise can induce a refractory period that reduces exercise-induced bronchoconstriction. Pre-treatment with a SABA inhaler 15 minutes before exercise is also highly effective.",
+      "Reduce Indoor Air Pollution: Use exhaust fans when cooking, avoid burning candles or incense, choose fragrance-free cleaning products, and ventilate well when painting or using chemical cleaners.",
+      "Attend Regular Asthma Reviews: Asthma is dynamic — what works at 25 may not work at 45. An annual review with your doctor or asthma nurse assesses control, adjusts medication, checks inhaler technique, and updates your action plan.",
+    ],
+    simpleExplanation: {
+      whatIs:
+        "Asthma is like having airways that are always a little irritated and on high alert — like a sensitive car alarm that goes off at the slightest touch. The tubes that carry air to your lungs are chronically inflamed, meaning they're swollen and touchy even when you're not having symptoms. When something sets them off — cold air, a cat, a run, a cold virus — the muscles around those tubes squeeze tight, the lining swells further, and extra mucus clogs the space, making it genuinely hard to breathe. In between flare-ups, most people with asthma breathe completely normally. It's not that your lungs are permanently weak — it's that they have a hair-trigger that needs to be carefully managed.",
+      howYouGet:
+        "Asthma is mostly something you're born predisposed to — it runs strongly in families. If you also tend toward allergies or eczema, your immune system is wired to overreact to things that don't bother most people, and the airways are often where that overreaction shows up. Early childhood respiratory infections, growing up around cigarette smoke, or being born in a highly urbanized environment can all tip the scales. Sometimes asthma develops in adulthood from repeated exposure to something at work — chemicals, flour, or dust. It's not caused by being unfit, anxious, or imagining it — there are measurable changes in the airway that explain every symptom.",
+      howToFeel:
+        "On a bad day, asthma feels like trying to breathe through a damp cloth that someone keeps pulling tighter. Your chest feels heavy and squeezed, you might hear a whistling sound when you breathe out, and every breath feels like work. At night it's often worst — you wake at 3 AM feeling like you can't get enough air in. After exercise, your lungs feel like they've seized up just when you stop moving. On a good day — with the right treatment — you feel absolutely nothing. Most people with well-controlled asthma go weeks or months without any symptoms at all. The goal of treatment is to make every day feel like a good day.",
+      howToGetBetter:
+        "Asthma is one of the most treatable chronic conditions in medicine. The magic combination is a daily controller inhaler (usually a steroid inhaler that calms the inflammation) plus a rescue inhaler (a quick-acting one you use when symptoms strike). It's like the difference between a smoke detector and a fire extinguisher — you need both. Taking the controller inhaler every day, even when you feel great, is the single most important habit to build. Beyond that: knowing your triggers and dodging them, using your inhaler correctly, getting a flu shot every year, and having a written action plan for what to do when things get worse. With those pieces in place, asthma becomes a background condition that barely interrupts your life.",
+    },
+    severity: "moderate",
     commonness: "very-common",
   },
 
@@ -1372,6 +1757,74 @@ export const diseases: Disease[] = [
     commonness: "uncommon",
   },
 
+  {
+id:  "goodpasture-syndrome ",
+name:  "Goodpasture Syndrome (Anti-GBM Disease) ",
+category:  "Autoimmune/Pulmonary-Renal Disease ",
+bodySystem:  "immune ",
+summary:
+ "Goodpasture syndrome is a rare but life-threatening autoimmune disease in which your immune system mistakenly produces antibodies that attack a specific protein called type IV collagen, which forms the structural foundation of tiny blood vessels in your lungs and kidneys. This rogue immune response causes severe bleeding in the lungs and rapid, progressive kidney failure. Unlike many chronic conditions that develop slowly, Goodpasture syndrome often strikes suddenly and progresses quickly over days to weeks, making it a true medical emergency that requires immediate hospitalization and aggressive treatment. The disease gets its name from Dr. Ernest Goodpasture, who first described it in 1919. While historically devastating, modern medicine has transformed the outlook for patients — with early recognition and prompt treatment, the vast majority of people survive and can preserve kidney function or recover from lung damage. Long-term management typically involves immunosuppressive medications and, in cases of irreversible kidney damage, dialysis or kidney transplantation. ",
+symptoms: [
+ "Coughing up blood (hemoptysis) that can range from occasional blood-streaked sputum to large, alarming volumes of bright red blood. This occurs because the attacking antibodies damage the delicate capillaries in the lungs, causing blood to leak into the air sacs. The amount of bleeding doesn't always correlate with how much your lungs are actually damaged. ",
+ "Rapidly worsening shortness of breath and a feeling of suffocation or drowning, even at rest. As blood fills the alveoli (air sacs), oxygen can't properly enter your bloodstream, leading to dangerous drops in blood oxygen levels and extreme respiratory distress. ",
+ "Chest pain, tightness, or a burning sensation behind the breastbone, often worsening with deep breaths or coughing. This is caused by lung tissue irritation and bleeding within the airways. ",
+ "Profound fatigue, weakness, and pallor (pale skin) that develops quickly. This is primarily due to anemia from internal bleeding in the lungs and kidneys, combined with the body's massive inflammatory response and failing kidney function. ",
+ "Decreased urine output (oliguria) or complete absence of urine (anuria), accompanied by dark, tea-colored, bloody, or foamy urine. The kidneys' filtering units (glomeruli) become inflamed and scarred, preventing them from properly filtering waste and fluid from the blood. ",
+ "Swelling (edema) in the legs, ankles, feet, face, or around the eyes. As kidney function declines, fluid and sodium build up in the body instead of being excreted, causing rapid, noticeable puffiness and sudden weight gain. ",
+ "High blood pressure that develops suddenly or worsens dramatically. Damaged kidneys struggle to regulate fluid balance and release hormones that control blood pressure, leading to dangerous spikes that can cause headaches, blurred vision, or nosebleeds. ",
+ "Nausea, vomiting, loss of appetite, and a metallic taste in the mouth. These are classic signs of uremia — the buildup of toxic waste products in the blood that healthy kidneys normally remove. As toxins accumulate, they affect the digestive system and overall wellbeing. ",
+ "Symptoms typically develop rapidly over days to a few weeks, not months or years. The sudden onset of combined lung bleeding and kidney failure is a hallmark of the disease and should trigger immediate emergency medical evaluation. ",
+ "Important Note: Some people primarily experience lung symptoms first, while others notice kidney problems before any bleeding occurs. In a small percentage of cases, symptoms may appear sequentially rather than simultaneously, which can sometimes delay recognition of the underlying connection. ",
+],
+causes: [
+ "Autoimmune production of anti-glomerular basement membrane (anti-GBM) antibodies: This is the direct cause of the disease. For reasons not fully understood, your immune system loses its ability to distinguish 'self' from 'foreign' and produces antibodies specifically targeting the alpha-3 chain of type IV collagen — a crucial structural protein in the basement membranes of lung capillaries and kidney glomeruli. ",
+ "Genetic susceptibility: Certain inherited genes, particularly HLA-DRB1 and HLA-DQB1 alleles, significantly increase the risk of developing the condition. These genes influence how the immune system recognizes proteins, making some people genetically predisposed to misidentify their own collagen as a threat. ",
+ "Environmental triggers that 'unlock' the disease in susceptible individuals: In people with the right genetic makeup, exposure to certain environmental factors appears to expose or alter the type IV collagen protein, triggering the autoimmune attack. Known triggers include cigarette smoke (which damages lung capillaries and makes the collagen more visible to the immune system), viral respiratory infections (like influenza), and exposure to hydrocarbon solvents, gasoline, or other industrial chemicals. ",
+ "Age and sex patterns: Goodpasture syndrome has a bimodal age distribution, meaning it most commonly strikes in two distinct groups: young men in their 20s and 30s (who tend to have more severe lung bleeding) and older adults in their 50s and 60s (more often women, who typically present with predominant kidney failure). ",
+ "Immune system dysregulation: The condition represents a severe breakdown in immune tolerance. Unlike systemic autoimmune diseases like lupus that attack multiple tissues broadly, Goodpasture syndrome is highly specific — it targets only the basement membranes in the lungs and kidneys because that's where the targeted type IV collagen is most abundant and structurally critical. ",
+],
+diagnosis: [
+ "Blood test for anti-GBM antibodies: This is the definitive diagnostic test and is usually the first step when Goodpasture syndrome is suspected. It detects the presence of antibodies targeting the glomerular basement membrane. A positive result, combined with compatible symptoms, strongly confirms the diagnosis. ",
+ "Kidney biopsy: The gold standard for confirming kidney involvement and assessing the extent of damage. A tiny sample of kidney tissue is examined under a microscope using immunofluorescence staining, which reveals a characteristic 'linear' pattern of IgG antibodies deposited along the glomerular basement membrane. This linear pattern is unique to anti-GBM disease and distinguishes it from other causes of kidney inflammation. ",
+ "Urinalysis and blood chemistry tests: Urine tests typically show hematuria (blood), proteinuria (protein), and dysmorphic red blood cells or red blood cell casts — clear signs of glomerular damage. Blood tests reveal rapidly rising creatinine and blood urea nitrogen (BUN) levels, indicating acute kidney injury, along with anemia from internal bleeding. ",
+ "Chest X-ray or CT scan: Imaging of the lungs typically shows patchy, bilateral infiltrates or 'fluffy' opacities that represent blood filling the air spaces. These findings, especially when combined with unexplained shortness of breath and coughing up blood, strongly point toward pulmonary hemorrhage. ",
+ "Pulmonary function tests and bronchoscopy: While not always required, a diffusion capacity test (DLCO) often shows an abnormally high value initially because the hemoglobin in the leaked blood absorbs extra carbon monoxide during testing. Bronchoscopy with bronchoalveolar lavage can directly visualize and confirm active bleeding in the lungs. ",
+ "Complete blood count (CBC): Reveals anemia (low red blood cell count) due to lung bleeding and chronic inflammation, which helps explain fatigue, pallor, and shortness of breath. Platelet counts and clotting factors are typically normal, ruling out bleeding disorders. ",
+ "Rule-out testing: Doctors will order tests to exclude other conditions that cause combined lung and kidney disease (pulmonary-renal syndromes), such as granulomatosis with polyangiitis (GPA), microscopic polyangiitis (MPA), systemic lupus erythematosus (SLE), or severe infections. Specific antibody tests (like ANCA) help differentiate these conditions. ",
+],
+treatment: [
+ "IMMEDIATE EMERGENCY TREATMENT: Plasmapheresis (plasma exchange) — This is the cornerstone of acute management and must be started as soon as possible. Blood is removed from your body, the harmful anti-GBM antibodies are filtered out using a machine, and the cleaned blood is returned. This process is typically performed daily or every other day for 2-4 weeks until antibody levels drop to undetectable levels. It directly stops the ongoing attack on your lungs and kidneys. ",
+ "High-dose corticosteroids (pulse methylprednisolone): Given intravenously initially to rapidly and powerfully suppress the immune system and halt further antibody production and inflammation. This is usually followed by high-dose oral prednisone, which is gradually tapered over several months as the disease comes under control. ",
+ "Cyclophosphamide or other immunosuppressive agents: Used alongside steroids to shut down the immune cells responsible for making the harmful antibodies. Cyclophosphamide is typically given daily or in pulses for 2-3 months, followed by a milder maintenance drug like azathioprine or mycophenolate to prevent relapse. This combination is highly effective at inducing remission. ",
+ "Supportive care for lung hemorrhage: High-flow oxygen therapy is essential to maintain blood oxygen levels. In severe cases, mechanical ventilation (a breathing machine) may be temporarily required until bleeding subsides and lung function recovers. Blood transfusions are given if anemia becomes severe or life-threatening. ",
+ "Kidney failure management: If kidney function has declined severely, temporary dialysis (hemodialysis) is started to filter toxins and remove excess fluid while the kidneys recover. Some patients regain enough function to stop dialysis after weeks or months; others with irreversible scarring may require long-term dialysis. ",
+ "Blood pressure and fluid management: Medications are used to control dangerously high blood pressure and protect remaining kidney function. Diuretics may be carefully used to manage fluid overload, but only under close supervision to avoid worsening kidney injury. ",
+ "Intensive care unit (ICU) monitoring: Due to the rapid progression and life-threatening nature of the disease, patients are initially managed in the ICU with continuous monitoring of oxygen levels, kidney function, fluid balance, and bleeding status. ",
+ "Long-term immunosuppression and monitoring: After the acute phase, patients typically remain on lower-dose immunosuppressive medications for 6-12 months to prevent relapse. Regular blood tests monitor kidney function, antibody levels, and medication side effects. Most patients achieve complete remission and relapses are rare if treatment is completed fully. ",
+ "Kidney transplantation: For patients who sustain permanent kidney failure, transplantation is a highly successful option once anti-GBM antibodies have been undetectable for at least 6-12 months. The disease does not recur in the transplanted kidney, and long-term outcomes are excellent. ",
+],
+prevention: [
+ "No specific prevention exists: Because Goodpasture syndrome is a rare autoimmune condition triggered by a complex interplay of genetics and unpredictable environmental factors, there is no known way to prevent it from occurring in the first place. ",
+ "Avoid smoking and respiratory irritants: Cigarette smoke is the most well-documented environmental trigger for lung involvement in Goodpasture syndrome. It damages lung capillaries, exposes the targeted collagen, and dramatically increases the risk and severity of pulmonary hemorrhage. Quitting smoking and avoiding secondhand smoke, vaping, and chemical fumes is critical for at-risk individuals. ",
+ "Minimize exposure to hydrocarbon solvents: Occupational or recreational exposure to gasoline, paint thinners, kerosene, and other organic solvents has been linked to triggering the disease in genetically susceptible people. Using proper ventilation, protective equipment, and following safety guidelines can reduce this risk. ",
+ "Seek immediate medical attention for warning signs: Because the disease progresses rapidly, early diagnosis is the single most important factor in preventing permanent organ damage. If you develop sudden shortness of breath, cough up blood, or notice rapidly declining urine output with swelling, go to the emergency room immediately. Don't wait to see if it improves. ",
+ "Regular monitoring for high-risk individuals: While routine screening isn't feasible for the general public, people with a strong family history of autoimmune diseases or known genetic susceptibility should be aware of the symptoms and seek prompt evaluation if they develop respiratory or kidney issues. ",
+ "Complete prescribed treatment and follow-up: If diagnosed, strictly adhering to the full course of plasmapheresis, immunosuppressive therapy, and monitoring appointments is essential to prevent relapse and maximize organ recovery. Stopping medications prematurely is one of the few preventable causes of disease recurrence. ",
+],
+simpleExplanation: {
+whatIs:
+ "Goodpasture syndrome is like your body's security system making a catastrophic mistake and attacking the very foundation of your lungs and kidneys. Your immune system produces antibodies that are supposed to fight infections, but instead they lock onto a specific protein that acts like the structural 'drywall' in your lung and kidney blood vessels. This causes those tiny vessels to leak blood into your lungs and stop filtering properly in your kidneys. It's rare, it comes on fast, and it's a medical emergency — but here's the crucial part: it's highly treatable if caught early, and modern medicine can stop the attack and give your organs a chance to heal. ",
+howYouGet:
+ "It's an autoimmune disease, which means it's not contagious and you can't catch it from anyone. It happens when people with certain genetic makeups encounter something in their environment — most commonly cigarette smoke, a respiratory infection, or chemical solvents — that somehow exposes a hidden protein in their lung and kidney tissues. The immune system mistakes this protein for an invader and launches a full-scale attack. It's incredibly rare, affecting about one in a million people, and it often strikes young men or older adults. You can't predict it, and it's absolutely not your fault. ",
+howToFeel:
+ "It usually hits suddenly and can be frightening. You might start coughing up blood — sometimes just streaks, sometimes enough to panic — and feel like you're suffocating even when you're sitting still. Your kidneys quickly struggle to do their job, so you might stop peeing as much, notice dark or bloody urine, and see rapid swelling in your legs, face, or around your eyes. You'll likely feel exhausted, look pale, and maybe feel nauseous or notice a metallic taste in your mouth. The symptoms worsen over days, not months, which is why it requires emergency care. ",
+howToGetBetter:
+ "This is a medical emergency, but the treatment is highly effective when started quickly. Doctors use a procedure called plasmapheresis — think of it like an oil change for your blood — where they filter out the harmful antibodies and return clean blood to your body. At the same time, they give you strong medications to shut down the misguided immune response and give your lungs and kidneys time to recover. Some people need temporary dialysis while their kidneys heal, and many make a full recovery. For those with permanent kidney damage, a transplant is a very successful long-term option. The key is acting fast: if you experience these symptoms, get to a hospital immediately. With prompt treatment, most people survive and go on to live normal, healthy lives. ⚕️💙 ",
+},
+severity:  "severe ",
+commonness:  "rare ",
+}, 
+
   // Integumentary System
   {
     id: "melanoma",
@@ -1708,394 +2161,40 @@ export const diseases: Disease[] = [
   },
 
   //Start here
-  {
-    id: "deep-vein-thrombosis",
-    name: "Deep Vein Thrombosis (DVT)",
-    category: "Vascular/Blood Clotting Disorder",
-    bodySystem: "cardiovascular",
-    summary:
-      "A serious condition where a blood clot (thrombus) forms in one or more deep veins, usually in the legs. The primary danger is that the clot can break loose, travel through the bloodstream to the lungs, and cause a life-threatening pulmonary embolism. DVT requires immediate medical treatment to prevent complications.",
-    symptoms: [
-      "Swelling in the affected leg (or arm), often starting in the calf",
-      "Pain or tenderness in the leg, often starting in the calf and feeling like cramping or soreness",
-      "Red or discolored skin on the affected leg",
-      "Warmth in the affected leg",
-      "Enlarged or prominent surface veins",
-      "Leg fatigue or heaviness",
-      "Pain that worsens when walking or standing",
-      "Skin that feels tight or stretched",
-      "About half of people with DVT have no symptoms (silent DVT)",
-      "If clot travels to lungs (pulmonary embolism): sudden shortness of breath, chest pain, rapid heart rate, coughing up blood",
-    ],
-    causes: [
-      "Prolonged immobility: long flights, bed rest, sitting for extended periods",
-      "Surgery, especially orthopedic, abdominal, or pelvic procedures",
-      "Cancer and cancer treatments (chemotherapy, radiation)",
-      "Pregnancy and postpartum period (up to 6 weeks after delivery)",
-      "Hormonal medications: birth control pills, hormone replacement therapy",
-      "Inherited blood clotting disorders (thrombophilia)",
-      "Previous history of DVT or pulmonary embolism",
-      "Age over 60 (though can occur at any age)",
-      "Obesity",
-      "Smoking",
-      "Heart failure or inflammatory bowel disease",
-      "Injury or trauma to veins",
-    ],
-    diagnosis: [
-      "Clinical assessment using Wells score or other risk assessment tools",
-      "D-dimer blood test - elevated levels suggest possible clot formation",
-      "Duplex ultrasound - most common and effective test to visualize clots in veins",
-      "CT venography or MR venography for detailed imaging when ultrasound is inconclusive",
-      "Contrast venography (rarely used) - injection of dye to visualize veins on X-ray",
-      "Physical examination checking for swelling, warmth, tenderness, and color changes",
-      "Blood tests for clotting disorders if recurrent DVT occurs",
-      "Immediate evaluation if pulmonary embolism is suspected",
-    ],
-    treatment: [
-      "Anticoagulant medications (blood thinners): heparin initially, followed by warfarin, or newer agents like rivaroxaban, apixaban",
-      "Treatment typically lasts 3-6 months or longer depending on risk factors",
-      "Compression stockings to reduce swelling and prevent post-thrombotic syndrome",
-      "Thrombolytic therapy (clot-busting drugs) for severe cases with risk of limb loss",
-      "Inferior vena cava (IVC) filter if anticoagulation is contraindicated",
-      "Early mobilization and walking as soon as safely possible",
-      "Pain management with over-the-counter pain relievers",
-      "Catheter-directed thrombolysis or thrombectomy for extensive clots",
-      "Regular monitoring of blood clotting times if on warfarin",
-    ],
-    prevention: [
-      "Stay active and avoid prolonged immobility - move around every 1-2 hours during long trips 🚶‍♀️",
-      "Wear compression stockings during long flights or car rides if at high risk",
-      "Exercise legs while sitting: ankle pumps, calf raises, leg extensions",
-      "Stay well-hydrated, especially during travel",
-      "Maintain healthy weight through diet and exercise",
-      "Don't smoke and avoid secondhand smoke",
-      "Take prescribed blood thinners exactly as directed if you're at high risk",
-      "Use pneumatic compression devices after surgery if recommended",
-      "Get up and move as soon as possible after surgery or illness",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Deep vein thrombosis is like having a traffic jam in the deep highways of your circulatory system, except instead of cars, it's a blood clot blocking the flow. These clots form in the large veins deep inside your legs (or sometimes arms), kind of like how leaves and debris can clog a storm drain during heavy rain.",
-      howYouGet:
-        "It usually happens when blood flow slows down, gets thicker, or when the blood vessel wall gets damaged - doctors call this Virchow's triad. Long periods of sitting (like on airplanes), surgery, pregnancy, or certain medications can make your blood more likely to clot. Think of it like how water in a slow-moving stream is more likely to freeze than water in a rushing river.",
-      howToFeel:
-        "Your leg might feel like it has a really bad muscle cramp that won't go away, especially in your calf. The leg often swells up, feels warm to the touch, and might look red or purple. Some people say it feels like they have a charley horse that just won't stop, or like their leg is stuffed into a sock that's too tight.",
-      howToGetBetter:
-        "The most important treatment is blood thinning medication that prevents the clot from getting bigger and stops new clots from forming - think of it like changing thick honey back into thin water so it can flow freely again. The body is amazing at dissolving clots naturally over time, but the medicine gives it a helping hand. Most people recover completely, though you'll need to take the medicine for several months. The key is getting treated quickly to prevent the clot from traveling to your lungs, which can be dangerous. Many people go on to live completely normal lives after DVT! 💊🩸",
-    },
-    severity: "severe",
-    commonness: "uncommon",
-  },
-
-  {
-    id: "varicose-veins",
-    name: "Varicose Veins",
-    category: "Vascular/Venous Disorder",
-    bodySystem: "cardiovascular",
-    summary:
-      "Enlarged, twisted, and swollen veins that are visible under the skin, most commonly appearing in the legs and feet. They occur when the one-way valves in veins become weakened or damaged, causing blood to pool and veins to stretch. While often considered a cosmetic concern, they can cause discomfort and lead to complications if severe.",
-    symptoms: [
-      "Visible, bulging veins that appear dark purple, blue, or flesh-colored",
-      "Twisted, rope-like appearance of affected veins",
-      "Aching or heavy feeling in legs, especially after standing or sitting for long periods",
-      "Burning, throbbing, muscle cramping, or swelling in lower legs",
-      "Worsened pain after sitting or standing for long periods",
-      "Itching around one or more of the veins",
-      "Skin discoloration around varicose veins",
-      "Restless legs, especially at night",
-      "Some people have no symptoms other than the visible veins",
-      "In severe cases: skin ulcers, blood clots, or bleeding from the veins",
-    ],
-    causes: [
-      "Weakened or damaged one-way valves in veins that normally prevent blood from flowing backward",
-      "Age - vein walls and valves weaken over time",
-      "Gender - women are more likely due to hormonal changes during pregnancy, menstruation, and menopause",
-      "Pregnancy - increased blood volume and hormonal changes, plus pressure from growing uterus",
-      "Family history and genetics",
-      "Prolonged standing or sitting, especially in occupations requiring long periods on feet",
-      "Obesity - extra weight puts additional pressure on veins",
-      "Lack of physical activity leading to poor muscle tone in legs",
-      "Previous leg injury or trauma",
-      "Deep vein thrombosis (blood clots) that damage vein valves",
-    ],
-    diagnosis: [
-      "Physical examination with patient standing to make veins more visible",
-      "Medical history including family history, occupation, and symptom patterns",
-      "Duplex ultrasound to check blood flow direction and identify valve problems",
-      "Visual inspection of skin color changes, swelling, or ulcers",
-      "Assessment of pain patterns and activities that worsen symptoms",
-      "Venography (rarely needed) using contrast dye to visualize vein structure",
-      "Evaluation for underlying venous insufficiency",
-    ],
-    treatment: [
-      "Conservative management: Compression stockings, leg elevation, regular exercise, weight management",
-      "Lifestyle modifications: Avoid prolonged standing/sitting, elevate legs when resting",
-      "Sclerotherapy: Injection of solution that causes veins to close and fade",
-      "Laser treatments: Endovenous laser therapy (EVLT) to close off affected veins",
-      "Radiofrequency ablation: Heat energy closes problematic veins",
-      "High ligation and vein stripping: Surgical removal of affected veins",
-      "Ambulatory phlebectomy: Removal of smaller varicose veins through tiny incisions",
-      "Compression therapy to improve blood flow and reduce symptoms",
-      "Treatment of underlying venous insufficiency if present",
-    ],
-    prevention: [
-      "Exercise regularly to improve leg strength and circulation 🏃‍♀️",
-      "Maintain healthy weight to reduce pressure on leg veins",
-      "Avoid prolonged standing or sitting - take breaks to move around",
-      "Elevate legs when resting, especially above heart level when possible",
-      "Wear compression stockings if recommended, especially during long periods of standing",
-      "Avoid tight clothing around waist, groin, or legs that restricts blood flow",
-      "Choose low-heeled shoes over high heels for better calf muscle pump function",
-      "Don't cross legs when sitting for extended periods",
-      "Stay hydrated and eat a high-fiber diet to prevent constipation and straining",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Varicose veins are like garden hoses that have lost their shape and gotten all twisted and bulgy. Inside your veins are tiny one-way doors (valves) that are supposed to keep blood flowing up toward your heart. When these little doors get weak or broken, blood starts flowing backward and pools in the vein, making it stretch out like an overfilled balloon.",
-      howYouGet:
-        "They usually develop when the tiny valves in your leg veins stop working properly - it's like having broken check valves in plumbing that let water flow the wrong way. Standing or sitting for long periods, being pregnant, getting older, or having it run in your family can all make these valves more likely to fail. Think of your leg muscles as pumps that help squeeze blood back up to your heart - when they don't work well, blood can pool in your veins.",
-      howToFeel:
-        "Your legs might feel heavy, achy, or tired, especially at the end of the day or after standing for a long time. Some people describe it as feeling like their legs are full of lead or like they have a constant charley horse. The visible veins might also be tender to touch, and your legs might feel restless or crampy, especially at night.",
-      howToGetBetter:
-        "The good news is there are many effective treatments available! Simple things like wearing compression stockings, elevating your legs, and walking regularly can make a big difference in how you feel. For the appearance and more bothersome symptoms, doctors can close off the problem veins with injections, lasers, or minor procedures - it's like redirecting traffic to better roads when one highway is damaged. Your body is smart and will automatically reroute blood through healthy veins. Most treatments are minimally invasive and you can return to normal activities quickly! 🦵✨",
-    },
-    severity: "mild",
-    commonness: "very-common",
-  },
-
-  {
-    id: "asthma",
-    name: "Asthma",
-    category: "Chronic Respiratory Disease",
-    bodySystem: "respiratory",
-    summary:
-      "A chronic lung condition where the airways become inflamed, narrowed, and produce extra mucus, making it difficult to breathe. Airways are overly sensitive to certain triggers, causing episodes of wheezing, coughing, chest tightness, and shortness of breath. With proper management, most people with asthma can live active, normal lives.",
-    symptoms: [
-      "Wheezing - a whistling sound when breathing, especially when exhaling",
-      "Shortness of breath or difficulty breathing",
-      "Chest tightness or pressure, like a band squeezing around the chest",
-      "Coughing, especially at night or early morning, often producing clear or white phlegm",
-      "Rapid breathing or feeling like you can't catch your breath",
-      "Difficulty talking in full sentences during an attack",
-      "Fatigue during physical activity",
-      "Trouble sleeping due to breathing problems",
-      "Anxiety or panic feeling during breathing difficulties",
-      "Blue lips or fingernails during severe attacks (emergency situation)",
-      "Symptoms often worse at night, early morning, or during exercise",
-    ],
-    causes: [
-      "Genetic predisposition - tends to run in families",
-      "Environmental triggers: allergens like dust mites, pet dander, pollen, mold",
-      "Respiratory infections, especially viral infections in early childhood",
-      "Air pollutants: smoke, chemical fumes, strong odors, air pollution",
-      "Weather changes, cold air, or high humidity",
-      "Physical activity or exercise (exercise-induced asthma)",
-      "Emotional stress or strong emotions",
-      "Certain medications like aspirin or beta-blockers",
-      "Gastroesophageal reflux disease (GERD)",
-      "Hormonal changes during menstruation or pregnancy",
-      "Occupational exposures to chemicals, dust, or fumes",
-    ],
-    diagnosis: [
-      "Medical history focusing on symptom patterns, family history, and potential triggers",
-      "Physical examination listening to lungs with stethoscope for wheezing or other sounds",
-      "Spirometry (pulmonary function tests) to measure how much air you breathe in/out and how fast",
-      "Peak flow measurement using a simple handheld device to monitor lung function",
-      "Methacholine challenge test to see how airways react to irritants",
-      "Allergy testing to identify specific triggers",
-      "Chest X-ray to rule out other conditions",
-      "Fractional exhaled nitric oxide (FeNO) test to measure airway inflammation",
-      "Trial of asthma medications to see if symptoms improve",
-    ],
-    treatment: [
-      "Quick-relief medications (rescue inhalers): Short-acting beta-agonists like albuterol for immediate symptom relief",
-      "Long-term control medications: Inhaled corticosteroids to reduce airway inflammation",
-      "Combination inhalers: Corticosteroids plus long-acting beta-agonists for daily control",
-      "Leukotriene modifiers: Pills that help control asthma by blocking inflammatory chemicals",
-      "Biologics: Injectable medications for severe, hard-to-control asthma",
-      "Trigger avoidance: Identifying and avoiding personal asthma triggers",
-      "Asthma action plan: Written plan for daily management and emergency situations",
-      "Regular monitoring with peak flow meters",
-      "Allergy medications if allergies trigger asthma",
-    ],
-    prevention: [
-      "Identify and avoid your personal asthma triggers 🚫",
-      "Keep rescue inhaler with you at all times",
-      "Take long-term control medications exactly as prescribed, even when feeling well",
-      "Monitor lung function regularly with peak flow meter",
-      "Get annual flu vaccinations to prevent respiratory infections",
-      "Maintain good indoor air quality: use air purifiers, control humidity, regular cleaning",
-      "Exercise regularly but warm up properly and use pre-exercise medication if needed",
-      "Manage stress through relaxation techniques or counseling",
-      "Follow your asthma action plan and have regular check-ups with healthcare provider",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Asthma is like having overly sensitive smoke detectors in your lungs. Your airways (the tubes that carry air to your lungs) get inflamed and swollen, kind of like how your throat gets sore when you have a cold. When you encounter certain triggers, your airways overreact by getting even more swollen, tightening up, and producing extra mucus - making it hard for air to get through, like trying to breathe through a straw.",
-      howYouGet:
-        "It's usually something you're born with - like having naturally sensitive airways that run in families. Certain things in your environment can wake up this sensitivity, like allergens (dust, pets, pollen), infections when you're young, or being around smoke and pollution. Think of it like some people being born with sensitive skin that reacts to certain soaps - except your airways are the sensitive part.",
-      howToFeel:
-        "During an asthma episode, it can feel scary and like you can't get enough air, no matter how hard you try to breathe. Your chest might feel tight like someone is squeezing it, and you might make a whistling sound when you breathe out. You might cough a lot, especially at night, and feel tired after doing things that used to be easy.",
-      howToGetBetter:
-        "The wonderful thing about asthma is that it's very manageable with the right treatment! You'll have two types of medications: a 'rescue' inhaler for when you need quick help breathing, and daily 'controller' medications that keep your airways calm and less reactive. It's like having both a fire extinguisher for emergencies and a sprinkler system for daily protection. Learning your triggers and avoiding them, plus taking your medications regularly, means most people with asthma can do everything they want to do - including sports and outdoor activities! 🏃‍♀️💨",
-    },
-    severity: "moderate",
-    commonness: "very-common",
-  },
-
-  {
-    id: "sarcoidosis",
-    name: "Sarcoidosis",
-    category: "Multisystem Inflammatory Disease",
-    bodySystem: "respiratory",
-    summary:
-      "A multisystem inflammatory disease of unknown cause characterized by the formation of granulomas (small clusters of inflammatory cells) in various organs. While it can affect any organ, it most commonly involves the lungs. The disease can range from mild to severe and may resolve on its own or become chronic.",
-    symptoms: [
-      "Persistent dry cough that doesn't improve with cough medicine",
-      "Shortness of breath, especially during physical activity",
-      "Chest pain or tightness",
-      "Fatigue and weakness that can be severe and persistent",
-      "Fever and night sweats",
-      "Weight loss and loss of appetite",
-      "Swollen lymph nodes, especially in the chest, neck, or armpits",
-      "Skin changes: rashes, bumps, or discolored patches, especially on legs and arms",
-      "Eye problems: blurred vision, eye pain, sensitivity to light, dry or gritty eyes",
-      "Joint pain and stiffness, particularly in ankles and knees",
-      "Enlarged spleen or liver",
-      "Heart rhythm abnormalities or heart failure (if heart is involved)",
-      "Neurological symptoms like headaches, seizures, or facial weakness (rare)",
-    ],
-    causes: [
-      "Unknown exact cause - likely involves interaction between genetic susceptibility and environmental triggers",
-      "Abnormal immune system response where the body's immune system overreacts to an unknown substance",
-      "Possible infectious triggers: bacteria, viruses, or fungi that trigger autoimmune response",
-      "Environmental factors: dust, chemicals, or other airborne particles",
-      "Genetic predisposition - more common in certain ethnic groups and families",
-      "Geographic clustering suggests possible environmental or infectious triggers",
-      "Age factor - most commonly develops between ages 20-40",
-      "Gender factor - slightly more common in women",
-    ],
-    diagnosis: [
-      "Chest X-ray showing enlarged lymph nodes in chest or lung changes",
-      "High-resolution CT scan of chest for detailed lung and lymph node imaging",
-      "Pulmonary function tests to assess lung capacity and gas exchange",
-      "Tissue biopsy showing characteristic granulomas (usually from lungs, lymph nodes, or skin)",
-      "Blood tests: elevated ACE levels, calcium levels, inflammatory markers",
-      "Bronchoscopy with bronchoalveolar lavage to examine lung cells and fluid",
-      "Eye examination to check for ocular involvement",
-      "Electrocardiogram and echocardiogram if cardiac involvement suspected",
-      "Complete physical examination to assess multiple organ involvement",
-    ],
-    treatment: [
-      "Observation and monitoring for mild cases that may resolve spontaneously",
-      "Corticosteroids (prednisone): Main treatment to reduce inflammation and prevent organ damage",
-      "Immunosuppressive medications: Methotrexate, azathioprine, or biologics for steroid-sparing effect",
-      "Topical treatments for skin lesions: steroid creams or injections",
-      "Eye drops containing steroids for ocular sarcoidosis",
-      "Treatment of specific complications: heart medications for cardiac involvement, bronchodilators for lung symptoms",
-      "Regular monitoring of lung function, eye health, and other affected organs",
-      "Calcium and vitamin D monitoring due to risk of elevated levels",
-      "Physical therapy and rehabilitation for fatigue and joint symptoms",
-    ],
-    prevention: [
-      "No specific prevention available since the cause is unknown",
-      "Avoid known lung irritants like smoke, dust, and chemical fumes 🚭",
-      "Maintain overall good health through balanced diet and regular exercise",
-      "Get regular medical check-ups if you have risk factors or family history",
-      "Protect skin from excessive sun exposure, which may worsen skin lesions",
-      "Follow up regularly with healthcare providers for monitoring if diagnosed",
-      "Take prescribed medications consistently and don't stop abruptly",
-      "Report new or worsening symptoms promptly to healthcare team",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Sarcoidosis is like your body's immune system getting confused and overreacting to something it can't identify. Instead of just fighting off the problem, your immune system creates little clusters of inflammatory cells called granulomas - think of them like tiny, persistent protest groups that set up camp in various parts of your body, most commonly your lungs and lymph nodes.",
-      howYouGet:
-        "Doctors don't know exactly what causes it, but it seems to happen when someone with the right genetic makeup encounters something in their environment that triggers their immune system to go haywire. It's like having a car alarm that's too sensitive - instead of only going off for real threats, it starts blaring at every little thing, even things that aren't actually dangerous.",
-      howToFeel:
-        "Many people feel extremely tired, like they're running on empty even after getting plenty of sleep. You might have a nagging cough that won't go away, feel short of breath when climbing stairs, or notice swollen glands in your neck or chest. Some people develop skin rashes or bumps, while others might have eye irritation or joint pain. The fatigue can be one of the most challenging aspects.",
-      howToGetBetter:
-        "The interesting thing about sarcoidosis is that it sometimes goes away on its own, especially milder cases - like your immune system finally realizes it was overreacting and calms down. For more active disease, anti-inflammatory medications like steroids can help quiet down the immune system and reduce the inflammation. Many people live completely normal lives with sarcoidosis, and while some may need long-term treatment, others recover fully. The key is working with your doctors to monitor the disease and treat it appropriately for your specific situation. 🌟💊",
-    },
-    severity: "moderate",
-    commonness: "uncommon",
-  },
-
-  {
-    id: "goodpasture-syndrome",
-    name: "Goodpasture Syndrome",
-    category: "Autoimmune/Pulmonary-Renal Disease",
-    bodySystem: "immune",
-    summary:
-      "A rare autoimmune disease where the body's immune system attacks the lungs and kidneys by producing antibodies against a specific protein (type IV collagen) found in the basement membranes of these organs. It causes severe lung bleeding and kidney failure, requiring immediate aggressive treatment. Without prompt intervention, it can be life-threatening.",
-    symptoms: [
-      "Coughing up blood (hemoptysis) - may range from streaks to large amounts",
-      "Shortness of breath that worsens rapidly",
-      "Chest pain or tightness",
-      "Difficulty breathing or feeling like you're drowning",
-      "Fatigue and weakness",
-      "Pale skin or pallor",
-      "Decreased urine output or changes in urine color (dark, bloody, or foamy)",
-      "Swelling in legs, ankles, feet, or around eyes",
-      "High blood pressure",
-      "Nausea and vomiting",
-      "Metallic taste in mouth",
-      "Weight gain from fluid retention",
-      "Symptoms often develop rapidly over days to weeks",
-    ],
-    causes: [
-      "Autoimmune response where the body produces anti-glomerular basement membrane (anti-GBM) antibodies",
-      "These antibodies attack type IV collagen in lung and kidney basement membranes",
-      "Exact trigger unknown, but may involve combination of genetic susceptibility and environmental factors",
-      "Possible triggers: viral respiratory infections, exposure to hydrocarbons or organic solvents",
-      "Smoking may increase lung involvement and severity",
-      "HLA-DRB1 and HLA-DQB1 genetic variants associated with increased risk",
-      "More common in young men (20s-30s) and older women (50s-60s)",
-      "Rare condition affecting about 1 in 1 million people per year",
-    ],
-    diagnosis: [
-      "Blood test for anti-GBM antibodies - the key diagnostic test",
-      "Kidney biopsy showing linear IgG deposits along glomerular basement membrane",
-      "Lung biopsy (if kidney biopsy not conclusive) showing similar linear deposits",
-      "Chest X-ray or CT scan showing lung bleeding or infiltrates",
-      "Urinalysis showing blood, protein, and kidney cells in urine",
-      "Blood tests for kidney function: creatinine, blood urea nitrogen (BUN)",
-      "Complete blood count to check for anemia from bleeding",
-      "Pulmonary function tests to assess lung capacity and gas exchange",
-      "Bronchoscopy with bronchoalveolar lavage to confirm lung bleeding",
-    ],
-    treatment: [
-      "EMERGENCY TREATMENT: Plasmapheresis (plasma exchange) to remove harmful antibodies from blood",
-      "High-dose corticosteroids (methylprednisolone) to suppress immune system",
-      "Immunosuppressive medications: cyclophosphamide or rituximab to prevent antibody production",
-      "Supportive care for lung bleeding: oxygen therapy, mechanical ventilation if needed",
-      "Dialysis if kidney function severely compromised",
-      "Blood transfusions if severe anemia from bleeding",
-      "Treatment typically requires intensive care unit monitoring initially",
-      "Long-term immunosuppression to prevent relapse",
-      "Kidney transplantation may be needed if kidneys are severely damaged",
-    ],
-    prevention: [
-      "No specific prevention available for this autoimmune condition",
-      "Avoid smoking, which may worsen lung involvement 🚭",
-      "Avoid exposure to hydrocarbon solvents and organic chemicals when possible",
-      "Seek immediate medical attention for unexplained coughing up blood or rapid breathing problems",
-      "Regular monitoring if you have family history of autoimmune diseases",
-      "Follow up regularly with healthcare team if diagnosed to monitor for relapse",
-      "Take immunosuppressive medications exactly as prescribed",
-      "Report any respiratory infections or unusual symptoms promptly",
-    ],
-    simpleExplanation: {
-      whatIs:
-        "Goodpasture Syndrome is like your body's security system making a terrible mistake and attacking your own lungs and kidneys. Your immune system creates antibodies that are supposed to fight infections, but instead they target a specific protein that's like the 'foundation' of your lung and kidney tissues. It's as if your body's guards started attacking the very building they're supposed to protect.",
-      howYouGet:
-        "It's an autoimmune disease, which means it's not contagious - your immune system just gets confused and starts attacking healthy parts of your body. Doctors think it might be triggered by something like a viral infection or chemical exposure in people who have certain genes that make them susceptible, kind of like how some people are allergic to peanuts while others aren't.",
-      howToFeel:
-        "It usually comes on very quickly and can be frightening. You might start coughing up blood, which can be scary, and feel like you can't catch your breath. Your kidneys might not work properly, causing swelling in your legs and face. Many people feel extremely tired and weak, and the symptoms can worsen rapidly over just a few days or weeks.",
-      howToGetBetter:
-        "This is a medical emergency that needs immediate hospital treatment, but the good news is that it's treatable if caught early! Doctors use treatments like plasmapheresis (think of it like changing the oil in your car - they clean the harmful antibodies out of your blood) and powerful medications to stop your immune system from attacking your organs. Many people can recover well, especially if treatment starts quickly. Some may need ongoing treatment to keep their immune system in check, and in severe cases, kidney transplant might be needed, but many people go on to live normal lives. ⚡🏥",
-    },
-    severity: "severe",
-    commonness: "rare",
-  },
+  // COPD
+  // pneumonia
+  // tuberculosis
+  // Acute Bronchitis
+  // Sleep Apnea
+  // Pulmonary Embolism (PE)
+  // Lung Cancer
+  // Type 2 Diabetes
+  // Cushing’s Syndrome
+  // addisons-disease
+  // thyroid-storm
+  // hypothyroidism
+  // hyperthyroidism
+  // Obesity
+  // generalized Anxiety Disorder
+  // adhd
+  // ptsd
+  // Schizophrenia
+  // Bipolar Disorder
+  // Gout
+  // Osteoporosis
+  // fibromyalgia
+  // Rheumatoid Arthritis (RA)
+  // Osteomyelitis
+  // systemic Lupus Erythematosus (SLE)
+  // Osteoarthritis
+  // Multiple Sclerosis (MS)
+  // 'Parkinson\'s Disease'
+  // Epilepsy
+  // Migraine
+  // alzheimers-disease
+  // Irritable Bowel Syndrome (IBS)
+  // Intestinal Ischemia
+  // Ulcerative Colitis
+  // Crohn’s Disease
+  // gastroesophageal-reflux
 ];
